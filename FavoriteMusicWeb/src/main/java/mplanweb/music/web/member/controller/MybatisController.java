@@ -1,4 +1,4 @@
-package mplanweb.music.member.controller;
+package mplanweb.music.web.member.controller;
 
 import java.util.List;
 import java.util.Locale;
@@ -13,8 +13,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import mplanweb.music.member.service.MemberDAOService;
-import mplanweb.music.member.bean.Member;
+
+import mplanweb.music.web.member.bean.Member;
+import mplanweb.music.web.member.service.MemberDAOService;
 
 @Controller
 public class MybatisController {
@@ -25,7 +26,7 @@ public class MybatisController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(MybatisController.class);
 
-
+	// TODO
 	@RequestMapping("/main")
 	public ModelAndView main(Locale locale, Model model) {
 		logger.info("Welcome main", locale);
@@ -40,7 +41,7 @@ public class MybatisController {
 
 	}
 
-
+	// TODO
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public ModelAndView insert(HttpServletRequest request) {
 

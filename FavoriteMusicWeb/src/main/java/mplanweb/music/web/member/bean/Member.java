@@ -1,4 +1,4 @@
-package mplanweb.music.member.bean;
+package mplanweb.music.web.member.bean;
 
 public class Member {
 	private String name;

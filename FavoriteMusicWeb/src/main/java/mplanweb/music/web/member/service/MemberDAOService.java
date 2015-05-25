@@ -1,4 +1,4 @@
-package mplanweb.music.member.service;
+package mplanweb.music.web.member.service;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import mplanweb.music.member.bean.Member;
-import mplanweb.music.member.dao.MemberDAO;
+import mplanweb.music.web.member.bean.Member;
+import mplanweb.music.web.member.dao.MemberDAO;
 
 
 @Repository

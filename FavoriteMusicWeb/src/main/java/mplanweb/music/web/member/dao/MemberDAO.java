@@ -1,8 +1,8 @@
-package mplanweb.music.member.dao;
+package mplanweb.music.web.member.dao;
 
 import java.util.ArrayList;
 
-import mplanweb.music.member.bean.Member;
+import mplanweb.music.web.member.bean.Member;
 
 public interface MemberDAO {
 	ArrayList<Member> getMembers();
