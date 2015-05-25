@@ -17,7 +17,9 @@
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
  -->
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+ 
+ <!-- DBSetting -->
+	<bean id="jdbcProp" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<value>/WEB-INF/properties/mysql.properties</value>
 		</property>
@@ -37,7 +39,7 @@
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="/WEB-INF/mybatis/mapper/**/*.xml" />
+		<property name="mapperLocations" value="/WEB-INF/mybatis/mapper/user/*.xml" />
 	</bean>
 
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
@@ -46,7 +48,7 @@
 
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="mplanweb.music.web.test" />
+		<property name="basePackage" value="mplanweb.music.web" />
 	</bean>
 
 
