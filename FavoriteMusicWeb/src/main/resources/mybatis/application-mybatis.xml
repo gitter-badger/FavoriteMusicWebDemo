@@ -4,25 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/tx
   	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<bean id="rootMessageSource"
-		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<property name="basenames">
-			<list>
-				<value>classpath:messages/core</value>
-			</list>
-		</property>
-		<property name="fileEncodings" value="UTF-8" />
-		<property name="defaultEncoding" value="UTF-8" />
-	</bean>
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="mplanweb.music.web.test" />
-		<property name="annotationClass" value="org.springframework.stereotype.Repository" />
-	</bean>
+
 	<!-- DBproperties Setting -->
 	<bean id="jdbcProp"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
-			<value>/WEB-INF/properties/mysql.properties</value>
+			<value>classpath:properties/mysql.properties</value>
 		</property>
 	</bean>
 
@@ -35,16 +22,28 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 
+
 	<!-- SESSIONFACTORY 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- ibatis와 다르게 sql디렉토리에 xml 추가만 해주면 별도추가없이 알아서 xml내의 쿼리 인식 -->
-		<property name="mapperLocations"
-			value="WEB-INF\mybatis\mapper\**\*.xml" />
+		<property name="mapperLocations" value="classpath*:mybatis/mapper/**/*.xml" />
 	</bean>
+
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="mplanweb.music.web.test" />
+		<property name="annotationClass" value="org.springframework.stereotype.Repository" />
+	</bean>
+
 
 	<!-- log4j -->
 	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
@@ -57,10 +56,7 @@
 		</property>
 	</bean>
 
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 </beans>

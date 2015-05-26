@@ -7,7 +7,7 @@
 	<title>Home</title>
 </head>
 <body>
-<form action="login" method="post">
+<form name="test" action='/reserve/user/getUserInfo'  method="get">
 			<div class="id">
 				<input type="text" name="userid" id="userid"
 					placeholder="M!Plan 계정 (아이디)">

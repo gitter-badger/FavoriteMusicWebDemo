@@ -10,7 +10,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 		    /WEB-INF/spring/root-context.xml
-		    /WEB-INF/mybatis/application-mybatis.xml
+		    classpath:mybatis/**/application-mybatis.xml
 		</param-value>
 	</context-param>
 
