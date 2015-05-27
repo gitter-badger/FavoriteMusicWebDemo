@@ -41,7 +41,7 @@
 <body>
 	<div id="polina">
 		<h1>VM! Sound Admin Login</h1>
-		<form action="login" method="post">
+		<form action="login" method="get">
 			<div class="id">
 				<input type="text" name="userid" id="userid"
 					placeholder="M!Plan 계정 (아이디)">

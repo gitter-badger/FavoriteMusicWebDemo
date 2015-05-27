@@ -5,16 +5,18 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import mplanweb.music.web.user.bean.UserBean;
-import mplanweb.music.web.user.dao.UserDAO;
+import mplanweb.music.web.user.mapper.UserDAO;
 
 
-@Service("userservice")
+//@Service("UserService")
 public class UserServiceImpl {
 
 	@Autowired
+	@Qualifier("UserService")
 	private UserDAO userdao;
 	
 	public boolean duplicateUser(String userid){
