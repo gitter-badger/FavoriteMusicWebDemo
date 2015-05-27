@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
 <!doctype html>
 <html>
 <head>
@@ -16,18 +16,19 @@
 <!-- login -->
 <script type="text/javascript">
 	function login() {
-		var user_id = document.login3.userid.value;
-		var passwd = document.login3.passwd.value;
+		var user_id = document.login.userid.value;
+		var passwd = document.login.passwd.value;
 		if (user_id == "" || user_id == null) {
 			alert("아이디를 다시 입력해 주세요");
-			document.getElementById("userid").focus();
+			login.getElementById("userid").focus();
 		} else if (passwd == "" || passwd == null) {
 			alert("비밀번호 다시 입력해 주세요");
-			document.getElementById("passwd").focus();
+			login3.getElementById("passwd").focus();
 		} else {
 			alert("완료");
-			document.login3.action = "/web/user/getUserInfo";
-			document.login3.submit();
+			document.login.action="login";
+			//doument.login3.action = "./board?action=write.ui";
+			document.login.submit();
 		}
 	}
 </script>
@@ -40,7 +41,7 @@
 <body>
 	<div id="polina">
 		<h1>VM! Sound Admin Login</h1>
-		<form name="login3" method="get">
+		<form action="login" method="get">
 			<div class="id">
 				<input type="text" name="userid" id="userid"
 					placeholder="M!Plan 계정 (아이디)">
@@ -53,13 +54,14 @@
 					for="checkbox">로그인 상태 유지 </label>
 			</div>
 			<div class="button">
-				<input type="button" value="로그인" class="button"
-					onclick="javascript:login();" />
+				<input type="submit" value="로그인" class="button" />
 			</div>
 			<div class="info">
 				<a class="idsearch" href="#" target="_blank">M!Plan 계정찾기</a> <a
 					class="passsearch" href="#" target="_blank">M!Plan 비밀번호찾기</a>
 			</div>
+			<p>ⓒ M!Plan Project 1997~2015</p>
+			<p>ⓒ VM! Contents Labs 2009~2015</p>
 		</form>
 	</div>
 </body>

@@ -9,9 +9,10 @@
 <title>Join Page</title>
 </head>
 <body>
-	<c:forEach items="${list }" var="userInfo"  varStatus="status">
-		ID: <c:out value="${userInfo.user_id }" /> <br />
-		Name: <c:out value="${userInfo.name }" /> <br />
+	<c:forEach items="${list }" var="getUserInfo"  varStatus="status">
+		ID: <c:out value="${getUserInfo.userid }" /> <br />
+		<!-- 
+		 Name: <c:out value="${userInfo.name }" /> <br />-->
 	</c:forEach>
 </body>
 </html>

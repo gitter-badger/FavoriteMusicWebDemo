@@ -18,8 +18,7 @@
 			document.getElementById("passwd").focus();
 		} else {
 			alert("완료");
-			document.login3.action = "/user/getUserInfo";
-			//doument.login3.action = "./board?action=write.ui";
+			document.login3.action = "/web/user/getUserInfo";
 			document.login3.submit();
 		}
 	}

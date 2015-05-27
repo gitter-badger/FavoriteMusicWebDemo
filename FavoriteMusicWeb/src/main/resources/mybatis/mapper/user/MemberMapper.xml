@@ -15,4 +15,10 @@
   	WHERE mp_userid=#{userid}
   </select>
 
+  <select id="">
+      SELECT *
+      FROM mplan_member
+      WHERE mp_userid = #{userid}, mp_passwd = #{passwd}
+      
+  </select>
 </mapper>

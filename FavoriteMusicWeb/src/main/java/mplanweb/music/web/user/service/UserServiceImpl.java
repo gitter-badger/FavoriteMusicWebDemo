@@ -13,10 +13,9 @@ import mplanweb.music.web.user.mapper.UserDAO;
 
 
 //@Service("UserService")
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService{
 
 	@Autowired
-	@Qualifier("UserService")
 	private UserDAO userdao;
 	
 	public boolean duplicateUser(String userid){
@@ -44,5 +43,10 @@ public class UserServiceImpl {
 	public int insertUser(HashMap map){
 		userdao.insertUser(map);
 		return 0;
+	}
+	@Override
+	public ArrayList login(String userid, String passwd) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

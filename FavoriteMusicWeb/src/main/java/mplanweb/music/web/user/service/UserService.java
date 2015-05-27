@@ -14,5 +14,6 @@ public interface UserService {
 	public int insertUser(HashMap map);
 	public boolean updateUser(String userid, String pwd);
 	public boolean deleteUser(String userid, String pwd);
-
+	//login
+	public ArrayList login(String userid, String passwd);
 }
