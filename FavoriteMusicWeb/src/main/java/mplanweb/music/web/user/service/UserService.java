@@ -4,7 +4,7 @@ import mplanweb.music.web.user.bean.UserBean;
 
 public interface UserService {
 	
-	//·Î±×ÀÎ
+	//Login
 	public UserBean login(String userid, String passwd);
 
 }
