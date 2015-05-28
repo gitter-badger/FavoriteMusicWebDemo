@@ -18,7 +18,7 @@
 			document.getElementById("passwd").focus();
 		} else {
 			alert("완료");
-			document.login3.action = "/web/user/getUserInfo";
+			document.login3.action = "/web/user/login";
 			document.login3.submit();
 		}
 	}
