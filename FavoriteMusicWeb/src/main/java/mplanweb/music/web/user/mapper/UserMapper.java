@@ -10,4 +10,19 @@ public interface UserMapper {
 			@Param("userid") String userid,
 			@Param("passwd") String passwd);
 
+	public void insert(UserBean userbean);
+
+	public void insertAuthority(String userid, String authority);
+
+	public int update(UserBean userbean);
+
+	public UserBean selectOne(String userid);
+
+	public int updatePasswd(String currentPasswd, String newPasswd,
+			String userid);
+
+	public void deleteAuthority(String email);
+
+	public void delete(UserBean userbean);
+
 }

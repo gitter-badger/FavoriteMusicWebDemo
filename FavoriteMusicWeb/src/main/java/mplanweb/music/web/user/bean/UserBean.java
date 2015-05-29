@@ -6,15 +6,15 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class UserBean {
-	@Size(max = 10, message = "¾ÆÀÌµğ´Â 10±ÛÀÚ ÀÌÇÏ ±âÁ¦ ¹Ù¶ø´Ï´Ù.")
+	@Size(max = 10, message = "ì•„ì´ë”” 10ê¸€ì ì´í•˜ì—¬ë§Œ í•©ë‹ˆë‹¤.")
 	private String userid;
 	private String passwd;
-	@NotBlank(message = "ÀÌ¸ŞÀÏ Çü½ÄÀÌ ¾Æ´Õ´Ï´Ù.")
-	@Email(message = "ÀÌ¸ŞÀÏ Çü½ÄÀÌ ¾Æ´Õ´Ï´Ù.")
+	@NotBlank(message = "ì´ë©”ì¼ í˜•ì‹ì´ ì•„ë‹™ë‹ˆë‹¤.")
+	@Email(message = "ì´ë©”ì¼ í˜•ì‹ì´ ì•„ë‹™ë‹ˆë‹¤.")
 	private String email;
-	@Size(min = 2, message = "¼ºÇÔÀº 2±ÛÀÚ ÀÌ»ó ±âÁ¦ ¹Ù¶ø´Ï´Ù.")
+	@Size(min = 2, message = "ì´ë¦„ì€ 2ê¸€ì ì´ìƒì—¬ë§Œ í•©ë‹ˆë‹¤.")
 	private String name;
-	@Size(min = 6, message = "Æù¹øÈ£ Çü½ÄÀÌ 000-000-0000, 000-0000-0000 ÀÔ´Ï´Ù.")
+	@Size(min = 6, message = "ì „í™”ë²ˆí˜¸ í˜•ì‹ì´ ë‹¤ë¦…ë‹ˆë‹¤.")
 	private String phone;
 
 	public UserBean() {

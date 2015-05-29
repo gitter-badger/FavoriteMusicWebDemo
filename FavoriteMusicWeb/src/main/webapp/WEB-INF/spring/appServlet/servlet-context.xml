@@ -28,7 +28,8 @@
 
 
 
-	<context:component-scan base-package="mplanweb.music.web, mplanweb.music.web.user.controller" />
+	<context:component-scan
+		base-package="mplanweb.music.web, mplanweb.music.web.user.controller, mplanweb.music.web.user.bean, mplanweb.music.web.user.mapper, mplanweb.music.web.user.service, mplanweb.music.web.etc" />
 
 
 </beans:beans>

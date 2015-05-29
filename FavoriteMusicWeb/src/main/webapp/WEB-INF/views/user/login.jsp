@@ -10,7 +10,7 @@
 </head>
 <body>
 	<c:forEach items="${result}" var="UserBean"  varStatus="status">
-		ID: <c:out value="${getUserInfo.userid }" /> <br />
+		ID: <c:out value="${userid }" /> <br />
 		<!-- 
 		 Name: <c:out value="${userInfo.name }" /> <br />-->
 	</c:forEach>
