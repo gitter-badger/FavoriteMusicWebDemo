@@ -7,10 +7,10 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link rel="stylesheet" href="resources/css/style.css">
+<link rel="stylesheet" href="resources/mplan/css/style.css">
 <script
 	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="resources/js/index.js"></script>
+<script src="resources/mplan/js/index.js"></script>
 <title>Favorite Music Admin Page</title>
 </head>
 <!-- login -->
@@ -26,7 +26,7 @@
 			login3.getElementById("passwd").focus();
 		} else {
 			alert("완료");
-			document.login.action="login";
+			document.login.action="/admin/home";
 			//doument.login3.action = "./board?action=write.ui";
 			document.login.submit();
 		}
@@ -35,7 +35,7 @@
 <!--  video/195550.mp4 -->
 <!-- Video -->
 <video id="movie" poster="ittank.png" preload="auto" autoplay loop>
-	<source src="resources/video/187711.mp4" type="video/mp4">
+	<source src="resources/mplan/video/187711.mp4" type="video/mp4">
 </video>
 
 <body>
