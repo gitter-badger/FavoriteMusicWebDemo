@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
 <!doctype html>
 <html>
 <head>
@@ -16,19 +16,17 @@
 <!-- login -->
 <script type="text/javascript">
 	function login() {
-		var user_id = document.login.userid.value;
-		var passwd = document.login.passwd.value;
+		var user_id = document.login3.j_username.value;
+		var passwd = document.login3.j_passwd.value;
 		if (user_id == "" || user_id == null) {
 			alert("아이디를 다시 입력해 주세요");
-			login.getElementById("userid").focus();
+			login3.getElementById("userid").focus();
 		} else if (passwd == "" || passwd == null) {
 			alert("비밀번호 다시 입력해 주세요");
 			login3.getElementById("passwd").focus();
 		} else {
 			alert("완료");
-			document.login.action="/admin/home";
-			//doument.login3.action = "./board?action=write.ui";
-			document.login.submit();
+			login3.submit();
 		}
 	}
 </script>
@@ -41,20 +39,23 @@
 <body>
 	<div id="polina">
 		<h1>VM! Sound Admin Login</h1>
-		<form action="login" method="get">
+		<form name="login3" action="j_spring_security_check" method="post">
 			<div class="id">
-				<input type="text" name="userid" id="userid"
+				<input type="text" name="j_username" id="userid"
 					placeholder="M!Plan 계정 (아이디)">
 			</div>
 			<div class="pass">
-				<input type="password" name="passwd" id="passwd" placeholder="비밀번호">
+				<input type="password" name="j_passwd" id="passwd" placeholder="비밀번호">
 			</div>
 			<div class="checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox"> <label
 					for="checkbox">로그인 상태 유지 </label>
 			</div>
 			<div class="button">
-				<input type="submit" value="로그인" class="button" />
+				<div class="button">
+					<input type="button" value="로그인" class="button"
+						onclick="login()" />
+				</div>
 			</div>
 			<div class="info">
 				<a class="idsearch" href="#" target="_blank">M!Plan 계정찾기</a> <a

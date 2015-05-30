@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mplanweb.music.web.user.UserMapper">
-	<cache />
+<mapper namespace="mplanweb.music.web.admin">
 
-	<select id="login" resultType="UserBean">
+	<select id="getUserPwd" parameterType="java.lang.String"
+		resultType="java.lang.String">
 		SELECT mp_userid, mp_passwd
 		FROM
 		mplan_member
 		WHERE
-		mp_userid = #{userid}, mp_passwd = #{passwd}
+		mp_userid =
+		#{userid}
 
 	</select>
 

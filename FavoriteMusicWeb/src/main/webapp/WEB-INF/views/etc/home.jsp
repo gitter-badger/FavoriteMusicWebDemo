@@ -26,7 +26,7 @@
 
 </head>
 <body>
-	<form name="login3" method="get">
+	<form name="login3" method="post">
 		<div class="id">
 			<input type="text" name="userid" id="userid"
 				placeholder="M!Plan 계정 (아이디)">
