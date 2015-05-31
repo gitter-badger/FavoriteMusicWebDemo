@@ -22,7 +22,7 @@
 		file="../inc/header.jsp"%>
 </div>
 <div class="container-fluid">
-blacklist
+
 </div>
 <div id="footer">
 	<%@ include file="../inc/footer.jsp"%>

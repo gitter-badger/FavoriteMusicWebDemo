@@ -24,12 +24,6 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
-
-
-
-
-	<context:component-scan base-package="mplanweb.music.web" />
-
-
-
+	<context:component-scan base-package="mplanweb.music.web, mplanweb.music.web.admin, mplanweb.music.web.admin.mybatis" />
+	
 </beans:beans>

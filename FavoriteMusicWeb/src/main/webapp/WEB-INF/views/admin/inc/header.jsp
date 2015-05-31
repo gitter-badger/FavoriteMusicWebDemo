@@ -37,6 +37,7 @@ body {
 <!--[if lt IE 9]>
   <script src="js/libs/html5-3.4-respond-1.1.0.min.js"></script>
   <![endif]-->
+<!-- login -->
 </head>
 <body>
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -101,7 +102,8 @@ body {
 
 					</ul>
 					<ul class="nav pull-right">
-						<li><a>Admin님께서 접속 하였습니다.</a></li>
+						<li><a href="j_spring_security_logout">${username}님
+								반갑습니다.</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -115,19 +117,7 @@ body {
 		src="/web/resources/admin/_Shared/bootstrap/js/libs/bootstrap/bootstrap.min.js"></script>
 	<script src="/web/resources/admin/_Shared/bootstrap/js/plugins.js"></script>
 	<script src="/web/resources/admin/_Shared/bootstrap/js/script.js"></script>
-	<script src="http://code.jquery.com/ui/1.8.22/jquery-ui.min.js"
-		type="text/javascript"></script>
-	<script>
-		var _gaq = [ [ '_setAccount', 'UA-XXXXX-X' ], [ '_trackPageview' ] ];
-		(function(d, t) {
-			var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-			g.src = ('https:' == location.protocol ? '//ssl' : '//www')
-					+ '.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g, s)
-		}(document, 'script'));
-	</script>
-	<script type="text/javascript">
-		
-	</script>
+	<script src="http://code.jquery.com/ui/1.8.22/jquery-ui.min.js"></script>
+
 </body>
 </html>

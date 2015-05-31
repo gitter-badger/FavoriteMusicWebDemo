@@ -7,11 +7,12 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/resources/mybatis/application-mybatis.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/setting/mybatis-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/setting/root-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/setting/security-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/setting/servlet_context.xml</config>
 	</configs>
 	<autoconfigs>
-		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

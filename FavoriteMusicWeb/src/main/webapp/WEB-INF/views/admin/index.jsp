@@ -17,7 +17,7 @@
 <script type="text/javascript">
 	function login() {
 		var user_id = document.login3.j_username.value;
-		var passwd = document.login3.j_passwd.value;
+		var passwd = document.login3.j_password.value;
 		if (user_id == "" || user_id == null) {
 			alert("아이디를 다시 입력해 주세요");
 			login3.getElementById("userid").focus();
@@ -45,7 +45,7 @@
 					placeholder="M!Plan 계정 (아이디)">
 			</div>
 			<div class="pass">
-				<input type="password" name="j_passwd" id="passwd" placeholder="비밀번호">
+				<input type="password" name="j_password" id="passwd" placeholder="비밀번호">
 			</div>
 			<div class="checkbox">
 				<input type="checkbox" name="checkbox" id="checkbox"> <label

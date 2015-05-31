@@ -5,13 +5,19 @@
 
 	<select id="getUserPwd" parameterType="java.lang.String"
 		resultType="java.lang.String">
-		SELECT mp_userid, mp_passwd
+		SELECT mp_pwd
 		FROM
 		mplan_member
 		WHERE
 		mp_userid =
 		#{userid}
 
+	</select>
+
+	<select id="getUserMember" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		
+		SELECT 
 	</select>
 
 </mapper>

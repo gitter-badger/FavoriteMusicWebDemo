@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:beans="http://www.springframework.org/schema/beans"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:security="http://www.springframework.org/schema/security"
-	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-	<!-- Spring 보안 관련 -->
 	<security:http auto-config="true">
 		<security:intercept-url pattern="/main.do"
 			access="ROLE_USER" />
@@ -17,11 +15,11 @@
 
 	<security:authentication-manager>
 		<security:authentication-provider
-			user-service-ref="AdminUserService" />
+			user-service-ref="memberService" />
 	</security:authentication-manager>
 
-	<bean id="AdminUserService" class="mplanweb.music.web.admin.AdminUserService">
-		<property name="maindao">
+	<bean id="memberService" class="mplanweb.music.web.admin.MemberService">
+		<property name="mainDao">
 			<bean class="mplanweb.music.web.admin.MainDaoImpl">
 				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 			</bean>
@@ -29,3 +27,4 @@
 	</bean>
 
 </beans>
+

@@ -9,26 +9,27 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-public class AdminUserService implements UserDetailsService {
+public class MemberService implements UserDetailsService {
 
-	private MainDAO maindao;
+	private MainDAO mainDao;
 
 	public void setMainDao(MainDAO maindao) {
-		this.maindao = maindao;
+		this.mainDao = maindao;
 	}
 
-	public UserDetails loadUserByUsername(String userid)
+	public UserDetails loadUserByUsername(String mp_name)
 			throws UsernameNotFoundException {
 
 		// id, passwd
-		String userPwd = maindao.getUserPwd(userid);
+		String userPwd = mainDao.getUserPwd(mp_name);
 
+		
 		// "ROLE_USER 이름 권한 설정
 		Collection<SimpleGrantedAuthority> roles = new ArrayList<SimpleGrantedAuthority>();
 		roles.add(new SimpleGrantedAuthority("ROLE_USER"));
-
+	
 		// 로그인 정보 return
-		UserDetails user = new User(userid, userPwd, roles);
+		UserDetails user = new User(mp_name, userPwd, roles);
 		return user;
 	}
 
