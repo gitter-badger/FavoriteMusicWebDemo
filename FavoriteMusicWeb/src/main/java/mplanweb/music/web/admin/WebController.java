@@ -1,7 +1,10 @@
 package mplanweb.music.web.admin;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import mplanweb.music.web.AdminController;
 
@@ -43,5 +46,14 @@ public class WebController {
 			ModelMap model) throws Throwable {
 		logger.info("MainPage ==> logout.do : ", paramMap, model);
 		return "/admin/index";
+	}
+	
+	@RequestMapping("/join.do")
+	public void getJoin(ModelMap model, HttpServletRequest request)  throws Throwable {
+		String userid = request.getParameter("userid");
+		ArrayList list = null;
+		
+	
+		
 	}
 }

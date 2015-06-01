@@ -1,1 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mplanweb.music.web.board.BoardMapper">
+<insert id="insertBoard" parameterType="Board">
+INSERT INTO mp_board2 (title, writer, contents, regdate) values ( #{title},#{writer},#{contents}, now());
+</insert>
+
+<select id="listBoard" resultType="Board" parameterType="Search">
+select * from board
+<if test="area !=null">
+<where>
+<foreach collection="area" item="item" separator="or" open="(" close=")">
+${item} LIKE #{searchKey}
+</foreach>
+</where>
+</if>
+order by seq desc
+</select>
+
+<select id="getBoard" resultType="Board" parameterType="int">
+select * from mp_board2 where seq=#{seq}
+</select>
+
+</mapper>
