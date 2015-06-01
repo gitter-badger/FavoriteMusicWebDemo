@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import mplanweb.music.web.etc.BoardLogger;
+import mplanweb.music.web.etc.BoardStringUtil;
+import mplanweb.music.web.etc.ResultJSON;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +20,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class BoardController {
+public class BoardController  extends BoardLogger{
 	
 	@Autowired
 	private BoardService BoardService;
-	
-	protected static Logger logger = Logger.getLogger(BoardController.class);
 	@RequestMapping(value = "/angular", method = RequestMethod.GET)
 	protected String showAngularPage(Model model) {
 		model.addAttribute("yboard", new Board()); // 초기세션처리를 위해 디폴트 처리

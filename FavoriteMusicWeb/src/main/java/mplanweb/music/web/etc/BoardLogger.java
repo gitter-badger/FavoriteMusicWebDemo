@@ -1,4 +1,4 @@
-package mplanweb.music.web.board;
+package mplanweb.music.web.etc;
 
 import org.apache.log4j.Logger;
 

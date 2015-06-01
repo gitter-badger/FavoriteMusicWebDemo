@@ -2,6 +2,8 @@ package mplanweb.music.web.board;
 
 import java.io.Serializable;
 
+import mplanweb.music.web.etc.BoardStringUtil;
+
 @SuppressWarnings("serial")
 public class Board implements Serializable {
 	private int boardID; // : 고유키

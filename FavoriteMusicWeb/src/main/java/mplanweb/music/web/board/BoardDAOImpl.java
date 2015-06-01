@@ -14,33 +14,33 @@ public class BoardDAOImpl implements BoardDAO{
 
 	@Override
 	public int selectTotalCountYboard(BoardSearch boardSearch) {
-		return sqlSession.selectOne("Yboard.selectTotalCountYboard", boardSearch);
+		return sqlSession.selectOne("mplanweb.music.web.board.selectTotalCountYboard", boardSearch);
 	}
 
 	@Override
 	public List<Board> selectYboard(BoardSearch boardSearch) {
-		return sqlSession.selectList("Yboard.selectYboard", boardSearch);
+		return sqlSession.selectList("mplanweb.music.web.board.selectYboard", boardSearch);
 	}
 
 	@Override
 	public Board viewYboard(Map<String, Object> map) {
-		return sqlSession.selectOne("Yboard.viewYboard", map);
+		return sqlSession.selectOne("mplanweb.music.web.board.viewYboard", map);
 	}
 
 	@Override
 	public int insertYboard(Board board) {
-		return sqlSession.insert("Yboard.insertYboard", board);
+		return sqlSession.insert("mplanweb.music.web.board.insertYboard", board);
 	}
 
 	@Override
 	public int updateYboard(Board board) {
-		return sqlSession.update("Yboard.updateYboard", board);
+		return sqlSession.update("mplanweb.music.web.board.updateYboard", board);
 	}
 
 	@Override
 	public void deleteYboard(List<Map<String, Object>> mapList) {		
 		for (Map<String, Object> map: mapList) {
-			sqlSession.delete("Yboard.deleteYboard", map);
+			sqlSession.delete("mplanweb.music.web.board.deleteYboard", map);
 		}		
 	}
 }

@@ -55,6 +55,13 @@
 	<logger name="mplanweb.music.web.admin">
 		<level value="info" />
 	</logger>
+	<logger name="mplanweb.music.web.board">
+		<level value="info" />
+	</logger>
+	
+	<logger name="mplanweb.music.web.board2">
+		<level value="info" />
+	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">

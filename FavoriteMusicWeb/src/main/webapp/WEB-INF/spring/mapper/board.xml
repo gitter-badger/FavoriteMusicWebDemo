@@ -1,26 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="mplanweb.music.web.board">
 
-<mapper namespace="mplanweb.music.web.board.BoardMapper">
-<insert id="insertBoard" parameterType="Board">
-INSERT INTO mp_board2 (title, writer, contents, regdate) values ( #{title},#{writer},#{contents}, now());
-</insert>
-
-<select id="listBoard" resultType="Board" parameterType="Search">
-select * from board
-<if test="area !=null">
-<where>
-<foreach collection="area" item="item" separator="or" open="(" close=")">
-${item} LIKE #{searchKey}
-</foreach>
-</where>
-</if>
-order by seq desc
-</select>
-
-<select id="getBoard" resultType="Board" parameterType="int">
-select * from mp_board2 where seq=#{seq}
-</select>
-
-</mapper>
+	<select id="selectTotalCountYboard"  resultType="int" parameterType="boardSearch">
+		SELECT COUNT(*)
+		FROM mp_board2
+		<where>
+			<if test="@Ognl@isNotEmpty(searchText)">				
+				 AND ${searchColumn}  LIKE CONCAT('',#{searchText},'%')
+			</if>
+			<if test="@Ognl@isNotEmpty(priority)">				
+				<![CDATA[ 
+				 AND priority >= #{priority}
+				]]>	
+			</if>		
+		</where>		
+	</select>
+	
+	<select id="selectYboard"  resultType="Board" parameterType="boardSearch">
+		SELECT boardID, boardTitle, priority, userName, userGender, registDate
+		FROM mp_board2
+		<where>
+			<if test="@Ognl@isNotEmpty(searchText)">				
+				AND ${searchColumn}  LIKE CONCAT('',#{searchText},'%')
+			</if>
+			<if test="@Ognl@isNotEmpty(priority)">				
+				<![CDATA[ 
+				AND priority >= #{priority}
+				]]>	
+			</if>		
+		</where>		
+		ORDER BY registDate DESC LIMIT #{start}, #{limit}
+	</select>
+	
+	<select id="viewYboard" resultType="Board" parameterType="map">
+		SELECT boardID, boardTitle, boardContent, priority, userName, userGender, registDate
+		FROM mp_board2 WHERE boardID = #{boardID}
+	</select>
+	
+	<insert id="insertYboard" parameterType="Board">
+		INSERT INTO mp_board2(boardTitle, boardContent, priority, userName, userGender, registDate)
+		VALUES(#{boardTitle}, #{boardContent}, #{priority}, #{userName}, #{userGender}, NOW())
+	</insert>
+	
+	<update id="updateYboard" parameterType="Board">
+		UPDATE mp_board2 
+	 	<set>
+	 		<if test="@Ognl@isNotEmpty(boardTitle)">	
+	 			boardTitle = #{boardTitle},
+	 		</if>	 	
+	 		<if test="@Ognl@isNotEmpty(priority)">	
+	 			priority = #{priority},
+	 		</if>	 		 		
+	 		<if test="@Ognl@isNotEmpty(boardContent)">				
+	 			boardContent = #{boardContent},
+	 		</if>	 	 		
+	 		<if test="@Ognl@isNotEmpty(userName)">				
+	 			userName = #{userName},
+	 		</if>	 		 	
+	 		<if test="@Ognl@isNotEmpty(userGender)">				
+	 			userGender = #{userGender},
+	 		</if>	
+	 	</set>
+	 	WHERE boardID = #{boardID}
+	</update>
+	
+	<delete id="deleteYboard" parameterType="map">
+		DELETE FROM mp_board2 WHERE boardID= #{boardID}
+	</delete>
+</mapper>    
