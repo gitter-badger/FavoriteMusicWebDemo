@@ -6,7 +6,7 @@ function yboardList($scope, $http) {
 	$http({
 		url: '/yboard/select',
 		method: 'POST',				
-		data: yboard,				
+		data: board,				
 	}).success(function(returnJSON) {
 			$scope.yboards = returnJSON.items;
 	});

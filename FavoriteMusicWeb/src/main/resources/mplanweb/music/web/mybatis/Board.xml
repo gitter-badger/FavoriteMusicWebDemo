@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    
+
 <mapper namespace="mplanweb.music.web.board">
 
-	<select id="selectTotalCountYboard"  resultType="int" parameterType="boardSearch">
+
+		
+<select id="selectTotalCountYboard"  resultType="int" parameterType="boardSearch">
 		SELECT COUNT(*)
 		FROM mp_board2
 		<where>
@@ -18,7 +20,8 @@
 		</where>		
 	</select>
 	
-	<select id="selectYboard"  resultType="Board" parameterType="boardSearch">
+
+<select id="selectYboard"  resultType="Board" parameterType="boardSearch">
 		SELECT boardID, boardTitle, priority, userName, userGender, registDate
 		FROM mp_board2
 		<where>
@@ -69,4 +72,6 @@
 	<delete id="deleteYboard" parameterType="map">
 		DELETE FROM mp_board2 WHERE boardID= #{boardID}
 	</delete>
+
+
 </mapper>    

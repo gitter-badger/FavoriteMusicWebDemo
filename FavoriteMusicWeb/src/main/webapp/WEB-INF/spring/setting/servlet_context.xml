@@ -16,6 +16,7 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
+
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
 	<beans:bean
@@ -23,7 +24,5 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-
-	<context:component-scan base-package="mplanweb.music.web, mplanweb.music.web.admin, mplanweb.music.web.admin.mybatis, mplanweb.music.web.board" />
-	
+<context:component-scan base-package="mplanweb.music" />
 </beans:beans>

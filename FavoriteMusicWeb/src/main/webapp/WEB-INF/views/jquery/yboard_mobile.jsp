@@ -8,9 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="resources/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"	rel="stylesheet">
-<script src="resources/bower_components/jquery/jquery.min.js"></script>
-<script src="resources/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="/web/resources/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"	rel="stylesheet">
+<script src="/web/resources/bower_components/jquery/jquery.min.js"></script>
+<script src="/web/resources/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 <body onload="yboardReload()">
@@ -65,5 +65,5 @@
 			<a href="#page1" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back">Back</a>
 	</div>
 </body>
-<script src="resources/js/jquery/yboard_mobile.js"></script>
+<script src="/web/resources/js/jquery/yboard_mobile.js"></script>
 </html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		<setting name="useGeneratedKeys" value="false" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="mplanweb.music.web.admin.MemberDAO" alias="member" />
+		<typeAlias alias="Board" type="mplanweb.music.web.board.Board" />
+		<typeAlias alias="BoardSearch" type="mplanweb.music.web.board.BoardSearch" />
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="mplanweb/music/web/mybatis/AdminMemberMapper.xml" />
+		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
+	</mappers>
+
+</configuration>

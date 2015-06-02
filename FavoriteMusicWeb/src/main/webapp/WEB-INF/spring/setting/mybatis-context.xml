@@ -19,13 +19,14 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
+		
 	</bean>
 
 	<!-- SESSIONFACTORY 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- ibatis와 다르게 sql디렉토리에 xml 추가만 해주면 별도추가없이 알아서 xml내의 쿼리 인식 -->
-		<property name="mapperLocations" value="/WEB-INF/spring/mapper/*.xml" />
+		<property name="configLocation" value="classpath:mplanweb/music/web/mybatis/Configuration.xml" />
 	</bean>
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
@@ -37,9 +38,7 @@
 	</bean>
 
 
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="mplanweb.music.web" />
-	</bean>
+
 
 	<!-- log4j -->
 	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">

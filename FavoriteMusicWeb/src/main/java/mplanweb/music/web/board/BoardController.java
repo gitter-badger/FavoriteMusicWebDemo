@@ -5,12 +5,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
+import mplanweb.music.web.AdminController;
 import mplanweb.music.web.etc.BoardLogger;
 import mplanweb.music.web.etc.BoardStringUtil;
 import mplanweb.music.web.etc.ResultJSON;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.mobile.device.Device;
+import org.springframework.mobile.device.DeviceUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,10 +27,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class BoardController  extends BoardLogger{
-	
+
+public class BoardController extends BoardLogger {
+
 	@Autowired
 	private BoardService BoardService;
+
+	@RequestMapping(value = "/jquery", method = RequestMethod.GET)
+	protected String showJqueryPage(HttpServletRequest request, Model model) {
+
+		Device device = DeviceUtils.getCurrentDevice(request);
+		model.addAttribute("yboard", new Board()); // 초기세션처리를 위해 디폴트 처리
+		if (device.isNormal()) {
+			return "/jquery/yboard";
+		} else {
+			return "/jquery/yboard_mobile";
+		}
+
+	}
+
 	@RequestMapping(value = "/angular", method = RequestMethod.GET)
 	protected String showAngularPage(Model model) {
 		model.addAttribute("yboard", new Board()); // 초기세션처리를 위해 디폴트 처리
@@ -47,10 +69,10 @@ public class BoardController  extends BoardLogger{
 		resultJSON.setSuccess(true);
 		return resultJSON;
 	}
-	
-	
+
 	/**
 	 * yboard 입력
+	 * 
 	 * @param yboard
 	 * @return
 	 */
@@ -62,10 +84,10 @@ public class BoardController  extends BoardLogger{
 		resultJSON.setSuccess(true);
 		return resultJSON;
 	}
-	
-	
+
 	/**
-	 * yboard에서 체크된 값들 삭제처리 
+	 * yboard에서 체크된 값들 삭제처리
+	 * 
 	 * @param boardIDs
 	 * @return
 	 */
@@ -76,18 +98,20 @@ public class BoardController  extends BoardLogger{
 		String boardIDs = String.valueOf(param.get("boardIDs"));
 		List<Map<String, Object>> mapList = new ArrayList<Map<String, Object>>();
 		String[] boardIDEncrypts = boardIDs.split(",");
-		for (String boardIDEncrypt: boardIDEncrypts) {
+		for (String boardIDEncrypt : boardIDEncrypts) {
 			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("boardID", BoardStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
+			map.put("boardID",
+					BoardStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
 			mapList.add(map);
 		}
 		BoardService.deleteYboard(mapList);
 		resultJSON.setSuccess(true);
 		return resultJSON;
 	}
-	
+
 	/**
-	 * yboard 보기 
+	 * yboard 보기
+	 * 
 	 * @param boardIDs
 	 * @return
 	 */
@@ -96,15 +120,16 @@ public class BoardController  extends BoardLogger{
 	public ResultJSON viewYboard(@PathVariable String boardIDEncrypt) {
 		ResultJSON resultJSON = new ResultJSON();
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("boardID", BoardStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
+		map.put("boardID",
+				BoardStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
 		resultJSON.setData(BoardService.viewYboard(map));
 		resultJSON.setSuccess(true);
 		return resultJSON;
 	}
-	
-	
+
 	/**
 	 * yboard 수정처리
+	 * 
 	 * @param boardIDs
 	 * @return
 	 */
@@ -112,11 +137,11 @@ public class BoardController  extends BoardLogger{
 	@ResponseBody
 	public ResultJSON updateYboard(@RequestBody Board board) {
 		ResultJSON resultJSON = new ResultJSON();
-		board.setBoardID(BoardStringUtil.getTmsDecryptoAesForInt(board.getBoardIDEncrypt()));
+		board.setBoardID(BoardStringUtil.getTmsDecryptoAesForInt(board
+				.getBoardIDEncrypt()));
 		BoardService.updateYboard(board);
 		resultJSON.setSuccess(true);
 		return resultJSON;
 	}
 
 }
-

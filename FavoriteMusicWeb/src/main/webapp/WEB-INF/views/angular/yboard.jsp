@@ -5,33 +5,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Yboard for AngularJS</title>
-<link href="resources/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="resources/bower_components/angular/angular.min.js"></script>
+<link href="/web/resources/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="/web/resources/bower_components/angular/angular.min.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="page-header">
 			<h1>
-				Yboard <small>for AngularJS</small>
+				AngularJS</small>
 			</h1>
 		</div>
 		<div class="row">
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<!-- Default panel contents -->
-					<div class="panel-heading">Search Box</div>
+					<div class="panel-heading">검색창</div>
 					<div class="panel-body">
 						<div class="col-md-6">
 							<div class="input-group">
 								<input type="text" class="form-control"> <span
 									class="input-group-btn">
-									<button class="btn btn-default" type="button">Search!</button>
+									<button class="btn btn-default" type="button">검색</button>
 								</span>
 							</div>
 						</div>
 						<div class="col-md-3">
-							<button type="button" class="btn btn-primary">Add</button>
-							<button type="button" class="btn btn-danger">Delete</button>
+							<button type="button" class="btn btn-primary">추가</button>
+							<button type="button" class="btn btn-danger">삭제</button>
 						</div>
 					</div>
 					<!-- Table -->
@@ -39,23 +39,23 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox"/></th>
-								<th>ID</th>
-								<th>TITLE</th>
-								<th>PRIORITY</th>
-								<th>USERNAME</th>
-								<th>GENDER</th>
-								<th>DATE</th>
+								<th>아이디</th>
+								<th>제목</th>
+								<th>위선권</th>
+								<th>닉네임</th>
+								<th>남여</th>
+								<th>날짜</th>
 							</tr>							
 						</thead>
 						<tbody ng-controller="yboardList">
 							<tr ng-repeat="yboard in yboards">
 								<td><input type="checkbox"/></td>
-								<td>{{yboard.boardID}}</td>
-								<td>{{yboard.boardTitle}}</td>
-								<td>{{yboard.priority}}</td>
-								<td>{{yboard.userName}}</td>
-								<td>{{yboard.userGender}}</td>
-								<td>{{yboard.registDate}}</td>
+								<td>{{Board.boardID}}</td>
+								<td>{{Board.boardTitle}}</td>
+								<td>{{Board.priority}}</td>
+								<td>{{Board.userName}}</td>
+								<td>{{Board.userGender}}</td>
+								<td>{{Board.registDate}}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -75,5 +75,5 @@
 		</div>
 	</div>
 </body>
-<script src="resources/js/angular/yboard.js"></script>
+<script src="/web/resources/js/angular/yboard.js"></script>
 </html>
