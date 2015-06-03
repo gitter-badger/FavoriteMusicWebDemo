@@ -38,11 +38,9 @@ public class BoardController extends BoardLogger {
 
 		Device device = DeviceUtils.getCurrentDevice(request);
 		model.addAttribute("yboard", new Board()); // 초기세션처리를 위해 디폴트 처리
-		if (device.isNormal()) {
+
 			return "/jquery/yboard";
-		} else {
-			return "/jquery/yboard_mobile";
-		}
+	
 
 	}
 

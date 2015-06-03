@@ -43,7 +43,27 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
-
+		<!-- Excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-excelant</artifactId>
+			<version>3.12</version>
+		</dependency>
 		<!-- JSONObject 모듈추가 -->
 		<dependency>
 			<groupId>org.json</groupId>
@@ -202,7 +222,7 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-		<!-- <scope>runtime</scope> -->
+			<!-- <scope>runtime</scope> -->
 		</dependency>
 
 

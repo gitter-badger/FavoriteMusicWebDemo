@@ -50,12 +50,12 @@
 						<tbody ng-controller="yboardList">
 							<tr ng-repeat="yboard in yboards">
 								<td><input type="checkbox"/></td>
-								<td>{{Board.boardID}}</td>
-								<td>{{Board.boardTitle}}</td>
-								<td>{{Board.priority}}</td>
-								<td>{{Board.userName}}</td>
-								<td>{{Board.userGender}}</td>
-								<td>{{Board.registDate}}</td>
+								<td>{{board.boardID}}</td>
+								<td>{{boardSearch.boardTitle}}</td>
+								<td>{{boardSearch.priority}}</td>
+								<td>{{boardSearch.userName}}</td>
+								<td>{{boardSearch.userGender}}</td>
+								<td>{{boardSearch.registDate}}</td>
 							</tr>
 						</tbody>
 					</table>

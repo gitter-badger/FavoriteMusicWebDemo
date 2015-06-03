@@ -5,19 +5,22 @@
 
 <configuration>
 	<settings>
+
 		<setting name="cacheEnabled" value="true" />
 		<setting name="useGeneratedKeys" value="false" />
 	</settings>
 
 	<typeAliases>
-		<typeAlias type="mplanweb.music.web.admin.MemberDAO" alias="member" />
+
 		<typeAlias alias="Board" type="mplanweb.music.web.board.Board" />
 		<typeAlias alias="BoardSearch" type="mplanweb.music.web.board.BoardSearch" />
+		<typeAlias alias="Excel" type="mplanweb.music.web.admin.excel.Excel" />
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mplanweb/music/web/mybatis/AdminMemberMapper.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
+		<mapper resource="mplanweb/music/web/mybatis/excel.xml" />
 	</mappers>
 
 </configuration>
