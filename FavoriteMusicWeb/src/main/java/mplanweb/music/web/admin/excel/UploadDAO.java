@@ -8,6 +8,7 @@ import java.util.List;
  * 
  * 
  */
-public interface UploadDao {
-	void addExcel(List<Excel> list);
+public interface UploadDAO {
+
+	public void addExcel(List<Excel> list);
 }

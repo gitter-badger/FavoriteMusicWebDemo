@@ -24,5 +24,6 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-<context:component-scan base-package="mplanweb.music" />
+	
+	<context:component-scan base-package="mplanweb.music" />
 </beans:beans>

@@ -19,14 +19,15 @@
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
-		
+
 	</bean>
 
 	<!-- SESSIONFACTORY 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- ibatis와 다르게 sql디렉토리에 xml 추가만 해주면 별도추가없이 알아서 xml내의 쿼리 인식 -->
-		<property name="configLocation" value="classpath:mplanweb/music/web/mybatis/Configuration.xml" />
+		<property name="configLocation"
+			value="classpath:mplanweb/music/web/mybatis/Configuration.xml" />
 	</bean>
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
@@ -36,8 +37,6 @@
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-
-
 
 
 	<!-- log4j -->
@@ -51,8 +50,11 @@
 		</property>
 	</bean>
 
+	<!-- Configure the multipart resolver -->
 	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
-
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes (100MB) -->
+		<property name="maxUploadSize" value="100000000  " />
+	</bean>
 	<tx:annotation-driven transaction-manager="transactionManager" />
 </beans>

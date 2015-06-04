@@ -33,7 +33,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class UploadController implements HandlerExceptionResolver{
 	
 	@Autowired
-	private IUploadService iUploadService;
+	private UploadService UploadService;
 	
 	private static List<Excel> list = new ArrayList<Excel>();
 	
@@ -88,7 +88,7 @@ public class UploadController implements HandlerExceptionResolver{
             }
             file.close();
             
-	        iUploadService.addExcel(list);
+            UploadService.addExcel(list);
             
 	        list.clear();
 	        

@@ -14,7 +14,6 @@
 
 		<typeAlias alias="Board" type="mplanweb.music.web.board.Board" />
 		<typeAlias alias="BoardSearch" type="mplanweb.music.web.board.BoardSearch" />
-		<typeAlias alias="Excel" type="mplanweb.music.web.admin.excel.Excel" />
 	</typeAliases>
 
 	<mappers>

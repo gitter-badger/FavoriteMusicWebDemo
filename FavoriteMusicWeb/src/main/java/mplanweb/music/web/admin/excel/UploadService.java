@@ -11,14 +11,8 @@ import org.springframework.stereotype.Service;
  * 
  * 
  */
-@Service
-public class UploadService {
 
-	@Autowired
-	private UploadDao uploadDao;
-
-	public void addExcel(List<Excel> list) {
-		uploadDao.addExcel(list);
-	}
+public interface UploadService {
+	public  void addExcel(List<Excel> list);
 
 }
