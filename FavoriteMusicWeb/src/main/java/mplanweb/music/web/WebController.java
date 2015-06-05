@@ -1,12 +1,10 @@
-package mplanweb.music.web.admin;
+package mplanweb.music.web;
 
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-
-import mplanweb.music.web.AdminController;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

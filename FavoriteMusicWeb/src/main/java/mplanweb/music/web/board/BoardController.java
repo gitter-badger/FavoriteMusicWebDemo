@@ -7,7 +7,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import mplanweb.music.web.AdminController;
 import mplanweb.music.web.etc.BoardLogger;
 import mplanweb.music.web.etc.BoardStringUtil;
 import mplanweb.music.web.etc.ResultJSON;

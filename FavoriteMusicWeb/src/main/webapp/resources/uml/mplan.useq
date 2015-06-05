@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sequence-diagram version="1.1.8" icons="true">  
-  <object id="1" language="java" name="mplanweb.music.web.AdminController" project="FavoriteMusicWeb" 
-    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/AdminController.java" binary="false" 
-    label="adminController" type="class" autoSize="true">    
-    <position height="-1" width="-1" x="224" y="0"/>  
-  </object>  
-  <object id="2" language="java" name="mplanweb.music.web.admin.MainDAO" project="FavoriteMusicWeb" 
+  <object id="1" language="java" name="mplanweb.music.web.admin.MainDAO" project="FavoriteMusicWeb" 
     file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/admin/MainDAO.java" binary="false" label="mainDAO" 
     type="interface" autoSize="true">    
     <position height="-1" width="-1" x="185" y="0"/>  
   </object>  
-  <object id="3" language="java" name="mplanweb.music.web.admin.MainDaoImpl" project="FavoriteMusicWeb" 
+  <object id="2" language="java" name="mplanweb.music.web.admin.MainDaoImpl" project="FavoriteMusicWeb" 
     file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/admin/MainDaoImpl.java" binary="false" label="mainDaoImpl" 
     type="class" autoSize="true">    
     <position height="-1" width="-1" x="373" y="0"/>  
   </object>  
-  <object id="4" language="java" name="mplanweb.music.web.admin.MemberService" project="FavoriteMusicWeb" 
+  <object id="3" language="java" name="mplanweb.music.web.admin.MemberService" project="FavoriteMusicWeb" 
     file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/admin/MemberService.java" binary="false" 
     label="memberService" type="class" autoSize="true">    
     <position height="-1" width="-1" x="500" y="0"/>  
   </object>  
-  <object id="5" language="java" name="mplanweb.music.web.admin.WebController" project="FavoriteMusicWeb" 
+  <object id="4" language="java" name="mplanweb.music.web.admin.WebController" project="FavoriteMusicWeb" 
     file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/admin/WebController.java" binary="false" 
     label="webController" type="class" autoSize="true">    
     <position height="-1" width="-1" x="650" y="0"/>  
