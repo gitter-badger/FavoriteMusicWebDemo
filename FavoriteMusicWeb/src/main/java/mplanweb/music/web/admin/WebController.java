@@ -1,4 +1,4 @@
-package mplanweb.music.web;
+package mplanweb.music.web.admin;
 
 import java.security.Principal;
 import java.util.ArrayList;

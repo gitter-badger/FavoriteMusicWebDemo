@@ -49,10 +49,6 @@
 			</bean>
 		</property>
 	</bean>
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="mplanweb.music.web" />
-	</bean>
-
 	<!-- Configure the multipart resolver -->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

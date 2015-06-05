@@ -11,7 +11,6 @@
 	</settings>
 
 	<typeAliases>
-
 		<typeAlias alias="Board" type="mplanweb.music.web.board.Board" />
 		<typeAlias alias="BoardSearch" type="mplanweb.music.web.board.BoardSearch" />
 	</typeAliases>
