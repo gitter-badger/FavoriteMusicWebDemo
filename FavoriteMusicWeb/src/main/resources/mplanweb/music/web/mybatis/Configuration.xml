@@ -11,14 +11,19 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias alias="Board" type="mplanweb.music.web.board.Board" />
-		<typeAlias alias="BoardSearch" type="mplanweb.music.web.board.BoardSearch" />
+
+	
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mplanweb/music/web/mybatis/AdminMemberMapper.xml" />
-		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
-		<mapper resource="mplanweb/music/web/mybatis/excel.xml" />
+	
+	
 	</mappers>
 
+<!--  	<mapper resource="mplanweb/music/web/mybatis/excel.xml" 
+		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
+		<typeAlias alias="Board" type="mplanweb.music.web.board.Board" />
+		<typeAlias alias="BoardSearch" type="mplanweb.music.web.board.BoardSearch" />
+/> -->
 </configuration>

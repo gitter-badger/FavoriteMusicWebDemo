@@ -379,6 +379,7 @@
 				<configuration>
 					<forkMode>always</forkMode>
 					<reportFormat>xml</reportFormat>
+					<argLine>-XX:MaxPermSize=4096m -Xms4096m -Xmx4096m</argLine>
 				</configuration>
 			</plugin>
 		</plugins>

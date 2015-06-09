@@ -27,15 +27,22 @@ public class AdminController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	//Admin Page 
+	//Main Page
 	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String Main(Locale locale, Model model) {
+		logger.info("LoginPage ==> MainPage : ", locale);
+		return "/main/index";
+	}
+
+	//admin Page
+	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String Admin(Locale locale, Model model) {
 		logger.info("LoginPage ==> MainPage : ", locale);
 		return "/admin/index";
 	}
-
-	//member 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/admin/login", method = RequestMethod.GET)
 	public String action(Locale locale, Model model) {
 		logger.info("MainPage ==> ??? : ", locale);
 
