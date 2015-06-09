@@ -51,9 +51,11 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	<!-- <servlet-mapping> <servlet-name>appServlet</servlet-name> <url-pattern>*.do</url-pattern> 
-		</servlet-mapping> -->
-	<!-- Spring security -->
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
 
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
