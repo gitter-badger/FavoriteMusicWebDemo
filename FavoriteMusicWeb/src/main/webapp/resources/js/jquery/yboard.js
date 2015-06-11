@@ -21,9 +21,9 @@ function showList(search) {
 		dataType: 'JSON',
 		data:  JSON.stringify(search),
 	    contentType:"application/json; charset=UTF-8",
-		url: '/yboard/select',
+		url: '/web/select',
 		error: function() {
-			alert("Loading failed!");
+			alert("test");
 		},
 		success: function(returnJSON) {
 			if (returnJSON.success) {
@@ -71,7 +71,7 @@ function viewYboard(boardIDEncrypt) {
 		type: "GET",
 		dataType: "JSON",
 		contentType: "application/json; charset=UTF-8",
-		url: "/yboard/view/"+boardIDEncrypt,
+		url: "/web/view/"+boardIDEncrypt,
 		error: function() {
 			alert("Loading failed!");
 		},
@@ -235,7 +235,7 @@ $('#btnYboardSave').click(function() {
 		dataType: "JSON",
 		data: JSON.stringify(yboard),
 		contentType : "application/json; charset=UTF-8",
-		url: '/yboard/'+method,
+		url: '/web/'+method,
 		error: function() {
 			alert("Loading failed!");
 		},

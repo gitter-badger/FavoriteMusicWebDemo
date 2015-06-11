@@ -63,7 +63,11 @@
 .MNA .MNAList h3 a:hover { color:#e40076; }
 .MNA .MNAList .MNALSub { position:absolute; width:366px; height:130px; left:0; top:60px; display:none; }
 .MNA .MNAList .MNALSub.on { display:block; }
-.MNA .MNAList .MNALSub .MNALSInner { position:relative; width:100%; height:100%; }
+.MNA .MNAList .MNALSub .MNALSInner {
+	position: relative;
+	width: 200%;
+	height: 100%;
+}
 .MNA .MNAList .MNALSub .MNALSInner ul { height:100%; }
 .MNA .MNAList .MNALSub .MNALSInner ul li { position:relative; float:left; width:104px; height:100%; margin-bottom:16px; padding-left:19px; }
 .MNA .MNAList .MNALSub .MNALSInner ul li a { position:relative; height:104px; margin-bottom:8px; display:block; }

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mplanweb.music.web.board">
+<mapper namespace="Yboard">
 
-
-		
-<select id="selectTotalCountYboard"  resultType="int" parameterType="boardSearch">
+<select id="selectTotalCountYboard"  resultType="int" parameterType="YboardSearch">
 		SELECT COUNT(*)
-		FROM mp_board2
+		FROM yboard
 		<where>
 			<if test="@Ognl@isNotEmpty(searchText)">				
 				 AND ${searchColumn}  LIKE CONCAT('',#{searchText},'%')
@@ -20,10 +18,9 @@
 		</where>		
 	</select>
 	
-
-<select id="selectYboard"  resultType="Board" parameterType="boardSearch">
+	<select id="selectYboard"  resultType="Yboard" parameterType="YboardSearch">
 		SELECT boardID, boardTitle, priority, userName, userGender, registDate
-		FROM mp_board2
+		FROM yboard
 		<where>
 			<if test="@Ognl@isNotEmpty(searchText)">				
 				AND ${searchColumn}  LIKE CONCAT('',#{searchText},'%')
@@ -37,18 +34,18 @@
 		ORDER BY registDate DESC LIMIT #{start}, #{limit}
 	</select>
 	
-	<select id="viewYboard" resultType="Board" parameterType="map">
+	<select id="viewYboard" resultType="Yboard" parameterType="map">
 		SELECT boardID, boardTitle, boardContent, priority, userName, userGender, registDate
-		FROM mp_board2 WHERE boardID = #{boardID}
+		FROM yboard WHERE boardID = #{boardID}
 	</select>
 	
-	<insert id="insertYboard" parameterType="Board">
-		INSERT INTO mp_board2(boardTitle, boardContent, priority, userName, userGender, registDate)
+	<insert id="insertYboard" parameterType="Yboard">
+		INSERT INTO yboard(boardTitle, boardContent, priority, userName, userGender, registDate)
 		VALUES(#{boardTitle}, #{boardContent}, #{priority}, #{userName}, #{userGender}, NOW())
 	</insert>
 	
-	<update id="updateYboard" parameterType="Board">
-		UPDATE mp_board2 
+	<update id="updateYboard" parameterType="Yboard">
+		UPDATE yboard 
 	 	<set>
 	 		<if test="@Ognl@isNotEmpty(boardTitle)">	
 	 			boardTitle = #{boardTitle},
@@ -70,8 +67,6 @@
 	</update>
 	
 	<delete id="deleteYboard" parameterType="map">
-		DELETE FROM mp_board2 WHERE boardID= #{boardID}
+		DELETE FROM yboard WHERE boardID= #{boardID}
 	</delete>
-
-
 </mapper>    

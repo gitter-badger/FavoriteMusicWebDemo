@@ -6,35 +6,12 @@ body, td, th {
 
 #header {
 	font-family: 'Nanum Gothic';
-	position: relative;
+	position: static;
 	width: 100%;
 	z-index: 100;
 	height: 105px;
 	background-color: #EEEEED;
 	border-bottom: 2px solid #9E9E9E;
-}
-#header .inner_wrap {
-	width: 980px;
-	margin: auto;
-	position: relative;
-	background: none;
-	z-index: 100;
-	height: 57px;
-}
-.inner_wrap #logo .logoimg {
-		position: absolute;
-	top: 20px;
-	width: 260px;
-	display: block;
-	height: 30px;
-	background-image: url(img/main.png);
-	text-indent: -100%;
-	white-space: nowrap;
-	overflow: hidden;
-	font-size: 0;
-	line-height: 0;
-	text-shadow: none;
-	color: transparent;
 }
 
 #header .inner_wrap .search {
@@ -99,17 +76,21 @@ body, td, th {
 }
 #center {
 	font-family: 'Nanum Gothic';
-	width: 100%;
-	height: 1414px;
+	position: static;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
 }
 #center .center_wrap {
 	margin: auto;
 	width: 980px;
+	position: static;
+	height: 100%;
 }
 #center .center_wrap .slider {
 	position: relative;
 	width: 660px;
-	margin-top: 20px;
 	float: left;
 }
 
@@ -128,12 +109,12 @@ body, td, th {
 #footer {
 	font-family: 'Nanum Gothic';
 	width: 100%;
-	position: static;
 	background: #eaeae8;
 	border-top: 2px solid #9E9E9E;
 	bottom: 0%;
 	left: 0%;
-	height: 115px;
+	clear: both;
+	position: static;
 }
 #footer #footerwarp {
 	width: 980px;
@@ -205,31 +186,55 @@ body, td, th {
 	margin-top: 5px;
 	margin-bottom: 0px;
 }
+#header .inner_wrap {
+	width: 980px;
+	margin: auto;
+	position: relative;
+	background: none;
+	z-index: 100;
+	height: 57px;
+}
 #header .nav {
-	float: left;
-	left: 156px;
-	position: absolute;
+	position: relative;
 	top: 59px;
+	left: -34px;
+}
+.inner_wrap #logo .logoimg {
+		position: absolute;
+	top: 20px;
+	width: 260px;
+	display: block;
+	height: 30px;
+	background-image: url(img/main.png);
+	text-indent: -100%;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	text-shadow: none;
+	color: transparent;
 }
 
 #header .nav ul li {
 	overflow: hidden;
 	width: 70px;
-}
-#header .nav ul li {
+	display: block;
 	float: left;
-	left: 62%;
+	white-space: nowrap;
 }
 #header .nav li a {
 	background-image: url(img/menulogo.png);
 	display: block;
 	height: 38px;
 	overflow: hidden;
+	margin: auto;
 	text-indent: -999px;
+
+
+
 	width: 73px
 	
 	width: 96px;
-	left: 57px;
 }
 #header .nav li.nav_0 a {
 	background-position: 0 0px
@@ -315,7 +320,6 @@ body, td, th {
 }
 
 .box {
-	position: relative;
 	border-radius: 3px;
 	background: #ffffff;
 	border-top: 3px solid #d2d6de;
@@ -326,7 +330,7 @@ body, td, th {
 	clear: right;
 }
 .box.box-primary {
-	border-top-color: #3c8dbc
+	border-top-color: #3c8dbc;
 }
 .box.box-info {
 	border-top-color: #00c0ef
