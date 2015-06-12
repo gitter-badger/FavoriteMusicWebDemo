@@ -1,4 +1,4 @@
-package mplanweb.music.web.uploadtest;
+package mplanweb.music.web.upload;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -87,10 +87,10 @@ public class UploadController {
 
 		// 업로드 파일 Request
 		MultipartFile mimg = request.getFile("imgupload");
-		MultipartFile m320k = request.getFile("m320kupload");
-		MultipartFile m192k = request.getFile("m192kupload");
+		MultipartFile m320k = request.getFile("m192kupload");
+		MultipartFile m192k = request.getFile("m320kupload");
 
-		if (m320k != null && m192k != null && mimg != null) {
+		if (m320k != null) {
 			// Request 업로드 정확히 받냐 안받냐 Test
 			System.out.println("Parameter Name : " + mimg.getName());
 			System.out.println("File Name : " + mimg.getOriginalFilename());
@@ -107,25 +107,28 @@ public class UploadController {
 			String pimgName = mimg.getName();
 			String fimgName = mimg.getOriginalFilename();
 			String imgcontentType = mimg.getContentType();
+			long imgsize = mimg.getSize();
 
 			String p320Name = m320k.getName();
 			String f320Name = m320k.getOriginalFilename();
 			String m320contentType = m320k.getContentType();
-
+			long m320size = m320k.getSize();
+			
 			String p192Name = m192k.getName();
 			String f192Name = m192k.getOriginalFilename();
 			String m192contentType = m192k.getContentType();
-
+			long m192size = m192k.getSize();
+			
 			// Upload 파일명 uuid변경
 			String uploadFimgName = System.currentTimeMillis()
 					+ UUID.randomUUID().toString()
-					+ pimgName.substring(pimgName.lastIndexOf("."));
+					+ fimgName.substring(fimgName.lastIndexOf("."));
 			String uploadF320Name = System.currentTimeMillis()
 					+ UUID.randomUUID().toString()
-					+ p320Name.substring(p320Name.lastIndexOf("."));
+					+ f320Name.substring(f320Name.lastIndexOf("."));
 			String uploadF192Name = System.currentTimeMillis()
 					+ UUID.randomUUID().toString()
-					+ p192Name.substring(p192Name.lastIndexOf("."));
+					+ f192Name.substring(f192Name.lastIndexOf("."));
 
 			String uploadimgPath = "E://upload//img//";
 			String upload320Path = "E://upload//music192k//";
@@ -136,21 +139,21 @@ public class UploadController {
 			logger.info("File img = " + uploadimgPath);
 			logger.info("File 320 = " + upload320Path);
 			logger.info("File 192 = " + upload192Path);
+
 			// 파일 저장
-			if (m320k.getSize() != 0 && m192k.getSize() != 0
-					&& mimg.getSize() != 0) {
-				mimg.transferTo(new File(uploadimgPath + "/upload/"
+			if (m320k.getSize() != 0) {
+				mimg.transferTo(new File(uploadimgPath + "/"
 						+ uploadFimgName));
-				m320k.transferTo(new File(upload320Path + "/upload/"
+				m320k.transferTo(new File(upload320Path + "/"
 						+ uploadF320Name));
-				m192k.transferTo(new File(upload192Path + "/upload/"
+				m192k.transferTo(new File(upload192Path + "/"
 						+ uploadF192Name));
 			}
 
 			result.put("paramname", pimgName);
 			result.put("fileName", fimgName);
 			result.put("uploadedFileName", uploadFimgName);
-			result.put("fileSize", mimg.getSize());
+			result.put("fileSize", imgsize);
 			result.put("contentType", imgcontentType);
 			String downlinkimg = "fileDownloads?of="
 					+ URLEncoder.encode(fimgName, "UTF-8") + "&f="
@@ -160,7 +163,7 @@ public class UploadController {
 			result.put("paramname", p320Name);
 			result.put("fileName", f320Name);
 			result.put("uploadedFileName", uploadF320Name);
-			result.put("fileSize", m320k.getSize());
+			result.put("fileSize", m320size);
 			result.put("contentType", m320contentType);
 			String downlink320k = "fileDownloads?of="
 					+ URLEncoder.encode(f320Name, "UTF-8") + "&f="
@@ -170,13 +173,26 @@ public class UploadController {
 			result.put("paramname", p192Name);
 			result.put("fileName", f192Name);
 			result.put("uploadedFileName", uploadF192Name);
-			result.put("fileSize", m192k.getSize());
+			result.put("fileSize", m192size);
 			result.put("contentType", m192contentType);
 			String downlink192k = "fileDownloads?of="
 					+ URLEncoder.encode(f192Name, "UTF-8") + "&f="
 					+ URLEncoder.encode(uploadF192Name, "UTF-8");
 			result.put("downlink", downlink192k);
-
+			
+			logger.info("downlinkimg= " + downlinkimg);
+			logger.info("downlink320k= " + downlink320k);
+			logger.info("downlink192k = " + downlink192k);
+			
+			
+			
+			//FileInfoModel2 file = new FileInfoModel2(pimgName, p320Name,  p192Name, fimgName, f320Name, f192Name, uploadFimgName, uploadF320Name, uploadF192Name,   
+			//		imgsize, m320size, m192size, imgcontentType, m320contentType, m192contentType, downlinkimg, downlink320k, downlink192k);
+			
+			
+			FileInfoModel2.FileInfoModel2(result);
+	
+			
 		}
 
 		// View Data Save
@@ -188,6 +204,9 @@ public class UploadController {
 		result.put("year", year);
 		result.put("corp", corp);
 		return result;
+		
+		
+		
 	}
 
 	// Multiupload upload
@@ -220,7 +239,16 @@ public class UploadController {
 
 		HashMap<String, Object> result = new HashMap<String, Object>();
 
+		// list
+		// List<MultipartFile> mlist = request.getFiles("imgupload");
+		// List<MultipartFile> mlist = request.getFiles("imgupload");
 		List<MultipartFile> mlist = request.getFiles("uploadFile");
+
+		// MultipartFile mfile = request.getFile("uploadFile");
+
+		// logger.info("test : " + mlist.get(i).getName());
+		// logger.info("test : " + mlist.get(i).getOriginalFilename());
+		// logger.info("test : " + mlist.get(i).getSize());
 
 		// 1번 레이 이미지
 		String img = mlist.get(0).getOriginalFilename();
@@ -303,13 +331,35 @@ public class UploadController {
 	public ModelAndView fileDownloads(HttpServletRequest request)
 			throws Exception {
 		String f = request.getParameter("f");
-		f = new String(f.getBytes("ISO8859_1"), "UTF-8");
+		String of = request.getParameter("of");
+		of = new String(f.getBytes("ISO8859_1"), "UTF-8");
 
-		String path = request.getServletContext().getRealPath("uploadFile");
-		String fullPath = path + "/" + f;
+		//String path = request.getServletContext().getRealPath("uploadFile");
+	
+		logger.info(f);
+		logger.info(of);
 
+		
+		
+
+		String mimgPath = "E://upload//img//";
+		String m320Path = "E://upload//music192k//";
+		String m192Path = "E://upload//music320k//";
+		logger.info(mimgPath);
+		logger.info(m320Path);
+		logger.info(m192Path);
+		
+		String fullPath = mimgPath + f;
+		String fullPath2 = m320Path + f;
+		String fullPath3 = m192Path + f;
+		logger.info(fullPath);
+		logger.info(fullPath2);
+		logger.info(fullPath3);
 		File downloadFile = new File(fullPath);
-
+		File downloadFile2 = new File(fullPath2);
+		File downloadFile3 = new File(fullPath3);
+		
+		
 		return new ModelAndView("download", "downloadFile", downloadFile);
 	}
 

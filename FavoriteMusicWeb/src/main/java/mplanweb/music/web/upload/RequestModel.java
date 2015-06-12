@@ -1,4 +1,4 @@
-package mplanweb.music.web.uploadtest;
+package mplanweb.music.web.upload;
 
 import org.springframework.web.multipart.MultipartFile;
 

@@ -16,18 +16,19 @@
 
 	<h3>jQuery ajax fileupload (ajax 파일업로드)</h3>
 	<form name="multiform" id="multiform"
-		action="<%=request.getContextPath()%>/fileUploads" method="POST"
+		action="<%=request.getContextPath()%>/fileuploads" method="POST"
 		enctype="multipart/form-data">
 		아티스트 이름 : <input type="text" size="20px" name="artist" /> <br /> 타이틀
 		: <input type="text" size="20px" name="title" /> <br /> 앨범명 : <input
 			type="text" size="20px" name="album" /> <br /> 가사입력 :
 		<textarea rows="10" cols="20" size="20px" name="lyric"></textarea>
 		<br /> 년도 : <input type="text" size="20px" name="year" /> <br />
-		레이블 : <input type="text" size="20px" name="corp" /> <br /> 이미지 파일 :
-		<input type="file" name="imgupload"><br /> 음질320k <input
-			type="file" name="m320kupload"><br /> 음질192k <input
-			type="file" name="m192kupload"><br /> <input type="submit"
-			id="btnSubmit" value="전송" /><br />
+		레이블 : <input type="text" size="20px" name="corp" /> <br />
+	<!-- 다중 파일업로드  -->
+	file : <input type="file" class="afile3"  name="imgupload" /> <br/>
+	file : <input type="file" class="afile3"  name="m320kupload" /> <br/>
+	file : <input type="file" class="afile3"  name="m192kupload" /> <br/>
+		<input type="submit" id="btnSubmit" value="전송"/><br/>
 	</form>
 
 	<div id="result"></div>
@@ -77,7 +78,7 @@
 			$("#result").append("연도:" + data.year + "<br/>");
 			$("#result").append("회사:" + data.corp + "<br/>");
 
-			if (data.fileName) {
+			if (data.fileName && data.fileName2 && data.fileName3) {
 				//var link = "FileDownload?f="+data.fileName+"&of="+data.fileName;        
 				$("#result").append(
 						"파일 :<a href='"+ data.downlink +"' download>"
