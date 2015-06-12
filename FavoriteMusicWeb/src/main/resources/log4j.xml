@@ -62,6 +62,9 @@
 	<logger name="mplanweb.music.web.etc">
 		<level value="info" />
 	</logger>
+	<logger name="mplanweb.music.web.uploadtest">
+		<level value="info" />
+	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">

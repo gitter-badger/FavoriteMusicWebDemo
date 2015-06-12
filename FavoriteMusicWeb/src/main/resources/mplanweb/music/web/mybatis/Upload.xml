@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<mapper namespace="uploadmusic">
+
+	<insert id="uploadfile" parameterType="result">
+
+
+		INSERT INTO mplan_music
+		(mp_artist, mp_title, mp_album, mp_lyric, mp_year, mp_corp, mp_img, mp_imgsize,
+		mp_imgo, mp_320k, mp_320size, mp_320ko, mp_192k, mp_192size, mp_192ko,
+		mp_useyn, mp_insert_date)
+		values
+		(#{artist}, #{title}, #{album}, #{lyric}, #{year}, #{corp}, #{filelist}, #{filelist}, #{filelist}, #{filelist},
+		#{filelist}, #{filelist}, #{filelist}, #{filelist}, #{filelist}, 'Y', NOW()) ;
+
+
+	</insert>
+	
+</mapper>
