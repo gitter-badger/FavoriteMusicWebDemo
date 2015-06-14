@@ -13,14 +13,15 @@
 	<typeAliases>
 		<typeAlias alias="Yboard" type="mplanweb.music.web.board.Yboard" />
 		<typeAlias alias="YboardSearch" type="mplanweb.music.web.board.YboardSearch" />
-
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mplanweb/music/web/mybatis/AdminMemberMapper.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
-
+		<mapper resource="mplanweb/music/web/mybatis/Upload.xml" />
 	</mappers>
 
-	<!-- <mapper resource="mplanweb/music/web/mybatis/excel.xml" /> -->
+
+	<!-- <mapper resource="mplanweb/music/web/mybatis/excel.xml" /> 
+	<mapper resource="mplanweb/music/web/mybatis/Upload.xml" />-->
 </configuration>

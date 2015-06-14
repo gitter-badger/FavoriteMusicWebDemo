@@ -93,7 +93,7 @@ function removeModal(){
           <li class="nav_1"><a href="#">New</a></li>
           <li class="nav_2"><a href="#">All</a></li>
           <li class="nav_3"><a href="#">Radio</a></li>
-          <li class="nav_4"><a href="#">Notice</a></li>
+          <li class="nav_4"><a href="/web/fileuploadsingle">Notice</a></li>
           <li class="nav_5"><a href="/web/jquery">Faq</a></li>
      </ul>
   </div>

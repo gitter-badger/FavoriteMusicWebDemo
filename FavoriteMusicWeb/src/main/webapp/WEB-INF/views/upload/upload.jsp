@@ -24,11 +24,11 @@
 		<textarea rows="10" cols="20" size="20px" name="lyric"></textarea>
 		<br /> 년도 : <input type="text" size="20px" name="year" /> <br />
 		레이블 : <input type="text" size="20px" name="corp" /> <br />
-	<!-- 다중 파일업로드  -->
-	file : <input type="file" class="afile3"  name="imgupload" /> <br/>
-	file : <input type="file" class="afile3"  name="m320kupload" /> <br/>
-	file : <input type="file" class="afile3"  name="m192kupload" /> <br/>
-		<input type="submit" id="btnSubmit" value="전송"/><br/>
+		<!-- 다중 파일업로드  -->
+		이미지 : <input type="file" class="afile3" name="imgupload" /> <br />
+		음질320K : <input type="file" class="afile3" name="m320kupload" /> <br />
+		음질192K : <input type="file" class="afile3" name="m192kupload" /> <br />
+		<input type="submit" id="btnSubmit" value="전송" /><br />
 	</form>
 
 	<div id="result"></div>
@@ -78,14 +78,35 @@
 			$("#result").append("연도:" + data.year + "<br/>");
 			$("#result").append("회사:" + data.corp + "<br/>");
 
-			if (data.fileName && data.fileName2 && data.fileName3) {
-				//var link = "FileDownload?f="+data.fileName+"&of="+data.fileName;        
-				$("#result").append(
-						"파일 :<a href='"+ data.downlink +"' download>"
-								+ data.fileName + "</a>");
-				$("#result").append("<br/>");
-			}
+			$("#result").append("링크1:" + data.downlinkimg + "<br/>");
+			$("#result").append("링크2:" + data.downlink192k + "<br/>");
+			$("#result").append("링크3:" + data.downlink320k + "<br/>");
 
+			$("#result").append("파일이름1:" + data.fimgName + "<br/>");
+			$("#result").append("파일이름2:" + data.f192Name + "<br/>");
+			$("#result").append("파일이름3:" + data.f320Name + "<br/>");
+
+			if (data.downlinkimg != null) {
+				$("#result").append(
+						"파일 :<a href='"+ data.downlinkimg +"' download>"
+								+ data.fimgName + "</a>");
+				$("#result").append("<br/>");
+
+			}
+			if (data.downlink192k != null) {
+				$("#result").append(
+						"파일 :<a href='"+ data.downlink192k +"' download>"
+								+ data.f192Name + "</a>");
+				$("#result").append("<br/>");
+
+			}
+			if (data.downlink320k != null) {
+				$("#result").append(
+						"파일 :<a href='"+ data.downlink320k +"' download>"
+								+ data.f320Name + "</a>");
+				$("#result").append("<br/>");
+
+			}
 			//$('#multiform')[0].reset();  //폼 초기화(리셋);
 			//$('#multiform').resetForm();   //위코드와 동일 (jQuery.Form 플러그인 메서드)
 			$('#multiform').clearForm(); //(jQuery.Form 플러그인 메서드)
