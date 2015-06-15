@@ -240,6 +240,8 @@ public class UploadController {
 		return result;
 	}
 
+	
+	// 다운로드 아직 미구현
 	@RequestMapping("/fileDownloads2")
 	public void fileDownload2(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
