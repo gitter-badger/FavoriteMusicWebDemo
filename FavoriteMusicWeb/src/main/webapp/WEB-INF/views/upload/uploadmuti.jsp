@@ -43,7 +43,7 @@
 
 	<h3>jQuery ajax fileupload (ajax 파일업로드)</h3>
 	<form name="multiform" id="multiform"
-		action="<%=request.getContextPath()%>/fileuploadm" method="POST"
+		action="<%=request.getContextPath()%>/fileUpload2" method="POST"
 		enctype="multipart/form-data">
 
 		아티스트 이름 : <input type="text" size="20px" name="artist" /> <br /> 타이틀

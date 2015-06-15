@@ -23,7 +23,7 @@
 </div>
 <div class="container-fluid">
 <div id="footer">
-	<%@ include file="../../upload/uploadmuti.jsp"%>
+	<%@ include file="../../upload/upload.jsp"%>
 </div>
 </div>
 <div id="footer">

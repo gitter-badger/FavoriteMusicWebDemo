@@ -73,7 +73,7 @@ body {
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">음원관리 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="musinin">음원 등록</a></li>
+								<li><a href="musicin">음원 등록</a></li>
 								<li><a href="musicda">음반사 관리</a></li>
 								<li><a href="musicup">음원 수정</a></li>
 								<li><a href="musical">앨범 관리</a></li>

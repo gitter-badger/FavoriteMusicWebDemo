@@ -14,21 +14,96 @@
 </head>
 <body>
 
-	<h3>jQuery ajax fileupload (ajax 파일업로드)</h3>
+	<h3>Favorite 음원 업로드</h3>
 	<form name="multiform" id="multiform"
 		action="<%=request.getContextPath()%>/fileuploads" method="POST"
 		enctype="multipart/form-data">
-		아티스트 이름 : <input type="text" size="20px" name="artist" /> <br /> 타이틀
-		: <input type="text" size="20px" name="title" /> <br /> 앨범명 : <input
-			type="text" size="20px" name="album" /> <br /> 가사입력 :
-		<textarea rows="10" cols="20" size="20px" name="lyric"></textarea>
-		<br /> 년도 : <input type="text" size="20px" name="year" /> <br />
-		레이블 : <input type="text" size="20px" name="corp" /> <br />
+			넘버 : <select name = "num">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">20</option>
+		  <option value="21">21</option>
+		  <option value="22">22</option>
+		  <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		  <option value="26">26</option>
+		  <option value="27">27</option>
+		  <option value="28">28</option>
+		  <option value="29">29</option>
+		  <option value="30">30</option>
+        </select><br />
+		아티스트 : <input type="text" size="20px" name="artist" /> <br /> 
+		타이틀 : <input type="text" size="20px" name="title" /> <br /> 
+		앨범명 : <input type="text" size="20px" name="album" /> <br /> 
+		가사입력 : <textarea rows="10" cols="20" size="20px" name="lyric"></textarea><br /> 
+		년도 : <input type="date" size="20px" name="year"><br />
+		레이블 : <input type="text" size="20px" name="label" /> <br />
+		유통사 : <input type="text" size="20px" name="corp" /> <br />
+        1차 분류(가요/팝) : <select name="genre1">
+          <option value="gayo">가요</option>
+          <option value="pop">팝</option>
+          <option value="jpop">일본음악</option>
+          <option value="cpop">중국음악</option>
+          <option value="worldmusic">월드뮤직</option>
+        </select> 
+        <br />
+		2차 분류(장르) : <select name="genre2">
+		  <option value="dance">댄스</option>
+		  <option value="electronic">일렉트로닉</option>
+		  <option value="rock">락</option>
+		  <option value="ost">O.S.T</option>
+		  <option value="balade">발라드</option>
+		  <option value="rnb">R&amp;B</option>
+		  <option value="hiphop">힙합</option>
+		  <option value="trot">트롯트</option>
+		  <option value="etc">기타</option>
+		</select> <br />
+		기타 : <input type="text" size="20px" name="etc" /> <br />
+		오픈일 : <input type="datetime-local" name="copy"><br />
+		연령제한 : <select name = "age">
+  <option value="0">전체이용가</option>
+  <option value="7">7세이용가</option>
+  <option value="12">12세이용가</option>
+  <option value="15">15세이용가</option>
+  <option value="19">19세이용가</option>
+</select>
+     <br />
 		<!-- 다중 파일업로드  -->
 		이미지 : <input type="file" class="afile3" name="imgupload" /> <br />
 		음질320K : <input type="file" class="afile3" name="m320kupload" /> <br />
 		음질192K : <input type="file" class="afile3" name="m192kupload" /> <br />
-		<input type="submit" id="btnSubmit" value="전송" /><br />
+        사용여부 : 
+        <table width="200">
+          <tr>
+            <td><label>
+              <input type="radio" name="RadioGroup1" value="Y" id="RadioGroup1_0">
+              사용</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="RadioGroup1" value="N" id="RadioGroup1_1">
+              사용불가</label></td>
+          </tr>
+        </table>
+      <input type="submit" id="btnSubmit" value="전송" /><br />
 	</form>
 
 	<div id="result"></div>
@@ -77,11 +152,6 @@
 			$("#result").append("가사:" + data.lyric + "<br/>");
 			$("#result").append("연도:" + data.year + "<br/>");
 			$("#result").append("회사:" + data.corp + "<br/>");
-
-			$("#result").append("링크1:" + data.downlinkimg + "<br/>");
-			$("#result").append("링크2:" + data.downlink192k + "<br/>");
-			$("#result").append("링크3:" + data.downlink320k + "<br/>");
-
 			$("#result").append("파일이름1:" + data.fimgName + "<br/>");
 			$("#result").append("파일이름2:" + data.f192Name + "<br/>");
 			$("#result").append("파일이름3:" + data.f320Name + "<br/>");
