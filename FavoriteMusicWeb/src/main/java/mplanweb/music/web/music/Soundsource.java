@@ -1,9 +1,9 @@
-package mplanweb.music.web.upload;
+package mplanweb.music.web.music;
 
 import java.util.Date;
 import java.util.HashMap;
 
-public class Uploadfile {
+public class Soundsource {
 	private String artist;
 	private String title;
 	private String album;
@@ -27,10 +27,6 @@ public class Uploadfile {
 	private String copy;
 	private String age;
 	private String RadioGroup1;
-	public Uploadfile() {
-
-		
-	}
 	public String getArtist() {
 		return artist;
 	}

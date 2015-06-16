@@ -84,24 +84,8 @@ public class AdminController {
 
 		return "/admin/music/musical";
 	}
-	@RequestMapping(value = "/musicda", method = RequestMethod.GET)
-	public String musicda(Locale locale, Model model) {
-		logger.info("MainPage ==> musicda : ", locale);
 
-		return "/admin/music/musicda";
-	}
-	@RequestMapping(value = "/musicin", method = RequestMethod.GET)
-	public String musicin(Locale locale, Model model) {
-		logger.info("MainPage ==> musicin : ", locale);
 
-		return "/admin/music/musicin";
-	}
-	@RequestMapping(value = "/musicup", method = RequestMethod.GET)
-	public String musicup(Locale locale, Model model) {
-		logger.info("MainPage ==> musicup : ", locale);
-
-		return "/admin/music/musicup";
-	}
 	//radio
 	@RequestMapping(value = "/board", method = RequestMethod.GET)
 	public String board(Locale locale, Model model) {

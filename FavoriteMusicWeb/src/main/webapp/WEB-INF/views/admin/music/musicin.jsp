@@ -23,7 +23,7 @@
 </div>
 <div class="container-fluid">
 <div id="footer">
-	<%@ include file="../../upload/upload.jsp"%>
+	<%@ include file="../../mplan/soundsource.jsp"%>
 </div>
 </div>
 <div id="footer">

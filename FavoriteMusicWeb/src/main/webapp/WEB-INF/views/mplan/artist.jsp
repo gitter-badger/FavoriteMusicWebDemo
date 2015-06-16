@@ -16,7 +16,7 @@
 
 	<h3>Favorite 아티스트등록</h3>
 	<form name="multiform" id="multiform"
-		action="<%=request.getContextPath()%>/labelinsert" method="POST"
+		action="<%=request.getContextPath()%>/artistinsert" method="POST"
 		enctype="multipart/form-data">
 		아티스트 : <input type="text" size="20px" name="artist" /> <br /> 
 		데뷔년도 : <input type="text" size="20px" name="debut" /> <br /> 
@@ -75,38 +75,7 @@
 			});
 		});
 
-		//전달받은 정보를 가지고 화면에 보기 좋게 출력
-		function output(data) {
-			//업로드한 파일을 다운로드할수있도록 화면 구성
-			$("#result").append("<h3>(" + (++downGroupCnt) + ") 다운로드</h3>");
-			$("#result").append("가수:" + data.artist + "<br/>");
-			$("#result").append("제목:" + data.title + "<br/>");
-		
 
-			if (data.downlinkimg != null) {
-				$("#result").append(
-						"파일 :<a href='"+ data.downlinkimg +"' download>"
-								+ data.fimgName + "</a>");
-				$("#result").append("<br/>");
-
-			}
-			if (data.downlink192k != null) {
-				$("#result").append(
-						"파일 :<a href='"+ data.downlink192k +"' download>"
-								+ data.f192Name + "</a>");
-				$("#result").append("<br/>");
-
-			}
-			if (data.downlink320k != null) {
-				$("#result").append(
-						"파일 :<a href='"+ data.downlink320k +"' download>"
-								+ data.f320Name + "</a>");
-				$("#result").append("<br/>");
-
-			}
-			$('#multiform').clearForm(); //(jQuery.Form 플러그인 메서드)
-
-		}
 	</script>
 
 </body>

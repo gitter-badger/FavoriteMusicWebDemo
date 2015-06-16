@@ -22,7 +22,9 @@
 		file="../inc/header.jsp"%>
 </div>
 <div class="container-fluid">
-group
+<div id="center">
+	<%@ include file="../../mplan/album.jsp"%>
+</div>
 </div>
 <div id="footer">
 	<%@ include file="../inc/footer.jsp"%>

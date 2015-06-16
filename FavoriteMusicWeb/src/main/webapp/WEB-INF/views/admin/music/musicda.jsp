@@ -25,7 +25,7 @@
 
 
 <div id="center">
-	<%@ include file="../../mplan/music.jsp"%>
+	<%@ include file="../../mplan/artist.jsp"%>
 </div>
 
 

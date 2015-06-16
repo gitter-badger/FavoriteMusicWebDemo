@@ -73,11 +73,11 @@ body {
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">음원관리 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="musicin">음원 등록</a></li>
-								<li><a href="musicda">음반사 관리</a></li>
-								<li><a href="musicup">음원 수정</a></li>
-								<li><a href="musical">앨범 관리</a></li>
-								<li><a href="#">test</a></li>
+								<li><a href="musical">회사 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicda">레이블사 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicup">앨범 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicin">음원 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicmoney">정산관리</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">관리자 <span class="caret"></span></a>
