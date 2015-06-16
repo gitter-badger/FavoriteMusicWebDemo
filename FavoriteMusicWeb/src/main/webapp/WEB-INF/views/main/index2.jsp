@@ -7,6 +7,26 @@
 <head>
 <meta charset="utf-8">
 <title>Favorite Music</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+	type="text/javascript"></script>
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+
+<style>
+.ui-autocomplete {
+	position: absolute;
+	cursor: default;
+	height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+</STYLE>
+
 <link href="resources/main/main.css" rel="stylesheet" type="text/css">
 <link href="resources/main/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet" type="text/css">
@@ -19,41 +39,12 @@
 	type="text/css">
 <link href="resources/main/music.css" rel="stylesheet" type="text/css">
 <link href="resources/main/modal.css" rel="stylesheet" type="text/css">
-<script src="resources/main/jQuery/jQuery-2.1.3.min.js"
-	type="text/javascript">
-	
-</script>
 <script src="resources/main/modalLayer.js" type="text/javascript">
-	
-</script>
-<script type="text/javascript">
-	$(function() {
-		$("#openmodal").click(function() {
-			$.blockUI({
-				message : $('#modallogin')
-			})
-		})
-	})
-	function removeModal() {
-		$.unblockUI();
-	}
-</script>
 <script src="resources/main/bootstrap/js/bootstrap.min.js"
 	type="text/javascript">
-	
 </script>
 <script src="resources/main/iCheck/icheck.min.js" type="text/javascript"></script>
-<script>
-	$(function() {
-		$('input').iCheck({
-			checkboxClass : 'icheckbox_square-blue',
-			radioClass : 'iradio_square-blue',
-			increaseArea : '20%' // optional
-		});
-	});
-</script>
 <script src="resources/main/main.js" type="text/javascript">
-	
 </script>
 </head>
 <body>
@@ -98,11 +89,13 @@
 			</div>
 			<div class="search">
 				<span class="input-group margin"> <input type="text"
-					class="form-control" placeholder="[가수 & 제목] 검색 하면 됩니다."> <span
+					id="testText" class="form-control"
+					placeholder="[가수 & 제목] 검색 하면 됩니다."> <span
 					class="input-group-btn">
 						<button class="btn btn-info btn-flat" type="button">검색</button>
 				</span>
 				</span>
+
 			</div>
 			<div class="btjoin">
 				<button class="btn btn-block btn-primary">회원가입</button>
@@ -117,7 +110,7 @@
 					<li class="nav_1"><a href="#">New</a></li>
 					<li class="nav_2"><a href="#">All</a></li>
 					<li class="nav_3"><a href="#">Radio</a></li>
-					<li class="nav_4"><a href="#">Notice</a></li>
+					<li class="nav_4"><a href="/web/fileuploadsingle">Notice</a></li>
 					<li class="nav_5"><a href="/web/jquery">Faq</a></li>
 				</ul>
 			</div>
@@ -126,10 +119,160 @@
 
 	<!-- Start Center -->
 	<div id="center">
-		<div class="center_wrap2">
-			<%@ include file="../jquery/yboard.jsp"%>
+		<!-- LOGO -->
+		<div class="center_wrap">
+			<div class="slider">
+				<div class="box-body">
+					<div id="carousel-example-generic" class="carousel slide"
+						data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0"
+								class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"
+								class=""></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"
+								class=""></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<img
+									src="http://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap"
+									alt="First slide">
+								<div class="carousel-caption">First Slide</div>
+							</div>
+							<div class="item">
+								<img
+									src="http://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap"
+									alt="Second slide">
+								<div class="carousel-caption">Second Slide</div>
+							</div>
+							<div class="item">
+								<img
+									src="http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap"
+									alt="Third slide">
+								<div class="carousel-caption">Third Slide</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.box-body -->
+				</div>
+			</div>
+
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<h3 class="box-title">로그인</h3>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="login">
+						<div class="login-box-body">
+							<form action="#" method="post">
+								<div class="form-group has-feedback">
+									<input type="text" class="form-control" placeholder="아이디" /> <span
+										class="glyphicon glyphicon-user form-control-feedback"></span>
+								</div>
+								<div class="form-group has-feedback">
+									<input type="password" class="form-control" placeholder="패스워드" />
+									<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+								</div>
+								<div class="row">
+									<div class="col-xs-8">
+										<div class="checkbox icheck">
+											<label> <input type="checkbox"> 아이디 저장
+											</label>
+										</div>
+									</div>
+									<!-- /.col -->
+									<div class="col-xs-4">
+										<button type="submit"
+											class="btn btn-primary btn-block btn-flat">로그인</button>
+									</div>
+									<!-- /.col -->
+								</div>
+							</form>
+						</div>
+						<!-- /.box-body -->
+					</div>
+					<!-- /.box -->
+				</div>
+			</div>
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<h3 class="box-title">Favorite Music 정보</h3>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="info-box">
+						<span class="info-box-icon bg-aqua"><i
+							class="fa fa-envelope-o"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">음원보유수</span> <span
+								class="info-box-number">10,000,000곡</span>
+						</div>
+						<!-- /.info-box-content -->
+					</div>
+					<!-- /.info-box -->
+
+					<div class="info-box">
+						<span class="info-box-icon bg-aqua"><i
+							class="fa fa-envelope-o"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">라디오 채널수</span> <span
+								class="info-box-number">20개</span>
+						</div>
+						<!-- /.info-box-content -->
+					</div>
+					<!-- /.info-box -->
+
+					<div class="info-box">
+						<span class="info-box-icon bg-aqua"><i
+							class="fa fa-envelope-o"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">오늘 등록된 음원수</span> <span
+								class="info-box-number">1,240곡</span>
+						</div>
+						<!-- /.info-box-content -->
+					</div>
+					<!-- /.info-box -->
+
+					<div class="info-box">
+						<span class="info-box-icon bg-aqua"><i
+							class="fa fa-envelope-o"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">총 유저수</span> <span
+								class="info-box-number">120,020명</span>
+						</div>
+						<!-- /.info-box-content -->
+					</div>
+					<!-- /.info-box -->
+				</div>
+			</div>
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<h3 class="box-title">공지사항</h3>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="notice">
+						<div class="notice">
+							<dl class="noticelist">
+								<dd>
+									<ul id="mainnoticelist">
+										<li><a href="#">Hellomplan 대표</a></li>
+										<li><a href="#">[공지사항] 06/10 정기정검</a></li>
+										<li><a href="#">본 서비스는 안드로이드 앱에서만 정상 사용</a></li>
+										<li><a href="#">새로운 Hello M!Plan 개편</a></li>
+										<li><a href="#">새로운 Hello M!Plan 개편</a></li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	<!-- End Center -->
 	<!-- Start Footer -->
 	<div id="footer">
 		<div class="footerwarp" id="footerwarp">

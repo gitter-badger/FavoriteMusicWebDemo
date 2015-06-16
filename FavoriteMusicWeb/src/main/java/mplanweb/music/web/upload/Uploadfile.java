@@ -8,7 +8,7 @@ public class Uploadfile {
 	private String title;
 	private String album;
 	private String lyric;
-	private Date year;
+	private String year;
 	private String corp;
 	private String fimgName;
 	private String f320Name;
@@ -24,7 +24,7 @@ public class Uploadfile {
 	private String genre1;
 	private String genre2;
 	private String etc;
-	private Date copy;
+	private String copy;
 	private String age;
 	private String RadioGroup1;
 	public Uploadfile() {
@@ -55,10 +55,10 @@ public class Uploadfile {
 	public void setLyric(String lyric) {
 		this.lyric = lyric;
 	}
-	public Date getYear() {
+	public String getYear() {
 		return year;
 	}
-	public void setYear(Date year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 	public String getCorp() {
@@ -151,10 +151,10 @@ public class Uploadfile {
 	public void setEtc(String etc) {
 		this.etc = etc;
 	}
-	public Date getCopy() {
+	public String getCopy() {
 		return copy;
 	}
-	public void setCopy(Date copy) {
+	public void setCopy(String copy) {
 		this.copy = copy;
 	}
 	public String getAge() {

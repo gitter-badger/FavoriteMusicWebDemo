@@ -27,6 +27,8 @@
 </head>
 <body>
 <div class="body">
+
+
 	<!-- 에디터 시작 -->
 	<!--
 		@decsription
@@ -34,6 +36,10 @@
 	-->
 	<form name="tx_editor_form" id="tx_editor_form" action="http://posttestserver.com/post.php" method="post" accept-charset="utf-8">
 		<!-- 에디터 컨테이너 시작 -->
+        	<input type="hidden" name="action" value="write.do" /> 작성자<input
+				type="text" name="author" /><br /> 
+                제목<input type="text"
+				name="title" /><br />
 		<div id="tx_trex_container" class="tx-editor-container">
 			<!-- 사이드바 -->
 			<div id="tx_sidebar" class="tx-sidebar">
@@ -633,7 +639,7 @@
 		});
 	}
 </script>
-<div><button onclick='loadContent()'>SAMPLE - load contents to editor</button></div>
+<div><button onclick='saveContent()'>글쓰기</button>  <a href="./board?action=list.do">목록보기</a></div>
 <!-- End: Loading Contents -->
 
 </body>

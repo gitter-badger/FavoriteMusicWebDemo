@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Music">
+
+
+	<insert id="upfile">
+		INSERT INTO mplan_artist
+		(mp_artist, mp_content, mp_debut, mp_label,  mp_useyn, mp_artistimg,  mp_artistsize,  mp_artistorg, mp_date)  
+		values
+		(#{artist} , #{content}, #{debut}, 	#{label}, #{RadioGroup1}, #{fimgName}, #{imgsize}, #{uploadFimgName}, NOW()) ;
+		
+	</insert>
+	
+</mapper>

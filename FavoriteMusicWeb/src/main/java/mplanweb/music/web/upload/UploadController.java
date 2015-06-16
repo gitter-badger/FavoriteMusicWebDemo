@@ -43,7 +43,6 @@ public class UploadController {
 
 	@Autowired
 	private UploadServiceImpl uploadServiceImpl;
-	private UploadService uploadService;
 
 	// 싱글
 
@@ -84,14 +83,14 @@ public class UploadController {
 		//int num = Integer.parseInt("num"); // 아티스트 이름 Request
 		logger.info("num : " + num);
 		String label = request.getParameter("label"); // 음원제목 Request
-		String yearset = request.getParameter("year"); // 년도 Request
-		Date year = day.parse(yearset);
+		String year = request.getParameter("year"); // 년도 Request
+		//Date year = day.parse(yearset);
 		
 		String genre1 = request.getParameter("genre1"); // 음원제목 Request
 		String genre2 = request.getParameter("genre2"); // 음원제목 Request
 		String etc = request.getParameter("etc"); // 음원제목 Request
-		String copyset = request.getParameter("copy"); // 음원제목 Request
-		Date copy = dt.parse(copyset);
+		String copy = request.getParameter("copy"); // 음원제목 Request
+		//Date copy = dt.parse(copyset);
 		String age = request.getParameter("age");
 		//int age = Integer.parseInt("age"); // 음원제목 Request
 		String RadioGroup1 = request.getParameter("RadioGroup1"); // 음원제목

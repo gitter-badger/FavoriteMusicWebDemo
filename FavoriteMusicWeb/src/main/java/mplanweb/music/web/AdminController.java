@@ -33,7 +33,11 @@ public class AdminController {
 		logger.info("LoginPage ==> MainPage : ", locale);
 		return "/main/index";
 	}
-
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String Main4(Locale locale, Model model) {
+		logger.info("LoginPage ==> MainPage : ", locale);
+		return "/main/test";
+	}
 	//admin Page
 	
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)

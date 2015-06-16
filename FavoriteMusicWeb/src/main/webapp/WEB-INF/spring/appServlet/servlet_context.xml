@@ -58,6 +58,12 @@
 
 	<beans:bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
-		<beans:bean id="download" class="mplanweb.music.web.upload.DownloadView" />
+	<beans:bean id="download" class="mplanweb.music.web.upload.DownloadView" />
 	<context:component-scan base-package="mplanweb.music.web" />
+	<context:component-scan base-package="mplanweb.music.web.admin" />
+	<context:component-scan base-package="mplanweb.music.web.board" />
+	<context:component-scan base-package="mplanweb.music.web.upload" />
+	<context:component-scan base-package="mplanweb.music.web.search" />
+	<context:component-scan base-package="mplanweb.music.web.music" />
+	
 </beans:beans>

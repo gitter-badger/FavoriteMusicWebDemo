@@ -193,7 +193,7 @@ body, td, th {
 #header .inner_wrap {
 	width: 980px;
 	margin: auto;
-	position: relative;
+	position: static;
 	background: none;
 	z-index: 100;
 	height: 57px;
