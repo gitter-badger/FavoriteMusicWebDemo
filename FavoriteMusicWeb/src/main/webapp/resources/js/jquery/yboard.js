@@ -258,6 +258,8 @@ $('#btnYboardSave').click(function() {
  * 체크된 게시내용 삭제 
  */
 $('#btnYboardDelete').click(function(){
+	var is = $('input[name=yboardIDs]:checked').val();
+	alert(is);
 	var checkedYboardIDs = $(':checkbox[name="yboardIDs"]').map(function(){
 		if(this.checked) {
 			return this.value;
@@ -273,12 +275,13 @@ $('#btnYboardDelete').click(function(){
 	var param = {
 			boardIDs: checkedYboardIDs
 	};
+	alert(param);
 	$.ajax({
 		type: "POST",
 		dataType: "JSON",
 		data: JSON.stringify(param),
 		contentType: "application/json; charset=UTF-8",
-		url: "/yboard/delete",
+		url: "/web/delete",
 		error: function() {
 			alert("Loading failed!")
 		},

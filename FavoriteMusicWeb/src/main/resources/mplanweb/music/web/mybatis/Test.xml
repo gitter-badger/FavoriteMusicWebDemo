@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Test">
+
+	<select id="selecttotalcount" resultType="int" parameterType="Ssearch">
+
+		SELECT COUNT(*)
+		FROM mplan_music
+		<where>
+			<if test="@Ognl@isNotEmpty(searchText)">
+				AND ${searchColumn} LIKE CONCAT('',#{searchText},'%')
+			</if>
+		</where>
+	</select>
+
+	<select id="selectSsview" resultType="Ssview" parameterType="Ssearch">
+		SELECT mp_mpnum, mp_artist, mp_title, mp_album, mp_year, mp_useyn,
+		mp_insert_date
+		FROM mplan_music
+		<where>
+			<if test="@Ognl@isNotEmpty(searchText)">
+				AND ${searchColumn} LIKE CONCAT('',#{searchText},'%')
+			</if>
+		</where>
+		ORDER BY mp_insert_date DESC LIMIT #{start}, #{limit}
+	</select>
+
+	<select id="viewSSview" resultType="Ssview" parameterType="map">
+		SELECT mp_mpnum, mp_num, mp_artist, mp_title, mp_album, mp_lyric,
+		mp_label, mp_corp, mp_open_date, mp_year, mp_genre1, mp_genre2,
+		mp_img,
+		mp_320k, mp_192k, mp_age, mp_etc, mp_useyn,
+		mp_insert_date,
+		mp_open_date
+		FROM
+		mplan_music
+		WHERE mp_mpnum = #{mp_mpnum}
+	</select>
+
+	<insert id="insertssearch" parameterType="Ssview">
+
+		INSERT INTO mplan_music (
+		mp_num, mp_artist,
+		mp_title, mp_album,
+		mp_lyric, mp_year,
+		mp_corp, mp_label,
+		mp_genre1, mp_genre2,
+		mp_etc, mp_age,
+		mp_open_date, mp_img,
+		mp_320k, mp_192k,
+		mp_useyn, mp_insert_date)
+		values (
+		#{mp_num}, #{mp_artist},
+		#{mp_title}, #{mp_album},
+		#{mp_lyric}, #{mp_year},
+		#{mp_corp}, #{mp_label},
+		#{mp_genre1}, #{mp_genre2},
+		#{mp_etc}, #{mp_age},
+		#{mp_open_date}, #{mp_img},
+		#{mp_320k}, #{mp_192k},
+		#{mp_useyn}, NOW())
+	</insert>
+	<delete id="deletessearch" parameterType="map">
+		DELETE FROM mplan_music
+		WHERE
+		mp_mpnum= #{mp_mpnum}
+	</delete>
+
+</mapper>

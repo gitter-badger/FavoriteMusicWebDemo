@@ -14,8 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Repository
-public class MusicServiceImpl  implements
-		MusicService {
+public class MusicServiceImpl2  implements
+		MusicService2 {
 
 	@Autowired
 	private SqlSession sqlSession;
@@ -37,7 +37,15 @@ public class MusicServiceImpl  implements
 		System.out.println("MusicServiceImpl.class : " + soundsource);		
 		sqlSession.insert("Music.Soundsourceinsert", soundsource);
 	}
-
+	/*
+	public void soundsourceselect(Soundsource soundsource) {
+		// TODO Auto-generated method stub
+	
+			//logger.info("uploadServiceImpl.class : " + uploadfile);
+		System.out.println("MusicServiceImpl.class : " + soundsource);		
+		sqlSession.insert("Music.soundsourceselect", soundsource);
+	}
+	*/
 
 
 }

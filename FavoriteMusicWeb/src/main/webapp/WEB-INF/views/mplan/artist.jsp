@@ -18,25 +18,25 @@
 	<form name="multiform" id="multiform"
 		action="<%=request.getContextPath()%>/artistinsert" method="POST"
 		enctype="multipart/form-data">
-		아티스트 : <input type="text" size="20px" name="artist" /> <br /> 
-		데뷔년도 : <input type="text" size="20px" name="debut" /> <br /> 
-		특징/소개 : <textarea rows="10" cols="20" size="20px" name="content"></textarea><br /> 
-		레이블 : <input type="text" size="20px" name="label" /> <br />
+		아티스트 : <input type="text" size="20px" name="artist" /> <br /> 데뷔년도 :
+		<input type="text" size="20px" name="debut" /> <br /> 특징/소개 :
+		<textarea rows="10" cols="20" size="20px" name="content"></textarea>
+		<br /> 레이블 : <input type="text" size="20px" name="label" /> <br />
 		이미지 : <input type="file" class="afile3" name="imgupload" /> <br />
-        사용여부 : 
-        <table width="200">
-          <tr>
-            <td><label>
-              <input type="radio" name="RadioGroup1" value="Y" id="RadioGroup1_0">
-              사용</label></td>
-          </tr>
-          <tr>
-            <td><label>
-              <input type="radio" name="RadioGroup1" value="N" id="RadioGroup1_1">
-              사용불가</label></td>
-          </tr>
-        </table>
-      <input type="submit" id="btnSubmit" value="전송" /><br />
+		사용여부 :
+		<table width="200">
+			<tr>
+				<td><label> <input type="radio" name="RadioGroup1"
+						value="Y" id="RadioGroup1_0"> 사용
+				</label></td>
+			</tr>
+			<tr>
+				<td><label> <input type="radio" name="RadioGroup1"
+						value="N" id="RadioGroup1_1"> 사용불가
+				</label></td>
+			</tr>
+		</table>
+		<input type="submit" id="btnSubmit" value="전송" /><br />
 	</form>
 
 	<div id="result"></div>
@@ -74,7 +74,9 @@
 				}
 			});
 		});
-
+		function output(data) {
+			$('#multiform').clearForm(); 
+		}
 
 	</script>
 

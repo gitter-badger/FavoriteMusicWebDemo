@@ -37,7 +37,7 @@ public class YboardController extends YboardLogger {
 		 Device device = DeviceUtils.getCurrentDevice(request);
 		 model.addAttribute("yboard", new Yboard()); // 초기세션처리를 위해 디폴트 처리
 	
-		 return "/main/index2";	
+		 return "/jquery/yboard";	
 		 
 		
 	}
@@ -65,10 +65,13 @@ public class YboardController extends YboardLogger {
 	public ResultJSON selectYboard(@RequestBody YboardSearch yboardSearch) {
 		ResultJSON resultJSON = new ResultJSON();
 		int totalCount = yboardService.selectTotalCountYboard(yboardSearch);
+		System.out.println("yboardSearch : " + yboardSearch);
+		System.out.println("totalCount : " + totalCount);
 		List<Yboard> yboardList = yboardService.selectYboard(yboardSearch);
 		resultJSON.setTotal(totalCount);
 		resultJSON.setItems(yboardList);
 		resultJSON.setSuccess(true);
+		System.out.println("resultJSON : " + resultJSON);
 		return resultJSON;
 	}
 	
@@ -81,8 +84,10 @@ public class YboardController extends YboardLogger {
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	@ResponseBody
 	public ResultJSON insertYboard(@RequestBody Yboard yboard) {
+		System.out.println("yboard : " + yboard);
 		ResultJSON resultJSON = new ResultJSON();
 		yboardService.insertYboard(yboard);
+		System.out.println("resultJSON : " + resultJSON);
 		resultJSON.setSuccess(true);
 		return resultJSON;
 	}
@@ -118,11 +123,13 @@ public class YboardController extends YboardLogger {
 	@RequestMapping(value = "/view/{boardIDEncrypt}", method = RequestMethod.GET)
 	@ResponseBody
 	public ResultJSON viewYboard(@PathVariable String boardIDEncrypt) {
+		System.out.println("boardIDEncrypt : " + boardIDEncrypt);
 		ResultJSON resultJSON = new ResultJSON();
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("boardID", YKStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
 		resultJSON.setData(yboardService.viewYboard(map));
 		resultJSON.setSuccess(true);
+		System.out.println("resultJSON : " + resultJSON);
 		return resultJSON;
 	}
 	

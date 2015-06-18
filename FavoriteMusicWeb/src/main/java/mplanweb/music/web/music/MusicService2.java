@@ -7,10 +7,12 @@ import java.util.List;
 
 import org.springframework.web.servlet.ModelAndView;
 
-public interface MusicService {
+public interface MusicService2 {
 
 
 	public void artistinsert(Artist artist) ;
 	public void albuminsert(Album album) ;
 	public void Soundsourceinsert(Soundsource Soundsource) ;
+	
+	
 }

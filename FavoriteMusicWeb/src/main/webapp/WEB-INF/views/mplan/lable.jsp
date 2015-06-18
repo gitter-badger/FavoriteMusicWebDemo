@@ -14,16 +14,15 @@
 </head>
 <body>
 
-	<h3>Favorite 앨범 등록</h3>
+	<h3>Favorite 아티스트등록</h3>
 	<form name="multiform" id="multiform"
-		action="<%=request.getContextPath()%>/albuminsert" method="POST"
+		action="<%=request.getContextPath()%>/artistinsert" method="POST"
 		enctype="multipart/form-data">
-		아티스트 : <input type="text" size="20px" name="artist" /> <br /> 
-		앨범명 : <input type="text" size="20px" name="album" /> <br /> 
-		발매년도 : <input type="text" size="20px" name="year" /> <br /> 
-		특징/소개 : <textarea rows="10" cols="20" size="20px" name="content"></textarea><br /> 
-		유통사 : <input type="text" size="20px" name="corp" /> <br />
-		이미지 : <input type="file" class="afile3" name="imgupload" /> <br />
+		회사이름 : <input type="text" size="20px" name="artist" /> <br /> 
+		사업자등록번호 : <input type="text" size="20px" name="debut" /> <br /> 
+		위치 : <textarea rows="10" cols="20" size="20px" name="content"></textarea><br /> 
+		담당자 : <input type="text" size="20px" name="label" /> <br />
+		담당자전화번호 : <input type="file" class="afile3" name="imgupload" /> <br />
         사용여부 : 
         <table width="200">
           <tr>
@@ -75,9 +74,7 @@
 				}
 			});
 		});
-		function output(data) {
-			$('#multiform').clearForm(); 
-		}
+
 
 	</script>
 

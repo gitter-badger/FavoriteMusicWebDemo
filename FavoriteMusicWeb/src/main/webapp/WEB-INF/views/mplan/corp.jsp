@@ -74,7 +74,9 @@
 				}
 			});
 		});
-
+		function output(data) {
+			$('#multiform').clearForm(); 
+		}
 
 	</script>
 

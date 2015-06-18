@@ -48,7 +48,7 @@ public class MusicController {
 			.getLogger(MusicController.class);
 
 	@Autowired
-	MusicServiceImpl musicserviceimpl;
+	MusicServiceImpl2 musicserviceimpl;
 
 	// Music 목록
 	@RequestMapping(value = "/musicda", method = RequestMethod.GET)
@@ -57,7 +57,13 @@ public class MusicController {
 
 		return "/admin/music/musicda";
 	}
+	// Music 목록
+		@RequestMapping(value = "/musicview", method = RequestMethod.GET)
+		public String MusicView(Locale locale, Model model) {
+			logger.info("MainPage ==> musicda : ", locale);
 
+			return "/admin/music/musicda2";
+		}
 	@RequestMapping(value = "/musicin", method = RequestMethod.GET)
 	public String musicin(Locale locale, Model model) {
 		logger.info("MainPage ==> musicin : ", locale);
@@ -70,6 +76,9 @@ public class MusicController {
 
 		return "/admin/music/musicup";
 	}
+	
+	// 
+	
 	// 저장
 	@RequestMapping(value = "/artistinsert", produces = "application/json")
 	@ResponseBody
@@ -421,9 +430,9 @@ public class MusicController {
 		logger.info("of : " + of);
 
 		// 웹사이트 루트디렉토리의 실제 디스크상의 경로 알아내기.
-		String mimgPath = "E://upload//img//";
-		String m320Path = "E://upload//music192k//";
-		String m192Path = "E://upload//music320k//";
+		String m192Path = "E://upload//img//";
+		String mimgPath= "E://upload//music192k//";
+		String m320Path = "E://upload//music320k//";
 		// String path =
 		// request.getSession().getServletContext().getRealPath("upload");
 		// String path = WebUtils.getRealPath(request.getServletContext(),
@@ -445,6 +454,9 @@ public class MusicController {
 		File downloadFile1 = new File(fullPath);
 		File downloadFile2 = new File(fullPath2);
 		File downloadFile3 = new File(fullPath3);
+		logger.info("downloadFile1 : " + downloadFile1);
+		logger.info("downloadFile2 : " + downloadFile2);
+		logger.info("downloadFile3 : " + downloadFile3);
 		// ===전달 받은 정보를 가지고 파일객체 생성(E)===//
 
 		// 파일 다운로드를 위해 컨테츠 타입을 application/download 설정
@@ -454,6 +466,8 @@ public class MusicController {
 		response.setContentLength((int) downloadFile1.length());
 		response.setContentLength((int) downloadFile2.length());
 		response.setContentLength((int) downloadFile3.length());
+		
+		
 		// 다운로드 창을 띄우기 위한 헤더 조작
 		response.setContentType("application/octet-stream; charset=utf-8");
 		response.setHeader("Content-Disposition", "attachment;filename="
@@ -468,6 +482,8 @@ public class MusicController {
 		 */
 
 		FileInputStream fin = new FileInputStream(downloadFile1);
+		logger.info("fin : " + fin);
+
 		// FileInputStream fin2 = new FileInputStream(downloadFile2);
 		// FileInputStream fin3 = new FileInputStream(downloadFile3);
 		ServletOutputStream sout = response.getOutputStream();

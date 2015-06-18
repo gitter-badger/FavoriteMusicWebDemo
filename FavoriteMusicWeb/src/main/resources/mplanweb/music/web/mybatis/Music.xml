@@ -2,16 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Music">
-
-
+<!-- 
+	<select id="soundsourceselect" parameterType="hashmap"
+		resultType="Soundsource">
+		SELECT mp_mpnum, mp_artist, mp_album, mp_year , mp_useyn FROM
+		mplan_music;
+	</select>
+ -->
 	<insert id="artistinsert">
 		INSERT INTO mplan_artist
 		(mp_artist, mp_content,
 		mp_debut, mp_label, mp_useyn, mp_artistimg, mp_artistsize,
 		mp_artistorg, mp_date)
 		values
-		(#{artist} , #{content}, #{debut}, #{label}, #{RadioGroup1},
-		#{fimgName}, #{imgsize}, #{uploadFimgName}, NOW()) ;
+		(#{artist} , #{content}, #{debut},
+		#{label}, #{RadioGroup1},
+		#{fimgName}, #{imgsize}, #{uploadFimgName},
+		NOW()) ;
 
 	</insert>
 
@@ -21,11 +28,13 @@
 		mp_content, mp_year, mp_corp, mp_albumimg, mp_albumsize,
 		mp_albumimgorg, mp_useyn, mp_date )
 		values
-		(#{artist} , #{album}, #{content}, #{year}, #{corp}, #{fimgName},
-		#{imgsize}, #{uploadFimgName}, #{RadioGroup1}, NOW()) ;
+		(#{artist} , #{album},
+		#{content}, #{year}, #{corp}, #{fimgName},
+		#{imgsize},
+		#{uploadFimgName}, #{RadioGroup1}, NOW()) ;
 
 	</insert>
-	
+
 	<insert id="Soundsourceinsert">
 		INSERT INTO mplan_music
 		(mp_num, mp_artist, mp_title,

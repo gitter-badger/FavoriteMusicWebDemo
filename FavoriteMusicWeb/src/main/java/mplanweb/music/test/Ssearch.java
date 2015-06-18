@@ -1,12 +1,6 @@
-package mplanweb.music.web.board;
+package mplanweb.music.test;
 
-/**
- * 리스트 검색 공통
- * 
- * @author ykkim
- * 
- */
-public class Search {
+public class Ssearch {
 	private int start; // 페이징 시작값
 	private int limit; // 페이징 카운트
 	private int page;
@@ -14,6 +8,7 @@ public class Search {
 	private String searchText; // 검색어
 	private String startDate; // 시작일
 	private String endDate; // 종료일
+
 	public int getStart() {
 		System.out.println("getStart : " + start);
 		return start;
@@ -83,5 +78,4 @@ public class Search {
 		System.out.println("setEndDate : " + endDate);
 		this.endDate = endDate;
 	}
-
 }

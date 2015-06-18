@@ -29,7 +29,7 @@ public class DownloadView extends AbstractView {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 
-		File file = (File) model.get("downloadFile1");
+		File file = (File) model.get("fileDownloads2");
 		String f = file.toString();
 		logger.info("DownloadView : " + f);
 		response.setContentType(getContentType());

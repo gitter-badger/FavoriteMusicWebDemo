@@ -103,8 +103,9 @@ data : {
 						</div>
 					</div>
 				</form>
-				<button type="button" class="closeModalLayer"
-					onClick="removeModal()">´Ý±â</button>
+					<button type="button" class="closeModalLayer" data-dismiss="modal"
+						aria-hidden="true" onClick="removeModal()">&times;</button>
+			
 			</div>
 		</div>
 	</div>
