@@ -295,17 +295,123 @@ function resetForm(formID) {
  * 모달창이 닫힐때 폼내용을 reset해준다.
  */
 $('.modal').on('hidden.bs.modal', function() {
-	$('#yboard_boardContent').text('');
-	resetForm('yboardForm');
+	$('#lyric').text('');
+	resetForm('mplanform');
 });
 
 /**
  * 저장
  */
 
-$('#btnYboardSave').click(function() {
+// 파일저장이 씨발 애미 없다.
 
+$(function(){
+
+	$('#mplanform').ajaxForm(
+			
+			{
+		
+		cache : false,
+		dataType : "json",
+		//보내기전 validation check가 필요할경우
+		beforeSubmit : function(data, frm, opt) {
+			//console.log(data);
+			alert("전송전!!");
+			return true;
+		},
+		//submit이후의 처리
+		success : function(data, statusText) {
+
+			alert("전송성공!!");
+			showList(null);
+			resetForm('yboardForm');
+			$('#yboardEditModal').modal('hide');
+		},
+		//ajax error
+		error : function(e) {
+			alert("에러발생!!");
+			console.log(e);
+		}
+	});
+});
+		
+/*
+ * btnyboardsave 버튼 클릭 했을시
+ * 
+ *
+ * 
+ * 
+ */
+
+/*
+$(function(){
+$('#btnYboardSave').click(function() { // 버큰 클릭 했을시
+
+	var mpssnumEncrypt = $('#mpssnumEncrypt').val(); // 각각 입력
+
+	var method = "ssviewinsert"; // insert냐 update냐 확인
+	if (mpssnumEncrypt != "") {
+		method = "ssviewupdate";
+	}
+	// 폼입력값 검증
+	if (!formValidator()) {
+		return;
+	}
+	var formData = new FormData();
+	formData.append("mp_img", $("input[name=imgupload]")[0].files[0]);
+	formData.append("mp_320k", $("input[name=m320kupload]")[0].files[0]);
+	formData.append("mp_192k", $("input[name=m192kupload]")[0].files[0]);
+	formData.append("mp_num", $("#num").val());
+	formData.append("mp_artist", $("#artist").val());
+	formData.append("mp_title", $("#title").val());
+	formData.append("mp_album", $("#album").val());
+	formData.append("mp_lyric", $("textarea[name=lyric]").text());
+	formData.append("mp_label", $("#label").val());
+	formData.append("mp_corp", $("#corp").val());
+	formData.append("mp_year", $("#year").val());
+	formData.append("mp_etc", $("#etc").val());
+	formData.append("mp_open_date", $("#copy").val());
+	formData.append("mp_num", $("#num").val());
+	formData.append("mp_genre1", $("#genre1").val());
+	formData.append("mp_genre2", $("#genre2").val());
+	formData.append("mp_age", $("#age").val());
+	formData.append("mp_useyn", $('input[type="radio"]:checked').val());
+	formData.append("mpssnumEncrypt", mpssnumEncrypt);
+	alert(formData.toString());
+	alert(formData);
+	alert(method);
+	$.ajax({
+		url : '/web/appler/' + method,
+		data : formData,
+		processData : false,
+		contentType : false,
+		type : "POST",
+		error : function() {
+			alert("Loading failed!");
+		},
+		success : function(data) {
+			if (data.success) {
+				showList(null);
+				resetForm('yboardForm');
+				$('#yboardEditModal').modal('hide');
+			} else {
+				alert(data.msg);
+			}
+		}
+	});
+});
+});
+
+*/
+
+/*
+$('#btnYboardSave').click(function() {
+	// var surveyCode = $("#surveyCodeForm" ).serializeObject();
 	var mpssnumEncrypt = $('#mpssnumEncrypt').val();
+	
+	
+	
+
 	var method = "ssviewinsert";
 	if (mpssnumEncrypt != "") {
 		method = "ssviewupdate";
@@ -314,14 +420,14 @@ $('#btnYboardSave').click(function() {
 	if (!formValidator()) {
 		return;
 	}
-	// var surveyCode = $("#surveyCodeForm" ).serializeObject();
 	var ssview = {
+		
 		mp_artist : $('#artist').val(),
 		mp_title : $('#title').val(),
 		mp_album : $('#album').val(),
-		mp_lyric : $('#lyric').val(),
-		mp_artist : $('#label').val(),
-		mp_label : $('#corp').val(),
+		mp_lyric : $("textarea[name=lyric]").text(),
+		mp_corp : $('#corp').val(),
+		mp_label : $('#label').val(),
 		mp_year : $('#year').val(),
 		mp_etc : $('#etc').val(),
 		mp_open_date : $('#copy').val(),
@@ -329,11 +435,7 @@ $('#btnYboardSave').click(function() {
 		mp_genre1 : $('#genre1').val(),
 		mp_genre2 : $('#genre2').val(),
 		mp_age : $('#age').val(),
-		mp_useyn : $('input[type="radio"]:checked').val(),
-		mp_imgupload : $('#imgfile').val(),
-		mp_m320kupload : $('#mp320file').val(),
-		mp_m192kupload : $('#mp192file').val(),
-
+		mp_use_yn : $('input[type="radio"]:checked').val(),
 		mpssnumEncrypt : mpssnumEncrypt
 
 	};
@@ -360,6 +462,12 @@ $('#btnYboardSave').click(function() {
 	});
 
 });
+*/
+
+
+
+
+
 
 /**
  * 체크된 게시내용 삭제
@@ -405,9 +513,9 @@ $('#btnYboardDelete').click(function() {
  */
 $('#allCheck').click(function() {
 	if (this.checked) {
-		$(':checkbox[name="mp_mpnums"]').prop("checked", true);
+		$(':checkbox[name="mp_mpnum"]').prop("checked", true);
 	} else {
-		$(':checkbox[name="mp_mpnums"]').prop("checked", false);
+		$(':checkbox[name="mp_mpnum"]').prop("checked", false);
 	}
 });
 

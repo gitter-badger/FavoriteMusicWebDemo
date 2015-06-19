@@ -39,27 +39,37 @@
 	</select>
 
 	<insert id="insertssearch" parameterType="Ssview">
-
-		INSERT INTO mplan_music (
+		INSERT INTO
+		mplan_music (
 		mp_num, mp_artist,
 		mp_title, mp_album,
 		mp_lyric, mp_year,
 		mp_corp, mp_label,
 		mp_genre1, mp_genre2,
 		mp_etc, mp_age,
-		mp_open_date, mp_img,
+		mp_open_date,
+		mp_img,
 		mp_320k, mp_192k,
-		mp_useyn, mp_insert_date)
+		mp_useyn, mp_insert_date, mp_imgsize, mp_imgo,
+		mp_320size, mp_320ko, mp_192size, mp_192ko)
 		values (
-		#{mp_num}, #{mp_artist},
+		#{mp_num},
+		#{mp_artist},
 		#{mp_title}, #{mp_album},
 		#{mp_lyric}, #{mp_year},
 		#{mp_corp}, #{mp_label},
 		#{mp_genre1}, #{mp_genre2},
-		#{mp_etc}, #{mp_age},
+		#{mp_etc},
+		#{mp_age},
 		#{mp_open_date}, #{mp_img},
 		#{mp_320k}, #{mp_192k},
-		#{mp_useyn}, NOW())
+		#{mp_useyn}, NOW(),
+		#{mp_imgsize} ,
+		#{mp_imgo},
+		#{mp_320size},
+		#{mp_320ko},
+		#{mp_192size},
+		#{mp_192ko})
 	</insert>
 	<delete id="deletessearch" parameterType="map">
 		DELETE FROM mplan_music

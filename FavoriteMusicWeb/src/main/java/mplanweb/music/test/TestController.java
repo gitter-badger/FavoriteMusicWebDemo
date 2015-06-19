@@ -161,22 +161,31 @@ public class TestController {
 		jsontotal.setSuccess(true);
 		return jsontotal;
 	}
+
+/*
 	@RequestMapping(value = "/ssviewinsert", method = RequestMethod.POST)
 	@ResponseBody
 	public Jsontotal insertssview(@RequestBody Ssview ssview) {
-		System.out.println("ssview : " + ssview);
+		System.out.println("ssview2222222222222222222222222222222222222 : " + ssview);
 		Jsontotal jsontotal = new Jsontotal();
 		musicService.insertssearch(ssview);
-		System.out.println("Jsontotal : " + jsontotal);
+		System.out.println("Jsontotal2222222222222222222222222222222222222222 : " + jsontotal);
 		jsontotal.setSuccess(true);
 		return jsontotal;
-	}
-	/*
+*/
+	
+	// jsontotal 대신 다른걸로 추진 해야됨
+	
+	
 	@RequestMapping(value = "/ssviewinsert", produces = "application/json")
 	@ResponseBody
 	public Jsontotal insertssview(MultipartHttpServletRequest request) throws Exception {
 	
-		int mp_num = Integer.parseInt(request.getParameter("num")); // 아티스트 이름 Request
+		
+		// Jsontotal
+		//int mp_num = Integer.parseInt(request.getParameter("num")); // 아티스트 이름 Request
+		String mp_num = request.getParameter("num"); // 아티스트 이름 Request
+		//int mp_num = Integer.parseInt(mp_num2);
 		String mp_artist = request.getParameter("artist"); // 음원제목 Request
 		String mp_title = request.getParameter("title"); // 앨범명 Request
 		String mp_album = request.getParameter("album"); // 가사 Request
@@ -193,6 +202,16 @@ public class TestController {
 		MultipartFile mimg = request.getFile("imgupload");
 		MultipartFile m320k = request.getFile("m320kupload");
 		MultipartFile m192k = request.getFile("m192kupload");
+		
+		
+		logger.info("mp_num2 : " + mp_num);
+		logger.info("mp_artist : " + mp_artist);
+		logger.info("mp_title : " + mp_title);
+		logger.info("mp_album : " + mp_album);
+		logger.info("mp_lyric : " + mp_lyric);
+		logger.info("mp_label : " + mp_label);
+		
+		
 		Jsontotal jsontotal = new Jsontotal();
 			if (mimg != null && m192k != null && m192k != null) {
 
@@ -240,7 +259,6 @@ public class TestController {
 				// ///////////////////////////////////////////////////////////////////////
 				// Hashput 입력
 				// ///////////////////////////////////////////////////////////////////////
-		
 				Ssview ssview = new Ssview();
 				ssview.setMp_img(mp_img);
 				ssview.setMp_320k(mp_320k);
@@ -251,7 +269,7 @@ public class TestController {
 				ssview.setMp_imgo(mp_imgo);
 				ssview.setMp_320ko(mp_320ko);
 				ssview.setMp_192ko(mp_192ko);
-				ssview.setMp_num(mp_num);
+				//ssview.setMp_num(mp_num);
 				ssview.setMp_artist(mp_artist);
 				ssview.setMp_title(mp_title);
 				ssview.setMp_album(mp_album);
@@ -276,7 +294,16 @@ public class TestController {
 	
 		return jsontotal;
 	}
-	*/
+	
+	@RequestMapping(value = "/ssviewupdate", method = RequestMethod.POST)
+	@ResponseBody
+	public Jsontotal updateYboard(@RequestBody Ssview ssview) {
+		Jsontotal jsontotal = new Jsontotal();
+		ssview.setBoardID(MusicStringUtil.getTmsDecryptoAesForInt(ssview.getBoardIDEncrypt()));
+		musicService.updateSsview(ssview);
+		jsontotal.setSuccess(true);
+		return jsontotal;
+	}
 	
 	@RequestMapping(value = "/ssviewdelete", method = RequestMethod.POST)
 	@ResponseBody
@@ -297,5 +324,6 @@ public class TestController {
 		return jsontotal;
 	}
 	
+	// 다운로드 확인..
 	
 }

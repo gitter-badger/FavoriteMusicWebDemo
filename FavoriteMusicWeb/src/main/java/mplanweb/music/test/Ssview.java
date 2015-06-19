@@ -35,50 +35,62 @@ public class Ssview implements Serializable {
 	private String mp_insert_date; // : 아티스트
 
 	public long getMp_imgsize() {
+		System.out.println("getMp_imgsize : " + mp_imgsize);
 		return mp_imgsize;
 	}
 
 	public void setMp_imgsize(long mp_imgsize) {
+		System.out.println("setMp_imgsize : " + mp_imgsize);
 		this.mp_imgsize = mp_imgsize;
 	}
 
 	public long getMp_320size() {
+		System.out.println("getMp_320size : " + mp_320size);
 		return mp_320size;
 	}
 
 	public void setMp_320size(long mp_320size) {
+		System.out.println("setMp_320size : " + mp_320size);
 		this.mp_320size = mp_320size;
 	}
 
 	public long getMp_192size() {
+		System.out.println("getMp_192size : " + mp_192size);
 		return mp_192size;
 	}
 
 	public void setMp_192size(long mp_192size) {
+		System.out.println("setMp_192size : " + mp_192size);
 		this.mp_192size = mp_192size;
 	}
 
 	public String getMp_imgo() {
+		System.out.println("getMp_imgo : " + mp_imgo);
 		return mp_imgo;
 	}
 
 	public void setMp_imgo(String mp_imgo) {
+		System.out.println("setMp_imgo : " + mp_imgo);
 		this.mp_imgo = mp_imgo;
 	}
 
 	public String getMp_320ko() {
+		System.out.println("getMp_320ko : " + mp_320ko);
 		return mp_320ko;
 	}
 
 	public void setMp_320ko(String mp_320ko) {
+		System.out.println("setMp_320ko : " + mp_320ko);
 		this.mp_320ko = mp_320ko;
 	}
 
 	public String getMp_192ko() {
+		System.out.println("getMp_192ko : " + mp_192ko);
 		return mp_192ko;
 	}
 
 	public void setMp_192ko(String mp_192ko) {
+		System.out.println("setMp_192ko : " + mp_192ko);
 		this.mp_192ko = mp_192ko;
 	}
 

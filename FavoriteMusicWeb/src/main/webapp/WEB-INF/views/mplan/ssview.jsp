@@ -92,23 +92,23 @@
 
 
 	<!-- Modal : Yboard Edit -->
+	<form class="form-horizontal" id="mplanform" name="mplanform"
+		action="/web/appler/ssviewinsert" method="POST"
+		enctype="multipart/form-data">
+		<div class="modal fade" id="yboardEditModal" tabindex="-1"
+			role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
 
-	<div class="modal fade" id="yboardEditModal" tabindex="-1"
-		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
+				<div class="modal-content">
 
-			<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">음원 관리/수정</h4>
+					</div>
 
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">음원 관리/수정</h4>
-				</div>
+					<div class="modal-body">
 
-				<div class="modal-body">
-					<form class="form-horizontal" id="yboardForm" name="yboardForm"
-						action="/web/appler/ssviewinsert" method="POST"
-						enctype="multipart/form-data">
 						<input type="hidden" id="mpssnumEncrypt" name="mpssnumEncrypt">
 						<div class="form-group">
 							<label for="num" class="col-sm-2 control-label">넘버</label>
@@ -267,10 +267,6 @@
 							<div class="col-sm-10">
 								<input type="file" class="mp320file" name="m320kupload"
 									id="m320kupload" />
-
-
-
-
 							</div>
 						</div>
 						<div class="form-group">
@@ -293,21 +289,20 @@
 								</label>
 							</div>
 						</div>
-					</form>
-				</div>
 
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-					<button type="button" class="btn btn-primary" id="btnYboardSave">저장</button>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+						<button type="submit" class="btn btn-primary" id="btnYboardSave">저장</button>
+					</div>
+
 				</div>
 
 			</div>
 
 		</div>
-
-	</div>
-
-
+	</form>
 </body>
 
 <script src="/web/resources/music/sscont.js"></script>
