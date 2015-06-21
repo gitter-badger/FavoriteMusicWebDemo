@@ -1,4 +1,4 @@
-package mplanweb.music.test;
+package mplanweb.music.web.source;
 
 public class Ssearch {
 	private int start; // 페이징 시작값

@@ -1,4 +1,4 @@
-package mplanweb.music.test;
+package mplanweb.music.web.source;
 
 public class MusicStringUtil {
 

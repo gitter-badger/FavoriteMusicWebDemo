@@ -14,11 +14,11 @@
 		<typeAlias alias="Yboard" type="mplanweb.music.web.board.Yboard" />
 		<typeAlias alias="YboardSearch" type="mplanweb.music.web.board.YboardSearch" />
 		<typeAlias alias="Search" type="mplanweb.music.web.search.SearchDTO" />
-		<typeAlias alias="Ssearch" type="mplanweb.music.test.Ssearch" />
-		<typeAlias alias="Ssview" type="mplanweb.music.test.Ssview" />
-		<typeAlias alias="Ssalbum" type="mplanweb.music.test.SsAlbum" />
-		<typeAlias alias="Ssartist" type="mplanweb.music.test.Ssartist" />
-		<typeAlias alias="Sscorp" type="mplanweb.music.test.Sscorp" />
+		<typeAlias alias="Ssearch" type="mplanweb.music.web.source.Ssearch" />
+		<typeAlias alias="Ssview" type="mplanweb.music.web.source.Ssview" />
+		<typeAlias alias="Ssalbum" type="mplanweb.music.web.source.SsAlbum" />
+		<typeAlias alias="Ssartist" type="mplanweb.music.web.source.Ssartist" />
+		<typeAlias alias="Sscorp" type="mplanweb.music.web.source.Sscorp" />
 	</typeAliases>
 
 	<mappers>

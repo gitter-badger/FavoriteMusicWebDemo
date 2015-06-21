@@ -1,10 +1,11 @@
-package mplanweb.music.test;
+package mplanweb.music.web.source;
 
 import java.util.List;
 import java.util.Map;
 
-public interface MusicDAO {
+public interface MusicService {
 
+	
 	// SSView
 	public int selecttotalcount(Ssearch ssearch);
 
@@ -17,14 +18,14 @@ public interface MusicDAO {
 	public void deletessearch(List<Map<String, Object>> mapList);
 
 	public int updatessearch(Ssview ssview);
-
+	
 	// Album View
 	public int albumtotalcount(Ssearch ssearch);
 
 	public List<SsAlbum> selectalbumview(Ssearch ssearch);
 
 	public SsAlbum viewalbumview(Map<String, Object> map);
-
+	
 	public int insertalbum(SsAlbum ssalbum);
 
 	public void deletealbum(List<Map<String, Object>> mapList);
@@ -32,13 +33,13 @@ public interface MusicDAO {
 	public int updatealbum(SsAlbum ssalbum);
 
 	// Artist View
-
+	
 	public int artisttotalcount(Ssearch ssearch);
 
 	public List<Ssartist> selectartistview(Ssearch ssearch);
 
 	public Ssartist viewartistview(Map<String, Object> map);
-
+	
 	public int insertartist(Ssartist ssartist);
 
 	public void deleteartist(List<Map<String, Object>> mapList);
@@ -52,11 +53,13 @@ public interface MusicDAO {
 	public List<Sscorp> selectcorpview(Ssearch ssearch);
 
 	public Sscorp viewcorpview(Map<String, Object> map);
-
+	
 	public int insertcorp(Sscorp sscorp);
 
 	public void deletecorp(List<Map<String, Object>> mapList);
 
 	public int updatecorp(Sscorp sscorp);
 
+
+	
 }
