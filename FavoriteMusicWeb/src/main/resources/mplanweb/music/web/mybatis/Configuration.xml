@@ -16,6 +16,9 @@
 		<typeAlias alias="Search" type="mplanweb.music.web.search.SearchDTO" />
 		<typeAlias alias="Ssearch" type="mplanweb.music.test.Ssearch" />
 		<typeAlias alias="Ssview" type="mplanweb.music.test.Ssview" />
+		<typeAlias alias="Ssalbum" type="mplanweb.music.test.SsAlbum" />
+		<typeAlias alias="Ssartist" type="mplanweb.music.test.Ssartist" />
+		<typeAlias alias="Sscorp" type="mplanweb.music.test.Sscorp" />
 	</typeAliases>
 
 	<mappers>

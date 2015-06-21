@@ -37,7 +37,7 @@
 	<div class="container-fluid">
 		<div class="page-header">
 			<h1>
-				<small>Favorite Music 음원관리 - 수정사항 : Tel : 0012번으로 문의 </small>
+				<small>Favorite Music 음원관리</small>
 			</h1>
 		</div>
 		<div class="row">
@@ -50,8 +50,8 @@
 							<div class="row">
 								<div class="col-md-10">
 									<select id="searchColumn" class="selectpicker">
-										<option value="mp_artist">제목</option>
-										<option value="mp_title">작성자</option>
+										<option value="mp_artist">아티스트</option>
+										<option value="mp_title">제목</option>
 									</select> <input type="text" id="searchText" class="form-control">
 									<button class="btn btn-default" id="searchBtn">검색</button>
 								</div>
@@ -93,7 +93,7 @@
 
 	<!-- Modal : Yboard Edit -->
 	<form class="form-horizontal" id="mplanform" name="mplanform"
-		action="/web/appler/ssviewinsert" method="POST"
+		method="POST"
 		enctype="multipart/form-data">
 		<div class="modal fade" id="yboardEditModal" tabindex="-1"
 			role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -305,5 +305,5 @@
 	</form>
 </body>
 
-<script src="/web/resources/music/sscont.js"></script>
+<script src="/web/resources/music/soundview.js"></script>
 </html>

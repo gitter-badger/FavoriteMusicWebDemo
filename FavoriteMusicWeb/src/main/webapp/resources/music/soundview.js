@@ -17,7 +17,7 @@ function showList(ssearch) {
 				dataType : 'JSON',
 				data : JSON.stringify(ssearch),
 				contentType : "application/json; charset=UTF-8",
-				url : '/web/appler/ssviewselect',
+				url : '/web/source/ssviewselect',
 				error : function() {
 					alert("데이터가 에러 났습니다. 에러확인바랍니다.");
 				},
@@ -78,14 +78,14 @@ function ViewSelect(mpssnumEncrypt) {
 		type : "GET",
 		dataType : "JSON",
 		contentType : "application/json; charset=UTF-8",
-		url : "/web/appler/viewer/" + mpssnumEncrypt,
+		url : "/web/source/ssviewer/" + mpssnumEncrypt,
 		error : function() {
 			alert("실패 하셩습니다. ");
 		},
 		success : function(jsontotal) {
 			if (jsontotal.success) {
 				var ssview = jsontotal.data;
-				$('#mpssnumEncrypt').val(ssview.mpssnumEncrypt);
+				$('#mp_mpnum').val(ssview.mpssnumEncrypt);
 				$('#num > option[value="' + ssview.mp_num + '"]').prop(
 						'selected', true);
 				$('#num').selectpicker('render');
@@ -128,7 +128,7 @@ $('#searchBtn').click(function() {
 });
 
 function formValidator() {
-	$('#yboardForm').bootstrapValidator({
+	$('#mplanform').bootstrapValidator({
 		feedbackIcons : {
 			valid : 'glyphicon glyphicon-ok',
 			invalid : 'glyphicon glyphicon-remove',
@@ -238,7 +238,7 @@ function formValidator() {
 	// } fields
 
 	}).bootstrapValidator('validate');
-	return $('#yboardForm').data('bootstrapValidator').isValid();
+	return $('#mplanform').data('bootstrapValidator').isValid();
 };
 
 /**
@@ -284,7 +284,8 @@ function resetForm(formID) {
 	$("#" + formID).each(function() {
 		this.reset();
 	});
-	$('#mp_mpnums').val('')
+	$('#mp_mpnum').val('')
+	$("#num option[value='1']").attr('selected', true);
 	var bootstrapValidator = $('#' + formID).data('bootstrapValidator');
 	if (bootstrapValidator != null) {
 		bootstrapValidator.resetForm();
@@ -303,23 +304,32 @@ $('.modal').on('hidden.bs.modal', function() {
  * 저장
  */
 
-// 파일저장이 씨발 애미 없다.
-
-$(function(){
-
+$('#btnYboardSave').click(function() {
+	// var surveyCode = $("#surveyCodeForm" ).serializeObject();
+	var mpssnumEncrypt = $('#mpssnumEncrypt').val();
+	var method = "ssviewinsert";
+	// alert("ssviewinsert : " + mpssnumEncrypt);
+	if (mpssnumEncrypt != "") {
+		alert("ssviewupdate : " + mpssnumEncrypt);
+		method = "ssviewupdate";
+	}
+	// 폼입력값 검증
+	if (!formValidator()) {
+		return;
+	}
 	$('#mplanform').ajaxForm(
-			
-			{
-		
+
+	{
+		url : '/web/source/' + method,
 		cache : false,
 		dataType : "json",
-		//보내기전 validation check가 필요할경우
+		// 보내기전 validation check가 필요할경우
 		beforeSubmit : function(data, frm, opt) {
-			//console.log(data);
+			// console.log(data);
 			alert("전송전!!");
 			return true;
 		},
-		//submit이후의 처리
+		// submit이후의 처리
 		success : function(data, statusText) {
 
 			alert("전송성공!!");
@@ -327,147 +337,13 @@ $(function(){
 			resetForm('yboardForm');
 			$('#yboardEditModal').modal('hide');
 		},
-		//ajax error
+		// ajax error
 		error : function(e) {
 			alert("에러발생!!");
 			console.log(e);
 		}
 	});
 });
-		
-/*
- * btnyboardsave 버튼 클릭 했을시
- * 
- *
- * 
- * 
- */
-
-/*
-$(function(){
-$('#btnYboardSave').click(function() { // 버큰 클릭 했을시
-
-	var mpssnumEncrypt = $('#mpssnumEncrypt').val(); // 각각 입력
-
-	var method = "ssviewinsert"; // insert냐 update냐 확인
-	if (mpssnumEncrypt != "") {
-		method = "ssviewupdate";
-	}
-	// 폼입력값 검증
-	if (!formValidator()) {
-		return;
-	}
-	var formData = new FormData();
-	formData.append("mp_img", $("input[name=imgupload]")[0].files[0]);
-	formData.append("mp_320k", $("input[name=m320kupload]")[0].files[0]);
-	formData.append("mp_192k", $("input[name=m192kupload]")[0].files[0]);
-	formData.append("mp_num", $("#num").val());
-	formData.append("mp_artist", $("#artist").val());
-	formData.append("mp_title", $("#title").val());
-	formData.append("mp_album", $("#album").val());
-	formData.append("mp_lyric", $("textarea[name=lyric]").text());
-	formData.append("mp_label", $("#label").val());
-	formData.append("mp_corp", $("#corp").val());
-	formData.append("mp_year", $("#year").val());
-	formData.append("mp_etc", $("#etc").val());
-	formData.append("mp_open_date", $("#copy").val());
-	formData.append("mp_num", $("#num").val());
-	formData.append("mp_genre1", $("#genre1").val());
-	formData.append("mp_genre2", $("#genre2").val());
-	formData.append("mp_age", $("#age").val());
-	formData.append("mp_useyn", $('input[type="radio"]:checked').val());
-	formData.append("mpssnumEncrypt", mpssnumEncrypt);
-	alert(formData.toString());
-	alert(formData);
-	alert(method);
-	$.ajax({
-		url : '/web/appler/' + method,
-		data : formData,
-		processData : false,
-		contentType : false,
-		type : "POST",
-		error : function() {
-			alert("Loading failed!");
-		},
-		success : function(data) {
-			if (data.success) {
-				showList(null);
-				resetForm('yboardForm');
-				$('#yboardEditModal').modal('hide');
-			} else {
-				alert(data.msg);
-			}
-		}
-	});
-});
-});
-
-*/
-
-/*
-$('#btnYboardSave').click(function() {
-	// var surveyCode = $("#surveyCodeForm" ).serializeObject();
-	var mpssnumEncrypt = $('#mpssnumEncrypt').val();
-	
-	
-	
-
-	var method = "ssviewinsert";
-	if (mpssnumEncrypt != "") {
-		method = "ssviewupdate";
-	}
-	// 폼입력값 검증
-	if (!formValidator()) {
-		return;
-	}
-	var ssview = {
-		
-		mp_artist : $('#artist').val(),
-		mp_title : $('#title').val(),
-		mp_album : $('#album').val(),
-		mp_lyric : $("textarea[name=lyric]").text(),
-		mp_corp : $('#corp').val(),
-		mp_label : $('#label').val(),
-		mp_year : $('#year').val(),
-		mp_etc : $('#etc').val(),
-		mp_open_date : $('#copy').val(),
-		mp_mpnum : $('#num').val(),
-		mp_genre1 : $('#genre1').val(),
-		mp_genre2 : $('#genre2').val(),
-		mp_age : $('#age').val(),
-		mp_use_yn : $('input[type="radio"]:checked').val(),
-		mpssnumEncrypt : mpssnumEncrypt
-
-	};
-
-	$.ajax({
-		type : "POST",
-		dataType : "JSON",
-		data : JSON.stringify(ssview),
-		contentType : "application/json; charset=UTF-8",
-		url : '/web/appler/' + method,
-		error : function() {
-			alert("Loading failed!");
-		},
-		success : function(Jsontotal) {
-			if (Jsontotal.success) {
-				showList(null);
-				resetForm('yboardForm');
-
-				$('#yboardEditModal').modal('hide');
-			} else {
-				alert(Jsontotal.msg);
-			}
-		}
-	});
-
-});
-*/
-
-
-
-
-
 
 /**
  * 체크된 게시내용 삭제
@@ -494,7 +370,7 @@ $('#btnYboardDelete').click(function() {
 		dataType : "JSON",
 		data : JSON.stringify(param),
 		contentType : "application/json; charset=UTF-8",
-		url : "/web/appler/ssviewdelete",
+		url : "/web/source/ssviewdelete",
 		error : function() {
 			alert("Loading failed!")
 		},

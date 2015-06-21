@@ -212,8 +212,11 @@ $('.modal').on('hidden.bs.modal', function(){
 $('#btnYboardSave').click(function() {
 	var boardIDEncrypts = $('#yboard_boardIDEncrypt').val();
 	var method = "insert";
+	alert("boardIDEncrypts : " + boardIDEncrypts);
+	alert("sscorpinsert : " + method);
 	if (boardIDEncrypts != "") {
 		method = "update";
+		alert("sscorpinsert : " + method);
 	}
 	//폼입력값 검증
 	if(!formValidator()) {
