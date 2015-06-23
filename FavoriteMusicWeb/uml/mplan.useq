@@ -10,8 +10,8 @@
     type="class" autoSize="true">    
     <position height="-1" width="-1" x="373" y="0"/>  
   </object>  
-  <object id="3" language="java" name="mplanweb.music.web.admin.MemberService" project="FavoriteMusicWeb" 
-    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/admin/MemberService.java" binary="false" 
+  <object id="3" language="java" name="mplanweb.music.web.admin.UserService" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/admin/UserService.java" binary="false" 
     label="memberService" type="class" autoSize="true">    
     <position height="-1" width="-1" x="500" y="0"/>  
   </object>  

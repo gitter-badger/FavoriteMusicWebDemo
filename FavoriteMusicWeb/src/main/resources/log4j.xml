@@ -68,7 +68,10 @@
 	<logger name="mplanweb.music.web.search">
 		<level value="info" />
 	</logger>
-	<logger name="mplanweb.music.test">
+	<logger name="mplanweb.music.web.source">
+		<level value="info" />
+	</logger>
+	<logger name="mplanweb.music.web.member">
 		<level value="info" />
 	</logger>
 	<!-- 3rdparty Loggers -->

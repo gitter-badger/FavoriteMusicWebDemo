@@ -2,7 +2,7 @@ package mplanweb.music.web.admin;
 
 import javax.validation.constraints.Size;
 
-public class MemberDAO {
+public class UserDAO {
 	@Size(min=4, message="아이디 작성시 4글자 이상 작성 바합니다.")
 	private String userid;
 	@Size(min=6, message="패스워드 입력시 6글자 이상 작성 바랍니다.")
@@ -17,10 +17,10 @@ public class MemberDAO {
 	private String email;
 	private String comment;
 	
-	public MemberDAO(){
+	public UserDAO(){
 		
 	}
-	public MemberDAO(String userid, String passwd, String name, String email){
+	public UserDAO(String userid, String passwd, String name, String email){
 		this.userid = userid;
 		this.passwd = passwd;
 		this.name = name;

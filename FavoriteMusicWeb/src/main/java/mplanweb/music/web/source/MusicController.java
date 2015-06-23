@@ -10,9 +10,6 @@ import java.util.Map;
 import java.util.UUID;
 
 import mplanweb.music.web.admin.WebController;
-import mplanweb.music.web.board.ResultJSON;
-import mplanweb.music.web.board.YKStringUtil;
-import mplanweb.music.web.board.Yboard;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,14 +36,14 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @Controller
 @RequestMapping("/source")
-public class TestController {
+public class MusicController {
 
 	/*
 	 * 
 	 * Logger
 	 */
 	private static final Logger logger = LoggerFactory
-			.getLogger(TestController.class);
+			.getLogger(MusicController.class);
 
 	@Autowired
 	private MusicService musicService;

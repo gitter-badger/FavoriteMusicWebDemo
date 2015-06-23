@@ -2,7 +2,7 @@ package mplanweb.music.web.source;
 
 import java.io.Serializable;
 
-import mplanweb.music.web.board.YKStringUtil;
+
 
 @SuppressWarnings("serial")
 public class Ssartist implements Serializable {

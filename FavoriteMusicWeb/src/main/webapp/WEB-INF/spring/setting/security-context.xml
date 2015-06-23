@@ -17,7 +17,7 @@
 			user-service-ref="memberService" />
 	</security:authentication-manager>
 
-	<bean id="memberService" class="mplanweb.music.web.admin.MemberService">
+	<bean id="memberService" class="mplanweb.music.web.admin.UserService">
 		<property name="mainDao">
 			<bean class="mplanweb.music.web.admin.MainDaoImpl">
 				<property name="sqlSessionFactory" ref="sqlSessionFactory" />

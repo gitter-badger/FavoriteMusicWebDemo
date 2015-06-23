@@ -11,23 +11,22 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias alias="Yboard" type="mplanweb.music.web.board.Yboard" />
-		<typeAlias alias="YboardSearch" type="mplanweb.music.web.board.YboardSearch" />
+	
 		<typeAlias alias="Search" type="mplanweb.music.web.search.SearchDTO" />
 		<typeAlias alias="Ssearch" type="mplanweb.music.web.source.Ssearch" />
 		<typeAlias alias="Ssview" type="mplanweb.music.web.source.Ssview" />
 		<typeAlias alias="Ssalbum" type="mplanweb.music.web.source.SsAlbum" />
 		<typeAlias alias="Ssartist" type="mplanweb.music.web.source.Ssartist" />
 		<typeAlias alias="Sscorp" type="mplanweb.music.web.source.Sscorp" />
+		<typeAlias alias="Member" type="mplanweb.music.web.member.Member" />
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="mplanweb/music/web/mybatis/AdminMemberMapper.xml" />
-		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Upload.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Search.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Music.xml" />
-		<mapper resource="mplanweb/music/web/mybatis/Test.xml" />
+		<mapper resource="mplanweb/music/web/mybatis/Member.xml" />
 	</mappers>
 
 

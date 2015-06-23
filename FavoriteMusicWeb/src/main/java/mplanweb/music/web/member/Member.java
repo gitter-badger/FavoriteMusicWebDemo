@@ -1,150 +1,157 @@
 package mplanweb.music.web.member;
 
 public class Member {
-	private String userid; // 아이디
-	private String passwd; // 패스워드
-	private String name; // 이름
-	private String nickname; // 닉네임
-	private String email; // 이메일
-	private String email_useyn; // 이메일 동의
-	private String mobile; // 모바일
-	private String mailaddress; // 우편주소
-	private String houseaddress; // 동이름
-	private String etcaddress; // 기타주소
-	private String img; // 이미지
-	private String imgsize; // 사이즈
-	private String imgo; // 오리지널
-
+	private String mp_userid; // 아이디
+	private String mp_pwd; // 패스워드
+	private String mp_name; // 이름
+	private String mp_nickname; // 닉네임
+	private String mp_email; // 이메일
+	private String mp_email_useyn; // 이메일 동의
+	private String mp_mobile; // 모바일
+	private String mp_mailaddress; // 우편주소
+	private String mp_houseaddress; // 동이름
+	private String mp_etcaddress; // 기타주소
+	private String mp_img; // 이미지
+	private long mp_imgsize; // 사이즈
+	private String mp_imgo; // 오리지널
+	private String mp_useyn;
+	
 	public Member() {
 
 	}
 
-	public Member(String userid, String passwd) {
-		this.userid = userid;
-		this.passwd = passwd;
+	public Member(String mp_userid, String mp_pwd) {
+		this.mp_userid = mp_userid;
+		this.mp_pwd = mp_pwd;
 	}
 
-	public Member(String userid, String passwd, String name, String nickname,
-			String email, String email_useyn, String mobile,
-			String mailaddress, String houseaddress, String etcaddress,
-			String img, String imgsize, String imgo) {
-		this.userid = userid;
-		this.passwd = passwd;
-		this.name = name;
-		this.nickname = nickname;
-		this.email = email;
-		this.email_useyn = email_useyn;
-		this.mobile = mobile;
-		this.mailaddress = mailaddress;
-		this.houseaddress = houseaddress;
-		this.etcaddress = etcaddress;
-		this.img = img;
-		this.imgsize = imgsize;
-		this.imgo = imgo;
+	public Member(String mp_userid, String mp_pwd, String mp_name, String mp_nickname,
+			String mp_email, String mp_email_useyn, String mp_mobile,
+			String mp_mailaddress, String mp_houseaddress, String mp_etcaddress,
+			String mp_img, long mp_imgsize, String mp_imgo) {
+		this.mp_userid = mp_userid;
+		this.mp_pwd = mp_pwd;
+		this.mp_name = mp_name;
+		this.mp_nickname = mp_nickname;
+		this.mp_email_useyn = mp_email_useyn;
+		this.mp_mobile = mp_mobile;
+		this.mp_mailaddress = mp_mailaddress;
+		this.mp_houseaddress = mp_houseaddress;
+		this.mp_etcaddress = mp_etcaddress;
+		this.mp_img = mp_img;
+		this.mp_imgsize = mp_imgsize;
+		this.mp_imgo = mp_imgo;
 	}
 
-	public String getUserid() {
-		return userid;
+	public String getMp_userid() {
+		return mp_userid;
 	}
 
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setMp_userid(String mp_userid) {
+		this.mp_userid = mp_userid;
 	}
 
-	public String getPasswd() {
-		return passwd;
+	public String getMp_pwd() {
+		return mp_pwd;
 	}
 
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setMp_pwd(String mp_pwd) {
+		this.mp_pwd = mp_pwd;
 	}
 
-	public String getName() {
-		return name;
+	public String getMp_name() {
+		return mp_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setMp_name(String mp_name) {
+		this.mp_name = mp_name;
 	}
 
-	public String getNickname() {
-		return nickname;
+	public String getMp_nickname() {
+		return mp_nickname;
 	}
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setMp_nickname(String mp_nickname) {
+		this.mp_nickname = mp_nickname;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMp_email() {
+		return mp_email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMp_email(String mp_email) {
+		this.mp_email = mp_email;
 	}
 
-	public String getEmail_useyn() {
-		return email_useyn;
+	public String getMp_email_useyn() {
+		return mp_email_useyn;
 	}
 
-	public void setEmail_useyn(String email_useyn) {
-		this.email_useyn = email_useyn;
+	public void setMp_email_useyn(String mp_email_useyn) {
+		this.mp_email_useyn = mp_email_useyn;
 	}
 
-	public String getMobile() {
-		return mobile;
+	public String getMp_mobile() {
+		return mp_mobile;
 	}
 
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public void setMp_mobile(String mp_mobile) {
+		this.mp_mobile = mp_mobile;
 	}
 
-	public String getMailaddress() {
-		return mailaddress;
+	public String getMp_mailaddress() {
+		return mp_mailaddress;
 	}
 
-	public void setMailaddress(String mailaddress) {
-		this.mailaddress = mailaddress;
+	public void setMp_mailaddress(String mp_mailaddress) {
+		this.mp_mailaddress = mp_mailaddress;
 	}
 
-	public String getHouseaddress() {
-		return houseaddress;
+	public String getMp_houseaddress() {
+		return mp_houseaddress;
 	}
 
-	public void setHouseaddress(String houseaddress) {
-		this.houseaddress = houseaddress;
+	public void setMp_houseaddress(String mp_houseaddress) {
+		this.mp_houseaddress = mp_houseaddress;
 	}
 
-	public String getEtcaddress() {
-		return etcaddress;
+	public String getMp_etcaddress() {
+		return mp_etcaddress;
 	}
 
-	public void setEtcaddress(String etcaddress) {
-		this.etcaddress = etcaddress;
+	public void setMp_etcaddress(String mp_etcaddress) {
+		this.mp_etcaddress = mp_etcaddress;
 	}
 
-	public String getImg() {
-		return img;
+	public String getMp_img() {
+		return mp_img;
 	}
 
-	public void setImg(String img) {
-		this.img = img;
+	public void setMp_img(String mp_img) {
+		this.mp_img = mp_img;
 	}
 
-	public String getImgsize() {
-		return imgsize;
+	public long getMp_imgsize() {
+		return mp_imgsize;
 	}
 
-	public void setImgsize(String imgsize) {
-		this.imgsize = imgsize;
+	public void setMp_imgsize(long mp_imgsize) {
+		this.mp_imgsize = mp_imgsize;
 	}
 
-	public String getImgo() {
-		return imgo;
+	public String getMp_imgo() {
+		return mp_imgo;
 	}
 
-	public void setImgo(String imgo) {
-		this.imgo = imgo;
+	public void setMp_imgo(String mp_imgo) {
+		this.mp_imgo = mp_imgo;
 	}
 
+	public String getMp_useyn() {
+		return mp_useyn;
+	}
+
+	public void setMp_useyn(String mp_useyn) {
+		this.mp_useyn = mp_useyn;
+	}
 }
