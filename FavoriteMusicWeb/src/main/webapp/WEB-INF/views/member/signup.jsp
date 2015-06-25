@@ -26,14 +26,6 @@ function check() {
 
 <div id="wrap">
 
-    <div id="header">
-		<%@ include file="./inc/header.jsp" %>
-    </div>
-    
-    <div id="main-menu">
- 		<%@ include file="./inc/main-menu.jsp" %>
-    </div>
-    
 	<div id="container">
 		<div id="content" style="min-height: 800px;">
 <!-- 본문 시작 -->

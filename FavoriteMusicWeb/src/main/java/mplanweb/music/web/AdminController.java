@@ -50,7 +50,7 @@ public class AdminController {
 	public String action(Locale locale, Model model) {
 		logger.info("MainPage ==> ??? : ", locale);
 
-		return "/admin/home";
+		return "/main/loginok";
 	}
 	@RequestMapping(value = "/blacklist", method = RequestMethod.GET)
 	public String blacklist(Locale locale, Model model) {

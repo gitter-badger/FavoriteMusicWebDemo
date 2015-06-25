@@ -35,7 +35,7 @@ public class WebController {
 		String name = principal.getName();
 
 		model.addAttribute("username", name);
-		return "/admin/home";
+		return "/main/loginok";
 
 	}
 
@@ -43,7 +43,7 @@ public class WebController {
 	public String logout(@RequestParam Map<String, Object> paramMap,
 			ModelMap model) throws Throwable {
 		logger.info("MainPage ==> logout.do : ", paramMap, model);
-		return "/admin/index";
+		return "/main/index";
 	}
 	
 	@RequestMapping("/join.do")
