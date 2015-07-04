@@ -138,7 +138,7 @@ function formValidator() {
 					},
 					stringLength : {
 						min : 2,
-						max : 30,
+						max : 200,
 						message : '최소 2자에서 10자이내로 입력하세요'
 					}
 				}

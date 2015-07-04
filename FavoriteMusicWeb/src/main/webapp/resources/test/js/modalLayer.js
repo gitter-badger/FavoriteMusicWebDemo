@@ -125,9 +125,9 @@
 			css: {
 				padding:	0,
 				margin:		0,
-				width:		'15%',
-				height: '15%',
-				top:		'45%',
+				width:		'17%',
+				height: '23%',
+				top:		'35%',
 				left:		'45%',
 				textAlign:	'center',
 				color:		'#000',

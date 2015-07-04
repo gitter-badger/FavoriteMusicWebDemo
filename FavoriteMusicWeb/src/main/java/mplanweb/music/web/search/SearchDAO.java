@@ -14,10 +14,21 @@ public class SearchDAO implements SearchService {
 
 	public List<SearchDTO> listall(String artist) {
 		// TODO Auto-generated method stub
-
-		// logger.info("uploadServiceImpl.class : " + uploadfile);
-		System.out.println("uploadServiceImpl.class : " + artist);
-
 		return sqlSession.selectList("Query.listall", artist);
+	}
+
+	public List<MsearchDTO> artistsearch(String result) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("Query.artistsearch", result);
+	}
+
+	public List<MsearchDTO> albumsearch(String result) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("Query.albumsearch", result);
+	}
+
+	public List<MsearchDTO> musicsearch(String result) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("Query.musicsearch", result);
 	}
 }

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
 <!doctype html>
@@ -7,9 +7,14 @@
 <head>
 <meta charset="utf-8">
 <title>Favorite Music</title>
-<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"
+	type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+	type="text/javascript"></script>
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
 
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 
@@ -23,341 +28,451 @@
 }
 </STYLE>
 <script type="text/javascript">
-$(document).ready(function() {
-$("#testText").autocomplete({
-source : function(request, response) {
-$.ajax({
-url : "/web/search",
-type : "post",
-dataType : "json",
-data : {
-	term : request.term,
-	param1 : "param1 Value",
-	param2 : "param2 Value"
-	},
-	contentType : "application/x-www-form-urlencoded; charset=UTF-8",
-	data : request,
-	success : function(data) {
-		var result = data;
-		response(result);
-		},
-		error : function(data) {
-			alert("¿¡·¯°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.")
-			}
-		});
-		}
-		});
-		});
-
+	$(document)
+			.ready(
+					function() {
+						$("#testText")
+								.autocomplete(
+										{
+											source : function(request, response) {
+												$
+														.ajax({
+															url : "/web/search",
+															type : "post",
+															dataType : "json",
+															data : {
+																term : request.term,
+															//param1 : "param1 Value",
+															//param2 : "param2 Value"
+															},
+															contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+															data : request,
+															success : function(
+																	data) {
+																var result = data;
+																response(result);
+															},
+															error : function(
+																	data) {
+																alert("ì—ëŸ¬ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.")
+															}
+														});
+											}
+										});
+					});
 </script>
-<link href="resources/test/css/main.css" rel="stylesheet" type="text/css">
-<link href="resources/test/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="resources/test/css/modal.css" rel="stylesheet" type="text/css">
+
+<link href="resources/test/css/main.css" rel="stylesheet"
+	type="text/css">
+<link href="resources/test/css/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="resources/test/css/modal.css" rel="stylesheet"
+	type="text/css">
 <script src="resources/test/js/modalLayer.js" type="text/javascript"></script>
-<script src="resources/test/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="resources/test/js/main.js" type="text/javascript"></script>
+<script src="resources/test/bootstrap/js/bootstrap.min.js"
+	type="text/javascript"></script>
+
 </head>
 <body>
 
-	<!-- ¸ğ´ŞÃ¢ ·Î±×ÀÎ ·¹ÀÌ¾Æ¿ô -->
-	<div class="modal" id="modallogin">
-      <div class="login">
-        <div class="login-box-body">
-          <h2><strong>·Î±×ÀÎ</strong></h2>
-        <form action="j_spring_security_check" method="post">
-            <div class="form-group has-feedback">
-              <input type="text" class="form-control" name="j_username" placeholder="¾ÆÀÌµğ" />
-              <span
-										class="glyphicon glyphicon-user form-control-feedback"></span> </div>
-            <div class="form-group has-feedback">
-              <input type="password" class="form-control" name="j_password" placeholder="ÆĞ½º¿öµå" />
-              <span class="glyphicon glyphicon-lock form-control-feedback"></span> </div>
-            <div class="row">
-              <div class="col-xs-8">
-                <div class="checkbox icheck">
-                  <label>
-                    <input type="checkbox">
-                    ¾ÆÀÌµğ ÀúÀå </label>
-                </div>
-              </div>
-              <!-- /.col -->
-              <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">·Î±×ÀÎ</button>
-              </div>
-              <div class="userinfo">
-                <ul class="infolist">
-                  <li><a href="#" class="userlink">È¸¿ø°¡ÀÔ</a> <span class="textbar"></span> </li>
-                  <li><a href="#" class="userlink">°èÁ¤Ã£±â</a> <span class="textbar"></span> </li>
-                  <li><a href="#" class="userlink">ºñ¹Ğ¹øÈ£Ã£±â</a></li>
-                </ul>
-              </div>
-              <!-- /.col --> 
-            </div>
-          </form>
-          <button type="button" class="closeModalLayer" data-dismiss="modal"
-						aria-hidden="true" onClick="removeModal()">&times;</button>
-        </div>
-	</div>
+	<!-- ëª¨ë‹¬ì°½ ë¡œê·¸ì¸ ë ˆì´ì•„ì›ƒ -->
+	<div class="modal" id="modallogin" tabindex="-1"
+			role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="login">
+			<div class="login-box-body">
+				<h2>
+					<strong>ë¡œê·¸ì¸</strong>
+				</h2>
+				<form action="j_spring_security_check" method="post">
+					<div class="form-group has-feedback">
+						<input type="text" class="form-control" name="j_username"
+							placeholder="ì•„ì´ë””" /> <span
+							class="glyphicon glyphicon-user form-control-feedback"></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input type="password" class="form-control" name="j_password"
+							placeholder="íŒ¨ìŠ¤ì›Œë“œ" /> <span
+							class="glyphicon glyphicon-lock form-control-feedback"></span>
+					</div>
+					<div class="row">
+
+						<!-- /.col -->
+						<div class="col-xs-4">
+							<button type="submit" class="btn btn-primary btn-block btn-flat">ë¡œê·¸ì¸</button>
+						</div>
+
+						<!-- /.col -->
+					</div>
+				</form>
+				<button type="button" class="closeModalLayer" data-dismiss="modal"
+					aria-hidden="true" onClick="removeModal()">&times;</button>
+			</div>
+		</div>
 	</div>
 
-	<!-- ¸ğ´ŞÃ¢ ·Î±×ÀÎ ·¹ÀÌ¾Æ¿ô Á¾·á-->
-<!-- Header À­ºÎºĞ -->
-<div id="header">
-  <div id="headerwrap"></div>
-  <div class="top"> 
-    <!-- ·Î°í ½ÃÀÛ -->
-    <div id="logo"> <a href="#" class="logoimg">Favorite Music</a> </div>
-    <!-- ·Î°í Á¾·á --> 
-    <!-- search -->
-    <div class="search"> <span class="input-group margin">
-      <input type="text" id="testText" class="form-control" placeholder="[°¡¼ö & Á¦¸ñ] °Ë»ö ÇÏ¸é µË´Ï´Ù.">
-      <span class="input-group-btn">
-      <button class="btn btn-info btn-flat" type="button">°Ë»ö</button>
-      </span> </span> </div>
-    <!-- °Ë»ö Á¾·á --> 
-    <!-- ·Î±×ÀÎ ½ÃÀÛ-->
-    <div class="btjoin">
-      <button class="btn btn-block btn-primary">È¸¿ø°¡ÀÔ</button>
-    </div>
-    <div class="btlogin">
-      <button class="btn btn-block btn-danger" id="openmodal">·Î±×ÀÎ</button>
-    </div>
-    <!-- ·Î±×ÀÎ Á¾·á--> 
-    <!-- ¸Ş´º ½ÃÀÛ -->
-    <div class="nav">
-      <ul>
-        <li class="nav_0"><a href="#">À½¿øÂ÷Æ®</a></li>
-        <li class="nav_1"><a href="#">ÃÖ½ÅÀ½¾Ç</a></li>
-        <li class="nav_2"><a href="#">Àå¸£À½¾Ç</a></li>
-        <li class="nav_3"><a href="#">¶óµğ¿À</a></li>
-        <li class="nav_4"><a href="#">°øÁö»çÇ×</a></li>
-        <li class="nav_5"><a href="#">FAQ</a></li>
-        <li class="nav_6"><a href="#">1:1</a></li>
-        <li class="nav_7"><a href="#">1:1</a></li>
-        <li class="nav_8"><a href="#">1:1</a></li>
-      </ul>
-    </div>
-    <!-- ¸Ş´ºÁ¾·á --> 
-  </div>
-</div>
-<!-- end header --> 
-<!-- center -->
-<div id="center">
-  <div class="centerwrap">
-    <div class="centertab"> </div>
-    <!-- ¾Ù¹ü -->
-    <div class="album">
-      <div class="musicList albumList">
-        <h2><strong>ÃÖ½Å¾Ù¹ü</strong></h2>
-        <h3 class ="on"> <a href="#" class="musicgroup">Á¾ÇÕ</a> <span class="textbar"></span><a href="#" class="musicgroup">°¡¿ä</a> <span class="textbar"></span> <a href="#" class="musicgroup">ÆË</a> <span class="textbar"></span> <a href="#" class="musicgroup">J-POP</a></h3>
-        <ul class="thumbs">
-            <li><a href="#thumb1" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg);">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb2" class="thumbnail" style="background-image: url(resources/test/img/465226.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb3" class="thumbnail" style="background-image: url(resources/test/img/465266.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb4" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb5" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb6" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>POP</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb7" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>°¡¿ä</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb8" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-        </ul>
-      </div>
-    </div>
-    <!-- ½Ì±Û -->
-    <div class="album">
-      <div class="musicList albumList">
-        <h2><strong>ÃÖ½ÅÀ½¾Ç</strong></h2>
-         <h3 class ="on"> <a href="#" class="musicgroup">Á¾ÇÕ</a> <span class="textbar"></span><a href="#" class="musicgroup">°¡¿ä</a> <span class="textbar"></span> <a href="#" class="musicgroup">ÆË</a> <span class="textbar"></span> <a href="#" class="musicgroup">J-POP</a></h3>
-        <ul class="thumbs">
-          <li><a href="#thumb1" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg);">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb2" class="thumbnail" style="background-image: url(resources/test/img/465226.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb3" class="thumbnail" style="background-image: url(resources/test/img/465266.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb4" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb5" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb6" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>POP</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb7" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>°¡¿ä</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb8" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-        </ul>
-      </div>
-    </div>
-    <!-- ¶óµğ¿À -->
-    <div class="album">
-      <div class="musicList albumList">
-        <h2><strong>¶óµğ¿À</strong></h2>
-        <ul class="thumbs">
-           <li><a href="#thumb1" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg);">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb2" class="thumbnail" style="background-image: url(resources/test/img/465226.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb3" class="thumbnail" style="background-image: url(resources/test/img/465266.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb4" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb5" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb6" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>POP</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb7" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>°¡¿ä</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-          <li><a href="#thumb8" class="thumbnail" style="background-image: url(resources/test/img/462544.jpg)">
-            <h4>AllNew</h4>
-            <span class="description">Get the latest technologies</span></a> </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Â÷Æ® -->
-    <div class = "subcenter">
-      <div class="login">
-        <div class="login-box-body">
-          <h2><strong>·Î±×ÀÎ</strong></h2>
-       <form action="j_spring_security_check" method="post">
-            <div class="form-group has-feedback">
-             	<input type="text" class="form-control" placeholder="¾ÆÀÌµğ" name="j_username"/> 
-              <span class="glyphicon glyphicon-user form-control-feedback"></span> </div>
-            <div class="form-group has-feedback">
-          	<input type="password" class="form-control" placeholder="ÆĞ½º¿öµå" name="j_password"/>
-              <span class="glyphicon glyphicon-lock form-control-feedback"></span> </div>
-            <div class="row">
-              <div class="col-xs-8">
-                <div class="checkbox icheck">
-                 <label> <input type="checkbox" id="idcheck"> ¾ÆÀÌµğ ÀúÀå
-											</label>
-                </div>
-              </div>
-              <!-- /.col -->
-              <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">·Î±×ÀÎ</button>
-              </div>
-              <div class="userinfo">
-                <ul class="infolist">
-                  <li><a href="#" class="userlink">È¸¿ø°¡ÀÔ</a> <span class="textbar"></span> </li>
-                  <li><a href="#" class="userlink">°èÁ¤Ã£±â</a> <span class="textbar"></span> </li>
-                  <li><a href="#" class="userlink">ºñ¹Ğ¹øÈ£Ã£±â</a></li>
-                </ul>
-              </div>
-              <!-- /.col --> 
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- Á¤º¸ -->
-      <div class="infomation">
-        <div class="box-body">
-          <h2><strong>Á¤º¸</strong></h2>
-          <div class="info-box"> <span class="info-box-icon"><i
-							class="fa fa-music"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">À½¿øº¸À¯¼ö</span> <span
-								class="info-box-number">10,000,000°î</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box -->
-          
-          <div class="info-box"> <span class="info-box-icon"><i
-							class="fa fa-play-circle"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">¶óµğ¿À Ã¤³Î¼ö</span> <span
-								class="info-box-number">20°³</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box -->
-          
-          <div class="info-box"> <span class="info-box-icon"><i
-							class="fa fa-cloud-upload"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">¿À´Ã µî·ÏµÈ À½¿ø¼ö</span> <span
-								class="info-box-number">1,240°î</span> </div>
-            <!-- /.info-box-content --> 
-          </div>
-          <!-- /.info-box -->
-          
-          <div class="info-box"> <span class="info-box-icon"><i
-							class="fa  fa-users"></i></span>
-            <div class="info-box-content"> <span class="info-box-text">ÃÑ À¯Àú¼ö</span> <span
-								class="info-box-number">120,020¸í</span> </div>
-          </div>
-        </div>
-      </div>
-      <!-- °øÁö»çÇ× -->
-      <div class="noticelist">
-      <h2><strong>°øÁö»çÇ×</strong></h2>
-        <ul id="notice">
-          <li><a href="#">[°øÁö] Favorite Music Å×½ºÆ®Áß</a></li>
-          <li><a href="#">[¾È³»] Favorite Music App</a></li>
-          <li><a href="#">[¾È³»] Favorite Music Á¤±â Á¤°Ë</a></li>
-          <li><a href="#">[¾È³»] Favorite Music È¸¿ø °¡ÀÔ</a></li>
-          <li><a href="#">[°øÁö] Favorite Music ±â´É Ãß°¡ °ü·Ã</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end center --> 
-<!-- footer -->
-<div id="footer">
-  <div class="footerwarp">
-    <div id="company"> <a href="#" class="footersize">Favorite Music</a></div>
-    <div class="footerlist">
-      <ul id="footercompany">
-        <li><a href="#">È¸»ç¼Ò°³</a></li>
-        <li><a href="#">ÀÌ¿ë¾à°ü</a></li>
-        <li><a href="#">°³ÀÎÁ¤º¸º¸È£Á¤Ã¥</a></li>
-        <li><a href="#">¹ıÀû°íÁö</a></li>
-        <li><a href="#">ÀÌ¸ŞÀÏ¹«´Ü¼öÁı°ÅºÎ</a></li>
-        <li><a href="#">°í°´¼¾ÅÍ</a></li>
-        <li><a href="#">Ã£¾Æ¿À½Ã´Â ±æ</a></li>
-      </ul>
-    </div>
-    <div class="footerlist2">
-      <ul id="footercompany">
-        <li> »ç¾÷ÀÚµî·Ï¹øÈ£ : 000-00-0000</li>
-        <li> Åë½ÅÆÇ¸Å½Å°í¹øÈ£ : 2015-°æ±â**-0101</li>
-        <li> °³ÀÎÁ¤º¸°ü¸®Ã¥ÀÓÀÚ : M!Plan </li>
-        <li> ´ëÇ¥ÀÌ»ç : ±èÁ¤ÈÆ </li>
-        <li id="company-info"> VM! - Favorite Music¢ß <br />
-          ¨Ï Copyright M!Plan All Rights Reserved. 1997~2015, ¨Ï Copyright M!Plan Lap All Rights Reserved. 2009~2015<br />
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- end footer -->
+	<!-- ëª¨ë‹¬ì°½ ë¡œê·¸ì¸ ë ˆì´ì•„ì›ƒ ì¢…ë£Œ-->
+	<!-- Header ìœ—ë¶€ë¶„ -->
+	<div id="header">
+		<div id="headerwrap"></div>
+		<div class="top">
+			<!-- ë¡œê³  ì‹œì‘ -->
+			<div id="logo">
+				<a href="/web" class="logoimg">Favorite Music</a>
+			</div>
+			<!-- ë¡œê³  ì¢…ë£Œ -->
+			<!-- search -->
+			
+				<div class="search">
+				<form action="/web/hellomplan" method="get">
+					<span class="input-group margin"> <input type="text"
+						id="testText" name="testText" class="form-control"
+						placeholder="[ê°€ìˆ˜ & ì œëª©] ê²€ìƒ‰ í•˜ë©´ ë©ë‹ˆë‹¤."> <span
+						class="input-group-btn">
+							<button class="btn btn-info btn-flat" id="btnsearch"
+								type="submit">ê²€ìƒ‰</button>
+					</span>
+					</span>
+					</form>
+				</div>
+			
+			<!-- ê²€ìƒ‰ ì¢…ë£Œ -->
+			<!-- ë¡œê·¸ì¸ ì‹œì‘-->
+			<div class="btjoin">
+				<button class="btn btn-block btn-primary">íšŒì›ê°€ì…</button>
+			</div>
+			<div class="btlogin">
+				<button class="btn btn-block btn-danger" id="openmodal">ë¡œê·¸ì¸</button>
+			</div>
+			<!-- ë¡œê·¸ì¸ ì¢…ë£Œ-->
+			<!-- ë©”ë‰´ ì‹œì‘ -->
+			<div class="nav">
+				<ul>
+					<li class="nav_0"><a href="#">ìŒì›ì°¨íŠ¸</a></li>
+					<li class="nav_1"><a href="#">ìµœì‹ ìŒì•…</a></li>
+					<li class="nav_2"><a href="#">ì¥ë¥´ìŒì•…</a></li>
+					<li class="nav_3"><a href="#">ë¼ë””ì˜¤</a></li>
+					<li class="nav_4"><a href="#">ê³µì§€ì‚¬í•­</a></li>
+					<li class="nav_5"><a href="#">FAQ</a></li>
+					<li class="nav_6"><a href="#">1:1</a></li>
+
+				</ul>
+			</div>
+			<!-- ë©”ë‰´ì¢…ë£Œ -->
+		</div>
+	</div>
+	<!-- end header -->
+	<!-- center -->
+	<div id="center">
+		<div class="centerwrap">
+			<div class="centertab"></div>
+			<!-- ì•¨ë²” -->
+			<div class="album">
+				<div class="musicList albumList">
+					<h2>
+						<strong>ìµœì‹ ì•¨ë²”</strong>
+					</h2>
+					<h3 class="on">
+						<a href="#" class="musicgroup">ì¢…í•©</a> <span class="textbar"></span><a
+							href="#" class="musicgroup">ê°€ìš”</a> <span class="textbar"></span>
+						<a href="#" class="musicgroup">íŒ</a> <span class="textbar"></span>
+						<a href="#" class="musicgroup">J-POP</a>
+					</h3>
+					<ul class="thumbs">
+						<li><a href="#thumb1" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg);">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb2" class="thumbnail"
+							style="background-image: url(resources/test/img/465226.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb3" class="thumbnail"
+							style="background-image: url(resources/test/img/465266.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb4" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb5" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb6" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>POP</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb7" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>ê°€ìš”</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb8" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- ì‹±ê¸€ -->
+			<div class="album">
+				<div class="musicList albumList">
+					<h2>
+						<strong>ìµœì‹ ìŒì•…</strong>
+					</h2>
+					<h3 class="on">
+						<a href="#" class="musicgroup">ì¢…í•©</a> <span class="textbar"></span><a
+							href="#" class="musicgroup">ê°€ìš”</a> <span class="textbar"></span>
+						<a href="#" class="musicgroup">íŒ</a> <span class="textbar"></span>
+						<a href="#" class="musicgroup">J-POP</a>
+					</h3>
+					<ul class="thumbs">
+						<li><a href="#thumb1" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg);">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb2" class="thumbnail"
+							style="background-image: url(resources/test/img/465226.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb3" class="thumbnail"
+							style="background-image: url(resources/test/img/465266.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb4" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb5" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb6" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>POP</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb7" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>ê°€ìš”</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb8" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- ë¼ë””ì˜¤ -->
+			<div class="album">
+				<div class="musicList albumList">
+					<h2>
+						<strong>ë¼ë””ì˜¤</strong>
+					</h2>
+					<ul class="thumbs">
+						<li><a href="#thumb1" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg);">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb2" class="thumbnail"
+							style="background-image: url(resources/test/img/465226.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb3" class="thumbnail"
+							style="background-image: url(resources/test/img/465266.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb4" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb5" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb6" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>POP</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb7" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>ê°€ìš”</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+						<li><a href="#thumb8" class="thumbnail"
+							style="background-image: url(resources/test/img/462544.jpg)">
+								<h4>AllNew</h4> <span class="description">Get the latest
+									technologies</span>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- ì°¨íŠ¸ -->
+			<div class="subcenter">
+				<div class="login">
+					<div class="login-box-body">
+						<h2>
+							<strong>ë¡œê·¸ì¸</strong>
+						</h2>
+						<form action="j_spring_security_check" method="post">
+							<div class="form-group has-feedback">
+								<input type="text" class="form-control" placeholder="ì•„ì´ë””"
+									name="j_username" /> <span
+									class="glyphicon glyphicon-user form-control-feedback"></span>
+							</div>
+							<div class="form-group has-feedback">
+								<input type="password" class="form-control" placeholder="íŒ¨ìŠ¤ì›Œë“œ"
+									name="j_password" /> <span
+									class="glyphicon glyphicon-lock form-control-feedback"></span>
+							</div>
+							<div class="row">
+								<div class="col-xs-8">
+									<div class="checkbox icheck">
+										<label> <input type="checkbox" id="idcheck">
+											ì•„ì´ë”” ì €ì¥
+										</label>
+									</div>
+								</div>
+								<!-- /.col -->
+								<div class="col-xs-4">
+									<button type="submit"
+										class="btn btn-primary btn-block btn-flat">ë¡œê·¸ì¸</button>
+								</div>
+								<div class="userinfo">
+									<ul class="infolist">
+										<li><a href="./join" class="userlink">íšŒì›ê°€ì…</a> <span
+											class="textbar"></span></li>
+										<li><a href="#" class="userlink">ê³„ì •ì°¾ê¸°</a> <span
+											class="textbar"></span></li>
+										<li><a href="#" class="userlink">ë¹„ë°€ë²ˆí˜¸ì°¾ê¸°</a></li>
+									</ul>
+								</div>
+								<!-- /.col -->
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- ì •ë³´ -->
+				<div class="infomation">
+					<div class="box-body">
+						<h2>
+							<strong>ì •ë³´</strong>
+						</h2>
+						<div class="info-box">
+							<span class="info-box-icon"><i class="fa fa-music"></i></span>
+							<div class="info-box-content">
+								<span class="info-box-text">ìŒì›ë³´ìœ ìˆ˜</span> <span
+									class="info-box-number">${musictotal }ê³¡</span>
+
+
+
+							</div>
+							<!-- /.info-box-content -->
+						</div>
+						<!-- /.info-box -->
+
+						<div class="info-box">
+							<span class="info-box-icon"><i class="fa fa-play-circle"></i></span>
+							<div class="info-box-content">
+								<span class="info-box-text">ë¼ë””ì˜¤ ì±„ë„ìˆ˜</span> <span
+									class="info-box-number">${radiototal}ì±„ë„</span>
+							</div>
+							<!-- /.info-box-content -->
+						</div>
+						<!-- /.info-box -->
+
+						<div class="info-box">
+							<span class="info-box-icon"><i class="fa fa-cloud-upload"></i></span>
+							<div class="info-box-content">
+								<span class="info-box-text">ì˜¤ëŠ˜ ë“±ë¡ëœ ìŒì›ìˆ˜</span> <span
+									class="info-box-number">${todaymusictotal }ê³¡</span>
+							</div>
+							<!-- /.info-box-content -->
+						</div>
+						<!-- /.info-box -->
+
+						<div class="info-box">
+							<span class="info-box-icon"><i class="fa  fa-users"></i></span>
+							<div class="info-box-content">
+								<span class="info-box-text">ì´ ìœ ì €ìˆ˜</span> <span
+									class="info-box-number">${membertotal }ëª…</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ê³µì§€ì‚¬í•­ -->
+				<div class="noticelist">
+					<h2>
+						<strong>ê³µì§€ì‚¬í•­</strong>
+					</h2>
+					<ul id="notice">
+						<li><a href="#">[ê³µì§€] Favorite Music í…ŒìŠ¤íŠ¸ì¤‘</a></li>
+						<li><a href="#">[ì•ˆë‚´] Favorite Music App</a></li>
+						<li><a href="#">[ì•ˆë‚´] Favorite Music ì •ê¸° ì •ê²€</a></li>
+						<li><a href="#">[ì•ˆë‚´] Favorite Music íšŒì› ê°€ì…</a></li>
+						<li><a href="#">[ê³µì§€] Favorite Music ê¸°ëŠ¥ ì¶”ê°€ ê´€ë ¨</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end center -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="footerwarp">
+			<div id="company">
+				<a href="#" class="footersize">Favorite Music</a>
+			</div>
+			<div class="footerlist">
+				<ul id="footercompany">
+					<li><a href="#">íšŒì‚¬ì†Œê°œ</a></li>
+					<li><a href="#">ì´ìš©ì•½ê´€</a></li>
+					<li><a href="#">ê°œì¸ì •ë³´ë³´í˜¸ì •ì±…</a></li>
+					<li><a href="#">ë²•ì ê³ ì§€</a></li>
+					<li><a href="#">ì´ë©”ì¼ë¬´ë‹¨ìˆ˜ì§‘ê±°ë¶€</a></li>
+					<li><a href="#">ê³ ê°ì„¼í„°</a></li>
+					<li><a href="#">ì°¾ì•„ì˜¤ì‹œëŠ” ê¸¸</a></li>
+				</ul>
+			</div>
+			<div class="footerlist2">
+				<ul id="footercompany">
+					<li>ì‚¬ì—…ìë“±ë¡ë²ˆí˜¸ : 000-00-0000</li>
+					<li>í†µì‹ íŒë§¤ì‹ ê³ ë²ˆí˜¸ : 2015-ê²½ê¸°**-0101</li>
+					<li>ê°œì¸ì •ë³´ê´€ë¦¬ì±…ì„ì : M!Plan</li>
+					<li>ëŒ€í‘œì´ì‚¬ : ê¹€ì •í›ˆ</li>
+					<li id="company-info">VM! - Favorite Musicãˆœ <br /> â“’
+						Copyright M!Plan All Rights Reserved. 1997~2015, â“’ Copyright
+						M!Plan Lap All Rights Reserved. 2009~2015<br />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
 </body>
+<script src="resources/test/js/main.js" type="text/javascript"></script>
 </html>
 

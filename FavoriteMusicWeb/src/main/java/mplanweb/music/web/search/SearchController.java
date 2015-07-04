@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
+
+import mplanweb.music.web.source.Jsontotal;
+import mplanweb.music.web.source.SsAlbum;
 import net.sf.json.JSONArray;
 
 import org.slf4j.Logger;
@@ -51,6 +54,31 @@ public class SearchController {
 
 	}
 	
-	
+	@RequestMapping(value = "/hellomplan", method = RequestMethod.GET)
+	public String Searchtest(Locale locale, Model model,
+			HttpServletRequest request, HttpServletResponse response,
+			MsearchDTO msearchdto) throws IOException {
+		String result = request.getParameter("testText");
+		System.out.println("Test : " + result);
+		List<MsearchDTO> object = searchdao.artistsearch(result);
+		List<MsearchDTO> object2 = searchdao.albumsearch(result);
+		List<MsearchDTO> object3 = searchdao.musicsearch(result);
+		model.addAttribute("object", object);
+		model.addAttribute("object2", object2);
+		model.addAttribute("object3", object3);
+		logger.info("count : " + object.size());
+		logger.info("object : " + object.toString());
+		
+		logger.info("count : " + object2.size());
+		logger.info("object : " + object2.toString());
+		
+		logger.info("count : " + object3.size());
+		logger.info("object : " + object3.toString());
+		//카운트 계산
+		return "main/search";
+		
+		//처리 
+		//List<SearchDTO> list = searchdao.searchall(result);
+	}
 
 }

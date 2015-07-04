@@ -145,6 +145,7 @@ public class MusicController {
 		Jsontotal jsontotal = new Jsontotal();
 		// 카운트 계산
 		int totalCount = musicService.selecttotalcount(ssearch);
+		System.out.println("총 갯수 : " + totalCount);
 		// 리스트 형식
 		List<Ssview> musiclist = musicService.selectSsview(ssearch); // nullpoint
 		jsontotal.setTotal(totalCount);
@@ -174,26 +175,6 @@ public class MusicController {
 		jsontotal.setSuccess(true);
 		return jsontotal;
 	}
-
-	/*
-	 * @RequestMapping(value = "/ssviewinsert", method = RequestMethod.POST)
-	 * 
-	 * @ResponseBody public Jsontotal insertssview(@RequestBody Ssview ssview) {
-	 * System.out.println("ssview2222222222222222222222222222222222222 : " +
-	 * ssview); Jsontotal jsontotal = new Jsontotal();
-	 * musicService.insertssearch(ssview);
-	 * System.out.println("Jsontotal2222222222222222222222222222222222222222 : "
-	 * + jsontotal); jsontotal.setSuccess(true); return jsontotal;
-	 */
-
-	/*
-	 * View =========> ssviewinsert =========> jsontotal ======> DB =====>
-	 * Ssview ===> /music/ssviewselect.jsp 음원 관리 선택 (List)
-	 * 
-	 * @param ssviewinsert
-	 * 
-	 * @return jsontotal
-	 */
 
 	@RequestMapping(value = "/ssviewinsert", produces = "application/json")
 	@ResponseBody
@@ -256,8 +237,8 @@ public class MusicController {
 			// Upload 폴더위치 설정
 			// ///////////////////////////////////////////////////////////////////////
 			String uploadimgPath = "E://upload//img//";
-			String upload192Path = "E://upload//music192k//";
 			String upload320Path = "E://upload//music320k//";
+			String upload192Path = "E://upload//music192k//";
 
 			// ///////////////////////////////////////////////////////////////////////
 			// Upload 파일사이즈 0이 아니라면... 업로드
@@ -266,10 +247,10 @@ public class MusicController {
 				mimg.transferTo(new File(uploadimgPath + "/" + mp_imgo));
 			}
 			if (m192k.getSize() != 0) {
-				m192k.transferTo(new File(upload192Path + "/" + mp_320ko));
+				m192k.transferTo(new File(upload192Path + "/" + mp_192ko));
 			}
 			if (m320k.getSize() != 0) {
-				m320k.transferTo(new File(upload320Path + "/" + mp_192ko));
+				m320k.transferTo(new File(upload320Path + "/" + mp_320ko));
 			}
 
 			// ///////////////////////////////////////////////////////////////////////
@@ -444,10 +425,12 @@ public class MusicController {
 	 */
 	@RequestMapping(value = "/ssviewdelete", method = RequestMethod.POST)
 	@ResponseBody
-	public Jsontotal deletessview(@RequestBody Map<String, Object> param) {
+	public Jsontotal deletessview(@RequestBody Map<String, Object> param, String mp_imgo) {
 		Jsontotal jsontotal = new Jsontotal();
 		String mp_mpnum = String.valueOf(param.get("mp_mpnum"));
+		//String mp_imgo = String.valueOf(param.get("mp_imgo"));
 		System.out.println("mp_mpnum : " + mp_mpnum);
+		System.out.println("mp_imgo : " + mp_imgo);
 		List<Map<String, Object>> mapList = new ArrayList<Map<String, Object>>();
 		String[] mpssnumEncrypts = mp_mpnum.split(",");
 
@@ -457,7 +440,7 @@ public class MusicController {
 					MusicStringUtil.getTmsDecryptoAesForInt(mpssnumEncrypt));
 			mapList.add(map);
 		}
-		musicService.deletessearch(mapList);
+		//musicService.deletessearch(mapList);
 		jsontotal.setSuccess(true);
 		return jsontotal;
 	}
@@ -613,7 +596,7 @@ public class MusicController {
 	@ResponseBody
 	public Jsontotal updatessalbum(MultipartHttpServletRequest request)
 			throws Exception {
-		
+
 		String num_pm = request.getParameter("mpssnumEncrypt"); // 아티스트 이름
 		String mp_artist = request.getParameter("artist"); // 음원제목 Request
 		String mp_album = request.getParameter("album"); // 앨범명 Request
@@ -660,7 +643,7 @@ public class MusicController {
 			// Hashput 입력
 			// ///////////////////////////////////////////////////////////////////////
 			SsAlbum ssalbum = new SsAlbum();
-	
+
 			ssalbum.setMp_alnum(MusicStringUtil.getTmsDecryptoAesForInt(num_pm));
 			ssalbum.setMp_artist(mp_artist);
 			ssalbum.setMp_album(mp_album);
@@ -855,7 +838,6 @@ public class MusicController {
 	public Jsontotal updateartist(MultipartHttpServletRequest request)
 			throws Exception {
 
-	
 		String num_pm = request.getParameter("mpssnumEncrypt"); // 아티스트 이름;
 		String mp_artist = request.getParameter("artist"); // 음원제목 Request
 		String mp_content = request.getParameter("content"); // 앨범명 Request
@@ -1010,8 +992,7 @@ public class MusicController {
 	@ResponseBody
 	public Jsontotal updatecorp(@RequestBody Sscorp sscorp) {
 		Jsontotal jsontotal = new Jsontotal();
-		System.out.println(sscorp
-				.getMpssnumEncrypt());
+		System.out.println(sscorp.getMpssnumEncrypt());
 		sscorp.setMp_corpnum(MusicStringUtil.getTmsDecryptoAesForInt(sscorp
 				.getMpssnumEncrypt()));
 		musicService.updatecorp(sscorp);
@@ -1025,6 +1006,7 @@ public class MusicController {
 		Jsontotal jsontotal = new Jsontotal();
 		String mp_corpnum = String.valueOf(param.get("mp_corpnum"));
 		System.out.println("mp_corpnum : " + mp_corpnum);
+
 		List<Map<String, Object>> mapList = new ArrayList<Map<String, Object>>();
 		String[] mpssnumEncrypts = mp_corpnum.split(",");
 
@@ -1034,8 +1016,10 @@ public class MusicController {
 					MusicStringUtil.getTmsDecryptoAesForInt(mpssnumEncrypt));
 			mapList.add(map);
 		}
+
 		musicService.deletecorp(mapList);
 		jsontotal.setSuccess(true);
+
 		return jsontotal;
 	}
 }

@@ -6,6 +6,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import mplanweb.music.web.MainService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,8 @@ public class WebController {
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(WebController.class);
-
+	@Autowired
+	MainService mainservice;
 	@RequestMapping("/loginFail.do")
 	public String loginFail(@RequestParam Map<String, Object> paramMap,
 			ModelMap model) throws Throwable {
@@ -43,6 +46,18 @@ public class WebController {
 	public String logout(@RequestParam Map<String, Object> paramMap,
 			ModelMap model) throws Throwable {
 		logger.info("MainPage ==> logout.do : ", paramMap, model);
+		int musictotal = mainservice.selectTotalCountMusic();
+		logger.info("musictotal : " + musictotal);
+		int todaymusictotal = mainservice.selectTotalCountToday();
+		logger.info("todaymusictotal : " + todaymusictotal);
+		int radiototal = mainservice.selectTotalCountRadio();
+		logger.info("radiototal : " + radiototal);
+		int membertotal = mainservice.selectTotalCountMember();
+		logger.info("membertotal : " + membertotal);
+		model.addAttribute("musictotal", musictotal);
+		model.addAttribute("todaymusictotal", todaymusictotal);
+		model.addAttribute("radiototal", radiototal);
+		model.addAttribute("membertotal", membertotal);
 		return "/main/index";
 	}
 	

@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/admin/radio/FileUploadForm.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/etc/home.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/main/join.jsp=UTF-8
 encoding/<project>=UTF-8
 separateDerivedEncodings=true

@@ -21,6 +21,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	// 로그인
+	
 	public Member login(String mp_userid, String mp_pwd) {
 		return membermapper.login(mp_userid, mp_pwd);
 

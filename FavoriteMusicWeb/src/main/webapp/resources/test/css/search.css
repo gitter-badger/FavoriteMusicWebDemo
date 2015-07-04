@@ -12,7 +12,8 @@ body, td, th {
 	padding: 0
 }
 h2 {
-	font-size: 15px;
+	font-size: 25px;
+	font-weight: bold;
 }
 /*푸터*/
 #footer {
@@ -27,6 +28,7 @@ h2 {
 	border-bottom-width: thin;
 	border-right-width: thin;
 	border-left-width: thin;
+	margin-top: 515px;
 }
 #footer .footersize {
 	background-image: url(../img/footer_logo.png);
@@ -454,6 +456,7 @@ form .row .col-xs-4 {
 }
 #center {
 	height: 100%;
+
 }
 .musicList.albumList .on .musicgroup {
 	color: #ff3d33;

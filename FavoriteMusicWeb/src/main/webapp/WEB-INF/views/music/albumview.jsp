@@ -92,6 +92,7 @@
 
 
 	<!-- Modal : Yboard Edit -->
+	
 	<form class="form-horizontal" id="mplanform" name="mplanform"
 		method="POST" enctype="multipart/form-data">
 		<div class="modal fade" id="yboardEditModal" tabindex="-1"

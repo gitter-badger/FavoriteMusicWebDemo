@@ -11,7 +11,7 @@
 	</settings>
 
 	<typeAliases>
-	
+
 		<typeAlias alias="Search" type="mplanweb.music.web.search.SearchDTO" />
 		<typeAlias alias="Ssearch" type="mplanweb.music.web.source.Ssearch" />
 		<typeAlias alias="Ssview" type="mplanweb.music.web.source.Ssview" />
@@ -19,6 +19,7 @@
 		<typeAlias alias="Ssartist" type="mplanweb.music.web.source.Ssartist" />
 		<typeAlias alias="Sscorp" type="mplanweb.music.web.source.Sscorp" />
 		<typeAlias alias="Member" type="mplanweb.music.web.member.Member" />
+		<typeAlias alias="MsearchDTO" type="mplanweb.music.web.search.MsearchDTO" />
 	</typeAliases>
 
 	<mappers>

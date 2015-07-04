@@ -165,7 +165,7 @@ a.logoimg {
 }
 #header .nav {
 	position: relative;
-	top: -2px;
+	top: -17px;
 	left: -34px;
 }
 #header .nav ul li {
@@ -352,7 +352,7 @@ li .thumbnail .description {
 }
 li .thumbnail:hover .description {
 	opacity: 1;
-	height: 180px;
+	height: 165px;
 }
 li .thumbnail .active-arrow {
 	width: 0;
@@ -412,33 +412,7 @@ form .row .userinfo {
 	right: 0;
 	margin: auto;
 }
-.userinfo .infolist li {
-	float: left;
-	overflow: hidden;
-}
-.infolist li .textbar {
-	display: inline-block;
-	width: 1px;
-	height: 9px;
-	margin-top: 7px;
-	margin-right: 9px;
-	margin-left: 9px;
-	margin-bottom: 0;
-	background-color: #191919;
-	opacity: .6;
-	filter: alpha(opacity=60);
-	vertical-align: top
-}
-.textbar {
-	display: inline-block;
-	width: 1px;
-	height: 9px;
-	margin: 3px 9px 0;
-	background-color: #191919;
-	opacity: .6;
-	filter: alpha(opacity=60);
-	vertical-align: top
-}
+
 .infolist li .userlink {
 	font-size: 14px;
 	color: #191919;
@@ -506,11 +480,13 @@ form .row .col-xs-4 {
 	font-weight: bolder;
 	font-size: 23px;
 	color: #FFFFFF;
+	margin-top: 9px;
 }
 .info-box-text {
 	display: block;
 	font-weight: bolder;
 	color: #FFFFFF;
+	font-size: 15px;
 }
 .fa.fa-music {
 	color: #FFFFFF;
@@ -534,7 +510,48 @@ form .row .col-xs-4 {
 	margin-left: -30px;
 }
 .centerwrap .subcenter .login {
+	height: 125px;
 }
+#header .top .logout_header {
+	position: absolute;
+	margin-top: -25px;
+	margin-left: 690px;
+	width: 190px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #191919;
+
+}
+.login form .col-xs-4 {
+	width: 280px;
+
+}
+infolist li .textbar {
+	display: inline-block;
+	width: 1px;
+	height: 9px;
+	margin-top: 7px;
+	margin-right: 9px;
+	margin-left: 9px;
+	margin-bottom: 0;
+	background-color: #191919;
+	opacity: .6;
+	filter: alpha(opacity=60);
+	vertical-align: top
+}
+.textbar {
+	display: inline-block;
+	width: 1px;
+	height: 9px;
+	margin: 3px 9px 0;
+	background-color: #191919;
+	opacity: .6;
+	filter: alpha(opacity=60);
+	vertical-align: top
+}
+
+
+
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {

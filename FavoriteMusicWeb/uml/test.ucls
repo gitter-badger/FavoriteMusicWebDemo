@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="mplanweb.music.web.source.MusicEncryptionUtil" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicEncryptionUtil.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="171" x="231" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="mplanweb.music.web.source.Sscorp" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/Sscorp.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="621" width="183" x="442" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="mplanweb.music.web.source.SsAlbum" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/SsAlbum.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="783" width="183" x="665" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="mplanweb.music.web.source.MusicServiceImpl" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="513" width="250" x="1833" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="mplanweb.music.web.source.MusicService" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="495" width="250" x="1454" y="970"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="mplanweb.music.web.source.Jsontotal" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/Jsontotal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="146" x="888" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="mplanweb.music.web.source.Ssearch" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/Ssearch.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="459" width="170" x="1400" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="mplanweb.music.web.source.MusicController" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="567" width="286" x="1074" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="mplanweb.music.web.source.Ssview" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/Ssview.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1485" width="183" x="1610" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="mplanweb.music.web.source.Ssartist" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/Ssartist.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="675" width="183" x="2123" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="mplanweb.music.web.source.MusicStringUtil" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicStringUtil.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="236" x="2346" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="mplanweb.music.web.source.MusicDAOImpl" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicDAOImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="531" width="250" x="2622" y="-555"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="mplanweb.music.web.source.MusicDAO" project="FavoriteMusicWeb" 
+    file="/FavoriteMusicWeb/src/main/java/mplanweb/music/web/source/MusicDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="495" width="250" x="2227" y="970"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="14">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="15">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="16">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="17" name="musicService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="20" name="musicDAO">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="21" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

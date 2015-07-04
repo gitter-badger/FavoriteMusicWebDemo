@@ -1,5 +1,6 @@
 function showList(ssearch) {
 	var record = "";
+	alert(ssearch);
 	if (ssearch === null) {
 		var ssearch = {
 			start : 0,
@@ -153,9 +154,9 @@ function formValidator() {
 						message : '제목 입력 바랍니다.'
 					},
 					stringLength : {
-						min : 2,
-						max : 30,
-						message : '최소 2자에서 30자이내로 입력하세요'
+						min : 1,
+						max : 200,
+						message : '최소 2자에서 200자이내로 입력하세요'
 					}
 				}
 			},
@@ -166,9 +167,9 @@ function formValidator() {
 						message : '앨범명 입력 바랍니다.'
 					},
 					stringLength : {
-						min : 2,
-						max : 30,
-						message : '최소 2자에서 10자이내로 입력하세요'
+						min : 1,
+						max : 200,
+						message : '최소 2자에서 30자이내로 입력하세요'
 					}
 				}
 			},
