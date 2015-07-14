@@ -20,6 +20,8 @@
 		<typeAlias alias="Sscorp" type="mplanweb.music.web.source.Sscorp" />
 		<typeAlias alias="Member" type="mplanweb.music.web.member.Member" />
 		<typeAlias alias="MsearchDTO" type="mplanweb.music.web.search.MsearchDTO" />
+			<typeAlias alias="BoardDTO" type="mplanweb.music.web.board.BoardDTO" />
+			<typeAlias alias="BoardCount" type="mplanweb.music.web.board.BoardCount" />
 	</typeAliases>
 
 	<mappers>
@@ -28,6 +30,7 @@
 		<mapper resource="mplanweb/music/web/mybatis/Search.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Music.xml" />
 		<mapper resource="mplanweb/music/web/mybatis/Member.xml" />
+		<mapper resource="mplanweb/music/web/mybatis/Board.xml" />
 	</mappers>
 
 

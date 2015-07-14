@@ -31,13 +31,13 @@
 	$(document)
 			.ready(
 					function() {
-						$("#testText")
+						$("#searchname")
 								.autocomplete(
 										{
 											source : function(request, response) {
 												$
 														.ajax({
-															url : "/web/search",
+															url : "/web/editsearch",
 															type : "post",
 															dataType : "json",
 															data : {
@@ -130,9 +130,9 @@
 			<!-- search -->
 
 			<div class="search">
-				<form action="/web/hellomplan" method="get">
+				<form action="/web/search" method="get">
 					<span class="input-group margin"> <input type="text"
-						id="testText" name="testText" class="form-control"
+						id="searchname" name="searchname" class="form-control"
 						placeholder="[가수 & 제목] 검색 하면 됩니다."> <span
 						class="input-group-btn">
 							<button class="btn btn-info btn-flat" id="btnsearch"

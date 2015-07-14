@@ -31,13 +31,13 @@
 	$(document)
 			.ready(
 					function() {
-						$("#testText")
+						$("#searchname")
 								.autocomplete(
 										{
 											source : function(request, response) {
 												$
 														.ajax({
-															url : "/web/search",
+															url : "/web/editsearch",
 															type : "post",
 															dataType : "json",
 															data : {

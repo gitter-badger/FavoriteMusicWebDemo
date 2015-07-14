@@ -30,7 +30,7 @@ public class SearchController {
 	@Autowired
 	SearchDAO searchdao;
 
-	@RequestMapping(value = "/search", method = RequestMethod.POST)
+	@RequestMapping(value = "/editsearch", method = RequestMethod.POST)
 	public void SearchValues(Locale locale, Model model,
 			HttpServletRequest request, HttpServletResponse response,
 			SearchDTO searchdto) throws IOException {
@@ -54,11 +54,11 @@ public class SearchController {
 
 	}
 	
-	@RequestMapping(value = "/hellomplan", method = RequestMethod.GET)
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String Searchtest(Locale locale, Model model,
 			HttpServletRequest request, HttpServletResponse response,
 			MsearchDTO msearchdto) throws IOException {
-		String result = request.getParameter("testText");
+		String result = request.getParameter("searchname");
 		System.out.println("Test : " + result);
 		List<MsearchDTO> object = searchdao.artistsearch(result);
 		List<MsearchDTO> object2 = searchdao.albumsearch(result);

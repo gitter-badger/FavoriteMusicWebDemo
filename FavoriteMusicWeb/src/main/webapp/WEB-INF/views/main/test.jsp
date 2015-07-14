@@ -38,7 +38,7 @@
 												$
 														.ajax({
 
-															url : "/web/search",
+															url : "/web/editsearch",
 															type : "post",
 															dataType : "json",
 															data : {
