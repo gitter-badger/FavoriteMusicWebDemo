@@ -9,6 +9,7 @@ $('#btnsearch').click(function() {
 	if(search == ""){
 		alert("검색어를 입력해 주세요");
 		 $("#searchname").focus();
+		 return;
 	}
 	
 });

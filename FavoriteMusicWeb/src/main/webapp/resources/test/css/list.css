@@ -537,26 +537,36 @@ form .row .col-xs-4 {
 	position: relative;
 	width: 649px;
 }
-.listtest:after {display:block;clear:both;content:''}
-.listtest ul {
-	position: relative;
-	margin-top: 0px;
+.listtest:after {
+	display: block;
+	clear: both;
+	content: ''
 }
-.listtest ul:after {display:block;clear:both;content:''}
+.listtest ul {
+	position: relative
+}
+.listtest ul:after {
+	display: block;
+	clear: both;
+	content: ''
+}
 .listtest li {
 	overflow: hidden;
 	position: relative;
-
-
-
-	+z-index:1;			
+ +z-index:1;
 	float: left;
 	padding-right: 2px;
 	padding-bottom: 0px;
 	left: -39px;
 }
-.listtest li:after {display:block;clear:both;content:''}
-.listtest li:hover {+z-index:2;}
+.listtest li:after {
+	display: block;
+	clear: both;
+	content: ''
+}
+.listtest li:hover {
++z-index:2;
+}
 .albumlist {
 	position: relative;
 	display: block;
@@ -664,7 +674,6 @@ form .row .col-xs-4 {
 	border-radius: 14px;
 	border: 1px solid #FFFFFF;
 }
-
 .albumlist .subject {
 	overflow: hidden;
 	display: block;
@@ -743,10 +752,149 @@ form .row .col-xs-4 {
 }
 .albumtitle .on .musicgroup {
 	color: #ff3d33;
-	
 }
+.tabmusic {
+	margin-left: 40px;
+	margin-top: 25px;
+}
+.tabmusic .newMusic {
+	height: 35px;
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: url(../img/tab.png);
+}
+.tabmusic .newMusic li {
+			overflow: hidden;
 
+	float: left;
+	background: url(../img/tab.png) no-repeat;
+}
+.tabmusic .newMusic a {
+	display: block;
+	height: 35px;
+	width: 100%;
+	text-indent: -1000em;
+}
+.tabmusic .newMusic a.on {
+	
+	background: url(../img/tab.png) no-repeat;
+}
+.tabmusic .newMusic li {
+	width: 113px;
+}
+.tabmusic .newMusic .all {
+	width: 115px;
+	background-position: 0 -50px;
+	margin-left: -40px;
+	height: 35px;
+}
+.tabmusic .newMusic .kpop {
+	background-position: -120px -50px;
+	margin-left: 0px;
+}
+.tabmusic .newMusic .pop {
+	background-position: -240px -50px;
+}
+.tabmusic .newMusic .ost {
+	background-position: -360px -50px;
+}
+.tabmusic .newMusic .jpop {
+	background-position: -480px -50px;
+	margin-left: 0px;
+}
+.tabmusic .newMusic .radio2 {
+	background-position: -600px -50px;
+	margin-left: 0px;
+	width: 117px;
+}
+.tabmusic .newMusic .jazz {
+	width: 114px;
+	background-position: -720px -50px;
+	margin-left: 0px;
+}
+.tabmusic .newMusic .all .on {
+	background-position: 0 -100px;
+	position: static;
+	margin-left: 0px;
+}
+.tabmusic .newMusic .kpop .on {
+	background-position: -120px -100px;
+		margin-left: 0px;
+}
+.tabmusic .newMusic .pop .on {
+	background-position: -240px -100px;
+	margin-left: 0px;
+}
+.tabmusic .newMusic .ost .on {
+	background-position: -360px -100px;
+	margin-left: 0px;
+}
+.tabmusic .newMusic .jpop .on {
+	background-position: -480px -100px;
+	margin-left: 0px;
 
+}
+.tabmusic .newMusic .radio2 .on {
+	background-position: -600px -100px;
+	margin-left: 0px;
+	width: 117px;
+}
+.newAlbum .tabNew li {
+	width: 113px;
+}
+.newAlbum .tabNew .all {
+	background-position: 0 -150px;
+}
+.newAlbum .tabNew .kpop {
+	background-position: -120px -150px;
+}
+.newAlbum .tabNew .pop {
+	background-position: -240px -150px;
+}
+.newAlbum .tabNew .ost {
+	background-position: -360px -150px;
+}
+.newAlbum .tabNew .jpop {
+	background-position: -480px -150px;
+}
+.newAlbum .tabNew .radio2{
+	background-position: -600px -150px;
+}
+.newAlbum .tabNew .all .on {
+	background-position: 0 -200px;
+}
+.newAlbum .tabNew .kpop .on {
+	background-position: -120px -200px;
+}
+.newAlbum .tabNew .pop .on {
+	background-position: -240px -200px;
+}
+.newAlbum .tabNew .ost .on {
+	background-position: -360px -200px;
+}
+.newAlbum .tabNew .jpop .on {
+	background-position: -480px -200px;
+}
+.newAlbum .tabNew .radio2 .on {
+	background-position: -600px -200px;
+}
+.centerwrap .tabmusic h3 {
+	font-weight: 700;
+}
+.listmusic {
+	margin-left: 40px;
+	margin-right: 144px;
+	margin-top: -19px;
+}
+#center .centerwrap .listmusic {
+}
+thead tr th {
+	text-align: center;
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
 }

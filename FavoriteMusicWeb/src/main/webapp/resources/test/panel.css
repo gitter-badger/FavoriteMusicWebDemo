@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+table{border-collapse:collapse;border-spacing:0;}
+.panel * {line-height:16px;}
+.panel #content {position:relative;float:left;width:794px;padding:10px 0 70px 21px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bg_content.gif') no-repeat;}
+.panel h2 {height:40px;text-indent:-1000em;background:#FFF url('http://file.bugsm.co.kr/nbugs/panel/lnb_panel.gif') no-repeat;}
+.panel h3 {height:40px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/panel/h3_title.gif') no-repeat;}
+.panel.panel.myActivity h3 {background-position:0 0;}
+.panel.top100 h3 {background-position:0 -50px;}
+.panel.newSong h3 {background-position:0 -100px;}
+.panel.applyLyrics h3 {background-position:0 -150px;}
+.panel.panel.panelBoard h3 {background-position:0 -200px;}
+.panel.panel.panelNotice h3 {background-position:0 -250px;}
+.panel.musicSearch h3 {background-position:0 -300px;}
+.panel.userGuide h3 {background-position:0 -350px;}
+.panel.bugsPanel h3 {background-position:0 -400px;}
+.panel.applyPanel h3 {background-position:0 -450px;}
+.panel.applyPanelOk h3 {background-position:0 -500px;}
+
+.panel .lnbWrap {float:left;width:149px;padding:8px 0 70px;}
+.panel .lnb {width:100%;margin-bottom:10px;}
+.panel .lnb li {overflow:hidden;width:100%;background-image:url('http://file.bugsm.co.kr/nbugs/panel/lnb_panel.gif');background-repeat:no-repeat;}
+.panel .lnb li a {display:block;height:31px;width:100%;text-indent:-1000em;}
+.panel .lnb .mnMyActivity {background-position:0 -40px;}
+.panel.panel.myActivity .lnb .mnMyActivity {background-position:-200px -40px;}
+.panel .lnb .mnTop100 {background-position:0 -71px;}
+.panel.top100 .lnb .mnTop100 {background-position:-200px -71px;}
+.panel .lnb .mnNewSong {background-position:0 -102px;}
+.panel.newSong .lnb .mnNewSong {background-position:-200px -102px;}
+.panel .lnb .mnApplyLyrics {background-position:0 -133px;}
+.panel.applyLyrics .lnb .mnApplyLyrics {background-position:-200px -133px;}
+.panel .lnb .mnPanelBoard {background-position:0 -164px;}
+.panel.panel.panelBoard .lnb .mnPanelBoard {background-position:-200px -164px;}
+.panel .lnb .mnNotice {background-position:0 -195px;}
+.panel.panel.panelNotice .lnb .mnNotice {background-position:-200px -195px;}
+.panel .lnb .mnUserGuide {background-position:0 -226px;}
+.panel.userGuide .lnb .mnUserGuide {background-position:-200px -226px;}
+
+.panel .lnbWrap .search{position:relative;width:134px;height:23px;background:url('http://file.bugsm.co.kr/nbugs/panel/bg_search.gif') no-repeat 0 0;}
+.panel .lnbWrap .search .inputTxt{float:left;width:97px;height:23px;line-height:22px;padding-left:8px;font-size:11px;letter-spacing:-1px;border:none;background:transparent;}
+.panel .lnbWrap .search button{float:left;width:29px;height:23px;text-indent:-10000px;background:transparent;}
+
+/* tab */
+.panel .tabPanel {height:35px;width:100%;margin-bottom:30px;background:url('http://file.bugsm.co.kr/nbugs/panel/tab_panel.gif') no-repeat 0 0;}
+.panel .tabPanel li {float:left;background:url('http://file.bugsm.co.kr/nbugs/panel/tab_panel.gif') no-repeat;}
+.panel .tabPanel a {display:block;overflow:hidden;height:35px;width:100%;text-indent:-1000em;}
+.panel .tabPanel a.on {background:url('http://file.bugsm.co.kr/nbugs/panel/tab_panel.gif') no-repeat;}
+
+.panel.top100 .tabPanel .total {width:115px;background-position:0 -50px;}
+.panel.top100 .tabPanel .kpop {width:115px;background-position:-120px -50px;}
+.panel.top100 .tabPanel .pop {width:104px;background-position:-240px -50px;}
+.panel.top100 .tabPanel .jpop {width:132px;background-position:-349px -50px;}
+.panel.top100 .tabPanel .total a.on {background-position:0 -100px;}
+.panel.top100 .tabPanel .kpop a.on {background-position:-120px -100px;}
+.panel.top100 .tabPanel .pop a.on {background-position:-240px -100px;}
+.panel.top100 .tabPanel .jpop a.on {background-position:-349px -100px;}
+
+.panel.newSong .tabPanel .kpop {width:86px;background-position:0 -150px;}
+.panel.newSong .tabPanel .pop {width:87px;background-position:-91px -150px;}
+.panel.newSong .tabPanel .jpop {width:106px;background-position:-183px -150px;}
+.panel.newSong .tabPanel .ost {width:94px;background-position:-294px -150px;}
+.panel.newSong .tabPanel .kpop a.on {background-position:0 -200px;}
+.panel.newSong .tabPanel .pop a.on {background-position:-91px -200px;}
+.panel.newSong .tabPanel .jpop a.on {background-position:-183px -200px;}
+.panel.newSong .tabPanel .ost a.on {background-position:-294px -200px;}
+
+.panel.applyLyrics .tabPanel .kpop {width:101px;background-position:0 -250px;}
+.panel.applyLyrics .tabPanel .pop {width:101px;background-position:-106px -250px;}
+.panel.applyLyrics .tabPanel .jpop {width:120px;background-position:-212px -250px;}
+.panel.applyLyrics .tabPanel .kpop a.on {background-position:0 -300px;}
+.panel.applyLyrics .tabPanel .pop a.on {background-position:-106px -300px;}
+.panel.applyLyrics .tabPanel .jpop a.on {background-position:-212px -300px;}
+
+.panel.musicSearch .tabPanel {margin-bottom:0;}
+.panel.musicSearch .tabPanel li {width:114px;text-align:center;background:none;}
+.panel.musicSearch .tabPanel li.artist{width:116px;}
+.panel.musicSearch .tabPanel li a {display:block;height:35px;width:100%;text-indent:0;background:url('http://file.bugsm.co.kr/nbugs/panel/tab_panel.gif') no-repeat 0 -350px;}
+.panel.musicSearch .tabPanel li a:hover {text-decoration:none;}
+.panel.musicSearch .tabPanel li a.on {background:url('http://file.bugsm.co.kr/nbugs/panel/tab_panel.gif') no-repeat 0 -400px;}
+.panel.musicSearch .tabPanel li a strong {display:inline-block;height:35px;line-height:35px;vertical-align:top;background-image:url('http://file.bugsm.co.kr/nbugs/panel/tab_panel.gif');background-repeat:no-repeat;}
+.panel.musicSearch .tabPanel li a strong span {display:none;}
+.panel.musicSearch .tabPanel li a span {display:inline-block;padding-top:11px;font-size:11px;color:#818181;line-height:16px;vertical-align:top;}
+.panel.musicSearch .tabPanel li a.on span {display:none;}
+.panel.musicSearch .tabPanel li.track a strong {width:12px;background-position:-146px -350px;}
+.panel.musicSearch .tabPanel li.album a strong {width:22px;background-position:-168px -350px;}
+.panel.musicSearch .tabPanel li.artist a strong {width:45px;background-position:-200px -350px;}
+.panel.musicSearch .tabPanel li.track a.on strong {background-position:-146px -400px;}
+.panel.musicSearch .tabPanel li.album a.on strong {background-position:-168px -400px;}
+.panel.musicSearch .tabPanel li.artist a.on strong {background-position:-200px -400px;}
+
+.panellist {clear:both;margin-bottom:10px;}
+.panellist h4{display:none;}
+.panellist table{width:100%;border-collapse:collapse;border-spacing:0;}
+.panellist table caption{display:none;}
+.panellist thead th{height:32px;line-height:32px;color:#666;font-size:11px;font-weight:normal;text-align:center;border-top:1px solid #e0dbda;border-bottom:1px solid #e0dbda;background:#f7f7f7;}
+.panellist thead th.colSong {padding-left:15px;text-align:left;}
+.panellist thead th.colArtist {padding-left:15px;text-align:left;}
+.panellist tbody td{height:35px;text-align:center;border-bottom:1px solid #f0eae9;word-wrap:normal;}
+.panellist tbody td.colSong {padding-left:15px;text-align:left;}
+.panellist tbody td.colSong .tractitle{vertical-align:-1px;	}
+.panellist tbody td.colSong a.tractitle{display:inline-block;font-weight:bold;vertical-align:middle;}
+.panellist tbody td.colSong span.tractitle{color:#D9D9D9;}
+.panellist tbody td.colSong a.btnPlay {display:inline-block;height:22px;width:22px;margin:1px 2px 0 0;vertical-align:middle;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_button.png') 0 -100px no-repeat;}
+.panellist tbody td.colSong a.btnPlay:hover{background-position:-100px -100px;}
+.panellist tbody td.colSong span.btnPlay {display:inline-block;height:22px;width:22px;margin:1px 2px 0 0;vertical-align:middle;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_button.png') -200px -100px no-repeat;}
+.panellist tbody td.colSong .btnPlay span{display:none;}
+.panellist tbody td.colSong .icon{display:inline-block;margin:0 0 0 2px;padding-top:5px;vertical-align:middle;}
+.panellist tbody td.colArtist {padding-left:15px;text-align:left;}
+.panellist tbody td.colArtist .ellipsis{height:15px;}
+.panellist tbody td .btn{display:inline-block;height:20px;background: url('http://file.bugsm.co.kr/nbugs/common/new/button/b_button.gif') no-repeat;}
+.panellist tbody td .btn span{display:none;}
+.panellist tbody td .btn.btnInput{width:30px;background-position:-381px -30px}
+.panellist tbody td .btn.btnInputOff{width:30px;background-position:-412px -30px}
+.panellist tbody td .btn.btnModify{width:30px;background-position:-310px -30px}	
+.panellist tbody td .btn.btnModifyOff{width:30px;background-position:-341px -30px}
+
+.panelbbs {clear:both;margin-bottom:10px;}
+.panelbbs h4{display:none;}
+.panelbbs table{width:100%;margin-bottom:20px;border-collapse:collapse;border-spacing:0;}
+.panelbbs table caption{display:none;}
+.panelbbs thead th{height:26px;line-height:26px;color:#666;font-size:11px;font-weight:normal;text-align:center;border-top:1px solid #e0dbda;border-bottom:1px solid #e0dbda;background:#f7f7f7;}
+.panelbbs tbody th{text-align:left;}
+.panelbbs th span , .panelbbs th label{display:block;height:11px;margin:0 auto;text-indent: -10000px;background:url('http://file.bugsm.co.kr/nbugs/panel/i_txtBoard.gif') no-repeat;}
+.panelbbs th.colNum span , .panelbbs th.colNum label {width:19px;background-position:0 0;}
+.panelbbs th.colSubject span , .panelbbs th.colSubject label {width:19px;background-position:0 -50px;}
+.panelbbs th.colUser span, .panelbbs th.colUser label {width:30px;background-position:0 -150px;}
+.panelbbs th.colDate span , .panelbbs th.colDate label{width:19px;background-position:0 -100px;}
+.panelbbs th.colCont span , .panelbbs th.colCont label {width:19px;background-position:0 -250px;}
+.panelbbs th.colHit span, .panelbbs th.colHit label{width:19px;background-position:0 -300px;}
+.panelbbs .searchField{float:right;width:183px;margin-bottom:11px;}
+.panelbbs .searchField .text{float:left;display:block;width:137px;height:23px;margin-right:-1px;padding-left:7px;line-height:22px;font-size:11px;color:#979899;vertical-align:middle;border:1px solid #c9c9c9;background:#efefef;}
+.panelbbs .searchField button{float:left;display:block;width:37px;height:25px;*margin-top:-1px;text-indent:-10000px;vertical-align:middle;background: url('http://file.bugsm.co.kr/nbugs/common/new/button/b_search.gif') 0 0 no-repeat;}
+.panelbbs tbody td{height:32px;text-align:center;border-bottom:1px solid #f0eae9;word-wrap:normal;}
+.panelbbs tbody td.colSubject {text-align:left;}
+.panelbbs tbody td.colSubject a{display:inline-block;float:left;}
+.panelbbs tbody td.colSubject .replyNum{display:inline-block;margin-left:4px;font-size:11px;color:#f60;}
+.panelbbs tbody td.colSubject .replyNum em{display:none;}
+.panelbbs tbody td.colSubject .icon{display:inline-block;margin-right:-4px;margin-left:3px;text-indent:-10000px;background:url('http://file.bugsm.co.kr/nbugs/common/new/ic.gif') no-repeat;}
+.panelbbs tbody td.colSubject .icNew{background-position;0 2px;}
+.panelbbs tbody td.colSubject .icHot{width:29px;height:15px;background-position:0 -555px;}
+.panelbbs tbody td.colDate {font-size:11px;color:#adaeb2;}
+.panelbbs tbody td.colHit {font-size:11px;color:#adaeb2;}
+.panelbbs tbody td .ellipsis{height:15px;}
+.panelbbs tbody .important td.colNum strong{display:block;width:33px;height:16px;margin:0 auto;text-indent:-10000px;background:url('http://file.bugsm.co.kr/nbugs/common/new/ic.gif') 0 -615px no-repeat;}
+.panelbbs tbody .important td.colSubject{font-weight:bold;}
+.panelbbs tbody .important.even td{background:#f9f9fa;}
+.panelbbs .btnarea {height:30px;}
+.panelbbs .btnarea .lt{float:left;}
+.panelbbs .btnarea .rt{float:right;}
+.panelbbs .btnarea button{display:inline-block;*margin-right:4px;height:30px;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_board.gif') no-repeat;}
+.panelbbs .btnarea button span{display:none;}
+.panelbbs .btnarea .btnList{width:64px;background-position:0 0;}
+.panelbbs .btnarea .btnWrite{width:75px;background-position:-74px 0;}
+.panelbbs .btnarea .btnModify{width:64px;background-position:-159px 0;}
+.panelbbs .btnarea .btnDelect{width:64px;background-position:-233px 0;}
+.panelbbs .btnarea .btnOk{width:64px;background-position:0 -60px;}
+.panelbbs .btnarea .btnCancel{width:64px;background-position:-74px -60px;}
+.panelbbs.view {margin-top:-12px;margin-bottom:30px;}
+.panelbbs.view .rowView{padding:28px 15px 35px;line-height:20px;text-align:left;}
+.panelbbs.write {margin-top:-12px;margin-bottom:30px;}
+.panelbbs.write table{margin:20px 0 !important;}
+.panelbbs.write tbody th{width:54px;}
+.panelbbs.write tbody th.colCont{vertical-align:top}
+.panelbbs.write tbody th.colCont label{margin-top:20px;}
+.panelbbs.write tbody td{width:740px;text-align:left;border-bottom:none;}
+.panelbbs.write tbody td.colSubject .inputTxt{width:712px;height:31px;padding:0 5px;line-height:31px;border:1px solid #dadada;}
+.panelbbs.write tbody td.colCont textarea{width:717px;height:238px;margin-top:10px;border:1px solid #dadada;}
+.panelbbs.write tbody td.colSubject .inputTxt.on,
+.panelbbs.write tbody td.colCont textarea.on{border:1px solid #f26b02 !important;}
+.panelbbs.write .btnArea{padding-right:15px;}
+
+.panel h3{padding-bottom:4px;}
+
+.panel .comment h5{height:24px;line-height:14px;color: #999;text-indent:41px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/panel/i_txtBoard.gif') 0 -200px no-repeat;}
+.panel .comment h5 span{display:none;}
+.panel .comment h5 strong{color:#F60;}
+.panel .comment h5 strong em{font-family: tahoma;}
+.panel .comment .sorting{display:none;}
+.panel .comment #commentForm textarea{width:690px;}
+.panel .comment #commentList{padding-top:14px;}
+.panel .comment #commentList .commentList{border-top:none;padding:0;}
+.panel .comment #commentList .commentList .btnLike{display:none;}
+.panel .comment #commentList .commentList .text{width:650px;padding:0 0 8px 0;}
+.panel .comment #commentList .commentList fieldset .wrap{width:783px;}
+.panel .comment #commentList .commentList fieldset textarea{width:690px;}
+	
+/*나의활동내역*/
+.panel.myActivity h3{margin-bottom:20px;border-bottom:1px solid #eaeaea;}
+.panel.myActivity .myInfo {overflow:hidden;}
+.panel.myActivity .myInfo .level{float:left;width:130px;height:135px;margin-right:20px;color:#999;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/panel/i_level.gif') no-repeat;}
+.panel.myActivity .myInfo .level.bronze{background-position:0 0;}
+.panel.myActivity .myInfo .level.silver{background-position:0 -145px;}
+.panel.myActivity .myInfo .level.gold{background-position:0 -290px;}
+.panel.myActivity .myInfo .level.emerald{background-position:0 -345px;}
+.panel.myActivity .myInfo .level.diamond{background-position:0 -580px;}
+.panel.myActivity .myInfo .level strong{display:none;}
+.panel.myActivity .myInfo .level .month{display:block;margin-top:105px;}
+.panel.myActivity .myInfo .infolist{float:left;padding-top:3px;}
+.panel.myActivity .myInfo .infolist li{padding-left:10px;margin-bottom:6px;background: url('http://file.bugsm.co.kr/nbugs/common/bu.gif') 0 -154px no-repeat;}
+.panel.myActivity .myInfo .infolist li span{display:inline-block;}
+.panel.myActivity .myInfo .infolist li span.tit{width:66px;}
+.panel.myActivity .myInfo .infolist li span.var var{padding-left:1px;}
+.panel.myActivity .panellist .sort{height:22px;margin-top:-2px;padding-right:9px;color:#e1e1e1;text-align:right;}
+.panel.myActivity .panellist .sort a{padding:0 6px 0 5px;}
+.panel.myActivity .panellist .sort a.on{font-weight:bold;color:#333;letter-spacing:-1px;}
+.panel.myActivity .panellist .sort span{font-size:11px;}
+.panel.myActivity .panellist .colNum{width:48px;}
+.panel.myActivity .panellist .colArtist{width:190px;}
+.panel.myActivity .panellist .colArtist .ellipsis{width:190px;}
+.panel.myActivity .panellist .colModify {width:60px;}
+
+.panel.top100 .panellist .colNum{width:48px;}
+.panel.top100 .panellist .colArtist{width:172px;}
+.panel.top100 .panellist .colArtist .ellipsis{width:170px;}
+.panel.top100 .panellist .colLyrics{width:69px;}
+.panel.top100 .panellist .colLyricsReal{width:79px;}
+
+.panel.newSong .panellist .colNum{width:48px;}
+.panel.newSong .panellist .colArtist{width:172px;}
+.panel.newSong .panellist .colArtist .ellipsis{width:170px;}
+.panel.newSong .panellist .colLyrics{width:69px;}
+.panel.newSong .panellist .colLyricsReal{width:79px;}
+
+.panel.applyLyrics .panellist {margin-top:-11px;}
+.panel.applyLyrics .panellist .colNum{width:48px;}
+.panel.applyLyrics .panellist .colArtist{width:190px;}
+.panel.applyLyrics .panellist .colArtist .ellipsis{width:190px;}
+.panel.applyLyrics .panellist .colApplyNum{width:69px;}
+.panel.applyLyrics .panellist .colInput{width:60px;}
+.panel.applyLyrics .panellist .sort{height:22px;padding-right:9px;color:#e1e1e1;text-align:right;}
+.panel.applyLyrics .panellist .sort a{padding:0 6px 0 5px;}
+.panel.applyLyrics .panellist .sort a.on{font-weight:bold;color:#333;letter-spacing:-1px;}
+.panel.applyLyrics .panellist .sort span{font-size:11px;}
+
+.panel.panelBoard h3{margin-bottom:11px;border-bottom:1px solid #eaeaea;}
+.panel.panelBoard .panelbbs .colNum{width:59px;}
+.panel.panelBoard .panelbbs .colSubject{width:571px;}
+.panel.panelBoard .panelbbs .colUser{width:72px;}
+.panel.panelBoard .panelbbs .colDate{width:96px;}
+.panel.panelBoard .pagination.typeF{padding:0;margin-top:-37px;}
+
+
+.panel.panelNotice h3{margin-bottom:11px;border-bottom:1px solid #eaeaea;}
+.panel.panelNotice .panelbbs .colNum{width:59px;}
+.panel.panelNotice .panelbbs .colSubject{width:575px;}
+.panel.panelNotice .panelbbs .colSubject .ellipsis{width:560px;}
+.panel.panelNotice .panelbbs .colSubject .ellipsis a{display:inline;float:none;}
+.panel.panelNotice .panelbbs .colDate{width:92px;}
+.panel.panelNotice .panelbbs .colHit{width:68px;}
+
+.panel.musicSearch .resultMsg{margin-bottom:18px;font-size:14px;font-weight:normal;letter-spacing:-1px;}
+.panel.musicSearch .resultMsg em{font-weight:bold;color:#F60;}
+.panel.musicSearch #content .search,
+.panel.musicSearch #content .search fieldset,
+.panel.musicSearch #content .search fieldset *{background-image:url('http://file.bugsm.co.kr/nbugs/panel/bg_search2.gif');background-repeat:no-repeat;}
+.panel.musicSearch #content .search fieldset form{background:none;}
+.panel.musicSearch #content .search{width:794px;height:36px;margin-bottom:24px;padding-top:6px;}
+.panel.musicSearch #content .search fieldset{display:block;width:496px;height:30px;margin:0 auto;padding-left:63px;background-position:0 -72px;}
+.panel.musicSearch #content .search fieldset .inputTxt{display:block;float:left;width:393px;height:30px;margin-right:6px;padding-left:11px;line-height:30px;vertical-align:middle;border:none;background-position:0 -132px;}
+.panel.musicSearch #content .search fieldset button{display:block;float:left;width:30px;height:30px;vertical-align:middle;background-color:transparent;background-position:-86px -69px;}
+.panel.musicSearch #content .search fieldset button span{display:none;}
+.panel.musicSearch .resultNum{height: 32px;font-size: 11px;letter-spacing:-1px;line-height:32px;text-indent:7px;}
+.panel.musicSearch .panellist .colNum{width:48px;}
+.panel.musicSearch .panellist .colArtist{width:172px;}
+.panel.musicSearch .panellist .colArtist .ellipsis{width:170px;}
+.panel.musicSearch .panellist .colLyrics{width:69px;}
+.panel.musicSearch .panellist .colLyricsReal{width:79px;}
+
+.panel.userGuide h3{margin-bottom:20px;border-bottom:1px solid #eaeaea;}
+.panel.userGuide .contarea{margin-bottom:20px;padding-left:32px;border-bottom:1px solid #eaeaea;}
+.panel.userGuide .contarea h4{height:33px;;margin-left:-22px;padding-top:1px;padding-left:22px;background:url('http://file.bugsm.co.kr/nbugs/common/new/ic.gif') no-repeat 0 -676px;}
+.panel.userGuide .contarea h4 span{display:block;height:15px;text-indent:-100000px;background-image:url('http://file.bugsm.co.kr/nbugs/panel/h4_title.gif');background-repeat:no-repeat;}
+.panel.userGuide .contarea h5 {display:block;height:15px;margin-bottom:5px;text-indent:-100000px;background-image:url('http://file.bugsm.co.kr/nbugs/panel/i_txtGuide.gif');background-repeat:no-repeat;}
+.panel.userGuide .contarea em{color:#f60;}
+.panel.userGuide .contarea ul{padding-bottom:20px;}
+.panel.userGuide .contarea li{padding-left:10px;margin-bottom:1px;background: url('http://file.bugsm.co.kr/nbugs/common/bu.gif') 0 -154px no-repeat;}	
+.panel.userGuide .contarea .desc{padding-bottom:20px;line-height:18px;}
+.panel.userGuide .contarea.guide h4 span{background-position:0 0;}
+.panel.userGuide .contarea.flyerPoints h4 span{background-position:0 -50px;}
+.panel.userGuide .contarea.precautions h4 span{background-position:0 -100px;}
+.panel.userGuide .contarea.myPoint h4 span{background-position:0 -150px;}
+.panel.userGuide .contarea.guide .period {width:auto;height:auto;font-size:12px;background:none;}
+.panel.userGuide .contarea.guide .period h5{background-position:0 0;}
+.panel.userGuide .contarea.guide .power h5{background-position:0 -50px;}
+.panel.userGuide .contarea.guide .power .btnarea{display:block;padding-top:6px;}
+.panel.userGuide .contarea.guide .power .btn{display:inline-block;width:173px;height:25px;background-image:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_applyLyrics.gif');background-repeat:no-repeat;}
+.panel.userGuide .contarea.guide .power .btn span{display:none;}
+.panel.userGuide .contarea.guide .power .btnApplyLyrics{background-position:0 0;}
+.panel.userGuide .contarea.guide .power .btnTwoLineLyrics{background-position:0 -55px;}
+.panel.userGuide .contarea.guide .homepage h5{background-position:0 -100px;}
+.panel.userGuide .contarea.guide .homepage .desc span{display:block;margin-top:9px;}
+.panel.userGuide .contarea.special .desc{margin-top:-4px;}
+.panel.userGuide .contarea.myPoint{border-bottom:none;}
+.panel.userGuide .contarea.myPoint .point{height:32px;}
+.panel.userGuide .contarea.myPoint .point h5{background-position:0 -150px;}
+.panel.userGuide .contarea.myPoint .rule h5{background-position:0 -200px;}
+.panel.userGuide .contarea.myPoint .level h5{height:19px;background-position:0 -250px;}
+.panel.userGuide .contarea.myPoint .level table{border-collapse:collapse;border-spacing:0;border:1px solid #c6c6c6;}
+.panel.userGuide .contarea.myPoint .level table caption{display:none;}
+.panel.userGuide .contarea.myPoint .level th,
+.panel.userGuide .contarea.myPoint .level td{height:24px;line-height:24px;}
+.panel.userGuide .contarea.myPoint .level th{width:69px;padding-left:10px;color:#666;font-weight:bold;text-align:left;border-right:1px solid #f4f4f4;border-bottom:1px solid #f4f4f4;background-color:#e0e0e0;}
+.panel.userGuide .contarea.myPoint .level td{width:259px;padding-right:8px;text-align:right;border-bottom:1px solid #f4f4f4;}
+.panel.userGuide .contarea.myPoint .level .last th,
+.panel.userGuide .contarea.myPoint .level .last td{border-bottom:none;}
+
+.panel.bugsPanel h3,
+.panel.applyPanel h3,
+.panel.joinPanel h3{margin-bottom:20px;border-bottom:1px solid #eaeaea;}
+	.panel .panelIs{width:785px;height:189px;margin-left:10px;margin-bottom:30px;border-bottom:2px solid #666;background:url('http://file.bugsm.co.kr/nbugs/panel/i_bugspanel.gif') no-repeat 0 0;}
+	.panel .panelIs strong,
+	.panel .panelIs .desc{display:none;}
+.panel.bugsPanel .panelGuide{position:relative;margin-bottom:20px;padding-bottom:30px;border-bottom:1px solid #eaeaea;}	
+.panel.bugsPanel .panelGuide h4{height:20px;text-indent:-10000px;background-image:url('http://file.bugsm.co.kr/nbugs/panel/h4_title.gif');background-repeat:no-repeat;}
+.panel.bugsPanel .panelGuide .desc {padding-bottom:30px;line-height:22px;}
+.panel.bugsPanel .panelGuide .desc em{color:#f60;}
+.panel.bugsPanel .panelGuide .guide1 h4{background-position:0 -195px;}
+.panel.bugsPanel .panelGuide .guide2 h4{background-position:0 -240px;}
+.panel.bugsPanel .panelGuide .guide3 h4{background-position:0 -285px;}
+.panel.bugsPanel .panelGuide .guide4 h4{background-position:0 -330px;}
+.panel.bugsPanel .panelGuide .guide5 h4{background-position:0 -375px;}
+	.panel.bugsPanel .panelGuide .guide1,
+	.panel.bugsPanel .panelGuide .guide2,
+	.panel.bugsPanel .panelGuide .guide3{width:361px;margin-left:10px;border-right:1px solid #e5e5e5;}
+	.panel.bugsPanel .panelGuide .guide3 .desc{padding-bottom:0;}
+	.panel.bugsPanel .panelGuide .guide4{position:absolute;top:0;right:0;width:390px;}
+	.panel.bugsPanel .panelGuide .guide5{position:absolute;top:144px;right:0;width:390px;}
+.panel.bugsPanel .appArea p{margin-bottom:30px;padding-left:10px;}
+.panel.bugsPanel .appArea p input{margin-right:3px;vertical-align:-1px;*vertical-align:-3px;}
+.panel.bugsPanel .appArea .btnArea{display:block;text-align:center;}
+.panel.bugsPanel .appArea button{height:42px;*margin-right:3px;}
+.panel.bugsPanel .appArea button span{display:none;}
+.panel.bugsPanel .appArea button.btnApplyPanel{width:202px;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_applyPanel.gif') no-repeat 0 0;}
+.panel.bugsPanel .appArea button.btnLogin{width:126px;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_login.gif') no-repeat 0 0;}
+
+.panel.applyPanel{}
+.panel.applyPanel .apply.write table{width:785px;margin:-30px 0 30px 10px;}
+.panel.applyPanel .apply.write th,
+.panel.applyPanel .apply.write td{text-align:left;border-bottom:1px solid #eaeaea;}
+.panel.applyPanel .apply.write th{width:131px;vertical-align:top}
+.panel.applyPanel .apply.write th span{display:block;height:11px;text-indent:-10000px;background-image:url('http://file.bugsm.co.kr/nbugs/panel/i_txtBoard.gif');background-repeat:no-repeat;}
+.panel.applyPanel .apply.write th.colName{height:50px;}
+.panel.applyPanel .apply.write th.colName span{width:20px;margin:20px 0 0 20px;background-position:0 -350px;}
+.panel.applyPanel .apply.write th.colCont span{width:91px;margin:27px 0 0 20px;background-position:0 -400px;}
+.panel.applyPanel .apply.write td{width:653px;}
+.panel.applyPanel .apply.write td.colCont textarea{width:623px;height:238px;margin:10px 0 5px;border:1px solid #dadada;}
+.panel.applyPanel .apply.write td.colCont textarea.on{border:1px solid #f26b02 !important;}
+.panel.applyPanel .apply.write td.colCont p{color:#999;margin-bottom:17px;}
+.panel.applyPanel .apply.write .btnArea{padding-right:15px;}
+.panel.applyPanel .apply.write .btnArea{text-align:center;}
+.panel.applyPanel .apply.write .btnArea button{height:42px;*margin-right:3px;}
+.panel.applyPanel .apply.write .btnArea button span{display:none;}
+.panel.applyPanel .apply.write .btnArea button.btnOk{width:109px;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_ok.gif') no-repeat 0 0;}
+.panel.applyPanel .apply.write .btnArea button.btnCancel{width:109px;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_cancel.gif') no-repeat 0 0;}
+
+.panel.joinPanel .joinOK h4{width:542px;height:70px;margin:80px auto 30px;text-indent:-10000px;background:url('http://file.bugsm.co.kr/nbugs/panel/i_txtJoinOk.gif') 0 0 no-repeat;}
+.panel.joinPanel .joinOK p{display:none;}
+.panel.joinPanel .joinOK ul{margin-left:168px;padding-bottom:77px;}
+.panel.joinPanel .joinOK li{padding-left:10px;margin-bottom:5px;letter-spacing:-1px;background: url('http://file.bugsm.co.kr/nbugs/common/bu.gif') 0 -154px no-repeat;}
+.panel.joinPanel .joinOK .btnArea{text-align:center;border-top:1px solid #eaeaea;}
+.panel.joinPanel .joinOK .btnArea button{height:42px;margin-top:30px;*margin-right:3px;}
+.panel.joinPanel .joinOK .btnArea button span{display:none;}
+.panel.joinPanel .joinOK .btnArea button.btnOk{width:109px;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_ok.gif') no-repeat 0 0;}

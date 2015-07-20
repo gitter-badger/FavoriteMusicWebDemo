@@ -1,6 +1,6 @@
 function showList(ssearch) {
 	var record = "";
-
+	alert(ssearch);
 	if (ssearch === null) {
 		var ssearch = {
 			start : 0,
@@ -250,8 +250,6 @@ function formValidator() {
  * @param page_index
  * 
  */
-
-
 function goPagination(total, limit, page_index) {
 	var options = {
 		bootstrapMajorVersion : 3,
@@ -313,6 +311,7 @@ $('#btnYboardSave').click(function() {
 	var method = "ssviewinsert";
 	// alert("ssviewinsert : " + mpssnumEncrypt);
 	if (mpssnumEncrypt != "") {
+		alert("ssviewupdate : " + mpssnumEncrypt);
 		method = "ssviewupdate";
 	}
 	// 폼입력값 검증
@@ -397,7 +396,7 @@ $('#allCheck').click(function() {
 	}
 });
 
-//초기화
+// 초기화
 (function() {
 	$('.selectpicker').selectpicker({
 		width : "auto"

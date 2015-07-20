@@ -1,5 +1,6 @@
 function showList(ssearch) {
 	var record = "";
+
 	if (ssearch === null) {
 		var ssearch = {
 			start : 0,

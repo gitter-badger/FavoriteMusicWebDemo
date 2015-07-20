@@ -30,6 +30,9 @@ public class SearchController {
 	@Autowired
 	SearchDAO searchdao;
 
+	/*
+	 *  검색창 > 찾고자 하는 가수 이름 > 밑에 리스트
+	 */
 	@RequestMapping(value = "/editsearch", method = RequestMethod.POST)
 	public void SearchValues(Locale locale, Model model,
 			HttpServletRequest request, HttpServletResponse response,
@@ -54,6 +57,9 @@ public class SearchController {
 
 	}
 	
+	/*
+	 * 검색후 > 리스트로 뿌려주기
+	 */
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String Searchtest(Locale locale, Model model,
 			HttpServletRequest request, HttpServletResponse response,
