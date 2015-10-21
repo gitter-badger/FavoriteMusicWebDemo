@@ -10,6 +10,10 @@
           <option name="url" value="https://github.com/mplan1997/mplanproject.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/mplan1997/mplanweb.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\정훈\IdeaProjects" />
