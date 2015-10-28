@@ -61,13 +61,9 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-<<<<<<< HEAD
-
-=======
 	<!-- <servlet-mapping> <servlet-name>appServlet</servlet-name> <url-pattern>*.do</url-pattern> 
 		</servlet-mapping> -->
 	<!-- Spring security -->
->>>>>>> parent of 5e0064f... test
 
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
