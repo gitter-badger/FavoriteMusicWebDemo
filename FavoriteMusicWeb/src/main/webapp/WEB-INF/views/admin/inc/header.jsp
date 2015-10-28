@@ -18,6 +18,45 @@
 
 <meta name="viewport" content="width=device-width">
 
+<link
+	href="/web/resources/bower_components/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="/web/resources/bower_components/bootstrap-select/bootstrap-select.min.css"
+	rel="stylesheet">
+<link
+	href="/web/resources/bower_components/bootstrapValidator/dist/css/bootstrapValidator.min.css"
+	rel="stylesheet">
+	
+	
+	
+	
+<script src="/web/resources/bower_components/jquery/jquery.min.js"></script>
+<script src="/web/resources/js/jquery/jquery.form.min.js"></script>
+<!-- jQuery MultiFile Plugin import -->
+<script src="/web/resources/js/jquery/jQuery.MultiFile.min.js"></script>
+<script
+	src="/web/resources/bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+<script
+	src="/web/resources/bower_components/bootstrap-paginator/build/bootstrap-paginator.min.js"></script>
+<script
+	src="/web/resources/bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js"></script>
+
+
+
+	<script src="/web/resources/admin/_Shared/js/lib/jquery-1.7.2.js"></script>
+	<script
+		src="/web/resources/admin/_Shared/bootstrap/js/libs/bootstrap/bootstrap.min.js"></script>
+	<script src="/web/resources/admin/_Shared/bootstrap/js/plugins.js"></script>
+	<script src="/web/resources/admin/_Shared/bootstrap/js/script.js"></script>
+	<script src="http://code.jquery.com/ui/1.8.22/jquery-ui.min.js"></script>
+
+
+
+
+
+
+
 <link rel="stylesheet"
 	href="/web/resources/admin/_Shared/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -73,11 +112,12 @@ body {
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">음원관리 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="musinin">음원 등록</a></li>
-								<li><a href="musicda">음반사 관리</a></li>
-								<li><a href="musicup">음원 수정</a></li>
-								<li><a href="musical">앨범 관리</a></li>
-								<li><a href="#">test</a></li>
+								<li><a href="musicup">회사 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicda">레이블사 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicda">아티스트 관리(등록,수정,삭제)</a></li>
+								<li><a href="musical">앨범 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicin">음원 관리(등록,수정,삭제)</a></li>
+								<li><a href="musicmoney">정산관리</a></li>
 							</ul></li>
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">관리자 <span class="caret"></span></a>
@@ -112,12 +152,7 @@ body {
 	</div>
 
 
-	<script src="/web/resources/admin/_Shared/js/lib/jquery-1.7.2.js"></script>
-	<script
-		src="/web/resources/admin/_Shared/bootstrap/js/libs/bootstrap/bootstrap.min.js"></script>
-	<script src="/web/resources/admin/_Shared/bootstrap/js/plugins.js"></script>
-	<script src="/web/resources/admin/_Shared/bootstrap/js/script.js"></script>
-	<script src="http://code.jquery.com/ui/1.8.22/jquery-ui.min.js"></script>
+
 
 </body>
 </html>

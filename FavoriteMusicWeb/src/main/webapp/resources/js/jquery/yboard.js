@@ -21,9 +21,9 @@ function showList(search) {
 		dataType: 'JSON',
 		data:  JSON.stringify(search),
 	    contentType:"application/json; charset=UTF-8",
-		url: '/yboard/select',
+		url: '/web/select',
 		error: function() {
-			alert("Loading failed!");
+			alert("test");
 		},
 		success: function(returnJSON) {
 			if (returnJSON.success) {
@@ -71,7 +71,7 @@ function viewYboard(boardIDEncrypt) {
 		type: "GET",
 		dataType: "JSON",
 		contentType: "application/json; charset=UTF-8",
-		url: "/yboard/view/"+boardIDEncrypt,
+		url: "/web/view/"+boardIDEncrypt,
 		error: function() {
 			alert("Loading failed!");
 		},
@@ -212,8 +212,11 @@ $('.modal').on('hidden.bs.modal', function(){
 $('#btnYboardSave').click(function() {
 	var boardIDEncrypts = $('#yboard_boardIDEncrypt').val();
 	var method = "insert";
+	alert("boardIDEncrypts : " + boardIDEncrypts);
+	alert("sscorpinsert : " + method);
 	if (boardIDEncrypts != "") {
 		method = "update";
+		alert("sscorpinsert : " + method);
 	}
 	//폼입력값 검증
 	if(!formValidator()) {
@@ -235,7 +238,7 @@ $('#btnYboardSave').click(function() {
 		dataType: "JSON",
 		data: JSON.stringify(yboard),
 		contentType : "application/json; charset=UTF-8",
-		url: '/yboard/'+method,
+		url: '/web/'+method,
 		error: function() {
 			alert("Loading failed!");
 		},
@@ -258,6 +261,8 @@ $('#btnYboardSave').click(function() {
  * 체크된 게시내용 삭제 
  */
 $('#btnYboardDelete').click(function(){
+	var is = $('input[name=yboardIDs]:checked').val();
+	alert(is);
 	var checkedYboardIDs = $(':checkbox[name="yboardIDs"]').map(function(){
 		if(this.checked) {
 			return this.value;
@@ -273,12 +278,13 @@ $('#btnYboardDelete').click(function(){
 	var param = {
 			boardIDs: checkedYboardIDs
 	};
+	alert(param);
 	$.ajax({
 		type: "POST",
 		dataType: "JSON",
 		data: JSON.stringify(param),
 		contentType: "application/json; charset=UTF-8",
-		url: "/yboard/delete",
+		url: "/web/delete",
 		error: function() {
 			alert("Loading failed!")
 		},

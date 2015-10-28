@@ -1,77 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mplanweb.music.web.board">
+<mapper namespace="mplanboard">
+	<insert id="boardinsert" parameterType="BoardDTO">
+		INSERT INTO
+		mplan_board(mp_boardnum, mp_hot, mp_title, mp_contents, mp_user,
+		mp_hit, mp_reply, mp_date)
+		VALUES('1', '1', '${mp_title}',
+		'${mp_contents}', 'admin', '1', '1', now())
 
-
-		
-<select id="selectTotalCountYboard"  resultType="int" parameterType="boardSearch">
-		SELECT COUNT(*)
-		FROM mp_board2
-		<where>
-			<if test="@Ognl@isNotEmpty(searchText)">				
-				 AND ${searchColumn}  LIKE CONCAT('',#{searchText},'%')
-			</if>
-			<if test="@Ognl@isNotEmpty(priority)">				
-				<![CDATA[ 
-				 AND priority >= #{priority}
-				]]>	
-			</if>		
-		</where>		
-	</select>
-	
-
-<select id="selectYboard"  resultType="Board" parameterType="boardSearch">
-		SELECT boardID, boardTitle, priority, userName, userGender, registDate
-		FROM mp_board2
-		<where>
-			<if test="@Ognl@isNotEmpty(searchText)">				
-				AND ${searchColumn}  LIKE CONCAT('',#{searchText},'%')
-			</if>
-			<if test="@Ognl@isNotEmpty(priority)">				
-				<![CDATA[ 
-				AND priority >= #{priority}
-				]]>	
-			</if>		
-		</where>		
-		ORDER BY registDate DESC LIMIT #{start}, #{limit}
-	</select>
-	
-	<select id="viewYboard" resultType="Board" parameterType="map">
-		SELECT boardID, boardTitle, boardContent, priority, userName, userGender, registDate
-		FROM mp_board2 WHERE boardID = #{boardID}
-	</select>
-	
-	<insert id="insertYboard" parameterType="Board">
-		INSERT INTO mp_board2(boardTitle, boardContent, priority, userName, userGender, registDate)
-		VALUES(#{boardTitle}, #{boardContent}, #{priority}, #{userName}, #{userGender}, NOW())
 	</insert>
-	
-	<update id="updateYboard" parameterType="Board">
-		UPDATE mp_board2 
-	 	<set>
-	 		<if test="@Ognl@isNotEmpty(boardTitle)">	
-	 			boardTitle = #{boardTitle},
-	 		</if>	 	
-	 		<if test="@Ognl@isNotEmpty(priority)">	
-	 			priority = #{priority},
-	 		</if>	 		 		
-	 		<if test="@Ognl@isNotEmpty(boardContent)">				
-	 			boardContent = #{boardContent},
-	 		</if>	 	 		
-	 		<if test="@Ognl@isNotEmpty(userName)">				
-	 			userName = #{userName},
-	 		</if>	 		 	
-	 		<if test="@Ognl@isNotEmpty(userGender)">				
-	 			userGender = #{userGender},
-	 		</if>	
-	 	</set>
-	 	WHERE boardID = #{boardID}
-	</update>
-	
-	<delete id="deleteYboard" parameterType="map">
-		DELETE FROM mp_board2 WHERE boardID= #{boardID}
-	</delete>
 
+<!-- 카운트 -->
+	<select id="boardcount" resultType="int" parameterType="BoardDTO">
 
+		SELECT COUNT(*)
+		FROM mplan_board
+	
+	</select>
+	
+	<!-- 보드 -->
+	<select id="boardsearch" resultType="BoardDTO" parameterType="BoardCount">
+		SELECT 
+		mp_num, mp_boardnum, mp_hot, mp_title, mp_contents, mp_user, mp_hit, mp_reply, mp_date 
+		FROM 
+		MPLAN_BOARD
+		<where>
+			<if test="@isNotEmpty(searchText)">
+				AND ${searchColumn} LIKE CONCAT('',#{searchText},'%')
+			</if>
+		</where>
+		ORDER BY mp_date DESC LIMIT #{start}, #{limit}
+	</select>
 </mapper>    

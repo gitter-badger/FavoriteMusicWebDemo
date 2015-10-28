@@ -3,66 +3,49 @@ package mplanweb.music.web.board;
 import java.util.List;
 import java.util.Map;
 
+import mplanweb.music.web.source.Ssearch;
+import mplanweb.music.web.source.Ssview;
+
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BoardDAOImpl extends SqlSessionDaoSupport implements BoardDAO {
+public class BoardDAOImpl implements BoardDAO {
+
 	@Autowired
 	private SqlSession sqlSession;
 
-	@Autowired(required = false)
-	@Override
-	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
-		super.setSqlSessionFactory(sqlSessionFactory);
+	public int boardcount(BoardCount boardcount) {
+		return sqlSession.selectOne("mplanboard.boardcount", boardcount);
 	}
 
-	@Autowired(required = false)
-	@Override
-	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
-		super.setSqlSessionTemplate(sqlSessionTemplate);
+	// search
+	public List<BoardDTO> boardsearch(BoardCount boardcount) {
+		return sqlSession.selectList("mplanboard.boardsearch", boardcount);
 	}
 
-	@Override
-	public int selectTotalCountYboard(BoardSearch boardSearch) {
-		return getSqlSession().selectOne(
-				"mplanweb.music.web.board.Board.selectTotalCountYboard",
-				boardSearch);
+	// view
+	public BoardDTO boardview(Map<String, Object> map) {
+		return sqlSession.selectOne("mplanboard.boardview", map);
 	}
 
-	@Override
-	public List<Board> selectYboard(BoardSearch boardSearch) {
-		return getSqlSession().selectList(
-				"mplanweb.music.web.board.Board.selectYboard", boardSearch);
+	// board insert
+	public int boardinsert(BoardDTO boarddto) {
+		return sqlSession.insert("mplanboard.boardinsert", boarddto);
 	}
 
-	@Override
-	public Board viewYboard(Map<String, Object> map) {
-		return getSqlSession().selectOne(
-				"mplanweb.music.web.board.Board.viewYboard", map);
+	// board update
+	public int boardupdate(BoardDTO boarddto) {
+		return sqlSession.update("mplanboard.boardupdate", boarddto);
 	}
 
-	@Override
-	public int insertYboard(Board board) {
-		return (int) getSqlSession().insert(
-				"mplanweb.music.web.board.Board.insertYboard", board);
-	}
-
-	@Override
-	public int updateYboard(Board board) {
-		return (int) getSqlSession().update(
-				"mplanweb.music.web.board.Board.updateYboard", board);
-	}
-
-	@Override
-	public void deleteYboard(List<Map<String, Object>> mapList) {
+	// board delete
+	public void boarddelete(List<Map<String, Object>> mapList) {
 		for (Map<String, Object> map : mapList) {
-			getSqlSession().delete(
-					"mplanweb.music.web.board.Board.deleteYboard", map);
+			sqlSession.delete("mplanboard.boarddelete", map);
 		}
 	}
+
+
 }

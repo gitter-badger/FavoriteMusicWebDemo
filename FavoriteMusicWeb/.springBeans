@@ -10,7 +10,7 @@
 		<config>src/main/webapp/WEB-INF/spring/setting/mybatis-context.xml</config>
 		<config>src/main/webapp/WEB-INF/spring/setting/root-context.xml</config>
 		<config>src/main/webapp/WEB-INF/spring/setting/security-context.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/setting/servlet_context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet_context.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

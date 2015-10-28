@@ -6,40 +6,47 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import mplanweb.music.web.source.SsAlbum;
+import mplanweb.music.web.source.Ssearch;
+
 @Service
-public class BoardServiceImpl implements BoardService{
+public class BoardServiceImpl implements BoardService {
 
 	@Autowired
-	private BoardDAO boardDAO;
+	private BoardDAO boarddao;
 
-	@Override
-	public int selectTotalCountYboard(BoardSearch boardSearch) {
-		return boardDAO.selectTotalCountYboard(boardSearch);
+	// count
+	public int boardcount(BoardCount boardcount) {
+		return boarddao.boardcount(boardcount);
+
 	}
 
-	@Override
-	public List<Board> selectYboard(BoardSearch boardSearch) {
-		return boardDAO.selectYboard(boardSearch);
+	// search
+	public List<BoardDTO> boardsearch(BoardCount boardcount) {
+		return boarddao.boardsearch(boardcount);
+
 	}
 
-	@Override
-	public Board viewYboard(Map<String, Object> map) {
-		return boardDAO.viewYboard(map);
+	// view
+	public BoardDTO boardview(Map<String, Object> map) {
+		return boarddao.boardview(map);
+
 	}
 
-	@Override
-	public int insertYboard(Board board) {
-		return boardDAO.insertYboard(board);
+	// board insert
+	public int boardinsert(BoardDTO boarddto) {
+		return boarddao.boardinsert(boarddto);
 	}
 
-	@Override
-	public int updateYboard(Board board) {
-		return boardDAO.updateYboard(board);
+	// board update
+	public int boardupdate(BoardDTO boarddto) {
+		return boarddao.boardupdate(boarddto);
 	}
 
-	@Override
-	public void deleteYboard(List<Map<String, Object>> mapList) {
-		boardDAO.deleteYboard(mapList);
+	// board delete
+	public void boarddelete(List<Map<String, Object>> mapList) {
+		boarddao.boarddelete(mapList);
 	}
+
 
 }

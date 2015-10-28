@@ -3,52 +3,24 @@ package mplanweb.music.web.board;
 import java.util.List;
 import java.util.Map;
 
+import mplanweb.music.web.source.Ssearch;
+
 public interface BoardService {
-	/**
-	 * 총 리스트 갯수
-	 * 
-	 * @param yboard
-	 * @return
-	 */
-	public int selectTotalCountYboard(BoardSearch boardSearch);
+	// count
+	public int boardcount(BoardCount boardcount);
 
-	/**
-	 * Yboard 리스트 출력
-	 * 
-	 * @param yboard
-	 * @return
-	 */
-	public List<Board> selectYboard(BoardSearch boardSearch);
+	// search
+	public List<BoardDTO> boardsearch(BoardCount boardcount);
 
-	/**
-	 * 선택한 Yboard 보기
-	 * 
-	 * @param map
-	 * @return
-	 */
-	public Board viewYboard(Map<String, Object> map);
+	// view
+	public BoardDTO boardview(Map<String, Object> map);
 
-	/**
-	 * Yboard 입력
-	 * 
-	 * @param yboard
-	 * @return
-	 */
-	public int insertYboard(Board board);
+	// board insert
+	public int boardinsert(BoardDTO boarddto);
 
-	/**
-	 * Yboard 업데이트
-	 * 
-	 * @param yboard
-	 * @return
-	 */
-	public int updateYboard(Board board);
+	// board update
+	public int boardupdate(BoardDTO boarddto);
 
-	/**
-	 * 선택한 Yboard 삭제
-	 * 
-	 * @param map
-	 * @return
-	 */
-	public void deleteYboard(List<Map<String, Object>> mapList);
+	// board delete
+	public void boarddelete(List<Map<String, Object>> mapList);
 }

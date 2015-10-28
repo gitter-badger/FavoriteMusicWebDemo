@@ -1,144 +1,86 @@
 package mplanweb.music.web.board;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
-import mplanweb.music.web.etc.BoardLogger;
-import mplanweb.music.web.etc.BoardStringUtil;
-import mplanweb.music.web.etc.ResultJSON;
+import mplanweb.music.web.search.MsearchDTO;
+import mplanweb.music.web.source.SsAlbum;
+import mplanweb.music.web.source.Sscorp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.mobile.device.Device;
-import org.springframework.mobile.device.DeviceUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/board")
+public class BoardController {
 
-public class BoardController extends BoardLogger {
+	private static final Logger logger = LoggerFactory
+			.getLogger(BoardController.class);
 
 	@Autowired
-	private BoardService BoardService;
+	private BoardService boardservice;
 
-	@RequestMapping(value = "/jquery", method = RequestMethod.GET)
-	protected String showJqueryPage(HttpServletRequest request, Model model) {
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public String list(Locale locale, Model model) {
+		logger.info("LoginPage ==> MainPage : ", locale);
+		return "/board/boardwrite";
+	}
 
-		Device device = DeviceUtils.getCurrentDevice(request);
-		model.addAttribute("yboard", new Board()); // 초기세션처리를 위해 디폴트 처리
+	// 게시판 등록
+	@RequestMapping(value = "/boardwrite", method = RequestMethod.POST)
+	@ResponseBody
+	public ModelAndView Boardwrite(@Valid BoardDTO boarddto,
+			BindingResult bindingResult, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		
+		String num = request.getParameter("num");
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
 
-			return "/jquery/yboard";
+		logger.info("num : " + boarddto);
+		logger.info("title : " + boarddto);
+		logger.info("content  : " + boarddto);
+
+		ModelAndView mv = new ModelAndView();
+		boarddto.setMp_boardnum(num);
+		boarddto.setMp_contents(content);
+		boarddto.setMp_title(title);
+		boardservice.boardinsert(boarddto);
+
+		mv.setViewName("redirect:/view");
+		return mv;
+
+	}
+
+	// 게시판 뷰
+	@RequestMapping(value = "/view", method = RequestMethod.GET)
+	@ResponseBody
+	public String Boardview(@RequestBody BoardCount boardcount, Model model) {
+		int totalcount = boardservice.boardcount(boardcount);
+		System.out.println("totalcount" + totalcount );
+		logger.info("총 카운트 : " + totalcount);
+		List<BoardDTO> listview = boardservice.boardsearch(boardcount);
+		System.out.println("listview" + listview );
+		model.addAttribute("listview", listview);
+		return "/board/boardview";
+	}
 	
-
-	}
-
-	@RequestMapping(value = "/angular", method = RequestMethod.GET)
-	protected String showAngularPage(Model model) {
-		model.addAttribute("yboard", new Board()); // 초기세션처리를 위해 디폴트 처리
-		return "/angular/yboard";
-	}
-
-	/**
-	 * yboard리스트: 파라미터를 json형태로 받고 결과를 json형태로 출력
-	 * 
-	 * @param yboard
-	 * @return
-	 */
-	@RequestMapping(value = "/select", method = RequestMethod.POST)
-	@ResponseBody
-	public ResultJSON selectYboard(@RequestBody BoardSearch boardSearch) {
-		ResultJSON resultJSON = new ResultJSON();
-		int totalCount = BoardService.selectTotalCountYboard(boardSearch);
-		List<Board> yboardList = BoardService.selectYboard(boardSearch);
-		resultJSON.setTotal(totalCount);
-		resultJSON.setItems(yboardList);
-		resultJSON.setSuccess(true);
-		return resultJSON;
-	}
-
-	/**
-	 * yboard 입력
-	 * 
-	 * @param yboard
-	 * @return
-	 */
-	@RequestMapping(value = "/insert", method = RequestMethod.POST)
-	@ResponseBody
-	public ResultJSON insertYboard(@RequestBody Board board) {
-		ResultJSON resultJSON = new ResultJSON();
-		BoardService.insertYboard(board);
-		resultJSON.setSuccess(true);
-		return resultJSON;
-	}
-
-	/**
-	 * yboard에서 체크된 값들 삭제처리
-	 * 
-	 * @param boardIDs
-	 * @return
-	 */
-	@RequestMapping(value = "/delete", method = RequestMethod.POST)
-	@ResponseBody
-	public ResultJSON deleteYboard(@RequestBody Map<String, Object> param) {
-		ResultJSON resultJSON = new ResultJSON();
-		String boardIDs = String.valueOf(param.get("boardIDs"));
-		List<Map<String, Object>> mapList = new ArrayList<Map<String, Object>>();
-		String[] boardIDEncrypts = boardIDs.split(",");
-		for (String boardIDEncrypt : boardIDEncrypts) {
-			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("boardID",
-					BoardStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
-			mapList.add(map);
-		}
-		BoardService.deleteYboard(mapList);
-		resultJSON.setSuccess(true);
-		return resultJSON;
-	}
-
-	/**
-	 * yboard 보기
-	 * 
-	 * @param boardIDs
-	 * @return
-	 */
-	@RequestMapping(value = "/view/{boardIDEncrypt}", method = RequestMethod.GET)
-	@ResponseBody
-	public ResultJSON viewYboard(@PathVariable String boardIDEncrypt) {
-		ResultJSON resultJSON = new ResultJSON();
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("boardID",
-				BoardStringUtil.getTmsDecryptoAesForInt(boardIDEncrypt));
-		resultJSON.setData(BoardService.viewYboard(map));
-		resultJSON.setSuccess(true);
-		return resultJSON;
-	}
-
-	/**
-	 * yboard 수정처리
-	 * 
-	 * @param boardIDs
-	 * @return
-	 */
-	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	@ResponseBody
-	public ResultJSON updateYboard(@RequestBody Board board) {
-		ResultJSON resultJSON = new ResultJSON();
-		board.setBoardID(BoardStringUtil.getTmsDecryptoAesForInt(board
-				.getBoardIDEncrypt()));
-		BoardService.updateYboard(board);
-		resultJSON.setSuccess(true);
-		return resultJSON;
-	}
-
+	
+	// 게시판 읽기
 }
