@@ -1,0 +1,573 @@
+@charset "UTF-8";
+
+.music * {line-height:16px;}
+.music h2 {overflow:hidden;height:40px;padding-top:8px;font-size:16px;line-height:40px;text-overflow:ellipsis;white-space:nowrap;}
+.music h2 .icSoundQuality {vertical-align:middle;margin-top:-3px;}
+	.msie7 .music h2 .icSoundQuality {margin-top:-2px;}
+.music h3 {color:#999;text-indent:-1000em;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/music/new/h3_title.gif') no-repeat;}
+.music .comment h3 {height:24px;line-height:14px;text-indent:41px;background-position:0 -440px;}
+.music h3 span {display:none;}
+.music h3 strong {font-size:14px;line-height:14px;vertical-align:top;}
+.music h3 strong em {display:inline-block;font-family:tahoma;font-size:14px;text-indent:0;line-height:14px;vertical-align:top;}
+.music h3 .count {display:inline;line-height:16px;vertical-align:top;padding-left:0;}
+.music h3 .count em {display:inline-block;margin-right:-2px;font-family:Arial;font-size:14px;color:#54575a;text-indent:0;line-height:16px;vertical-align:top;}
+.music h3 .count em:last-child {margin-right:0;}
+.music h3 .count .icSoundQuality {margin:-1px 4px 0 -2px;margin:-2px 4px 0 -2px\0IE8+9;}
+	.msie7 .music h3 .count .icSoundQuality {margin-top:-2px;}
+.music h4 {height:18px;line-height:12px;background:url('http://file.bugsm.co.kr/nbugs/music/new/h4_title.gif') no-repeat;}
+.music h4 span {display:none;}
+.music h4 strong {font-size:12px;line-height:12px;vertical-align:top;}
+.music h4 strong em {display:inline-block;font-family:tahoma;text-indent:0;line-height:12px;vertical-align:top;}
+.music h5 {height:14px;padding-bottom:2px;line-height:14px;background:url('http://file.bugsm.co.kr/nbugs/music/new/h5_title.gif') no-repeat;}
+.music h5 span {display:none;}
+.music #content {clear:both;width:100%;padding-bottom:110px;}
+
+.music .issueBanner {position:absolute;}
+.issueBanner .btnClose {display:block;position:absolute;overflow:hidden;height:18px;width:18px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/button/bc_close.gif') no-repeat;}
+.issueBanner.isAlbumEvent .btnClose,
+.issueBanner.isHiddenEvent .btnClose {top:15px;right:15px;background-position:0 -480px;}
+.issueBanner.isMarketing .btnClose.typeBlack {top:14px;right:17px;background-position:4px -436px;}
+.issueBanner.isMarketing .btnClose.typeWhite {top:14px;right:17px;background-position:4px -396px;}
+.issueBanner.isHiddenArtist {top:54px;left:748px;height:39px;width:216px;z-index:10;}
+.issueBanner.isAlbumEvent {top:40px;left:0;height:auto;width:964px;z-index:100;}
+.issueBanner.isMarketing {top:410px;left:375px;z-index:110;}
+.issueBanner.isHiddenEvent {top:40px;left:0;height:auto;width:964px;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_hiddenEvent.gif') repeat-x 0 100%;z-index:100;}
+.issueBanner.isHiddenEvent span {display:inline;float:left;}
+.issueBanner.isHiddenEvent .specialGift {position:absolute;right:0;top:282px;}
+.music .btnAlbumEventView {display:inline-block;height:20px;width:118px;margin:-3px 0 0 3px;vertical-align:top;}
+	.msie6 .music .btnAlbumEventView {margin-top:0;vertical-align:middle;}
+	.msie7 .music .btnAlbumEventView {vertical-align:middle;}
+.issueBanner p {display:none;}
+
+.music .intro {position:relative;width:100%;z-index:10;}
+.music .intro:after {content:"";display:block;clear:both;visibility:hidden;height:0;}
+.music .intro .infoBox {position:relative;float:left;width:730px;z-index:10;}
+.infoBox .thumbnailBox {display:inline;float:left;height:auto;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_thumbnailIntro.gif') no-repeat;}
+.infoBox .thumbnailBox span {display:inline-block;}
+.infoBox .thumbnailBox .thumbnail {position:relative;overflow:hidden;height:224px;width:224px;text-align:center;white-space:nowrap;}
+.infoBox .thumbnailBox .thumbnail img,
+.infoBox .thumbnailBox .thumbnail .thumbnailValign {line-height:224px;vertical-align:middle;}
+.infoBox .thumbnailBox .mask {position:absolute;top:0;left:0;height:224px;width:224px;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_mask.png') no-repeat;z-index:1;}
+.infoBox .thumbnailBox .morePhoto {height:33px;padding-top:7px;font-size:11px;letter-spacing:-1px;text-align:center;}
+.infoBox .thumbnailBox .morePhoto strong {padding-left:2px;font-size:12px;letter-spacing:0;}
+.infoBox .thumbnailBox .morePhoto a {display:inline-block;padding-right:20px;text-decoration:none;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 100% -3899px;}
+.infoBox .thumbnailBox .morePhoto a strong {text-decoration:underline;}
+.infoBox .info {display:inline;position:relative;float:right;min-height:294px;padding-left:15px;}
+	.msie6 .infoBox .info {height:294px;}
+.infoBox .info .desc {position:relative;clear:both;height:auto;padding-bottom:15px;z-index:1;}
+.infoBox .info .desc dt {float:left;height:16px;width:65px;margin:5px 0 2px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/music/new/i_titIntroDesc.gif') no-repeat;}
+.music .infoBox .info .desc .category {background-position:0 0;}
+.music .infoBox .info .desc .debut {background-position:0 -20px;}
+.music .infoBox .info .desc .activity {background-position:0 -40px;}
+.music .infoBox .info .desc .genre {background-position:0 -60px;}
+.music .infoBox .info .desc .style {background-position:0 -80px;}
+.music .infoBox .info .desc .member {background-position:0 -100px;}
+.music .infoBox .info .desc dt.artistname {background-position:0 -120px;}
+.music .infoBox .info .desc .albumsort {background-position:0 -140px;}
+.music .infoBox .info .desc .date {background-position:0 -160px;}
+.music .infoBox .info .desc .company {background-position:0 -180px;}
+.music .infoBox .info .desc .albumtitle {background-position:0 -200px;}
+.music .infoBox .info .desc .words {background-position:0 -220px;}
+.music .infoBox .info .desc .composition {background-position:0 -240px;}
+.music .infoBox .info .desc .arrangement {background-position:0 -260px;}
+.music .infoBox .info .desc dt.buyAlbum {margin-top:17px;background-position:0 -280px;}
+.music .infoBox .info .desc dt.buySong {margin-top:18px;background-position:0 -300px;}
+.infoBox .info .desc dd {min-height:16px;margin-left:65px;padding:5px 0 2px;color:#333;word-wrap:break-word;}
+.music .infoBox .info .desc dd.artistname {min-height:19px;padding:5px 0 0 0;}
+.music .infoBox .info .desc dd.artistname strong {margin-top:0;vertical-align:top;}
+	.music.musicTrack .infoBox .info .desc dd.artistname strong {font-weight:normal;}
+.music .classicalInfo {display:inline;vertical-align:top;}
+.music .classicalInfo .btnClassicalInfo {display:inline-block;overflow:hidden;height:23px;width:69px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/music/new/i_classicalInfo.gif') no-repeat 0 0;}
+.music .classicalInfo .btnClassicalInfo.on {background-position:0 -50px;}
+.music .classicalInfo .btnClassicalInfo span {position:absolute;top:0;left:0;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+.music .classicalInfo .layerClassicalInfo {display:none;position:absolute;left:64px;top:23px;padding:10px 30px 15px 15px;border-width:3px 1px 1px 1px;border-style:solid;border-color:#798598 #dfdfdf #dfdfdf #dfdfdf;background-color:#fcfcfc;z-index:1;}
+	.music.musicAlbum .classicalInfo .layerClassicalInfo {width:578px;}
+	.music.musicTrack .classicalInfo .layerClassicalInfo {width:520px;}
+.music .classicalInfo .layerClassicalInfo .btnClose {position:absolute;right:7px;top:7px;z-index:1010;}
+.music .classicalInfo .layerClassicalInfo .btnClose a {display:inline-block;height:18px;width:18px;background:url('http://file.bugsm.co.kr/nbugs/music/new/i_classicalInfo.gif') no-repeat 5px -95px;}
+.music .classicalInfo .layerClassicalInfo .btnClose a span {display:none;}
+.music .classicalInfo .layerClassicalInfo dl {overflow:hidden;}
+.music .classicalInfo .layerClassicalInfo dt {position:relative;float:left;height:22px;margin:0;color:#999;line-height:22px;text-indent:0;background-image:none;}
+	.music.musicAlbum .classicalInfo .layerClassicalInfo dt {width:86px;}
+	.music.musicTrack .classicalInfo .layerClassicalInfo dt {width:100px;}
+.music .classicalInfo .layerClassicalInfo dt span {position:absolute;top:0;right:0;height:22px;width:25px;color:#cdcdcd;line-height:22px;text-align:center;}
+.music .classicalInfo .layerClassicalInfo dd {min-height:22px;padding:0;color:#666b6e;line-height:22px;}
+	.music.musicAlbum .classicalInfo .layerClassicalInfo dd {margin-left:86px;}
+	.music.musicTrack .classicalInfo .layerClassicalInfo dd {margin-left:100px;}
+.music .classicalInfo .layerClassicalInfo dd a {color:#666b6e;line-height:22px;text-decoration:none;white-space:nowrap;}
+.music .classicalInfo .layerClassicalInfo dd a:hover {text-decoration:underline;}
+
+.music .infoBox .info .desc dd.buyAlbum .buying {padding-top:2px;}
+.music .infoBox .info .desc dd.buyAlbum .buying li {position:relative;overflow:hidden;width:383px;}
+.music .infoBox .info .desc dd.buyAlbum .buying li.last .priceInfo {border-bottom:none;}
+.music .infoBox .info .desc dd.buyAlbum .buying .priceInfo {height:34px;width:310px;border-bottom:1px solid #e5e5e5;}
+.music .infoBox .info .desc dd.buyAlbum .buying .flac24bit .priceInfo {border-bottom:none;}
+.music .infoBox .info .desc dd.buyAlbum .buying .priceInfo .num {display:inline-block;font-family:arial;}
+.music .infoBox .info .desc dd.buyAlbum .buying .priceInfo .itxt {display:inline-block;height:36px;line-height:0;font-size:0;background:url(http://file.bugsm.co.kr/nbugs/billing/i_txtBill.png) no-repeat;}
+.music .infoBox .info .desc dd.buyAlbum .buying .priceInfo .soundQuality {float:left;width:130px;font:bold 10px tahoma;color:#5288c0;line-height:34px;}
+	.music .infoBox .info .desc dd.buyAlbum .buying .mp3 .priceInfo .soundQuality {color:#ababab;}
+.music .infoBox .info .desc dd.buyAlbum .buying .priceInfo .icSoundQuality {vertical-align:middle;} 
+
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea {position:absolute;top:0;right:70px;text-align:right;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea li {float:left;height:34px;line-height:34px;width:auto;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea li span,
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea li strong,
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea li em {display:inline-block;font-weight:bold;line-height:34px;vertical-align:middle;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .discount {width:52px;font-size:15px;color:#ed2d21;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .discount del {display:inline-block;margin-top:1px;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .discount del em {display:inline;color:#575757;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .price {width:70px;text-align:right;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .price strong {margin-top:0;font-size:16px;color:#fe4000;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .price .itxt {width:11px;margin-top:-1px;margin-left:3px;background-position:0 -488px;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .price.noDiscount .num {color:#575757;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .price.noDiscount .itxt {background-position:0 -438px;}
+	.msie7 .music .infoBox .info .desc dd.buyAlbum .buying .pricearea .price .itxt {margin-top:0;}
+	/*.music .infoBox .info .desc dd.buyAlbum .buying .mp3 .pricearea .itxt {background-position:0 -488px !important;}
+	.music .infoBox .info .desc dd.buyAlbum .buying .mp3 .pricearea .price,
+	.music .infoBox .info .desc dd.buyAlbum .buying .mp3 .pricearea .price strong {color:#575757;}*/ 
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .rate {height:33px;width:60px;margin-left:4px;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .rate.free {width:63px;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .rate .num {height:36px;padding-left:5px;font-size:12px;line-height:35px;background:url(http://file.bugsm.co.kr/nbugs/billing/i_txtBill.png) no-repeat 0 -689px;}
+.music .infoBox .info .desc dd.buyAlbum .buying .pricearea .rate .itxt {width:39px;background-position:100% -689px !important;}
+.music .infoBox .info .desc dd.buyAlbum .buying .btnBuy {position:absolute;top:2px;right:0;padding-right:0;}
+.music .infoBox .info .desc dd.buyAlbum .buying .btnBuy img {display:block;}
+
+.infoBox .info .desc a {padding-right:6px;color:#333;text-decoration:underline;}
+.infoBox .info .desc strong {margin-top:1px;color:#333;}
+.infoBox .info .userArea {position:relative;clear:both;height:34px;}
+.infoBox .info .userArea .btnArea {display:inline;float:left;overflow:hidden;}
+.infoBox .info .userArea .btnArea .btnHitsong {margin-right:-2px;}
+.infoBox .info .userArea .layerFan .pagination .btnArea {float:none;}
+.infoBox .info .btnMoreAction {position:absolute;top:8px;right:0;}
+.infoBox .info .holdbackGuide {position:relative;clear:both;width:454px;margin:28px 0 0;padding-top:13px;border-top:1px solid #ececec;}
+.musicAlbum .holdbackGuide p {width:330px;color:#666;line-height:20px;}
+.musicAlbum .holdbackGuide p span {display:inline-block;}
+.musicAlbum .holdbackGuide p .price {font-weight:bold;color:#333;line-height:20px;}
+.musicAlbum .holdbackGuide p .price del {font-weight:normal;}
+.musicAlbum .holdbackGuide p .price strong {color:#F60;}
+.musicAlbum .holdbackGuide .btnDownload {position:absolute;top:15px;right:-2px;}
+.musicTrack .holdbackGuide .msg {padding-left:20px;line-height:16px;text-indent:-20px;}
+.musicTrack .holdbackGuide .msg * {vertical-align:top;}
+.musicTrack .holdbackGuide .msg em {display:inline-block;height:16px;width:20px;background:url('http://file.bugsm.co.kr/nbugs/common/ic.png') no-repeat 0 -539px;}
+.musicTrack .holdbackGuide .msg strong {font-weight:normal;color:#F60;}
+.musicTrack .holdbackGuide .msg a {text-decoration:underline;}
+
+.music .intro .otherInfoBox {position:relative;float:right;min-height:260px;width:218px;z-index:1;}
+	.music .intro .otherInfoBox .btns li.likeAlbum,
+	.music .intro .otherInfoBox .btns li.likeArtist {z-index:2;}
+.music .intro .otherInfoBox .btns {background-color:#fff;margin-bottom:6px;padding-bottom:1px;}
+.music .intro .otherInfoBox .btns li {position:relative;height:39px;}
+.music .intro .otherInfoBox .btns li a.button {display:block;height:37px;width:218px;background:url('http://file.bugsm.co.kr/nbugs/common/button/new/b_likesetV20140923.gif') no-repeat 0 0 !important;}
+.music .intro .otherInfoBox .btns li a.button span {display:none;}
+.music .intro .otherInfoBox .btns li a.btnLikeArtist {background-position:0 0 !important;}
+.music .intro .otherInfoBox .btns li a.btnAddHitsong {background-position:0 -50px !important;}
+.music .intro .otherInfoBox .btns li a.btnLikeAlbum {background-position:0 -100px !important;}
+.music .intro .otherInfoBox .btns li a.btnAddAlbum {background-position:0 -150px !important;}
+.music .intro .otherInfoBox .btns li a.btnLikeTrack {background-position:0 -600px !important;}
+.music .intro .otherInfoBox .btns li a.btnAddTrack {background-position:0 -200px !important;}
+.music .intro .otherInfoBox .btns li a.btnLikeArtistCancel {background-position:100% 0 !important;}
+.music .intro .otherInfoBox .btns li a.btnAddHitsongCancel {background-position:0 -50px !important;}
+.music .intro .otherInfoBox .btns li a.btnLikeAlbumCancel {background-position:100% -100px !important;}
+.music .intro .otherInfoBox .btns li a.btnAddAlbumCancel {background-position:0 -150px !important;}
+.music .intro .otherInfoBox .btns li a.btnLikeTrackCancel {background-position:100% -600px !important;}
+.music .intro .otherInfoBox .btns li a.btnAddTrackCancel {background-position:0 -200px !important;}
+
+.music .intro .otherInfoBox .btns li .count {display:inline-block;position:absolute;top:50%;margin-top:-9px;font-size:12px;font-weight:bold;line-height:14px;color:#ff3d33;}
+.music .intro .otherInfoBox .btns li.likeArtist .count {left:110px;}
+.music .intro .otherInfoBox .btns li.likeAlbum .count {left:89px;}
+.music .intro .otherInfoBox .btns li.likeTrack .count {left:78px;}
+.music .intro .otherInfoBox .btns li.likeArtist .count.cancel  {left:133px;color:#fff;}
+.music .intro .otherInfoBox .btns li.likeAlbum .count.cancel  {left:112px;color:#fff;}
+.music .intro .otherInfoBox .btns li.likeTrack .count.cancel  {left:102px;color:#fff;}
+.music .intro .otherInfoBox .btns li .layerLike {display:none;top:27px;left:6px;}
+
+/*
+.otherInfoBox .otherInfo {height:269px;width:190px;margin-top:20px;padding:0 10px 3px 15px;}
+.otherInfoBox .otherInfo .musicvideo {margin-bottom:0;}
+.otherInfoBox .otherInfo .lyrics {position:absolute;bottom:0;height:50px;width:190px;margin-bottom:3px;}
+.otherInfoBox .otherInfo .listBox {position:relative;overflow:hidden;height:189px;width:100%;}
+.otherInfoBox .otherInfo .listBox li {display:inline;float:left;width:100%;}
+.otherInfoBox .otherInfo .list {position:relative;overflow:hidden;height:198px;margin-top:6px;font-size:11px;word-spacing:-1px;}
+.otherInfoBox .otherInfo .list dt {overflow:hidden;height:16px;width:100%;margin-bottom:1px;padding-top:3px;text-overflow:ellipsis;white-space:nowrap;}
+.otherInfoBox .otherInfo .list dt a {color:#666;}
+.otherInfoBox .otherInfo .list .thumbnail {position:absolute;top:0;left:0;overflow:hidden;background:#FFF;text-align:center;white-space:nowrap;}
+.otherInfoBox .otherInfo .list .thumbnail a {display:block;overflow:hidden;}
+.otherInfoBox .otherInfo .list .preference {margin-bottom:5px;}
+.otherInfoBox .otherInfo .list .preference span {display:block;height:14px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 0 -3940px;}
+.otherInfoBox .otherInfo .list .preference .score5 {width:75px;}
+.otherInfoBox .otherInfo .list .preference .score4 {width:60px;}
+.otherInfoBox .otherInfo .list .preference .score3 {width:45px;}
+.otherInfoBox .otherInfo .list .preference .score2 {width:30px;}
+.otherInfoBox .otherInfo .list .preference .score1 {width:15px;}
+.otherInfoBox .pagination {height:17px;width:100%;padding-top:5px;text-align:right;}
+.otherInfoBox .pagination span {display:inline-block;vertical-align:top;}
+.otherInfoBox .pagination span span {display:none;}
+.otherInfoBox .pagination .page {margin:2px 0 0;font:bold 10px tahoma;}
+.otherInfoBox .pagination .btnArea {height:17px;margin:0 10px 0 0;font-size:0;}
+*/
+
+.music .more a strong {color:#54575A;}
+.music .more.close a {background-position:100% -436px;}
+
+.music .moreAll {position:absolute;top:0;right:7px;}
+.music .moreAll a {display:inline-block;height:25px;}
+.music .moreAll a span {position:absolute;top:0;left:0;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+
+.music .tabSorting {height:25px;margin-top:-28px;padding:0 2px 0 0;background:none;}
+.music .tabSorting li {background-position:0 -41px;}
+.music .tabSorting li a {line-height:25px;}
+.music .oneclickAction,
+.music .albumList {clear:both;}
+.music .tabSorting .check {display:inline-block;margin-left:-2px;padding:0 5px;vertical-align:middle;}
+	.msie7 .music .tabSorting li .check {margin-top:-1px;}
+.music .tabSorting .check .checkbox input {display:none;}
+.music .tabSorting .checkbox {display:block;cursor:pointer;height:13px;width:13px;margin-top:-2px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/ic_radio.gif') no-repeat 0 -100px;}
+.music .tabSorting .click .checkbox {background-position:0 -150px;}
+.music .tabSorting label {line-height:25px;color:#333;}
+.music .tabSorting .icSoundQuality {margin-right:2px;margin-top:-1px;vertical-align:middle;}
+	.msie7 .music .tabSorting .icSoundQuality {margin-top:-2px;}
+
+/* musicvideo fullHD sorting */
+.music .musicvideo .tabSorting .sortingArea {background:none;} 
+.music .musicvideo .tabSorting .sortingArea a {line-height:25px;}
+
+.music #commentForm textarea,
+.music #commentList textarea {width:860px;}
+.music #commentList .text {width:734px;}
+.music #commentList .replyList .text {width:804px;}
+.music #commentList fieldset .wrap {width:952px;}
+.music #commentList .starComment .starCommentLi {width:962px;}
+
+.music .servicesLimited {margin-bottom:20px;}
+.music .servicesLimited .box {position:relative;overflow:hidden;padding:20px 20px 17px;border:3px solid #f5f5f5;}
+.music .servicesLimited .box > p {display:inline-block;text-indent:8px;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') 0 -793px no-repeat;}
+.music .servicesLimited .toggle {display:inline-block;position:absolute;top:22px;top:20px\0IE8+9;right:24px;padding-right:7px;text-indent:0;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat;}
+	.msie7 .music .servicesLimited .toggle {top:20px;}
+.music .servicesLimited .toggle span {font-weight:normal;color:#5785d6;text-decoration:underline;}
+.music .servicesLimited .toggle.more {background-position:100% -1913px;}
+.music .servicesLimited .toggle.close {background-position:100% -1954px;}
+.music .servicesLimited .msg {padding:10px;margin-bottom:-17px;}
+.music .servicesLimited .msg li {color:#b2b2b2;padding-bottom:6px;padding-left:10px;text-indent:-10px;}
+.music .servicesLimited .msg li p {display:inline-block;padding-left:10px;color:#b2b2b2;line-height:16px;white-space:nowrap;}
+.music .servicesLimited .msg li em {color:#F60}
+.musicAlbum .servicesLimited .recommendAlbum {overflow:hidden;width:100%;padding:20px 0 0 5px;margin:17px 0 -25px;border-top:1px dotted #d8d8d8;}
+.musicAlbum .servicesLimited .recommendAlbum li {float:left;padding-right:19px;padding-bottom:25px;}
+.musicAlbum .servicesLimited .recommendAlbum li.cell3 {padding-right:0;}
+.musicAlbum .servicesLimited .recommendAlbum .thumbnail {float:left;height:75px;width:75px;margin:0 15px 0 0;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo {float:left;width:200px;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dt {width:100%;padding-top:3px;line-height:16px;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo .albumtitle {font-weight:bold;color:#666;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dd {overflow:hidden;color:#666;height:16px;width:100%;line-height:16px;word-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dd a {color:#666;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dd .artistname {color:#7d9600;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dd.titleSong {margin:0 0 10px;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dd.titleSong a {font-weight:normal;}
+.musicAlbum .servicesLimited .recommendAlbum .albumInfo dd.date {color:#bbbaba;}
+.music #detail {display:none;}
+
+.music .track {position:relative;z-index:1;}
+.music .trackSimpleList .trackInfo dt {width:400px;}
+.music .trackSimpleList .trackInfo dd {width:200px;}
+
+.music .popAlbumList {height:157px;width:987px;padding-bottom:27px;border-bottom:1px solid #ECECEC;}
+.popAlbumList li {display:inline;float:left;width:141px;}
+.popAlbumList li .thumbnail {position:relative;height:102px;width:114px;text-align:center;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_thumbnailAlbum.gif') no-repeat;}
+.popAlbumList li .thumbnail img,
+.popAlbumList li .thumbnail .thumbnailValign {line-height:100px;vertical-align:middle;}
+.popAlbumList li .thumbnail a {position:absolute;top:1px;left:9px;height:100px;width:100px;}
+.popAlbumList li .thumbnail .mask {position:absolute;top:0;left:0;height:100px;width:100px;cursor:pointer;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_maskAlbum.png') no-repeat;z-index:1;}
+.popAlbumList li .thumbnail .albumImg {display:block;overflow:hidden;height:100px;width:100px;}
+.popAlbumList li .albumInfo {width:114px;padding-top:7px;}
+.popAlbumList li .albumInfo dt {overflow:hidden;height:16px;width:100%;font-weight:bold;word-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;}
+.popAlbumList li .albumInfo dd {overflow:hidden;height:16px;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+.popAlbumList li .albumInfo .date {color:#BBBABA;}
+
+.music .popRecomList {height:157px;width:987px;border-bottom:1px solid #ECECEC;}
+.popRecomList li {display:inline;float:left;width:141px;}
+.popRecomList li .thumbnail {position:relative;height:102px;width:114px;text-align:center;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_thumbnailAlbum.gif') no-repeat;}
+.popRecomList li .thumbnail img,
+.popRecomList li .thumbnail .thumbnailValign {line-height:100px;vertical-align:middle;}
+.popRecomList li .thumbnail a {position:absolute;top:1px;left:9px;height:100px;width:100px;}
+.popRecomList li .thumbnail .mask {position:absolute;top:0;left:0;height:100px;width:100px;cursor:pointer;background:url('http://file.bugsm.co.kr/nbugs/music/new/bg_maskAlbum.png') no-repeat;z-index:1;}
+.popRecomList li .thumbnail .albumImg {display:block;overflow:hidden;height:100px;width:100px;}
+.popRecomList li .recomInfo {width:114px;padding-top:7px;}
+.popRecomList li .recomInfo dt {overflow:hidden;height:16px;width:100%;font-weight:bold;word-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;}
+.popRecomList li .recomInfo dd {overflow:hidden;height:16px;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+
+.recomArtist .popRecomList li {display:inline;float:left;width:141px;}
+.recomArtist .popRecomList li .thumbnail {position:relative;height:108px;width:108px;text-align:center;white-space:nowrap;border:1px solid #ededed;background:none;}
+.recomArtist .popRecomList li .thumbnail img,
+.recomArtist .popRecomList li .thumbnail .thumbnailValign {line-height:108px;vertical-align:middle;}
+.recomArtist .popRecomList li .thumbnail a {position:absolute;top:0;left:0;height:108px;width:108px}
+.recomArtist .popRecomList li .thumbnail .mask {position:absolute;top:0;left:0;height:108px;width:108px;cursor:pointer;z-index:1;background:none;}
+.recomArtist .popRecomList li .thumbnail .artistImg {display:block;overflow:hidden;height:108px;width:108px;}
+.recomArtist .popRecomList li .recomInfo {width:114px;padding-top:7px;}
+.recomArtist .popRecomList li .recomInfo dt {overflow:hidden;height:16px;width:100%;font-weight:bold;word-spacing:-1px;text-overflow:ellipsis;white-space:nowrap;}
+.recomArtist .popRecomList li .recomInfo dd {overflow:hidden;height:16px;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+
+.musicArtist .popRecomList li .recomInfo .genre,
+.musicArtist .popRecomList li .recomInfo .genre a,
+.musicAlbum .popRecomList li .recomInfo .artistname,
+.musicAlbum .popRecomList li .recomInfo .artistname a {color:#bbbaba;}
+
+.music .popMVList {overflow:hidden;height:171px;width:990px;border-bottom:1px solid #ECECEC;}
+.popMVList li {display:inline;float:left;width:165px;margin-bottom:27px;}
+.popMVList .thumbnail {position:relative;overflow:hidden;height:101px;width:135px;}
+.popMVList .thumbnail a {display:block;height:100%;}
+.popMVList .thumbnail span {display:block;height:100%;}
+.popMVList .thumbnail .time {position:absolute;top:80px;left:0;height:22px;width:129px;padding:0 6px 0 0;font-family:tahoma;font-size:11px;color:#d2d0ce;line-height:22px;text-align:right;background:url('http://file.bugsm.co.kr/nbugs/newMain/bg_mvTime.png') repeat-x;}
+.popMVList .thumbnail a:hover .time {text-decoration:none;} 
+.popMVList .thumbnail .btnPlayMV {display:block;position:absolute;top:83px;left:3px;}
+.popMVList .thumbnail .btnPlayMV span {display:block;overflow:hidden;height:18px;width:18px;text-indent:-1000em;background-image:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_button.png');}
+.popMVList .thumbnail a .btnPlayMV span {background-position:0 -200px;}
+.popMVList .thumbnail a:hover .btnPlayMV span {background-position:-100px -200px;}
+.popMVList .thumbnail span .btnPlayMV span {background-position:-200px -200px;}
+.popMVList .thumbnail .thumbnailValign {display:inline-block;}
+.popMVList .trackInfo {position:static;top:0;width:135px;padding-top:8px;}
+.popMVList .trackInfo dt {height:17px;width:100%;white-space:nowrap;}
+.popMVList .trackInfo dd {overflow:hidden;height:16px;width:100%;margin-top:3px;text-overflow:ellipsis;white-space:nowrap;}
+.popMVList .trackInfo .tracktitle {display:inline-block;font-weight:bold;color:#333;line-height:19px;vertical-align:top;}
+.popMVList .trackInfo span.tracktitle {line-height:19px;}
+.popMVList .trackInfo .trackIcon {display:inline-block;float:none;margin-top:1px;margin-right:0 !important;vertical-align:top;}
+.popMVList .trackInfo .artistname {color:#808080;}
+.popMVList .icon {position:absolute;top:5px;right:1px;}
+.popMVList .icon .trackIcon {height:18px;}
+.popMVList .icon .trackIcon span {display:none;}
+
+.musicArtist .biography .bioCont,
+.musicAlbum .albumReview p {overflow:hidden;margin:0 0 10px;}
+
+.musicArtist.maArtist .album,
+.musicArtist.maArtist .track,
+.musicArtist.maArtist .musicvideo,
+.musicArtist.maArtist .biography,
+.musicArtist.maArtist .recomArtist,
+.musicAlbum .album,
+.musicAlbum .track,
+.musicAlbum .albumReview,
+.musicTrack .lyrics,
+.musicAlbum .recomAlbum{position:relative;margin-bottom:30px;}
+
+/*
+.servicesLimited {clear:both;width:100%;padding:15px 0 0;border-top:1px solid #D9D9D9;background:url('http://file.bugsm.co.kr/nbugs/music/bg_servicesLimited.gif') repeat-x;}
+.servicesLimited .msg {margin:0 0 0 20px;padding:0 0 13px 20px;color:#666;line-height:16px;text-indent:-20px;}
+.servicesLimited .msg * {vertical-align:top;}
+.servicesLimited .msg em {display:inline-block;height:16px;width:20px;background:url('http://file.bugsm.co.kr/nbugs/common/ic.png') no-repeat 0 -539px;}
+.servicesLimited .msg strong {font-weight:normal;color:#F60;}
+.servicesLimited .msg a {text-decoration:underline;}
+.servicesLimited .pagination {float:right;margin:-20px 0 10px}
+.servicesLimited .pagination span {display:inline-block;vertical-align:top;}
+.servicesLimited .pagination span span {display:none;}
+.servicesLimited .pagination .page {margin:2px 0 0;font:bold 10px tahoma;}
+.servicesLimited .pagination .btnArea {height:17px;margin:0 10px 0 0;font-size:0;}
+.servicesLimited .pagination .btnArea .bcPrev {margin:0 -1px 0 0;}
+
+.musicAlbum .servicesLimited .recommendAlbum {overflow:hidden;width:100%;padding:20px 0 30px;border-top:1px solid #f4f4f4;}
+.servicesLimited .recommendAlbum li {float:left;width:290px;padding-left:20px;}
+.servicesLimited .recommendAlbum .thumbnail {float:left;height:75px;width:75px;margin:0 15px 0 0;}
+.servicesLimited .recommendAlbum .albumInfo {float:left;width:200px;}
+.servicesLimited .recommendAlbum .albumInfo dt {width:100%;line-height:16px;}
+.servicesLimited .recommendAlbum .albumInfo .albumtitle {font-weight:bold;color:#666;}
+.servicesLimited .recommendAlbum .albumInfo dd {color:#666;line-height:16px;}
+.servicesLimited .recommendAlbum .albumInfo dd a {color:#666;}
+.servicesLimited .recommendAlbum .albumInfo dd .artistname {color:#7d9600;}
+.servicesLimited .recommendAlbum .albumInfo dd.titleSong {margin:0 0 10px;}
+.servicesLimited .recommendAlbum .albumInfo dd.titleSong a {text-decoration:underline;}
+.servicesLimited .recommendAlbum .albumInfo dd.date {color:#bbbaba;}
+
+*/
+
+
+/* musicArtist */
+.musicArtist.maArtist .track h3 {height:25px;text-indent:45px;background-position:0 -80px;}
+.musicArtist.maArtist .album h3 {height:25px;text-indent:55px;background-position:0 -562px;}
+.musicArtist.maArtist .musicvideo h3 {height:25px;text-indent:71px;background-position:0 -280px;}
+.musicArtist.maArtist .biography h3 {height:33px;background-position:0 -320px;}
+.musicArtist.maArtist .recomArtist h3 {height:25px;background-position:0 -600px;}
+.musicArtist.maArtist .recomArtist h3 span {display:block;height:25px;width:272px;margin:2px 0 0 33px;background:url('http://file.bugsm.co.kr/nbugs/music/new/i_txtMusic.gif') 0 -100px no-repeat;}
+.musicArtist.maTrack .track h3 {height:26px;color:#54575A;text-indent:18px;background-position:0 0;}
+.musicArtist.maAlbum .album h3 {height:26px;color:#54575A;text-indent:32px;border-bottom:1px solid #B6B6B6;background-position:0 -120px;}
+.musicArtist.maDictionary .biography h3 {height:31px;background-position:0 -480px;}
+.musicArtist.maDictionary .discography h3 {height:26px;border-bottom:1px solid #BFBFBF;background-position:0 -520px;}
+.musicArtist.maMV .musicvideo h3 {height:26px;color:#54575A;text-indent:76px;background-position:0 -240px;}
+.musicArtist.maAlbum h4.orgAlbum {margin-top:15px;text-indent:45px;background-position:0 0;}
+.musicArtist.maAlbum h4.singleAlbum {margin-top:30px;text-indent:56px;background-position:0 -40px;}
+.musicArtist.maAlbum h4.joinAlbum {margin-top:30px;text-indent:45px;background-position:0 -80px;}
+.musicArtist h5 {padding-left:82px;background-position:0 -20px;}
+
+.musicArtist .tabMusic {overflow:hidden;height:45px;width:100%;margin-bottom:10px;background:url('http://file.bugsm.co.kr/nbugs/music/new/tab_music.gif') no-repeat;}
+.musicArtist .tabMusic li {display:inline;float:left;height:34px;width:114px;background:url('http://file.bugsm.co.kr/nbugs/music/new/tab_music.gif') no-repeat;}
+.musicArtist .tabMusic .maArtist {background-position:0 -100px;}
+.musicArtist .tabMusic .maAlbum {background-position:-120px -100px;}
+.musicArtist .tabMusic .maTrack {background-position:-240px -100px;}
+.musicArtist .tabMusic .maMV {background-position:-360px -100px;}
+.musicArtist .tabMusic .maDictionary {background-position:-480px -100px;}
+.musicArtist .tabMusic .maInterview {background-position:-600px -100px;}
+.musicArtist .tabMusic .maReview {background-position:-840px -100px;}
+.musicArtist.maArtist .tabMusic .maArtist {background-position:0 -140px;}
+.musicArtist.maAlbum .tabMusic .maAlbum {background-position:-120px -140px;}
+.musicArtist.maTrack .tabMusic .maTrack {background-position:-240px -140px;}
+.musicArtist.maMV .tabMusic .maMV {background-position:-360px -140px;}
+.musicArtist.maDictionary .tabMusic .maDictionary {background-position:-480px -140px;}
+.musicArtist.maInterview .tabMusic .maInterview {background-position:-600px -140px;}
+.musicArtist.maReview .tabMusic .maReview {background-position:-840px -140px;}
+.musicArtist .tabMusic li a {display:block;height:34px;text-indent:-1000em;}
+
+.musicArtist .infoBox .thumbnailBox {width:246px;background-image:none;}
+.musicArtist .intro .thumbnailBox .thumbnail {border:1px solid #ededed;}
+.musicArtist .intro .thumbnailBox .morePhoto {width:226px;}
+.musicArtist .infoBox .info {width:480px;margin-top:-5px;padding-left:0;}
+.musicArtist .otherInfoBox .otherInfo .list {height:57px;padding-left:65px;}
+.musicArtist .otherInfoBox .otherInfo .list .artistname {font-weight:bold;}
+.musicArtist .otherInfoBox .otherInfo .list .category {overflow:hidden;height:16px;width:100%;margin-bottom:2px;color:#999;text-overflow:ellipsis;white-space:nowrap;}
+.musicArtist .otherInfoBox .otherInfo .list .thumbnail {height:55px;width:55px;border:1px solid #E5E5E5;}
+.musicArtist .otherInfoBox .otherInfo .list .thumbnail img,
+.musicArtist .otherInfoBox .otherInfo .list .thumbnail .thumbnailValign {line-height:55px;vertical-align:middle;}
+.musicArtist .otherInfoBox .otherInfo .list .thumbnail a {height:55px;width:55px;}
+
+.musicArtist .btnOtherPage {width:794px;margin:0 auto;padding-top:20px;text-align:right;border-top:1px solid #BFBFBF;}
+.musicArtist.maDictionary .btnOtherPage {width:964px;}
+
+.musicArtist.maMV .musicvideoList .musicvideoInfo {width:600px;}
+.musicArtist.maMV .musicvideoList .mvContent {width:760px;}
+
+.musicArtist.maDictionary .biography,
+.musicArtist.maDictionary .discography {padding-bottom:30px;}
+.musicArtist.maDictionary .discoGraphyTB {width:578px;margin:20px auto 0;border-collapse:collapse;border-top:1px solid #d9d9d9;border-bottom:0 none;background:url('http://file.bugsm.co.kr/nbugs/music/bg_discographyTB.gif') no-repeat 1px 1px;}
+.musicArtist.maDictionary .discoGraphyTB caption {height:20px;background:url('http://file.bugsm.co.kr/nbugs/music/new/h4_title.gif') no-repeat;}
+.musicArtist.maDictionary .discoGraphyTB caption span {display:none;}
+.musicArtist.maDictionary .discoGraphyTB caption.regular {background-position:0 0;}
+.musicArtist.maDictionary .discoGraphyTB caption.single {background-position:0 -120px;}
+.musicArtist.maDictionary .discoGraphyTB thead {background:none;}
+.musicArtist.maDictionary .discoGraphyTB thead th {height:23px;color:#666;letter-spacing:-1px;border-right:1px solid #ececec;border-bottom:1px solid #ececec;}
+.musicArtist.maDictionary .discoGraphyTB tfoot {background:none;}
+.musicArtist.maDictionary .discoGraphyTB tfoot td {height:31px;text-align:center;border-bottom:1px solid #ececec;border-left:1px solid #fff;border-right:1px solid #fff;}
+.musicArtist.maDictionary .discoGraphyTB tfoot td a {padding:0 10px 0 0;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 100% -116px;}
+.musicArtist.maDictionary .discoGraphyTB tbody {background:none;}
+.musicArtist.maDictionary .discoGraphyTB tbody tr.even td {background:url('http://file.bugsm.co.kr/nbugs/music/bg_discographyTB.gif') no-repeat -20px -29px;}
+.musicArtist.maDictionary .discoGraphyTB tbody td {padding:2px 5px 3px 5px;font-family:tahoma;font-size:11px;color:#666;text-align:center;border-right:1px solid #ececec;}
+.musicArtist.maDictionary .discoGraphyTB tbody td.top {padding-top:8px;}
+.musicArtist.maDictionary .discoGraphyTB tbody td.bottom {padding-bottom:11px;border-bottom:1px solid #d9d9d9;}
+.musicArtist.maDictionary .discoGraphyTB .first {border-left:1px solid #d9d9d9;}
+.musicArtist.maDictionary .discoGraphyTB .end {border-right:1px solid #d9d9d9;}
+
+/* musicAlbum */
+.musicAlbum .track h3 {height:25px;text-indent:45px;background-position:0 -40px;}
+.musicAlbum .album h3 {height:25px;text-indent:136px;background-position:0 -160px;}
+.musicAlbum .albumReview h3 {height:33px;background-position:0 -360px;}
+.musicAlbum .recomAlbum h3 {height:25px;background-position:0 -600px;}
+.musicAlbum .recomAlbum h3 span {display:block;height:25px;width:230px;margin:2px 0 0 33px;background:url('http://file.bugsm.co.kr/nbugs/music/new/i_txtMusic.gif') 0 -50px no-repeat;}
+.musicAlbum .recomReview h3 {height:33px;background-position:0 -680px;}
+.musicAlbum h5 {padding-left:63px;background-position:0 0;}
+
+.musicAlbum .track .desc {padding:15px 8px 0 0;color:#999;text-align:right;}
+.musicAlbum .track .desc .icStar {display:inline-block;height:12px;width:11px;margin:1px 4px 0 0;font-size:0;line-height:0;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/ic_star.png') 0 -15px no-repeat;}
+	.msie7 .musicAlbum .track .desc .icStar {margin:-1px 4px 0 0;}
+.musicAlbum .intro {}
+.musicAlbum .infoBox .thumbnailBox {position:relative;width:260px;background-position:0 -300px;}
+.musicAlbum .intro .thumbnailBox .thumbnail {margin:1px 25px 1px 11px;}
+.musicAlbum .intro .thumbnailBox .morePhoto {width:240px;}
+.musicAlbum .infoBox .info {min-height:275px;width:455px;margin:-5px 0 10px;}
+.musicAlbum .otherInfoBox .otherInfo .list {height:57px;padding-left:65px;}
+.musicAlbum .otherInfoBox .otherInfo .list .albumtitle {font-weight:bold;}
+.musicAlbum .otherInfoBox .otherInfo .list .artistname {overflow:hidden;height:16px;width:100%;margin-bottom:2px;color:#999;text-overflow:ellipsis;white-space:nowrap;}
+.musicAlbum .otherInfoBox .otherInfo .list .artistname a {color:#999;}
+.musicAlbum .otherInfoBox .otherInfo .list .thumbnail {height:55px;width:55px;border:1px solid #E5E5E5;}
+.musicAlbum .otherInfoBox .otherInfo .list .thumbnail img,
+.musicAlbum .otherInfoBox .otherInfo .list .thumbnail .thumbnailValign {line-height:55px;vertical-align:middle;}
+.musicAlbum .otherInfoBox .otherInfo .list .thumbnail a {height:55px;width:55px;}
+
+.musicAlbum .recomReview {margin-bottom:20px;}
+.musicAlbum .recomReview h3 {height:25px;}
+.musicAlbum .recomReview .list {border-top:1px solid #e5e5e5;}
+.musicAlbum .recomReview .list li {overflow:hidden;padding:10px 0;border-bottom:1px solid #e5e5e5;}
+.musicAlbum .recomReview .list li .reviewArea {}
+.musicAlbum .recomReview .list li .review {float:left;width:841px;min-height:85px;padding:19px 0 12px;border-right:1px solid #e5e5e5;}
+.musicAlbum .recomReview .list li .review span {display:block;margin-right:38px;line-height:20px;text-align:justify;}
+.musicAlbum .recomReview .list li .review .title {display:block;margin-top:-7px;padding:2px 0 17px;font-size:14px;}
+.musicAlbum .recomReview .list li .review .close {display:block;height:60px;overflow:hidden;}
+.musicAlbum .recomReview .list li .review .open {display:block;}
+.musicAlbum .recomReview .list li .review .toggle {float:right;display:inline-block;cursor:pointer;padding-right:10px;font-size:12px;font-weight:bold;color:#54575a;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif');background-repeat:no-repeat;}
+.musicAlbum .recomReview .list li .review .btnMore {background-position:100% -691px;}
+.musicAlbum .recomReview .list li .review .btnClose {background-position:100% -742px;}
+.musicAlbum .recomReview .musicPDInfo {float:right;width:120px;padding-top:10px;text-align:center;}
+.musicAlbum .recomReview .musicPDInfo span {display:block;}
+.musicAlbum .recomReview .musicPDInfo span.pdImage {margin-bottom:5px;}
+.musicAlbum .recomReview .musicPDInfo span.pdImage img {width:50px;height:50px;border:1px solid #dedede;}
+.musicAlbum .recomReview .musicPDInfo span.name {font-weight:bold;color:#666;}
+.musicAlbum .recomReview .musicPDInfo span.name a {font-weight:bold;color:#666;}
+.musicAlbum .recomReview .musicPDInfo span.date {margin-top:-1px;font-size:11px;color:#999;}
+
+/* musicTrack */
+.musicTrack .intro {margin-bottom:20px;}
+.musicTrack .infoBox .thumbnailBox {width:260px;background-position:0 -300px;}
+.musicTrack .intro .thumbnailBox .thumbnail {margin:1px 25px 1px 11px;}
+.musicTrack .intro .thumbnailBox .morePhoto {width:240px;}
+.musicTrack .infoBox .info {min-height:275px;width:455px;margin:0 0 10px;}
+.musicTrack .infoBox .info .infoWrap {padding-bottom:5px;}
+.musicTrack .infoBox .info .infoWrap:after {content:"";display:block;clear:both;visibility:hidden;height:0;}
+.musicTrack .infoBox .info .trackDesc {position:relative;clear:both;min-height:42px;height:auto;}
+.musicTrack .infoBox .info .trackDesc .playBtns {top:0;margin:0;}
+.musicTrack .infoBox .info .trackDesc .trackInfo {display:inline;position:relative;float:left;overflow:hidden;width:395px;padding:2px 0 5px;}
+.musicTrack .infoBox .info .trackDesc .trackInfo .tracktitle {font-size:14px;font-weight:bold;color:#333;letter-spacing:-1px;line-height:19px;vertical-align:top;}
+.musicTrack .infoBox .info .trackDesc .trackInfo span.tracktitle {color:#D9D9D9;line-height:19px;}
+.musicTrack .infoBox .info .trackDesc .icon {display:inline-block;margin:0 0 0 3px;padding-top:2px;vertical-align:top;}
+.musicTrack .infoBox .info .trackDesc .downloadBtns {display:inline;position:static;float:left;width:auto;margin:0 0 0 58px;text-align:left;}
+	.msie7 .musicTrack .infoBox .info .trackDesc .downloadBtns {width:80px;}
+.infoBox .trackDesc .downloadBtns a, 
+.infoBox .trackDesc .downloadBtns span {height:24px;background-image:url('http://file.bugsm.co.kr/nbugs/common/new/button/bb_button.gif');}
+.musicTrack .infoBox .info .desc {padding-bottom:6px;}
+/*
+.musicTrack .otherInfo .musicvideo h5 {background-position:0 -80px;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list {height:207px;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list li {position:relative;height:77px;padding:0 0 0 75px;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list dt {height:18px;margin-bottom:0;padding-top:0;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list dt a {display:inline-block;padding-top:1px;font-size:11px;color:#333;letter-spacing:-1px;vertical-align:top;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon {display:inline-block;margin:0 0 0 3px;vertical-align:top;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon a,
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon span {float:left;height:18px;padding:0;background:url('http://file.bugsm.co.kr/nbugs/common/new/ic.png') no-repeat;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon a span,
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon span span {display:none;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon .icAdult {width:15px;background-position:-25px 0;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .icon .icHoldback {width:16px;background-position:0 -30px;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .artistname {overflow:hidden;height:16px;width:100%;color:#7D9600;text-overflow:ellipsis;white-space:nowrap;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .artistname a {color:#f60;letter-spacing:-1px;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .thumbnail {height:50px;width:65px;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .downloadBtns {right:0;width:115px;margin-top:0;text-align:left;}
+.musicTrack .otherInfoBox .otherInfo .musicvideo .list .thumbnail a {height:50px;width:65px;}
+*/
+
+.musicTrack .otherInfo .lyrics h5 {background-position:0 -60px;}
+.musicTrack .otherInfoBox .otherInfo .lyrics .list {margin-top:4px;height:30px;padding-left:40px;}
+.musicTrack .otherInfoBox .otherInfo .lyrics .list .username {padding:8px 0;margin:0;}
+.musicTrack .otherInfoBox .otherInfo .lyrics .list .thumbnail {height:30px;width:30px;}
+.musicTrack .otherInfoBox .otherInfo .pagination {margin-top:-6px;padding:0;}
+
+.musicTrack .lyrics h3 {float:left;height:28px;width:35px;background-position:0 -400px;}
+.musicTrack .lyrics {overflow:hidden;width:100%;}
+.musicTrack .lyrics .lyricsReg {float:left;padding:0 0 0 7px;background:url('http://file.bugsm.co.kr/nbugs/common/lv_gr.gif') no-repeat 0 -165px;}
+.musicTrack .lyrics .lyricsReg strong {font-weight:normal;color:#F60;}
+.musicTrack .lyrics .lyricsNone {float:left;margin-bottom:50px;padding:0 0 0 7px;background:url('http://file.bugsm.co.kr/nbugs/common/lv_gr.gif') no-repeat 0 -165px;}
+.musicTrack .lyrics .text {clear:both;}
+
+.musicTrack .musicvideo {padding-bottom:50px;}
+.musicTrack .musicvideo h3 {height:33px;width:52px;background-position:0 -640px;}
+.musicTrack .musicvideo .list {overflow:hidden;}
+.musicTrack .musicvideo .list li {float:left;position:relative;min-height:72px;width:320px;}
+.musicTrack .musicvideo .list dl {position:relative;width:300px;min-height:62px;}
+.musicTrack .musicvideo .list dt,
+.musicTrack .musicvideo .list dd {overflow:hidden;width:210px;margin-left:93px;white-space:nowrap;}
+.musicTrack .musicvideo .list dd.thumbnail {height:62px;width:82px;margin-left:0;position:absolute;top:0;left:0;}
+.musicTrack .musicvideo .list dd.thumbnail a img {height:60px;width:80px;border:1px solid #eee;}
+.musicTrack .musicvideo .list dd.artistname {overflow:hidden;height:17px;text-overflow:ellipsis;white-space:nowrap;}
+.musicTrack .musicvideo .list dd.artistname a {color:#f60;letter-spacing:-1px;}
+.musicTrack .musicvideo .list dt {height:16px;padding-top:1px;font-weight:bold;}
+.musicTrack .musicvideo .list dt a {display:inline-block;overflow:hidden;max-width:89%;text-overflow:ellipsis;white-space:nowrap;}
+.musicTrack .musicvideo .list .downloadBtns {position:static;margin:5px 0 0 93px;text-align:left;}
+.musicTrack .musicvideo .list .icon {display:inline-block;margin:0 0 0 3px;vertical-align:top;}
+.musicTrack .musicvideo .list .icon a,
+.musicTrack .musicvideo .list .icon span {float:left;height:18px;padding:0;background:url('http://file.bugsm.co.kr/nbugs/common/new/ic.png') no-repeat;}
+.musicTrack .musicvideo .list .icon a span,
+.musicTrack .musicvideo .list .icon span span {display:none;}
+.musicTrack .musicvideo .list .icon .icAdult {width:15px;background-position:-25px 0;}
+.musicTrack .musicvideo .list .icon .icHoldback {width:16px;background-position:0 -30px;}

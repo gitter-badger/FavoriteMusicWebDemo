@@ -1,0 +1,539 @@
+@charset "UTF-8";
+@import url('../common.css');
+@import url('../layer.css');
+
+html, body {height:100%;}
+#wrap {height:100%;min-height:667px;min-width:384px;}
+	*html #wrap {height:667px;width:384px;}
+#container {height:100%;width:100%;}
+
+#pgBasicPlayer {height:100%;}
+	.msie6 #pgBasicPlayer,
+	.msie7 #pgBasicPlayer {zoom:1;}
+#pgBasicPlayer:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+#pgBasicPlayer button {display:block;overflow:hidden;height:100%;width:100%;text-indent:-1000em;background-color:transparent;}
+
+#pgBasicPlayer h1 {display:inline;position:relative;float:left;height:30px;margin:9px 0 0 12px;background:url('http://file.bugsm.co.kr/nbugs/player/basic/i_playerV2.gif') no-repeat 0 0;z-index:1000;}
+#pgBasicPlayer h1 a {display:block;height:22px;width:59px;text-indent:-1000em;}
+#pgBasicPlayer .trackInfo .icon {display:inline-block;margin-top:1px;padding:0;vertical-align:top;}
+#pgBasicPlayer .trackInfo .icon .trackIcon.icAdult {background-position:-500px -350px;}
+#pgBasicPlayer .trackInfo .icon .trackIcon.icHoldback {width:16px;background-position:0 -30px;}
+/* scroll */
+.jScrollPaneContainer {position:relative;overflow:hidden;z-index:1;}
+.jScrollPaneTrack {position:absolute;cursor:pointer;right:0;background-position:0 0;}
+.jScrollCap {position:absolute;cursor:pointer;right:0;}
+.jScrollCap.jScrollCapTop {top:0;height:5px;width:10px;background-position:-50px 0;}
+.jScrollCap.jScrollCapBottom {bottom:0;height:5px;width:10px;background-position:-100px 0;}
+.jScrollPaneDrag {position:absolute;cursor:pointer;overflow:hidden;background-position:-150px 0;z-index:1;}
+.jScrollPaneDragTop {position:absolute;top:0;left:0;overflow:hidden;height:5px;background-position:-200px 0;}
+.jScrollPaneDragBottom {position:absolute;bottom:0;left:0;overflow:hidden;height:5px;background-position:-250px 0;}
+.skinBlack #pgBasicPlayer .jScrollPaneTrack,
+.skinBlack #pgBasicPlayer .jScrollCap,
+.skinBlack #pgBasicPlayer .jScrollPaneDrag,
+.skinBlack #pgBasicPlayer .jScrollPaneDragTop,
+.skinBlack #pgBasicPlayer .jScrollPaneDragBottom {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_scroll.gif');}
+.skinWhite #pgBasicPlayer .jScrollPaneTrack,
+.skinWhite #pgBasicPlayer .jScrollCap,
+.skinWhite #pgBasicPlayer .jScrollPaneDrag,
+.skinWhite #pgBasicPlayer .jScrollPaneDragTop,
+.skinWhite #pgBasicPlayer .jScrollPaneDragBottom {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_scroll.gif');}
+
+/* search */
+#pgBasicPlayer .search {display:inline;position:relative;float:right;height:22px;width:245px;margin:9px 12px 0 0;background:url('http://file.bugsm.co.kr/nbugs/player/basic/i_playerV2.gif') no-repeat -100px 0;z-index:10000;}
+#pgBasicPlayer .search .searchField {position:relative;overflow:hidden;z-index:100;}
+#pgBasicPlayer .search .searchField .text {display:block;float:left;overflow:hidden;height:18px;width:212px;margin:0;padding:2px;color:#b3b3b3;line-height:18px;text-indent:8px;vertical-align:top;border:0;background:none;}
+#pgBasicPlayer .search .searchField button {float:right;overflow:hidden;height:22px;width:25px;text-indent:-1000em;vertical-align:top;background:none;}
+#pgBasicPlayer .search .suggestSearch {display:none;position:absolute;top:22px;left:0;width:243px;padding:9px 0;border:1px solid #1a1a1a;border-top:0;background-color:#454545;z-index:10;}
+#pgBasicPlayer .search .suggestSearch .resultList2 {overflow:hidden;width:100%;}
+#pgBasicPlayer .search .suggestSearch .resultList2 li {float:left;width:100%;}
+#pgBasicPlayer .search .suggestSearch .resultList2 li.over,
+#pgBasicPlayer .search .suggestSearch .resultList2 li:hover {background-color:#343434;}
+#pgBasicPlayer .search .suggestSearch .resultList2 li a {display:block;overflow:hidden;padding:0 10px 0 0;color:#b3b3b3;line-height:21px;text-indent:10px;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .search .suggestSearch .resultList2 li a:hover {text-decoration:none;}
+#pgBasicPlayer .search .suggestSearch .resultList2 li a strong {color:#F60;}
+
+/* chromecast */
+#pgBasicPlayer .chromecast {position:relative;float:right;height:39px;width:53px;background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_sender_web.png') no-repeat 0 0;z-index:1000;}
+#pgBasicPlayer .chromecast button {display:block;height:100%;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_sender_web.png') no-repeat;}
+#pgBasicPlayer .chromecast.disconnect button {background-position:14px -90px;}
+#pgBasicPlayer .chromecast.connect button {background-position:14px -140px;}
+#pgBasicPlayer .chromecast.connecting button {background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_sender_web_ani_connecting.gif') no-repeat 14px 10px;}
+#pgBasicPlayer .chromecast .layerSender {display:none;position:absolute;top:35px;right:10px;width:163px;padding:8px 0;border:1px solid #000;background-color:#fff;box-shadow:3px 3px 5px #000;}
+#pgBasicPlayer .chromecast .layerSender li {overflow:hidden;cursor:pointer;}
+#pgBasicPlayer .chromecast .layerSender .check {display:none;}
+#pgBasicPlayer .chromecast .layerSender .check input {cursor:pointer;height:100%;width:100%;opacity:0;}
+#pgBasicPlayer .chromecast .layerSender label {display:block;overflow:hidden;padding-right:10px;color:#0d0d0d;line-height:28px;text-indent:12px;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .chromecast .layerSender li:hover label {text-decoration:underline;}
+#pgBasicPlayer .chromecast .layerSender .connected .check {display:block;float:right;height:28px;width:30px;margin-top:-28px;background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_sender_web.png') no-repeat 100% -43px;}
+#pgBasicPlayer .chromecast .layerSender .connected label {padding-right:30px;color:#4b8df7;}
+#pgBasicPlayer .ctl .chromecastMsg {font-weight:bold;color:#4b8df7;}
+#pgBasicPlayer .ctl .chromecastConnecting {position:absolute;left:50%;top:50%;height:50px;width:50px;margin:-25px 0 0 -25px;text-indent:-1000em;border-radius:8px;background-color:#000;opacity:0.6;}
+#pgBasicPlayer .ctl .chromecastConnecting:before {content:'';display:block;position:absolute;top:0;left:0;height:50px;width:50px;background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_seeking.gif') no-repeat 50% 50%;}
+.coachmark {position:absolute;top:0;left:0;height:100%;width:100%;z-index:10000;}
+.coachmark:before {content:'';display:block;position:absolute;top:0;left:0;height:100%;width:100%;background-color:#000;opacity:0.85;}
+.coachmark p {position:absolute;top:5px;right:6px;height:187px;width:325px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_sender_web_coachmark.png') no-repeat 0 0;}
+.coachmark button {position:absolute;bottom:100px;left:50%;height:46px;width:146px;margin-left:-73px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/chromecast/i_sender_web_coachmark.png') no-repeat 0 -200px;}
+
+/* ctl */
+#pgBasicPlayer .ctl {clear:both;position:relative;overflow:hidden;height:165px;z-index:100;}
+#pgBasicPlayer .ctl .thumbnail {display:inline;position:relative;float:left;overflow:hidden;height:100px;width:100px;margin:13px 0 10px 12px;text-align:center;white-space:nowrap;background-color:#000;}
+#pgBasicPlayer .ctl .thumbnail img {max-height:100%;max-width:100%;}
+#pgBasicPlayer .ctl .thumbnail img,
+#pgBasicPlayer .ctl .thumbnail .thumbnailValign {line-height:100px;vertical-align:middle;}
+#pgBasicPlayer .ctl .thumbnail .mask {position:absolute;top:0;left:0;height:100px;width:100px;z-index:1;}
+#pgBasicPlayer .ctl .trackInfo {overflow:hidden;margin:13px 65px 9px 124px;}
+#pgBasicPlayer .ctl .trackInfo * {line-height:18px;}
+#pgBasicPlayer .ctl .trackInfo dt {float:left;height:18px;width:100%;white-space:nowrap;}
+#pgBasicPlayer .ctl .trackInfo dd {float:left;overflow:hidden;height:18px;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .ctl .trackInfo dd a {word-spacing:-1px;}
+#pgBasicPlayer .ctl .trackInfo .tracktitle {display:inline-block;overflow:hidden;max-width:85%;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;word-spacing:-1px;vertical-align:top;}
+#pgBasicPlayer .ctl .trackInfo .icon .trackIcon.icAdult {display:block;overflow:hidden;cursor:pointer;height:15px;width:15px;text-indent:-1000em;}
+#pgBasicPlayer .ctl .playCtl {overflow:hidden;height:36px;width:260px;margin:0 0 0 124px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl {float:left;}
+#pgBasicPlayer .ctl .playCtl .btnCtl span {float:left;height:36px;width:34px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl span.btnPlay,
+#pgBasicPlayer .ctl .playCtl .btnCtl span.btnStop {width:35px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnPrev {background-position:0 -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnPrev:hover {background-position:-200px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnPrev:active {background-position:0 -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnNext {background-position:-150px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnNext:hover {background-position:-350px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnNext:active {background-position:-150px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnPlay {background-position:-50px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnPlay:hover {background-position:-250px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnPlay:active {background-position:-50px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnStop {background-position:-100px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnStop:hover {background-position:-300px -100px;}
+#pgBasicPlayer .ctl .playCtl .btnCtl .btnStop:active {background-position:-100px -100px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl {float:left;margin-left:11px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl span {float:left;height:36px;width:30px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl .repeat .off {background-position:0 -150px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl .repeat .onAll {background-position:-50px -150px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl .repeat .onOne {background-position:-100px -150px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl .shuffle .off {background-position:-150px -150px;}
+#pgBasicPlayer .ctl .playCtl .etcCtl .shuffle .on {background-position:-200px -150px;}
+#pgBasicPlayer .ctl .playCtl .volume {float:left;height:36px;margin-left:4px;}
+#pgBasicPlayer .ctl .playCtl .volume .soundCheck {display:block;float:left;height:17px;width:17px;margin-top:8px;}
+#pgBasicPlayer .ctl .playCtl .volume .base {position:relative;float:left;cursor:pointer;height:10px;width:55px;margin:12px 0 0;background-position:-100px -200px;}
+#pgBasicPlayer .ctl .playCtl .volume .base .bar {display:block;height:10px;background-position:-200px -200px;}
+#pgBasicPlayer .ctl .playCtl .volume .base .btnSlider {display:inline-block;position:absolute;top:0;height:10px;width:10px;background-position:-300px -200px;}
+#pgBasicPlayer .ctl .playCtl .volume.on .soundCheck {background-position:0 -200px;}
+#pgBasicPlayer .ctl .playCtl .volume.off .soundCheck {background-position:-50px -200px;}
+#pgBasicPlayer .ctl .playCtl .volume.off .base .bar {display:none;}
+#pgBasicPlayer .ctl .progress {clear:both;overflow:hidden;height:40px;width:360px;margin:0 0 0 12px;}
+#pgBasicPlayer .ctl .progress .base {position:relative;cursor:pointer;height:15px;margin-bottom:5px;background-position:0 -250px;}
+#pgBasicPlayer .ctl .progress .base .bar {display:block;height:15px;background-position:0 -300px;z-index:10;}
+#pgBasicPlayer .ctl .progress .base .btnSlider {display:block;position:absolute;top:0;height:15px;width:14px;background-position:-400px -250px;}
+#pgBasicPlayer .ctl .progress .time {display:inline-block;float:right;clear:both;}
+#pgBasicPlayer .ctl .progress .time em {font-size:11px;}
+#pgBasicPlayer .ctl .progress .time span {font-size:10px;}
+#pgBasicPlayer .ctl .btnRecommendTrack {display:block;position:absolute;top:0;right:0;margin:13px 11px 0 0;height:24px;width:24px;background-position:-250px -350px;}
+#pgBasicPlayer .ctl .btnRecommendTrack:hover {background-position:-300px -350px;}
+#pgBasicPlayer .ctl .btnLikeTrack {display:block;position:absolute;top:0;right:38px;margin:13px 0 0;height:24px;width:24px;background-position:0 -1000px;}
+#pgBasicPlayer .ctl .btnLikeTrackCancel {display:block;position:absolute;top:0;right:38px;margin:13px 0 0;height:24px;width:24px;background-position:-40px -1000px;}
+#pgBasicPlayer .ctl .btnLyrics {display:block;position:absolute;top:137px;left:5px;height:22px;width:71px;background-position:0 -350px;}
+#pgBasicPlayer .ctl .btnLyrics:hover {background-position:0 -375px;}
+#pgBasicPlayer .ctl .btnLyrics.click {background-position:-100px -350px;}
+#pgBasicPlayer .ctl .skinCheck {display:block;position:absolute;top:137px;left:76px;height:22px;width:35px;background-position:-200px -350px;}
+
+/* tabPlayer */
+#pgBasicPlayer .tabPlayer {position:relative;overflow:hidden;width:100%;background-repeat:repeat-x;}
+#pgBasicPlayer .tabPlayer li {float:left;width:128px;}
+#pgBasicPlayer .tabPlayer li.playList {background-position:0 0;}
+#pgBasicPlayer .tabPlayer li.myAlbum {background-position:-150px 0;}
+#pgBasicPlayer .tabPlayer li.top50 {background-position:-300px 0;}
+#pgBasicPlayer .tabPlayer a {display:block;overflow:hidden;height:30px;width:100%;}
+#pgBasicPlayer .tabPlayer .playList a.on {background-position:0 -50px;}
+#pgBasicPlayer .tabPlayer .myAlbum a.on {background-position:-150px -50px;}
+#pgBasicPlayer .tabPlayer .top50 a.on {background-position:-300px -50px;}
+#pgBasicPlayer .tabPlayer a span {position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+#pgBasicPlayer .tabPlayer a em {display:inline-block;padding:10px 0 0 85px;font-size:11px;}
+#pgBasicPlayer .tabPlayer a:hover em {text-decoration:none;}
+#pgBasicPlayer .tabPlayer a.on em {padding-top:11px;}
+
+/* list */
+#pgBasicPlayer .scrollArea {padding:245px 5px 39px 0;}
+#pgBasicPlayer .listWrap {display:none;position:static;min-height:100%;margin:-234px 0 -31px;}
+	*html #pgBasicPlayer .listWrap {height:100%;}
+#pgBasicPlayer .list ul {position:relative;width:99%;}
+	.msie6 #pgBasicPlayer .list ul,
+	.msie7 #pgBasicPlayer .list ul {zoom:1;}
+#pgBasicPlayer .list ul:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+#pgBasicPlayer .list .listRow {position:relative;float:left;cursor:pointer;height:23px;width:100%;z-index:1;}
+#pgBasicPlayer .list .downInsert {overflow:hidden;height:21px;}
+#pgBasicPlayer .list .check {position:absolute;top:50%;left:0;margin:-8px 8px 0 12px;z-index:1;}
+#pgBasicPlayer .list .trackInfo {overflow:hidden;margin-right:40px;padding-left:33px;}
+#pgBasicPlayer .list .trackInfo .scrollTrackWrap {position:relative;float:left;overflow:hidden;width:84%;}
+#pgBasicPlayer .list .trackInfo .scrollTrack {display:block;position:relative;width:100%;line-height:23px;white-space:nowrap;}
+#pgBasicPlayer .list .trackInfo .scrollTrack.short {overflow:hidden;text-overflow:ellipsis;}
+#pgBasicPlayer .list .trackInfo .icon {float:right;width:39px;margin:0;padding:4px 0 0;}
+#pgBasicPlayer .list .trackInfo .icon .trackIcon {margin:0 0 0 4px;}
+#pgBasicPlayer .list .trackInfo .icon .trackIcon.icAdult {display:block;float:left;overflow:hidden;height:15px;width:15px;text-indent:-1000em;}
+#pgBasicPlayer .list .trackInfo .icon .trackIcon.icHoldback {float:right;}
+#pgBasicPlayer .check {display:inline;float:left;}
+#pgBasicPlayer .check .checkbox {display:block;cursor:pointer;height:13px;width:13px;}
+#pgBasicPlayer .check.dim .checkbox {cursor:default;}
+#pgBasicPlayer .listBtns {position:absolute;bottom:31px;left:0;overflow:visible;height:33px;border-bottom:0;}
+#pgBasicPlayer .listBtns .check {margin:10px 8px 0 12px;}
+#pgBasicPlayer .listBtns .check .checkbox input {display:block;}
+#pgBasicPlayer .listBtns .btns {display:inline;float:left;margin:6px 0 0;}
+#pgBasicPlayer .listBtns .btns span {float:left;cursor:pointer;height:20px;margin-right:3px;}
+#pgBasicPlayer .listBtns .btns .btnDel {width:33px;background-position:0 -400px;}
+#pgBasicPlayer .listBtns .btns .btnDown {width:33px;background-position:-50px -400px;}
+#pgBasicPlayer .listBtns .btns .btnPut {width:33px;background-position:-100px -400px;}
+#pgBasicPlayer .listBtns .btns .btnMoveUp {width:19px;background-position:-150px -400px;margin-right:0;}
+#pgBasicPlayer .listBtns .btns .btnMoveDown {width:19px;background-position:-200px -400px;margin-left:-1px;}
+#pgBasicPlayer .listBtns .btns .btnAdd {line-height:20px;text-decoration:none;vertical-align:top;background-position:-350px -400px;}
+#pgBasicPlayer .listBtns .btns .btnAdd .num {margin:0;background-position:100% -400px;}
+#pgBasicPlayer .listBtns .btns .btnAdd button {overflow:visible;height:20px;font-size:11px;font-weight:bold;color:#0d0d0d;letter-spacing:-1px;line-height:22px;text-indent:0;white-space:nowrap;}
+#pgBasicPlayer .listBtns .btns .btnAdd button span {display:none}
+#pgBasicPlayer .listBtns .btns .btnAdd button em {display:inline-block;margin:0 8px 0 68px;line-height:20px;vertical-align:top;}
+#pgBasicPlayer .listBtns .btns .btnAddDim {cursor:default;width:70px;background-position:-250px -400px;}
+#pgBasicPlayer .listBtns .btns .btnAddDim span {display:none;}
+#pgBasicPlayer .listBtns .btns .btnLyricsReg {width:91px;background-position:0 -450px;}
+#pgBasicPlayer .listBtns .btns .btnLyricsApply {width:81px;background-position:-100px -450px;}
+#pgBasicPlayer .listBtns .time {display:inline;float:right;margin:10px 11px 0 0;font-size:11px;letter-spacing:-1px;}
+#pgBasicPlayer .listBtns .time span {font-size:10px;}
+#pgBasicPlayer .listBtns .time em {color:#808080;}
+#pgBasicPlayer .playTrackList .trackInfo .tracktitle,
+#pgBasicPlayer .playTrackList .trackInfo .artistname {line-height:23px;}
+#pgBasicPlayer .playTrackList .btns {display:none;position:absolute;top:50%;right:0;float:right;margin:-10px 3px 0;}
+#pgBasicPlayer .playTrackList .btns span {display:inline-block;height:18px;width:31px;}
+#pgBasicPlayer .playTrackList .btns span span {display:block;cursor:default;overflow:hidden;text-indent:-1000em;}
+#pgBasicPlayer .playTrackList .btns .btnDown {background-position:0 -500px;}
+#pgBasicPlayer .playTrackList .btns .btnDown span {background-position:-200px -500px;}
+#pgBasicPlayer .playTrackList .btns .btnFree {background-position:-50px -500px;}
+#pgBasicPlayer .playTrackList .btns .btnDRM {background-position:-160px -500px;}
+#pgBasicPlayer .playTrackList .btns .btnDRM span {background-position:-250px -500px;}
+#pgBasicPlayer .playTrackList .over .btns {display:block;}
+#pgBasicPlayer .searchTrackList .listRow {height:47px;border-top-width:1px;border-top-style:solid;}
+#pgBasicPlayer .searchTrackList .listRow.first {border:0;}
+#pgBasicPlayer .searchTrackList .trackInfo {margin-right:10px;padding-top:6px;}
+#pgBasicPlayer .searchTrackList .trackInfo * {line-height:18px;}
+#pgBasicPlayer .searchTrackList .trackInfo dt {overflow:hidden;height:18px;width:80%;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .searchTrackList .trackInfo dd {float:left;overflow:hidden;height:18px;max-width:40%;margin-right:4px;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .searchTrackList .trackInfo strong {display:inline-block;}
+#pgBasicPlayer .searchTrackList .trackInfo .tracktitle {word-spacing:-1px;vertical-align:top;}
+#pgBasicPlayer .searchTrackList .trackInfo .tracktitle:hover,
+#pgBasicPlayer .searchTrackList .trackInfo a:hover strong,
+#pgBasicPlayer .searchTrackList .trackInfo .tracktitle:hover strong {text-decoration:underline;}
+#pgBasicPlayer .searchTrackList .trackInfo a:hover strong {text-decoration:underline;}
+#pgBasicPlayer .searchTrackList .trackInfo .tracktitle {word-spacing:-1px;vertical-align:top;}
+#pgBasicPlayer .searchTrackList .trackInfo.disabled .tracktitle {cursor:default;}
+#pgBasicPlayer .searchTrackList .trackInfo.disabled .tracktitle:hover,
+#pgBasicPlayer .searchTrackList .trackInfo.disabled .tracktitle:hover strong {text-decoration:none;}
+#pgBasicPlayer .searchTrackList .trackInfo .artistname {padding-right:1px;color:#F60;word-spacing:-1px;}
+#pgBasicPlayer .searchTrackList .trackInfo .albumtitle {padding-right:1px;word-spacing:-1px;}
+#pgBasicPlayer .searchTrackList .trackInfo .icon {position:absolute;right:0;margin-top:1px;}
+
+/* playList */
+#pgBasicPlayer .listWrap.playList {display:block;}
+
+#pgBasicPlayer .toast {position:absolute;bottom:66px;width:100%;z-index:1;}
+#pgBasicPlayer .toast p {padding:28px 0;line-height:16px;text-align:center;border-width:1px;border-style:solid;border-color:#0d0d0d;}
+#pgBasicPlayer .toast .btnClose {position:absolute;top:11px;right:10px;cursor:pointer;height:18px;width:18px;background-position:-550px -350px;z-index:100;}
+#pgBasicPlayer .toast .btnClose span {display:none;}
+
+/* myalbumList */
+#pgBasicPlayer .listWrap .none {position:relative;top:300px;height:215px;width:205px;margin:0 0 0 90px;}
+#pgBasicPlayer .listWrap .none strong,
+#pgBasicPlayer .listWrap .none p {display:none;}
+#pgBasicPlayer .listWrap .list .myList {margin-top:-5px;}
+#pgBasicPlayer .myalbumList .myList .myListRow {position:relative;}
+#pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle {height:32px;width:100%;}
+#pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a {display:inline-block;padding:0 0 0 25px;font-weight:bold;line-height:32px;}
+#pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a:hover {text-decoration:none;}
+#pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a span {display:inline-block;font-weight:normal;line-height:32px;}
+#pgBasicPlayer .myalbumList .myList .myListRow .btnListenAll {position:absolute;top:8px;right:3px;height:18px;width:49px;}
+#pgBasicPlayer .myalbumList .myList .myListRow.reduction .playTrackList {display:none;}
+#pgBasicPlayer .myalbumList .myList .myListRow.expansion .playTrackList {width:100%;}
+#pgBasicPlayer .myalbumList .myList .playTrackList .check {margin-left:25px;}
+#pgBasicPlayer .myalbumList .myList .playTrackList .trackInfo {padding-left:47px;}
+
+/* top50List */
+#pgBasicPlayer .listWrap.top50List .playTrackList .chart {display:inline;float:left;width:19px;margin:0 6px 0 33px;line-height:23px;text-align:center;}
+#pgBasicPlayer .listWrap.top50List .playTrackList .chart em {line-height:23px;}
+#pgBasicPlayer .listWrap.top50List .playTrackList .trackInfo {padding-left:0;}
+
+/* account */
+#pgBasicPlayer .account {overflow:hidden;position:relative;height:30px;z-index:1000;}
+#pgBasicPlayer .account .userInfo {float:left;padding-left:11px;font-size:11px;letter-spacing:-1px;line-height:30px;}
+#pgBasicPlayer .account .userInfo span {display:inline-block;padding:0 4px;}
+#pgBasicPlayer .account .userInfo a {display:inline-block;padding-left:6px;text-decoration:underline;}
+#pgBasicPlayer .account .userInfo a span {display:inline;}
+#pgBasicPlayer .account .btnArea {display:inline-block;float:right;height:20px;margin:5px 5px 0 0;}
+#pgBasicPlayer .account .btnArea span {float:left;height:20px;margin-left:3px;}
+#pgBasicPlayer .account .btnLogin {width:44px;background-position:-300px -450px;}
+#pgBasicPlayer .account .btnLogout {width:55px;background-position:-350px -450px;}
+#pgBasicPlayer .account .btnConfiguration {width:35px;background-position:-450px -450px;}
+
+/* skin */
+.skinBlack {background:#3b3b3b url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_container.gif') repeat-x 0 0;}
+.skinBlack #pgBasicPlayer .ctl .thumbnail .mask {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/i_albumMask.png');}
+.skinBlack #pgBasicPlayer .trackInfo .icon .trackIcon.icAdult,
+.skinBlack #pgBasicPlayer .ctl .playCtl .btnCtl span,
+.skinBlack #pgBasicPlayer .ctl .playCtl .etcCtl span,
+.skinBlack #pgBasicPlayer .ctl .playCtl .volume .soundCheck,
+.skinBlack #pgBasicPlayer .ctl .playCtl .volume .base,
+.skinBlack #pgBasicPlayer .ctl .playCtl .volume .base .bar,
+.skinBlack #pgBasicPlayer .ctl .playCtl .volume .base .btnSlider,
+.skinBlack #pgBasicPlayer .ctl .progress .base,
+.skinBlack #pgBasicPlayer .ctl .progress .base .bar,
+.skinBlack #pgBasicPlayer .ctl .progress .base .btnSlider,
+.skinBlack #pgBasicPlayer .ctl .progress .base .loading,
+.skinBlack #pgBasicPlayer .ctl .btnRecommendTrack,
+.skinBlack #pgBasicPlayer .ctl .btnLyrics,
+.skinBlack #pgBasicPlayer .ctl .btnLikeTrack,
+.skinBlack #pgBasicPlayer .ctl .btnLikeTrackCancel,
+.skinBlack #pgBasicPlayer .ctl .skinCheck,
+.skinBlack #pgBasicPlayer .tabPlayer li,
+.skinBlack #pgBasicPlayer .tabPlayer a.on,
+.skinBlack #pgBasicPlayer .listBtns .btns span,
+.skinBlack #pgBasicPlayer .playTrackList .btns span,
+.skinBlack #pgBasicPlayer .account .btnLogin,
+.skinBlack #pgBasicPlayer .account .btnLogout,
+.skinBlack #pgBasicPlayer .account .btnConfiguration,
+.skinBlack #pgBasicPlayer .btnClose,
+.skinBlack #pgBasicPlayer .layerLyrics .lyricsNone span,
+.skinBlack #pgBasicPlayer .layerLyrics .lyricsNone .applyArea span a:hover,
+.skinBlack #pgBasicPlayer .layerResult .moreSearch div {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/i_skinV20140923.gif');}
+.skinBlack #pgBasicPlayer .ctl .trackInfo .tracktitle {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .ctl .trackInfo dd a {color:#b3b3b3;}
+.skinBlack #pgBasicPlayer .ctl .progress .time .start {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .ctl .progress .time .finish {color:#808080;}
+.skinBlack #pgBasicPlayer .ctl .progress .time span {color:#454545;}
+.skinBlack #pgBasicPlayer .tabPlayer {background-color:#1c1c1c;background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_tabPlayer.gif');}
+.skinBlack #pgBasicPlayer .tabPlayer a em {color:#bfbfbf;}
+.skinBlack #pgBasicPlayer .listWrap.top50List .playTrackList .chart {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .listWrap.top50List .playTrackList .chart em {color:#f60;}
+.skinBlack #pgBasicPlayer .list .rowSelect,
+.skinBlack #pgBasicPlayer .list .over {background-color:#363636;}
+.skinBlack #pgBasicPlayer .list .downInsert {border-bottom:2px solid #999;}
+.skinBlack #pgBasicPlayer .playTrackList .rowRecommend {background-color:#212121;}
+.skinBlack #pgBasicPlayer .playTrackList .nowPlaying .trackInfo span,
+.skinBlack #pgBasicPlayer .playTrackList .nowPlaying .trackInfo span span {color:#f60;}	
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo .tracktitle {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo .artistname {color:#808080;}
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo .artistname span {color:#595959;}
+.skinBlack #pgBasicPlayer .searchTrackList .listRow {border-color:#2e2e2e;}
+.skinBlack #pgBasicPlayer .searchTrackList .trackInfo dd {color:#595959;}
+.skinBlack #pgBasicPlayer .searchTrackList .trackInfo .tracktitle {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo.disabled *,
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo.disabled .tracktitle,
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo.disabled .artistname,
+.skinBlack #pgBasicPlayer .playTrackList .trackInfo.disabled .artistname span {color:#474747;}
+.skinBlack #pgBasicPlayer .searchTrackList .trackInfo .albumtitle {color:#808080;}
+.skinBlack #pgBasicPlayer .listBtns {border-top:1px solid #292929;background-color:#333;}
+.skinBlack #pgBasicPlayer .listBtns .btns .btnAdd button em {color:#f2f2f2;}
+.skinBlack #pgBasicPlayer .listBtns .time {color:#595959;}
+.skinBlack #pgBasicPlayer .listBtns .time span {color:#4a4a4a;}
+.skinBlack #pgBasicPlayer .account {border-top:1px solid #2b2b2b;background-color:#383838;}
+.skinBlack #pgBasicPlayer .account .userInfo {color:#808080;}
+.skinBlack #pgBasicPlayer .account .userInfo span {color:#595959;}
+.skinBlack #pgBasicPlayer .account .userInfo a {color:#737373;}
+.skinBlack #pgBasicPlayer .account .userInfo a span {color:#e6e6e6;}
+.skinBlack #pgBasicPlayer .layerPlayer {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_layerPlayer.gif');}
+.skinBlack #pgBasicPlayer .layerResult .resultView h2 {color:#bdbdbd;}
+.skinBlack #pgBasicPlayer .layerResult .resultView h2 span {color:#808080;}
+.skinBlack #pgBasicPlayer .layerResult .resultError h2 {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .layerResult .resultError p {color:#808080;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone h2 {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone .correct dt {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_layerResultNone.gif') 0 -400px;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone .correct dd a {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone .correct dd span {color:#4a4a4a;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone .boxArea {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_layerResultNone.gif') 0 0;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone .boxArea .boxBottom {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_layerResultNone.gif') 0 100%;}
+.skinBlack #pgBasicPlayer .layerResult .resultNone .guideSearch p {color:#808080;}
+.skinBlack #pgBasicPlayer .layerLyrics h2 .tracktitle {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .layerLyrics h2 .artistname {color:#808080;}
+.skinBlack #pgBasicPlayer .layerLyrics h2 span {color:#595959;}
+.skinBlack #pgBasicPlayer .layerLyrics .list {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .layerLyrics .listBtns p {color:#808080;}
+.skinBlack #pgBasicPlayer .layerLyrics .lyricsNone h2,
+.skinBlack #pgBasicPlayer .layerLyrics .lyricsNone p {color:#f0f0f0;}
+.skinBlack #pgBasicPlayer .layerLyrics .lyricsNone .registerArea {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/lhd_42.gif') repeat-x;}
+.skinBlack #pgBasicPlayer .myalbumList .none {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/i_skinV20140923.gif') no-repeat 0 -550px;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow {border-top:1px solid #404040;border-bottom:1px solid #2e2e2e;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow.first {border-top-color:#3b3b3b;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow.reduction {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/bg_myalbumList.gif');background-repeat:repeat-x;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow.reduction .myalbumtitle {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/i_skinV20140923.gif') no-repeat 0 -800px;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow.expansion .myalbumtitle {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/i_skinV20140923.gif') no-repeat 0 -850px;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a {color:#bdbdbd;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a span {color:#808080;}
+.skinBlack #pgBasicPlayer .myalbumList .myList .myListRow .btnListenAll {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinBlack/i_skinV20140923.gif') no-repeat -100px -500px;}
+.skinBlack #pgBasicPlayer .toast {background-color:#fff;}
+.skinBlack #pgBasicPlayer .toast p {color:#000;}
+.skinBlack #pgBasicPlayer .toast strong {color:#f60;}
+
+.skinWhite {background:#fafafa url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_container.gif') repeat-x 0 0;}
+.skinWhite #pgBasicPlayer .ctl .thumbnail .mask {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/i_albumMask.png');}
+.skinWhite #pgBasicPlayer .trackInfo .icon .trackIcon.icAdult,
+.skinWhite #pgBasicPlayer .ctl .playCtl .btnCtl span,
+.skinWhite #pgBasicPlayer .ctl .playCtl .etcCtl span,
+.skinWhite #pgBasicPlayer .ctl .playCtl .volume .soundCheck,
+.skinWhite #pgBasicPlayer .ctl .playCtl .volume .base,
+.skinWhite #pgBasicPlayer .ctl .playCtl .volume .base .bar,
+.skinWhite #pgBasicPlayer .ctl .playCtl .volume .base .btnSlider,
+.skinWhite #pgBasicPlayer .ctl .progress .base,
+.skinWhite #pgBasicPlayer .ctl .progress .base .bar,
+.skinWhite #pgBasicPlayer .ctl .progress .base .btnSlider,
+.skinWhite #pgBasicPlayer .ctl .progress .base .loading,
+.skinWhite #pgBasicPlayer .ctl .btnRecommendTrack,
+.skinWhite #pgBasicPlayer .ctl .btnLyrics,
+.skinWhite #pgBasicPlayer .ctl .btnLikeTrack,
+.skinWhite #pgBasicPlayer .ctl .btnLikeTrackCancel,
+.skinWhite #pgBasicPlayer .ctl .skinCheck,
+.skinWhite #pgBasicPlayer .tabPlayer li,
+.skinWhite #pgBasicPlayer .tabPlayer a.on,
+.skinWhite #pgBasicPlayer .playTrackList .btns span,
+.skinWhite #pgBasicPlayer .listBtns .btns span,
+.skinWhite #pgBasicPlayer .account .btnLogin,
+.skinWhite #pgBasicPlayer .account .btnLogout,
+.skinWhite #pgBasicPlayer .account .btnConfiguration,
+.skinWhite #pgBasicPlayer .btnClose,
+.skinWhite #pgBasicPlayer .layerLyrics .lyricsNone span,
+.skinWhite #pgBasicPlayer .layerLyrics .lyricsNone .applyArea span a:hover,
+.skinWhite #pgBasicPlayer .layerResult .moreSearch div {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/i_skinV20140923.gif');}
+.skinWhite #pgBasicPlayer .ctl .trackInfo .tracktitle {color:#000;}
+.skinWhite #pgBasicPlayer .ctl .trackInfo dd a {color:#414141;}
+.skinWhite #pgBasicPlayer .ctl .progress .time .start {color:#0a0a0a;}
+.skinWhite #pgBasicPlayer .ctl .progress .time .finish {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .ctl .progress .time span {color:#bfbfbf;}
+.skinWhite #pgBasicPlayer .tabPlayer {background-color:#d6d6d6;background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_tabPlayer.gif');}
+.skinWhite #pgBasicPlayer .tabPlayer a em {color:#8c8c8c;}
+.skinWhite #pgBasicPlayer .listWrap.top50List .playTrackList .chart {color:#414141;}
+.skinWhite #pgBasicPlayer .listWrap.top50List .playTrackList .chart em {color:#f60;}
+.skinWhite #pgBasicPlayer .list .rowSelect,
+.skinWhite #pgBasicPlayer .list .over {background-color:#ededed;}
+.skinWhite #pgBasicPlayer .list .downInsert {border-bottom:2px solid #666;}
+.skinWhite #pgBasicPlayer .playTrackList .rowRecommend {background-color:#eaecf4;}
+.skinWhite #pgBasicPlayer .playTrackList .nowPlaying .trackInfo span,
+.skinWhite #pgBasicPlayer .playTrackList .nowPlaying .trackInfo span span {color:#f60;}
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo .tracktitle {color:#414141;}
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo .artistname {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo .artistname span {color:#d9d9d9;}
+.skinWhite #pgBasicPlayer .searchTrackList .listRow {border-color:#e2e2e2;}
+.skinWhite #pgBasicPlayer .searchTrackList .trackInfo dd {color:#d9d9d9;}
+.skinWhite #pgBasicPlayer .searchTrackList .trackInfo .tracktitle {color:#414141;}
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo.disabled *,
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo.disabled .tracktitle,
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo.disabled .artistname,
+.skinWhite #pgBasicPlayer .playTrackList .trackInfo.disabled .artistname span {color:#d9d9d9;}
+.skinWhite #pgBasicPlayer .searchTrackList .trackInfo .albumtitle {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .listBtns {border-top:1px solid #dedede;background-color:#f2f2f2;}
+.skinWhite #pgBasicPlayer .listBtns .btns .btnAdd button em {color:#0d0d0d;}
+.skinWhite #pgBasicPlayer .listBtns .time {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .listBtns .time span {color:#d4d4d4;}
+.skinWhite #pgBasicPlayer .account {border-top:1px solid #d6d6d6;background-color:#e8e8e8;}
+.skinWhite #pgBasicPlayer .account .userInfo {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .account .userInfo span {color:#c4c4c4;}
+.skinWhite #pgBasicPlayer .account .userInfo a {color:#8c8c8c;}
+.skinWhite #pgBasicPlayer .account .userInfo a span {color:#0a0a0a;}
+.skinWhite #pgBasicPlayer .layerPlayer {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_layerPlayer.gif');}
+.skinWhite #pgBasicPlayer .layerResult .resultView h2 {color:#414141;}
+.skinWhite #pgBasicPlayer .layerResult .resultView h2 span {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .layerResult .resultError h2 {color:#414141;}
+.skinWhite #pgBasicPlayer .layerResult .resultError p {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone h2 {color:#414141;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone .correct dt {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_layerResultNone.gif') 0 -400px;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone .correct dd a {color:#414141;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone .correct dd span {color:#d9d9d9;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone .boxArea {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_layerResultNone.gif') 0 0;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone .boxArea .boxBottom {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_layerResultNone.gif') 0 100%;}
+.skinWhite #pgBasicPlayer .layerResult .resultNone .guideSearch p {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .layerLyrics h2 .tracktitle {color:#4d4d4d;}
+.skinWhite #pgBasicPlayer .layerLyrics h2 .artistname {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .layerLyrics h2 span {color:#d9d9d9;}
+.skinWhite #pgBasicPlayer .layerLyrics .list {color:#414141;}
+.skinWhite #pgBasicPlayer .layerLyrics .listBtns p {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .layerLyrics .lyricsNone h2,
+.skinWhite #pgBasicPlayer .layerLyrics .lyricsNone p {color:#4d4d4d;}
+.skinWhite #pgBasicPlayer .layerLyrics .lyricsNone .registerArea {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/lhd_42.gif') repeat-x;}
+.skinWhite #pgBasicPlayer .myalbumList .none {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/i_skinV20140923.gif') no-repeat 0 -550px;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow {border-top:1px solid #fafafa;border-bottom:1px solid #dcdcdc;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow.reduction {background-image:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/bg_myalbumList.gif');background-repeat:repeat-x;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow.reduction .myalbumtitle {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/i_skinV20140923.gif') no-repeat 0 -800px;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow.expansion .myalbumtitle {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/i_skinV20140923.gif') no-repeat 0 -850px;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a {color:#414141;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow .myalbumtitle a span {color:#a6a6a6;}
+.skinWhite #pgBasicPlayer .myalbumList .myList .myListRow .btnListenAll {background:url('http://file.bugsm.co.kr/nbugs/player/basic/skinWhite/i_skinV20140923.gif') no-repeat -100px -500px;}
+.skinWhite #pgBasicPlayer .toast {background-color:#454545;}
+.skinWhite #pgBasicPlayer .toast p {color:#fff;}
+.skinWhite #pgBasicPlayer .toast strong {color:#f88e26;}
+
+/* layer */
+#pgBasicPlayer .layerPlayer {display:none;position:absolute;left:0;min-height:100%;width:100%;background-repeat:repeat-x;}
+	*html #pgBasicPlayer .layerPlayer {height:100%;}
+#pgBasicPlayer .layerPlayer .btnClose {position:absolute;top:55px;right:14px;cursor:pointer;height:18px;width:18px;background-position:-350px -350px;z-index:100;}
+#pgBasicPlayer .layerPlayer .btnClose span {display:none;}
+
+#pgBasicPlayer .layerResult {top:40px;margin:-40px 0 -31px;background-position:0 39px;z-index:102;}
+#pgBasicPlayer .layerResult .scrollArea {padding:0 5px 9px 0;}
+#pgBasicPlayer .layerResult .moreSearch {margin:5px 0 8px 12px;}
+#pgBasicPlayer .layerResult .moreSearch .btnMore,
+#pgBasicPlayer .layerResult .moreSearch .btnTop {display:block;overflow:hidden;height:27px;width:346px;}
+#pgBasicPlayer .layerResult .moreSearch span {cursor:pointer;float:left;overflow:hidden;height:100%;text-indent:-1000em;}
+#pgBasicPlayer .layerResult .moreSearch .btnMore {background-position:0 -900px;margin:0 auto;}
+#pgBasicPlayer .layerResult .moreSearch .btnMore .more {width:263px;}
+#pgBasicPlayer .layerResult .moreSearch .btnMore .top {width:83px;}
+#pgBasicPlayer .layerResult .moreSearch .btnTop {background-position:0 -950px;margin:0 auto;}
+#pgBasicPlayer .layerResult .moreSearch .btnTop .top {width:100%;}
+#pgBasicPlayer .layerResult .resultWrap {padding:40px 0 50px;}
+#pgBasicPlayer .layerResult .resultView h2 {overflow:hidden;height:25px;width:90%;padding-top:20px;font-size:12px;font-weight:normal;line-height:25px;text-indent:10px;vertical-align:top;}
+#pgBasicPlayer .layerResult .resultView h2 strong {display:inline-block;overflow:hidden;max-width:60%;color:#f60;line-height:25px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;}
+#pgBasicPlayer .layerResult .resultError {padding-top:79px;text-align:center;line-height:21px;}
+#pgBasicPlayer .layerResult .resultError h2 {height:43px;font-size:12px;font-weight:bold;}
+#pgBasicPlayer .layerResult .resultError h2 span {display:inline-block;vertical-align:top;}
+#pgBasicPlayer .layerResult .resultError h2 .ic {height:11px;width:12px;margin:4px 5px 0 0;background:url('http://file.bugsm.co.kr/nbugs/player/basic/i_playerV2.gif') 0 -50px;}
+#pgBasicPlayer .layerResult .resultNone {padding-top:79px;text-align:center;line-height:21px;}
+#pgBasicPlayer .layerResult .resultNone h2 {height:43px;font-size:12px;font-weight:bold;}
+#pgBasicPlayer .layerResult .resultNone h2 span {display:inline-block;vertical-align:top;}
+#pgBasicPlayer .layerResult .resultNone h2 .ic {height:11px;width:12px;margin:4px 5px 0 0;background:url('http://file.bugsm.co.kr/nbugs/player/basic/i_playerV2.gif') 0 -50px;}
+#pgBasicPlayer .layerResult .resultNone h2 strong {color:#f60;}
+#pgBasicPlayer .layerResult .resultNone .boxArea {position:relative;width:306px;margin:0 auto;padding:22px;text-align:left;}
+#pgBasicPlayer .layerResult .resultNone .boxArea .boxBottom {position:absolute;bottom:0;left:0;height:22px;width:350px;}
+#pgBasicPlayer .layerResult .resultNone .correct {overflow:hidden;width:100%;}
+#pgBasicPlayer .layerResult .resultNone .correct dt {height:21px;width:100%;text-indent:-1000em;}
+#pgBasicPlayer .layerResult .resultNone .correct dd {float:left;overflow:hidden;height:21px;padding-right:11px;}
+#pgBasicPlayer .layerResult .resultNone .correct dd a {display:inline-block;font-size:12px;letter-spacing:-1px;line-height:17px;text-decoration:underline;vertical-align:top;white-space:nowrap;}
+#pgBasicPlayer .layerResult .resultNone .correct dd span {display:inline-block;padding-left:10px;line-height:17px;vertical-align:top;}
+#pgBasicPlayer .layerResult .resultNone .correct dd.last span {display:none;}
+#pgBasicPlayer .layerResult .resultNone .guideSearch {padding-top:13px;}
+#pgBasicPlayer .layerResult .resultNone .guideSearch p {letter-spacing:-1px;line-height:24px;}
+#pgBasicPlayer .layerResult .resultNone .guideSearch p span {display:inline-block;padding-left:7px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu.gif') no-repeat 0 -40px;}
+#pgBasicPlayer .layerResult .resultNone .guideSearch .goReserve {display:inline-block;padding:0 9px 0 7px;color:#f60;letter-spacing:0;text-decoration:underline;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif') no-repeat 100% -141px;}
+
+#pgBasicPlayer .layerLyrics {top:205px;margin:-205px 0 -31px;background-position:0 204px;z-index:10;}
+#pgBasicPlayer .layerLyrics h2 {font-size:12px;font-weight:normal;}
+#pgBasicPlayer .layerLyrics .btnClose {top:220px;}
+#pgBasicPlayer .layerLyrics .scrollArea {padding:0 5px 11px 12px;}
+#pgBasicPlayer .layerLyrics .list {padding-top:3px;line-height:18px;}
+#pgBasicPlayer .layerLyrics .list strong {color:#f60;line-height:18px;}
+#pgBasicPlayer .layerLyrics .listBtns p {line-height:32px;text-indent:12px;}
+#pgBasicPlayer .layerLyrics .listBtns p em {color:#f60;}
+#pgBasicPlayer .layerLyrics .listBtns .btns {margin-left:12px;}
+#pgBasicPlayer .layerLyrics .lyricsView {padding:205px 0 50px;}
+#pgBasicPlayer .layerLyrics .lyricsView h2 {height:25px;width:85%;padding:25px 0 0 12px;white-space:nowrap;}
+#pgBasicPlayer .layerLyrics .lyricsView h2 .tracktitle {display:inline-block;overflow:hidden;max-width:50%;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .layerLyrics .lyricsView h2 .artistname {display:inline-block;overflow:hidden;max-width:50%;text-overflow:ellipsis;white-space:nowrap;}
+#pgBasicPlayer .layerLyrics .lyricsNone {padding:272px 0 50px;line-height:21px;text-align:center;}
+#pgBasicPlayer .layerLyrics .lyricsNone span {display:inline-block;}
+#pgBasicPlayer .layerLyrics .lyricsNone span a {display:block;height:100%;}
+#pgBasicPlayer .layerLyrics .lyricsNone span span {display:none;}
+#pgBasicPlayer .layerLyrics .lyricsNone .btnLyricsApplyGeneral {height:88px;width:162px;background-position:-250px -550px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .btnLyricsApplyAuto {height:88px;width:162px;background-position:-450px -550px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .btnLyricsApplyGeneral a:hover {background-position:-250px -650px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .btnLyricsApplyAuto a:hover {background-position:-450px -650px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .btnLyricsRegGeneral {height:20px;width:80px;margin-top:14px;background-position:-200px -450px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .applyArea {margin-top:25px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .registerArea {margin-top:41px;padding-top:46px;}
+#pgBasicPlayer .layerLyrics .lyricsNone .registerArea .panelIs {display:block;font-weight:bold;color:#727cba;text-decoration:underline;}
+
+#pgBasicPlayer .layerInfoMsg {position:absolute;background:url('http://file.bugsm.co.kr/nbugs/player/bg_layerMsg.png') no-repeat;}
+#pgBasicPlayer .layerInfoMsg span {display:none;}
+#pgBasicPlayer .layerInfoMsg.inform {bottom:59px;height:22px;width:117px;background-position:0 -90px;}
+#pgBasicPlayer .layerInfoMsg.musicRecommend {display:none;top:39px;right:6px;height:52px;width:137px;background-position:0 0;}
+#pgBasicPlayer .layerInfoMsg.skinOption {display:none;top:122px;left:70px;height:20px;width:46px;background-position:0 -60px;}
+#pgBasicPlayer .layerInfoMsg.addPlaylist {top:194px;left:66px;height:20px;background:none;z-index:101;}
+#pgBasicPlayer .layerInfoMsg.addPlaylist span {display:block;height:20px;width:65px;font-size:11px;color:#fff;letter-spacing:-1px;line-height:17px;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/player/bg_layerMsg.png') no-repeat 0 -120px;}
+#pgBasicPlayer .layerInfoMsg.lyricsInform {position:absolute;bottom:27px;left:12px;height:28px;width:207px;background-position:0 -150px;}

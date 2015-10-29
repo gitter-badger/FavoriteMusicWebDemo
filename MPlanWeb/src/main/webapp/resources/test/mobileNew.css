@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+#container.mobile {}
+
+.mobileMain .appIntroTop {overflow:hidden;width:100%;margin:0 0 40px;padding:62px 0 0;}
+	.appIntroTop .appEvent {float:left;height:116px;width:376px;}
+	.appIntroTop .appEvent img {height:100%;width:100%;}
+	.appIntroTop .appMain {}
+	.appIntroTop .appMain .appMainList {overflow:hidden;height:199px;width:1004px;margin-right:-40px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_appMainList.gif') no-repeat 462px 0;}
+	.appIntroTop .appMain .appMainList li {float:left;height:199px;width:462px;margin-right:40px;}
+	.appIntroTop .appMain .appMainList li img {height:100%;width:100%;}
+	.appIntroTop .appMain .simpleNav {position:absolute;top:222px;left:8px;z-index:10;}
+	.appIntroTop .appNew {float:left;margin:9px 0 0;height:116px;width:376px;}
+	.appIntroTop .appNew img {height:100%;width:100%;}
+	
+.mobileMain h3 {height:28px;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/h_title.gif') no-repeat 0 0;}
+
+.mobileMain .tabCategory {overflow:hidden;width:100%;padding:0 0 27px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/tab_mobile.gif') no-repeat 0 36px;}
+	.tabCategory li {float:left;height:36px;width:auto;}
+	.tabCategory li a {display:block;overflow:hidden;height:100%;width:149px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/tab_mobile.gif') no-repeat;}
+	.tabCategory li .appAll {width:150px;background-position:0 -100px;}
+	.tabCategory li .appBugsGame {background-position:-150px -100px;}
+	.tabCategory li .appEssential {background-position:-300px -100px;}
+	.tabCategory li .appArtist {background-position:-450px -100px;}
+	.tabCategory li .appOST {background-position:-600px -100px;}
+	.tabCategory li .osIOS {width:74px;background-position:-750px -100px;}
+	.tabCategory li .osAndroid {width:71px;background-position:-830px -100px;}
+	.tabCategory li .osWindow {width:73px;background-position:-910px -100px;}
+	.tabCategory li.selected .appAll {background-position:0 -150px;}
+	.tabCategory li.selected .appBugsGame {background-position:-150px -150px;}
+	.tabCategory li.selected .appEssential {background-position:-300px -150px;}
+	.tabCategory li.selected .appArtist {background-position:-450px -150px;}
+	.tabCategory li.selected .appOST {background-position:-600px -150px;}
+	.tabCategory li.selected .osIOS {background-position:-750px -150px;}
+	.tabCategory li.selected .osAndroid {background-position:-830px -150px;}
+	.tabCategory li.selected .osWindow {background-position:-910px -150px;}
+.mobileMain .mainAppList {width:100%;padding:22px 0 0;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_mainTitle.gif') no-repeat;}
+	.mainAppList ul {overflow:hidden;width:100%;padding-top:1px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_mainAppList.gif') repeat-y;}
+	.mainAppList li {display:inline;position:relative;float:left;height:105px;width:293px;margin:0 0 0 22px;padding:0 0 50px;}
+	.mainAppList li .thumbnail {float:left;height:92px;width:92px;padding:13px 0 0 12px;}
+	.mainAppList li .thumbnail a {display:block;}
+	.mainAppList li .thumbnail img {height:79px;width:79px;}
+	.mainAppList .info {overflow:hidden;padding:13px 0 0;}
+	.mainAppList .info dt a {font-size:14px;font-weight:bold;color:#000;line-height:24px;}
+	.mainAppList .info dt .icNew {position:absolute;top:3px;left:65px;overflow:hidden;height:36px;width:36px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/ic.png') no-repeat 0 -120px;z-index:10;}
+	.mainAppList .info dt .icUp {position:absolute;top:3px;left:65px;overflow:hidden;height:36px;width:36px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/ic.png') no-repeat 0 -160px;z-index:10;}
+	.mainAppList .info dd.desc {overflow:hidden;height:28px;margin:0 0 8px;color:#666;line-height:14px;}
+	.mainAppList .info dd.os {overflow:hidden;height:14px;}
+	.mainAppList .info dd.os span {display:inline-block;overflow:hidden;height:0;width:15px;margin:0 4px 0 0;padding:14px 0 0;background:url('http://file.bugsm.co.kr/nbugs/common/ic.png') no-repeat}
+	.mainAppList .info dd.os span.iOS {background-position:0 0;}
+	.mainAppList .info dd.os span.android {background-position:0 -40px;}
+	.mainAppList .info dd.os span.windows {background:url('http://file.bugsm.co.kr/nbugs/common/ic2.gif') no-repeat 0 -150px;}
+	.mainAppList .info dd.os em {display:none;}
+	.mainAppList li:hover {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_mainAppList.gif') no-repeat -1000px 0;}
+	.mainAppList li:hover .info dt a,
+	.mainAppList .info dt a:hover {color:#F60;text-decoration:underline;}
+.mobileMain .pagination {margin-top:-25px;}
+
+.mobileApp #content {overflow:hidden;width:962px;margin:0 0 80px;padding-bottom:0;border:1px solid #ECECEC;border-right:1px solid #EFEFEF;border-bottom:1px solid #D9D9D9;}
+.mobileApp h3 {height:32px;padding:30px 0 0;}
+.mobileApp h4 {height:22px;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/h_title.gif') no-repeat;}
+.mobileApp .appTop {position:relative;width:100%;margin:0 0 1px;padding:73px 0 0;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_appDetailContent.gif') no-repeat 0 0;}
+.mobileApp .appTop .icEvent {position:absolute;height:92px;width:92px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/ic.gif') no-repeat 0 0;z-index:100;}
+.mobileApp .appTop .icNew {position:absolute;height:92px;width:92px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/ic.gif') no-repeat 0 -100px;z-index:100;}
+.mobileApp .layerBanner {display:none;position:absolute;top:320px;left:230px;height:472px;width:492px;z-index:100;}
+.mobileApp .layerBanner .bg {height:384px;width:404px;padding:44px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bg_banner.png') no-repeat;}
+.mobileApp .layerBanner .banner {height:361px;width:402px;padding:1px 1px 0;}
+.mobileApp .layerBanner .check {float:left;padding:0 0 0 6px;}
+	.msie6 .mobileApp .layerBanner .check {padding-top:5px;}
+.mobileApp .layerBanner .check .checkbox {vertical-align:middle;}
+.mobileApp .layerBanner .check label {font-size:11px;color:#999;line-height:22px;}
+.mobileApp .layerBanner .btnClose {float:right;}
+.mobileApp .layerBanner .btnClose a {display:block;height:22px;width:40px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bc_close.gif') no-repeat 6px -515px;}
+.mobileApp .layerBanner .btnClose a span {display:none;}
+
+
+.mobileAppBugs .appTop {margin:0;padding-top:0;/*padding:60px 0 0;*/text-align:left;z-index:10;}
+	.mobileAppBugs .appTop .icNew {top:0;left:0;}
+	.mobileAppBugs .appBugsis {overflow:hidden;height:469px;width:321px;padding:60px 84px 0 557px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/bg_appTop-20130107.jpg') left top no-repeat;}
+	.mobileAppBugs .appBugsis .appDesc {display:block;height:149px;text-indent:-1000em;}
+	.mobileAppBugs .appBugsis .ticketBuy {overflow:hidden;width:100%;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/bg_ticketPrice.gif') no-repeat 0 -610px;}
+	.mobileAppBugs .appBugsis .ticketBuy dt {height:53px;margin-bottom:10px;text-indent:-1000em;}
+	.mobileAppBugs .appBugsis .ticketBuy dd {position:relative;height:237px;}
+	.mobileAppBugs .appBugsis .ticketBuy dd a {display:block;position:absolute;overflow:hidden;}	
+	.mobileAppBugs .appBugsis .ticketBuy dd a.btnBuyBasic {top:23px;right:17px;}
+	.mobileAppBugs .appBugsis .ticketBuy dd a.btnBuyAllInOne {top:82px;right:17px;}	
+	.mobileAppBugs .appBugsis .ticketBuy dd a.btnDetailGuide {bottom:19px;left:20px;}
+	.mobileAppBugs .appBugsis .ticketBuy dd span,
+	.mobileAppBugs .appBugsis .ticketBuy dd p {display:none;}
+	.mobileAppBugs .appTop .awardWinning {position:absolute;top:0;left:656px;}
+	.mobileAppBugs .appTop .appAwardWinner {position:absolute;top:-1px;left:807px;}
+
+.mobileApp .tabOS {height:35px;width:794px;margin:0 0 30px 84px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/tab_mobile.gif') no-repeat 100% -300px;}
+	.tabOS li {float:left;}
+	.tabOS li a,
+	.tabOS li span {display:block;overflow:hidden;height:35px;width:129px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/tab_mobile.gif') no-repeat;}
+	.tabOS li .iPhone {width:130px;background-position:0 -200px;}
+	.tabOS li .android {background-position:-150px -200px;}
+	.tabOS li .window {background-position:-300px -200px;}
+	.tabOS li .iPad {background-position:-450px -200px;}
+	.tabOS li .androidTablet {background-position:-600px -200px;}
+	.tabOS li.selected .iPhone {width:130px;background-position:0 -250px;}
+	.tabOS li.selected .android {background-position:-150px -250px;}
+	.tabOS li.selected .window {background-position:-300px -250px;}
+	.tabOS li.selected .iPad {background-position:-450px -250px;}
+	.tabOS li.selected .androidTablet {background-position:-600px -250px;}
+.mobileAppBugs .tabOS {background-position:0 -350px;}
+
+.mobileApp .contentsInfo {display:none;}
+
+.mobileApp .appDownload {width:794px;margin:0 0 40px 84px;}
+	.appDownload h4 {margin:0 0 15px;background-position:0 -50px;}
+	.appDownload .btnDownload {overflow:hidden;width:100%;padding:15px 0;background-color:#FCFCFC;}
+	.appDownload .btnDownload span {display:inline;float:left;}
+	.appDownload .btnDownload .btnPro {padding:0 22px 0 15px;}
+	.appDownload .btnDownload .btnLite {padding:0 22px 0 15px;}
+	.appDownload .btnDownload .btnFree {padding:0 22px 0 15px;}
+	.appDownload.typeA {border-bottom:1px solid #ECECEC;}
+	.appDownload.typeA .btnDownload .QRcode {margin:13px 63px 0 0;}
+	.appDownload.typeA .btnDownload .QRcode img {height:70px;width:70px;}
+	.appDownload.typeA .notice {height:23px;width:100%;margin:10px 0 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/i_txt.gif') no-repeat 13px 0;}
+	.appDownload.typeB .btnDownload .QRcode {margin:13px 17px 0 0;}
+	.appDownload.typeB .notice {float:left;height:32px;width:370px;margin:30px 0 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/i_txt.gif') no-repeat 0 -50px;}
+		#window .appDownload.typeB .notice {background-position:0 -100px;}
+.mobileAppBugs .appDownload h4 {background-position:0 -250px;}
+
+.mobileApp .appIntro {position:relative;width:794px;margin:0 0 40px 84px;border-bottom:1px solid #ECECEC;}
+	.appIntro h4 {margin:0 0 40px;background-position:0 -100px;}
+	.appIntro .appTrackList {position:absolute;top:0;left:445px;padding-left:25px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_appTrackList.gif') no-repeat;}
+	.appIntro .appTrackList h4 {background-position:0 -150px;}
+	.appTrackList .scroll {overflow:hidden;overflow-y:scroll;height:510px;width:324px;border-top:1px solid #BFBFBF;}
+.mobileAppEssential .appIntro h4 {margin:0 0 23px;}
+.mobileAppBugs .appIntro h4 {margin:0 0 15px;background-position:0 -300px;}
+	.appIntro .appBugs {height:296px;width:794px;padding-top:25px;list-style:none;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/bg_appIntro.gif') no-repeat;}
+	.appIntro .appBugs li {/*height:123px;*/height:140px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_txtAppIntro.gif') no-repeat;}
+	.appIntro .appBugs .source {margin-left:30px;background-position:0 0;}
+	.appIntro .appBugs .offline {margin-left:175px;background-position:0 -150px;}
+	.appIntro .appBugs .title {display:block;visibility:hidden;height:40px;}
+	.appIntro .appBugs p {overflow:hidden;visibility:hidden;height:40px;}
+	.appIntro .appBugs span {display:block;height:28px;width:187px;margin-left:20px;}
+	#window .appIntro .appBugs {overflow:hidden;height:133px;padding:0;background:none;}
+	#window .appIntro .appBugs li {display:inline-block;overflow:hidden;height:69px;width:397px;margin:25px 0 40px;}
+	#window .appIntro .appBugs .source {float:left;background-position:30px -300px;}
+	#window .appIntro .appBugs .myalbum {float:right;background-position:0 -400px;}
+
+.mobileApp .appGuide {width:794px;margin:0 auto 45px;}
+	.appGuide h4 {margin:0 0 20px;background-position:0 -350px;}
+	#iPhone .appGuide h4 {background-position:0 -400px;}
+	#android .appGuide h4 {background-position:0 -450px;}
+	#androidTablet .appGuide h4 {background-position:0 -500px;}
+	#iPad .appGuide h4 {background-position:0 -550px;}
+	#window .appGuide h4 {background-position:0 -600px;}
+	.appGuide .appGuideWrap {position:relative;width:794px;padding:40px 0 34px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/bg_appGuide.gif') no-repeat 0 0;}
+	.appGuide .infoImg {display:none;position:relative;overflow:hidden;height:485px;width:794px;}
+	#androidTablet .appGuide .infoImg {height:333px;}
+	#iPad .appGuide .infoImg {height:333px;}
+	.appGuide .thumbnail {position:absolute;left:0;overflow:hidden;width:3970px;}
+	.appGuide .thumbnail img {display:inline-block;float:left;overflow:hidden;width:794px;}
+	.appGuide .navi {overflow:hidden;height:125px;margin:0 auto;}
+	#iPhone .appGuide .navi {width:540px;}
+	#android .appGuide .navi {width:630px;}
+	#window .appGuide .navi {width:450px;}
+	#androidTablet .appGuide .navi {width:630px;}
+	#iPad .appGuide .navi {width:360px;}
+	.appGuide .navi li {float:left;height:125px;width:90px;}
+	.appGuide .navi a {display:block;overflow:hidden;height:125px;width:90px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/bg_appGuideNavi.png') no-repeat;}
+	.appGuide .navi a.new {background-position:0 0;}
+	.appGuide .navi a.bugs {background-position:-100px 0;}
+	.appGuide .navi a.chart {background-position:-200px 0;}
+	.appGuide .navi a.player {background-position:-300px 0;}
+	.appGuide .navi a.myalbum {background-position:-400px 0;}
+	.appGuide .navi a.setting {background-position:-500px 0;}
+	.appGuide .navi a.listen {background-position:-600px 0;}
+	.appGuide .navi a.offline {background-position:-1200px 0;}
+	.appGuide .navi a.download {background-position:-1300px 0;}
+	.appGuide .navi a.mymusic {background-position:-900px 0;}
+	.appGuide .navi a.widget {background-position:-1000px 0;}
+	.appGuide .navi a.mv {background-position:-1100px 0;}
+	.appGuide .navi .on a.new,
+	.appGuide .navi a.new:hover {background-position:0 -150px;}
+	.appGuide .navi .on a.bugs,
+	.appGuide .navi a.bugs:hover {background-position:-100px -150px;}
+	.appGuide .navi .on a.chart,
+	.appGuide .navi a.chart:hover {background-position:-200px -150px;}
+	.appGuide .navi .on a.player,
+	.appGuide .navi a.player:hover {background-position:-300px -150px;}
+	.appGuide .navi .on a.myalbum,
+	.appGuide .navi a.myalbum:hover {background-position:-400px -150px;}
+	.appGuide .navi .on a.setting,
+	.appGuide .navi a.setting:hover {background-position:-500px -150px;}
+	.appGuide .navi .on a.listen,
+	.appGuide .navi a.listen:hover {background-position:-600px -150px;}
+	.appGuide .navi .on a.offline,
+	.appGuide .navi a.offline:hover {background-position:-1200px -150px;}
+	.appGuide .navi .on a.download,
+	.appGuide .navi a.download:hover {background-position:-1300px -150px;}
+	.appGuide .navi .on a.mymusic,
+	.appGuide .navi a.mymusic:hover {background-position:-900px -150px;}
+	.appGuide .navi .on a.widget,
+	.appGuide .navi a.widget:hover {background-position:-1000px -150px;}
+	.appGuide .navi .on a.mv,
+	.appGuide .navi a.mv:hover {background-position:-1100px -150px;}
+
+#window .appGuide .navi a {}	
+	#window .appGuide .navi a.new {background-position:0 -300px;}
+	#window .appGuide .navi a.channel {background-position:-100px -300px;}
+	#window .appGuide .navi a.chart {background-position:-200px -300px;}
+	#window .appGuide .navi a.player {background-position:-300px -300px;}
+	#window .appGuide .navi a.myalbum {background-position:-400px -300px;}
+	#window .appGuide .navi .on a.new,
+	#window .appGuide .navi a.new:hover {background-position:0 -450px;}
+	#window .appGuide .navi .on a.channel,
+	#window .appGuide .navi a.channel:hover {background-position:-100px -450px;}
+	#window .appGuide .navi .on a.chart,
+	#window .appGuide .navi a.chart:hover {background-position:-200px -450px;}
+	#window .appGuide .navi .on a.player,
+	#window .appGuide .navi a.player:hover {background-position:-300px -450px;}
+	#window .appGuide .navi .on a.myalbum,
+	#window .appGuide .navi a.myalbum:hover {background-position:-400px -450px;}
+	
+	.appGuide .btnMovieGuide {display:inline-block;position:absolute;top:20px;right:20px;}
+	.appGuide .btnTab span {position:absolute;top:264px;height:40px;width:40px;}
+	.appGuide .btnTab .prev {left:20px;}
+	.appGuide .btnTab .next {right:20px;}
+	.appGuide .btnTab span a {display:block;overflow:hidden;height:40px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/bg_paging.gif') no-repeat 0 0;}
+	.appGuide .btnTab .prev a {background-position:0 0;}
+	.appGuide .btnTab .next a {background-position:0 -40px;}
+	.appGuide .btnTab .simpleNav {position:absolute;top:375px;left:413px;z-index:10;}
+	#androidTablet .appGuide .btnTab span,
+	#iPad .appGuide .btnTab span {top:122px;}
+	#androidTablet .appGuide .btnTab .simpleNav,
+	#iPad .appGuide .btnTab .simpleNav {top:288px;}
+	
+.mobileApp .attention {width:794px;margin:0 auto 40px;}
+.mobileApp .attention h4 {margin:0 0 20px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/h_title.gif') no-repeat 0 -200px;}	
+	.attention li {display:none;}
+.mobileAppBugs .attention ul {height:18px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_txtAttention.gif') no-repeat 0 -20px;}
+
+.mobileAppBugs #iPhone {width:794px;margin:0 0 0 86px;}
+.mobileAppBugs #iPhone h4 {height:30px;margin-bottom:25px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_bugsAppIphone.png') no-repeat 0 0;}
+.mobileAppBugs #iPhone .appIntro {clear:both;height:233px;margin:0 0 15px 0;border:0;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_bugsAppIphone.png') no-repeat 0 -50px;}
+.mobileAppBugs #iPhone .appIntro * {display:none;}
+.mobileAppBugs #iPhone .appDownload {margin:0 0 15px 0;}
+.mobileAppBugs #iPhone .appDownload h4 {display:none;}
+.mobileAppBugs #iPhone .appGuide {margin:0 0 57px 0;}
+.mobileAppBugs #iPhone .appGuide h4 {display:none;}
+.mobileAppBugs #iPhone .appGuide ul {overflow:hidden;width:100%;}
+.mobileAppBugs #iPhone .appGuide li {float:left;width:100%;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_bugsAppIphone.png') no-repeat;}
+.mobileAppBugs #iPhone .appGuide li * {display:none;}
+.mobileAppBugs #iPhone .appGuide .storageBox {height:530px;background-position:0 -300px;}
+.mobileAppBugs #iPhone .appGuide .player {height:500px;background-position:0 -850px;}
+.mobileAppBugs #iPhone .appGuide .radio {height:540px;background-position:0 -1400px;}
+.mobileAppBugs #iPhone .appGuide .trackList {height:536px;background-position:0 -1950px;}
+
+.mobileAppBugs #android {width:794px;margin:0 0 0 86px;}
+.mobileAppBugs #android h4 {height:30px;margin-bottom:25px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_bugsApp.png') no-repeat 0 0;}
+.mobileAppBugs #android .appIntro {clear:both;height:233px;margin:0 0 15px 0;border:0;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_bugsApp.png') no-repeat 0 -50px;}
+.mobileAppBugs #android .appIntro * {display:none;}
+.mobileAppBugs #android .appDownload {margin:0 0 15px 0;}
+.mobileAppBugs #android .appDownload h4 {display:none;}
+.mobileAppBugs #android .appGuide {margin:0 0 57px 0;}
+.mobileAppBugs #android .appGuide h4 {display:none;}
+.mobileAppBugs #android .appGuide ul {overflow:hidden;width:100%;}
+.mobileAppBugs #android .appGuide li {float:left;width:100%;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_bugsApp.png') no-repeat;}
+.mobileAppBugs #android .appGuide li * {display:none;}
+.mobileAppBugs #android .appGuide .storageBox {height:510px;background-position:0 -300px;}
+.mobileAppBugs #android .appGuide .player {height:537px;background-position:0 -850px;}
+.mobileAppBugs #android .appGuide .radio {height:532px;background-position:0 -1400px;}
+.mobileAppBugs #android .appGuide .trackList {height:559px;background-position:0 -1950px;}
+.mobileAppBugs #android .appGuide .pluginApp {height:541px;background-position:0 -2550px;}
+
+.mobile .recommendApp {position:relative;height:139px;width:964px;margin:0 -1px;padding:41px 0 0;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/bg_appDetailContent.gif') no-repeat -1000px 100%;}
+	.recommendApp ul {width:auto;margin:0 auto;padding:18px 0 0;}
+	.recommendApp li {display:inline-block;width:109px;margin:0 -2px;text-align:center;}
+		.msie6 .recommendApp li,
+		.msie7 .recommendApp li {display:inline;}
+	.recommendApp li a {display:block;}
+	.recommendApp li img {height:79px;width:79px;}
+	.recommendApp li span {display:block;overflow:hidden;width:100px;margin:10px 4px 0 5px;color:#666;text-overflow:ellipsis;white-space:nowrap;}
+	.recommendApp li a:hover,
+	.recommendApp li a:hover span {font-weight:bold;color:#333;text-decoration:none;}
+	
+.mobileApp .shareSNS,
+.mobileWeb .shareSNS {position:absolute;top:62px;right:0;height:370px;width:45px;border:1px solid #EFEFEF;z-index:100;}
+	.shareSNS ul {width:40px;padding:5px 0 0 5px;border-bottom:1px solid #EFEFEF;background-color:#F6F6F6;}
+	.shareSNS li {margin:0 0 5px;}
+	.shareSNS li a {display:block;overflow:hidden;height:35px;width:35px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/ic_shareSNS.gif') no-repeat;}
+	.shareSNS li a.twitter {background-position:0 0;}
+	.shareSNS li a.facebook {background-position:0 -40px;}
+	.shareSNS li a.me2day {background-position:0 -80px;}
+	.shareSNS li a.cyworld {background-position:0 -120px;}
+	.shareSNS .followBugson {display:block;margin:9px 0;}
+	.shareSNS .followBugson a {display:block;overflow:hidden;height:185px;width:35px;margin:0 0 0 5px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/ic_shareSNS.gif') no-repeat 0 -160px;}
+
+.mobileAppBugs .layerTicketGuide {top:553px;right:105px;}
+.mobileAppBugs .layerWindowmobileGuide {top:762px;left:345px;}
+.mobileAppBugs .layerOfflinePlaylistGuide {top:1126px;right:84px;}
+
+.mobileAppBugs #window .event {height:160px;width:794px;margin:0 0 40px 84px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/bugs/i_windowEvent.jpg') no-repeat;}
+.mobileAppBugs #window .event * {position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+
+.mobileAppTapsonic #content {border-top:0 none;}
+.mobileAppTapsonic h4 {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/tapsonic/h_title.gif') no-repeat;}
+.mobileAppTapsonic #android {display:none;}
+.mobileAppTapsonic .appCoupon h4 {margin:0 0 15px;background-position:0 -150px;}
+.mobileAppTapsonic .appDownload h4 {background-position:0 -50px;}
+.mobileAppTapsonic .appIntro h4 {background-position:0 -100px;}
+.mobileAppTapsonic .appTop {position:relative;padding:0;text-align:left;}
+.mobileAppTapsonic .appTop .icEvent {top:0;right:46px;}
+.mobileAppTapsonic .appTop .btnFacebook {position:absolute;top:297px;right:235px;}
+.mobileAppTapsonic .appTop .btnA {position:absolute;top:104px;left:113px;height:152px;width:152px;}
+.mobileAppTapsonic .appTop .btnB {position:absolute;top:103px;right:114px;height:152px;width:152px;}
+.mobileAppTapsonic .appCoupon {position:relative;width:794px;margin:5px auto 40px;}
+.mobileAppTapsonic .appCoupon .coupon {position:relative;height:182px;width:100%;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/tapsonic/i_coupon.gif') no-repeat 0 -400px;}
+.mobileAppTapsonic .appCoupon .coupon a {position:absolute;top:47px;z-index:10;}
+.mobileAppTapsonic .appCoupon .coupon a.btnBuy3000 {left:150px;}
+.mobileAppTapsonic .appCoupon .coupon a.btnBuy4500 {left:409px;}
+.mobileAppTapsonic .appCoupon .coupon a.btnBuy5000 {left:409px;}
+.mobileAppTapsonic .appCoupon .coupon a.btnBuy9000 {left:670px;}
+.mobileAppTapsonic .appCoupon span,
+.mobileAppTapsonic .appCoupon .coupon strong {display:none;}
+.mobileAppTapsonic .appCoupon .help {overflow:hidden;height:0;}
+.mobileAppTapsonic .appCoupon .help li {text-indent:-1000em;} 
+.mobileAppTapsonic .appCoupon .help li a {display:block;position:absolute;top:148px;left:125px;height:20px;width:152px;}
+.mobileAppTapsonic .tabOS {background-position:100% -350px;}
+.mobileAppTapsonic .appIntro {border-bottom:0 none;}
+.mobileAppTapsonic .buyGuide {width:794px;margin:5px auto 40px;}
+.mobileAppTapsonic .buyGuide h4 {height:37px;margin-bottom:17px;padding:0;text-indent:-1000em;border-bottom:1px solid #e5e5e5;background-image:url('http://file.bugsm.co.kr/nbugs/help/coupon/new/h4_titleV20140421.gif');background-position:0 -400px;backgorund-repeat:no-repeat;}
+.mobileAppTapsonic .buyGuide li {line-height:22px;padding-left:15px;word-spacing:-1px;background-image:url('http://file.bugsm.co.kr/nbugs/common/bu.gif');background-position:2px -190px;background-repeat:no-repeat;}
+.mobileAppTapsonic .buyGuide a {color:#ff460d;}
+
+.mobileAppMuzaiq h4 {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/muzaiq/h_title.gif') no-repeat;}
+.mobileAppMuzaiq .appDownload h4 {background-position:0 0;}
+.mobileAppMuzaiq .appIntro h4 {background-position:0 -50px;}
+.mobileAppMuzaiq .appManual h4 {margin:0 0 40px;background-position:0 -100px;}
+.mobileAppMuzaiq .appTop {text-align:left;}
+.mobileAppMuzaiq .appTop img {margin-left:65px;}
+.mobileAppMuzaiq .tabOS {background-position:100% -350px;}
+.mobileAppMuzaiq .appManual {width:794px;margin:0 auto 40px;}
+.mobileAppMuzaiq .sectionIPad {display:none;}
+.mobileAppMuzaiq .sectionIPad .appIntro div {margin-top:-15px;}
+
+.mobileAppImsinger h4 {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/imsinger/h_title.gif') no-repeat;}
+.mobileAppImsinger .appDownload h4 {background-position:0 0;}
+.mobileAppImsinger .appIntro h4 {background-position:0 -50px;}
+.mobileAppImsinger .appManual h4 {margin:0 0 40px;background-position:0 -100px;}
+.mobileAppImsinger .appTop img {margin-bottom:40px;}
+.mobileAppImsinger .tabOS {background-position:100% -350px;}
+.mobileAppImsinger .appManual {width:794px;margin:0 auto 40px;}
+.mobileAppImsinger .appIntro {border-bottom:0 none;}
+.mobileAppImsinger .sectionAndroid {display:none;}
+
+.mobileAppTweetmusic h4 {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/tweetmusic/h_title.gif') no-repeat;}
+.mobileAppTweetmusic .appDownload h4 {background-position:0 0;}
+.mobileAppTweetmusic .appIntro h4 {background-position:0 -50px;}
+.mobileAppTweetmusic .appManual h4 {margin:0 0 40px;background-position:0 -100px;}
+.mobileAppTweetmusic .appTop img {margin-bottom:40px;}
+.mobileAppTweetmusic .tabOS {background-position:100% -350px;}
+.mobileAppTweetmusic .appManual {width:794px;margin:0 auto 40px;}
+.mobileAppTweetmusic .appIntro {border-bottom:0 none;}
+
+.mobileAppTrackplus h4 {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/trackplus/h_title.gif') no-repeat;}
+.mobileAppTrackplus .appDownload h4 {background-position:0 0;}
+.mobileAppTrackplus .appIntro h4 {background-position:0 -50px;}
+.mobileAppTrackplus .appManual h4 {margin:0 0 40px;background-position:0 -100px;}
+.mobileAppTrackplus .appTop img {margin-bottom:40px;}
+.mobileAppTrackplus .tabOS {background-position:100% -350px;}
+.mobileAppTrackplus .appManual {width:794px;margin:0 auto 40px;}
+.mobileAppTrackplus .appIntro {border-bottom:0 none;}
+
+.mobileAppYoapp h4 {background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/app/yoapp/h_title.gif') no-repeat;}
+.mobileAppYoapp .appDownload h4 {background-position:0 0;}
+.mobileAppYoapp .appIntro h4 {background-position:0 -50px;}
+.mobileAppYoapp .appTop img {margin-bottom:40px;}
+.mobileAppYoapp .tabOS {background-position:100% -350px;}
+.mobileAppYoapp .appManual {width:794px;margin:0 auto 40px;}
+.mobileAppYoapp .appIntro {border-bottom:0 none;}
+
+
+
+.mobileWeb #content {overflow:hidden;width:962px;margin:0 0 80px;padding-bottom:0;border:1px solid #ECECEC;border-right:1px solid #EFEFEF;border-bottom:1px solid #D9D9D9;}
+.mobileWeb h3 {height:32px;margin:30px 0 0;}
+.mobileWeb h4 {height:22px;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/h_title.gif') no-repeat;}
+.mobileWeb .webTop {height:216px;width:100%;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/web/bg_webTop.gif') no-repeat 0 0;}
+	.webTop * {display:none;}
+
+.mobileWeb .webDownload {height:164px;width:794px;margin:0 auto 54px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/web/bg_webDownload.gif') no-repeat 0 0;}
+	.webDownload .QRcode {display:inline-block;margin:25px;padding:10px;}
+	.webDownload .title,
+	.webDownload .url,
+	.webDownload p {display:none;}
+
+.mobileWeb .attention {width:794px;margin:0 auto 40px;}
+.mobileWeb .attention h4 {margin:0 0 20px;background-position:0 -200px;}
+.mobileWeb .attention ul {height:74px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/web/i_txtAttention.gif') no-repeat 0 -20px;}
+
+.mobileWeb .webGuide {overflow:hidden;width:832px;margin:0 47px 40px 84px;padding-bottom:17px;border-bottom:1px solid #ECECEC;}
+	.webGuide .infoImg {position:relative;float:right;height:615px;width:560px;}
+	.webGuide .thumbnail span {display:block;height:615px;width:560px;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/web/bg_webGuide.gif') no-repeat;}
+	.webGuide .thumbnail .vertical {background-position:0 0;}
+	.webGuide .thumbnail .horizontal {background-position:0 -650px;}
+	.webGuide .thumbnail img {position:absolute;overflow:hidden;}
+	.webGuide .thumbnail .vertical img {top:165px;left:66px;height:330px;width:220px;}
+	.webGuide .thumbnail .horizontal img {top:221px;left:113px;height:220px;width:330px;}
+	.webGuide .btnTab span {display:block;position:absolute;}
+	.webGuide .btnTab span a {display:block;overflow:hidden;height:25px;width:65px;text-indent:-1000em;}
+	.webGuide .btnTab .vertical {top:23px;left:196px;}
+	.webGuide .btnTab .horizontal {top:117px;left:333px;}
+	.webGuide .navi {float:left;height:615px;width:258px;}
+	.webGuide .navi li {width:100%;}
+	.webGuide .navi a {display:block;overflow:hidden;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/mobile/service/new/web/bg_webGuideNavi.gif') no-repeat;}
+	.webGuide .navi a.bugschart {height:123px;background-position:0 0;}
+	.webGuide .navi a.artistchart {height:107px;background-position:0 -135px;}
+	.webGuide .navi a.musicvideo {height:107px;background-position:0 -255px;}
+	.webGuide .navi a.mystorage {height:107px;background-position:0 -375px;}
+	.webGuide .navi a.musicInfo {height:171px;background-position:0 -495px;}
+	.webGuide .navi .on a.bugschart,
+	.webGuide .navi a.bugschart:hover {background-position:-300px 0;}
+	.webGuide .navi .on a.artistchart,
+	.webGuide .navi a.artistchart:hover {background-position:-300px -135px;}
+	.webGuide .navi .on a.musicvideo,
+	.webGuide .navi a.musicvideo:hover {background-position:-300px -255px;}
+	.webGuide .navi .on a.mystorage,
+	.webGuide .navi a.mystorage:hover {background-position:-300px -375px;}
+	.webGuide .navi .on a.musicInfo,
+	.webGuide .navi a.musicInfo:hover {background-position:-300px -495px;}
+	.webGuide h4,
+	.webGuide .navi li span,
+	.webGuide .btnTab .directions {display:none;}

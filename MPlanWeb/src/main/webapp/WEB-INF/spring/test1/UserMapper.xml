@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Member -->
+<!-- 
+<configuration>
+	<typeAliases>
+		<typeAlias type="mplanweb.music.web.user.bean.UserBean"
+			alias="UserBean" />
+	</typeAliases>
+
+	<mapper namespace="mplanweb.music.web.mapper.UserMapper">
+
+		<select id="login" resultType="UserBean">
+			SELECT mp_id, mp_nickname, mp_name
+			FROM mplan_member WHERE mp_id = #{userid} AND mp_pwd = #{passwd}
+		</select>
+
+	</mapper>
+</configuration>
+ -->

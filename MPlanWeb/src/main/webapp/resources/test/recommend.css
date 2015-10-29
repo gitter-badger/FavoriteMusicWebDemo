@@ -1,0 +1,1075 @@
+@charset "UTF-8";
+
+.recommend {}
+.recommend #content {position:relative;float:left;width:794px;padding:10px 0 70px 21px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bg_content.gif') no-repeat;}
+.recommend h2 {height:40px;text-indent:-1000em;background:#FFF url('http://file.bugsm.co.kr/nbugs/recommend/lnb_recommendV20141216.gif') no-repeat;}
+.recommend h3 {height:40px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/h3_titleV20141216.gif') no-repeat;}
+.recommend.recommendPdAlbum h3 {background-position:0 0;}
+.recommend.recommendPdAlbum.timelineMenu h3 {background-position:0 -50px;}
+.recommend.recommendPdAlbum.recomAlbumMenu h3 {background-position:0 -150px;}
+.recommend.recommendPdAlbum.auditionMenu h3 {background-position:0 -100px;}
+.recommend.recommendPdAlbum.pgPdManager h3 {background-position:0 -200px;border-bottom:1px solid #ececec;}
+.recommend.recommendPdAlbum.pgPdAlbumMake h3 {background-position:0 -250px;}
+.recommend.recommendPdAlbum.pgRecomReview h3 {background-position:0 -300px;}
+.recommend.recommendPdAlbum.pgPdDetail h3 {width:62px;}
+.recommend.recommendPdAlbum.pgPdDetail.auditionMenu h3 {width:auto;}
+.recommend.recommendPdAlbum.pgPdDetail.timelineMenu h3 {width:90px}
+.recommend.pgMania h3 {background-position:0 -350px;}
+
+.recommend .lnbWrap {float:left;width:149px;padding:8px 0 70px;}
+.recommend .lnb {width:100%;margin-bottom:18px;}
+.recommend .lnb li {overflow:hidden;width:100%;background:url('http://file.bugsm.co.kr/nbugs/recommend/lnb_recommendV20150422.gif') no-repeat;}
+.recommend .lnb li a {display:block;height:31px;width:100%;text-indent:-1000em;}
+.recommend .lnb .mnRecomAlbum {background-position:0 -40px;}
+.recommend .lnb .mnPdAlbum {background-position:0 -71px;}
+.recommend.recommendPdAlbum .lnb .mnPdAlbum {background-position:0 -71px;}
+.recommend.recommendPdAlbum .lnb .mnPdAlbum.off {background-position:0 -71px;}
+.recommend .lnb .mnRecomSeries {background-position:0 -102px !important;}
+.recommend .lnb .mnTimeline {background-position:0 -133px;}
+.recommend .lnb .mnAudition {background-position:0 -164px;}
+.recommend .lnb .mnMania {background-position:0 -195px;}
+
+.recommend.recommendPdAlbum.recomAlbumMenu .lnb .mnRecomAlbum {background-position:-200px -40px}
+.recommend.recommendPdAlbum .lnb .mnPdAlbum {background-position:-200px -71px}
+.recommend.recommendPdAlbum.recomSeriesMenu .lnb .mnRecomSeries {background-position:-200px -102px !important}
+.recommend.recommendPdAlbum.timelineMenu .lnb .mnTimeline {background-position:-200px -133px}
+.recommend.recommendPdAlbum.auditionMenu .lnb .mnAudition {background-position:-200px -164px}
+.recommend.pgMania .lnb .mnMania {background-position:-200px -195px;}
+	.recommend.recommendPdAlbum.recomAlbumMenu .lnb .mnPdAlbum ,
+	.recommend.recommendPdAlbum.recomSeriesMenu .lnb .mnPdAlbum ,
+	.recommend.recommendPdAlbum.timelineMenu .lnb .mnPdAlbum ,
+	.recommend.recommendPdAlbum.auditionMenu .lnb .mnPdAlbum {background-position:0 -71px}
+.recommend .lnbBanner {width:100%;padding-top:10px;}
+.recommend .lnbBanner a {display:block;margin:0 0 20px;}
+/*
+.recommend.recomAlbumMenu .lnb .mnRecomAlbum {background-position:-200px -40px !important;}
+.recommend.recommendPdAlbum.recomAlbumMenu .lnb .mnPdAlbum {background-position:0 -71px !important;}
+.recommend.recommendPdAlbum.recomAlbumMenu .lnb .mnRecomSeries {background-position:0 -102px !important;}
+.recommend.recommendPdAlbum.recomAlbumMenu .lnb .mnTimeline {background-position:0 -133px !important;}
+.recommend.recommendPdAlbum.recomAlbumMenu .lnb .mnAudition {background-position:0 -164px !important;}
+
+.recommend.recommendPdAlbum.timelineMenu .lnb .mnRecomAlbum {background-position:0 -40px !important;}
+.recommend.recommendPdAlbum.timelineMenu .lnb .mnPdAlbum {background-position:0 -71px !important;}
+.recommend.recommendPdAlbum.timelineMenu .lnb .mnTimeline {background-position:-200px -133px !important;}
+.recommend.recommendPdAlbum.timelineMenu .lnb .mnAudition {background-position:0 -164px !important;}
+
+.recommend.recommendPdAlbum.auditionMenu .lnb .mnRecomAlbum {background-position:0 -40px !important;}
+.recommend.recommendPdAlbum.auditionMenu .lnb .mnPdAlbum {background-position:0 -71px !important;}
+.recommend.recommendPdAlbum.auditionMenu .lnb .mnTimeline {background-position:0 -133px !important;}
+.recommend.recommendPdAlbum.auditionMenu .lnb .mnAudition {background-position:-200px -164px !important;}
+*/
+
+/* 장르음악 - 7080 (이후 장르음악메뉴에서 7080 빠지면 삭제 */
+.newNgenre.genre.timelineMenu h2 {height:40px;text-indent:-1000em;background:#FFF url('http://file.bugsm.co.kr/nbugs/recommend/lnb_recommendV20141216.gif') no-repeat;}
+.newNgenre.genre.timelineMenu h3 {height:40px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/h3_title_20140708.gif') 0 -50px no-repeat;}
+.newNgenre.genre.timelineMenu .lnb li {overflow:hidden;width:100%;background:url('http://file.bugsm.co.kr/nbugs/recommend/lnb_recommendV20141216.gif') no-repeat;}
+.newNgenre.genre.timelineMenu .lnb li a {display:block;height:31px;width:100%;text-indent:-1000em;}
+.newNgenre.genre.timelineMenu .lnb .mnRecomAlbum {background-position:0 -40px;}
+.newNgenre.genre.timelineMenu .lnb .mnPdAlbum {background-position:0 -71px;}
+.newNgenre.genre.timelineMenu .lnb .mnRecomSeries {background-position:0 -102px;}
+.newNgenre.genre.timelineMenu .lnb .mnTimeline {background-position:-200px -133px;}
+.newNgenre.genre.timelineMenu .lnb .mnAudition {background-position:0 -164px;}
+.newNgenre.genre.timelineMenu .lnb .mnMania {background-position:0 -195px;}
+.newNgenre.genre.timelineMenu .tabRecommend {clear:both;height:35px;width:100%;margin-bottom:20px;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_recommendV20141216.gif') no-repeat 0 0;}
+.newNgenre.genre.timelineMenu .tabRecommend li {float:left;width:137px;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_recommendV20141216.gif') no-repeat;}
+.newNgenre.genre.timelineMenu .tabRecommend a {display:block;overflow:hidden;height:35px;width:100%;text-indent:-1000em;}
+.newNgenre.genre.timelineMenu .tabRecommend a.on {background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_recommend_20140708.gif') no-repeat;}
+.newNgenre.genre.timelineMenu .tabRecommend .kpop {background-position:0 -150px;}
+.newNgenre.genre.timelineMenu .tabRecommend .pop {background-position:-150px -150px;}
+.newNgenre.genre.timelineMenu .tabRecommend .overseasOST {background-position:-300px -150px;}
+.newNgenre.genre.timelineMenu .tabRecommend .selection7080 {width:139px;background-position:-450px -150px;}
+.newNgenre.genre.timelineMenu .tabRecommend .kpop .on {background-position:0 -200px;}
+.newNgenre.genre.timelineMenu .tabRecommend .pop .on {background-position:-150px -200px;}
+.newNgenre.genre.timelineMenu .tabRecommend .overseasOST .on {background-position:-300px -200px;}
+.newNgenre.genre.timelineMenu .tabRecommend .selection7080 .on {background-position:-450px -200px;}
+.newNgenre.genre.timelineMenu .lnbBanner {padding-top:10px;}
+
+.recommend .lnbMusicPD {width:100%;margin-bottom:10px;}
+.recommend .lnbMusicPD li {overflow:hidden;height:29px;width:100%;background:url('http://file.bugsm.co.kr/nbugs/recommend/lnb_recommendMusicPD.gif') no-repeat;}
+.recommend .lnbMusicPD li a {display:block;height:17px;width:100%;text-indent:-1000em;}
+.recommend .lnbMusicPD li.goMakeAlbum {background-position:0 0;}
+.recommend .lnbMusicPD li.goRecomReview {background-position:0 -40px;}
+.recommend .lnbMusicPD li.goAdmin {background-position:0 -80px;}
+.recommend.pgPdAlbumMake .lnbMusicPD li.goMakeAlbum {background-position:-200px 0;}
+.recommend.pgRecomReview .lnbMusicPD li.goRecomReview{background-position:-200px -40px;}
+.recommend .lnbMusicPD li.goMakeAlbum:hover  {background-position:-200px -0;}
+.recommend .lnbMusicPD li.goRecomReview:hover  {background-position:-200px -40px;}
+.recommend .lnbMusicPD li.goAdmin:hover  {background-position:-200px -80px;}
+
+/*연도별음악 > 7080셀랙션만 container class 다름*/
+.timelineMenu .lnb {margin-bottom:18px;}
+.timelineMenu .lnbMusicPD {width:100%;margin-bottom:10px;}
+.timelineMenu .lnbMusicPD li {overflow:hidden;height:29px;width:100%;background:url('http://file.bugsm.co.kr/nbugs/recommend/lnb_recommendMusicPD.gif') no-repeat;}
+.timelineMenu .lnbMusicPD li a {display:block;height:17px;width:100%;text-indent:-1000em;}
+.timelineMenu .lnbMusicPD li.goMakeAlbum {background-position:0 0;}
+.timelineMenu .lnbMusicPD li.goRecomReview {background-position:0 -40px;}
+.timelineMenu .lnbMusicPD li.goAdmin {background-position:0 -80px;}
+.timelineMenu .lnbMusicPD li.goMakeAlbum:hover  {background-position:-200px -0;}
+.timelineMenu .lnbMusicPD li.goRecomReview:hover  {background-position:-200px -40px;}
+.timelineMenu .lnbMusicPD li.goAdmin:hover  {background-position:-200px -80px;}
+
+/* tab */
+.recommend .tabRecommend {clear:both;height:35px;width:100%;margin-bottom:20px;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_recommendV20150112.gif') no-repeat 0 0;}
+.recommend .tabRecommend li {float:left;width:137px;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_recommendV20150112.gif') no-repeat;}
+.recommend .tabRecommend a {display:block;overflow:hidden;height:35px;width:100%;text-indent:-1000em;}
+.recommend .tabRecommend a.on {background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_recommendV20150112.gif') no-repeat;}
+.recommendPdAlbum .tabRecommend .all {background-position:0 -50px;}
+.recommendPdAlbum .tabRecommend .chart {background-position:-150px -50px;}
+.recommendPdAlbum .tabRecommend .steadyseller {background-position:-300px -50px;}
+.recommendPdAlbum .tabRecommend .starpd {width:139px;background-position:-450px -50px;}
+.recommendPdAlbum .tabRecommend .all .on {background-position:0 -100px;}
+.recommendPdAlbum .tabRecommend .chart .on {background-position:-150px -100px;}
+.recommendPdAlbum .tabRecommend .steadyseller .on {background-position:-300px -100px;}
+.recommendPdAlbum .tabRecommend .starpd .on {background-position:-450px -100px;}
+
+.recommendPdAlbum.recomAlbumMenu .tabRecommend .all {background-position:0 -350px;}
+.recommendPdAlbum.recomAlbumMenu .tabRecommend .bestReview {background-position:-150px -350px;}
+.recommendPdAlbum.recomAlbumMenu .tabRecommend .selection {width:139px;background-position:-300px -350px;}
+.recommendPdAlbum.recomAlbumMenu .tabRecommend .all .on {background-position:0 -400px;}
+.recommendPdAlbum.recomAlbumMenu .tabRecommend .bestReview .on {background-position:-150px -400px;}
+.recommendPdAlbum.recomAlbumMenu .tabRecommend .selection .on {background-position:-300px -400px;}
+
+.recommendPdAlbum.timelineMenu .tabRecommend .kpop {background-position:0 -150px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .pop {background-position:-150px -150px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .overseasOST {background-position:-300px -150px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .selection7080 {width:139px;background-position:-450px -150px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .kpop .on {background-position:0 -200px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .pop .on {background-position:-150px -200px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .overseasOST .on {background-position:-300px -200px;}
+.recommendPdAlbum.timelineMenu .tabRecommend .selection7080 .on {background-position:-450px -200px;}
+
+.recommendPdAlbum.auditionMenu .tabRecommend li {width:114px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .hotIssue {background-position:0 -250px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .superstarK {background-position:-150px -250px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .voiceKorea {background-position:-300px -250px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .kpopStar {background-position:-450px -250px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .trueClassic {width:116px;background-position:-600px -250px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .hotIssue .on {background-position:0 -300px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .superstarK .on {background-position:-150px -300px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .voiceKorea .on {background-position:-300px -300px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .kpopStar .on {background-position:-450px -300px;}
+.recommendPdAlbum.auditionMenu .tabRecommend .trueClassic .on {background-position:-600px -300px;}
+
+.pgMania .tabRecommend .kpop {width:114px;background-position:0 -450px;}
+.pgMania .tabRecommend .kpop .on {width:114px;background-position:0 -500px;}
+.pgMania .tabRecommend .pop {width:116px;background-position:-120px -450px;}
+.pgMania .tabRecommend .pop .on {width:116px;background-position:-120px -500px;}
+
+/* recommendPdAlbum */
+.recommendPdAlbum .linkManager {position:absolute;top:20px;right:0;}
+.recommendPdAlbum .linkManager a {float:left;height:20px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat;}
+.recommendPdAlbum .linkManager .goAdmin {width:93px;background-position:0 0;}
+.recommendPdAlbum .linkManager .goAlbumMake {width:125px;background-position:-100px 0;}
+.recommendPdAlbum .linkManager .goPolicy {width:88px;background-position:-250px 0;}
+.recommendPdAlbum .linkManager a span {display:none;}
+
+.pgPdDetail .tabMusicpdAlbum {clear:both;height:37px;width:100%;padding-bottom:1px;margin-bottom:20px;border-bottom:2px solid #333c51;}
+.pgPdDetail .tabMusicpdAlbum li {float:left;border-top:1px solid #dfe0e1;border-right:1px solid #dfe0e1;background-color:#fff;}
+.pgPdDetail .tabMusicpdAlbum li.on {border-top:1px solid #333c51;border-right:1px solid #333c51;background:#333c51;}
+.pgPdDetail .tabMusicpdAlbum li.first {border-left:1px solid #dfe0e1;}
+.pgPdDetail .tabMusicpdAlbum li.first.on {border-left:1px solid #333c51;}
+.pgPdDetail .tabMusicpdAlbum a {display:block;overflow:hidden;height:37px;padding:0 26px;}
+.pgPdDetail .tabMusicpdAlbum a span {display:inline-block;height:36px;overflow:hidden;font-size:0;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_txtMusicPDAlbum.gif') no-repeat 0 0;}
+.pgPdDetail .tabMusicpdAlbum a em {display:inline-block;margin-left:8px;font-weight:bold;color:#ff7800;line-height:38px;}
+.pgPdDetail .tabMusicpdAlbum .tabAlbum a span {width:24px;background-position:0 -150px;}
+.pgPdDetail .tabMusicpdAlbum .tabAlbum.on a span {background-position:-200px -150px;}
+.pgPdDetail .tabMusicpdAlbum .tabComment a span {width:36px;background-position:0 -100px;}
+.pgPdDetail .tabMusicpdAlbum .tabComment.on a span {background-position:-200px -100px;}
+.pgPdDetail .tabMusicpdAlbum .tabPdAlbum a span {width:72px;background-position:0 0px;}
+.pgPdDetail .tabMusicpdAlbum .tabPdAlbum.on a span {background-position:-200px 0px;}
+.pgPdDetail .tabMusicpdAlbum .tabRecomAlbum a span {width:53px;background-position:0 -50px;}
+.pgPdDetail .tabMusicpdAlbum .tabRecomAlbum.on a span {background-position:-200px -50px;}
+
+.pgPdManager .tabMusicpdAlbum {clear:both;height:37px;width:100%;padding-bottom:1px;margin-bottom:20px;border-bottom:2px solid #333c51;}
+.pgPdManager .tabMusicpdAlbum li {float:left;border-top:1px solid #dfe0e1;border-right:1px solid #dfe0e1;background-color:#fff;}
+.pgPdManager .tabMusicpdAlbum li.on {border-top:1px solid #333c51;border-right:1px solid #333c51;background:#333c51;}
+.pgPdManager .tabMusicpdAlbum li.first {border-left:1px solid #dfe0e1;}
+.pgPdManager .tabMusicpdAlbum li.first.on {border-left:1px solid #333c51;}
+.pgPdManager .tabMusicpdAlbum a {display:block;overflow:hidden;height:37px;width:221px;}
+.pgPdManager .tabMusicpdAlbum a span {display:block;margin:0 auto;height:36px;overflow:hidden;font-size:0;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_txtMusicPDAlbum.gif') no-repeat 0 0;}
+.pgPdManager .tabMusicpdAlbum a em {display:inline-block;margin-left:8px;font-weight:bold;color:#ff7800;line-height:38px;}
+.pgPdManager .tabMusicpdAlbum .pdMakeGuide a span {width:96px;background-position:0 -200px;}
+.pgPdManager .tabMusicpdAlbum .pdMake a span {width:99px;background-position:0 -250px;}
+.pgPdManager .tabMusicpdAlbum .pdMakeGuide.on a span {background-position:-200px -200px;}
+.pgPdManager .tabMusicpdAlbum .pdMake.on a span {background-position:-200px -250px;}
+
+.recommendPdAlbum h4 {display:none;}
+.recommendPdAlbum h5 {height:25px;font-size:14px;font-weight:bold;color:#333;border-bottom:1px solid #c8c8c8;}
+.recommendPdAlbum h5 em {color:#f60;}
+.recommendPdAlbum h5 strong {color:#999;}
+.recommendPdAlbum .blind {position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+.recommendPdAlbum .listTab {margin-top:-33px;}
+
+.recommendPdAlbum .category .word {display:inline-block;color:#626e83;letter-spacing:-1px;word-spacing:-1px;}
+.recommendPdAlbum .category .word span {display:inline-block;height:21px;margin-left:2px;padding:0 7px 0 4px;line-height:22px;white-space:nowrap;}
+.recommendPdAlbum .category .over,
+.recommendPdAlbum .pdAlbumList .category .word,
+.recomAlbumSet .category .word {color:#626e83;text-decoration:none;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 0 -150px;}
+.recommendPdAlbum .category .over span,
+.recommendPdAlbum .pdAlbumList .category .word span ,
+.recomAlbumSet .category .word span {background:#fafafb url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 100% -150px;}
+.recommendPdAlbum .category .on,
+.recommendPdAlbum .pdAlbumList .category .on,
+.recomAlbumSet .category .on {color:#232937;font-weight:bold;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 0 -200px;}
+.recommendPdAlbum .category .on span,
+.recommendPdAlbum .pdAlbumList .category .on span ,
+.recomAlbumSet .category .on span {background:#fafafb url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 100% -200px;}
+
+.recommendPdAlbum #commentForm textarea,
+.recommendPdAlbum #commentList {position:relative;}
+.recommendPdAlbum #commentForm textarea,
+.recommendPdAlbum #commentList textarea,
+.recommendPdAlbum #commentList .replyForm textarea {width:690px;}
+.recommendPdAlbum #commentList .text {width:564px;}
+.recommendPdAlbum #commentList .replyList .text {width:634px;}
+.recommendPdAlbum #commentList fieldset .wrap {width:782px;}
+.recommendPdAlbum #commentList .starComment .starCommentLi {width:792px;}
+
+.recommendPdAlbum .thumbnail .pdIcon {position:absolute;top:0;left:0;height:51px;width:51px;background:url('http://file.bugsm.co.kr/nbugs/recommend/ic_musicpdFlag.png') no-repeat;z-index:1;}
+.recommendPdAlbum .thumbnail .pdIcon span {display:none;}
+.recommendPdAlbum .thumbnail .pdIcon em {display:inline-block;width:27px;margin-top:7px;font-family:tahoma;font-size:16px;font-weight:bold;color:#fff;text-align:center;}
+.recommendPdAlbum .thumbnail a .pdIcon {text-decoration:none;}
+.recommendPdAlbum .thumbnail .icNew {background-position:0 0;}
+.recommendPdAlbum .thumbnail .icChart {background-position:-100px 0;}
+.recommendPdAlbum .thumbnail .icSteadyseller {height:55px;width:40px;background-position:-200px 0;}
+
+.recommendPdAlbum .btnArea .btnLike {display:inline;float:left;}
+.recommendPdAlbum .btnArea .bubble {display:inline;float:left;margin-left:3px;height:34px;background:url('http://file.bugsm.co.kr/nbugs/common/bg_bubble.gif') no-repeat 100% 0;}
+.recommendPdAlbum .btnArea .bubble span {display:inline-block;height:100%;margin-right:2px;padding:0 9px 0 18px;background:url('http://file.bugsm.co.kr/nbugs/common/bg_bubble.gif') no-repeat 0 0;}
+.recommendPdAlbum .btnArea .bubble strong {color:#666;line-height:34px;}
+
+.recommendPdAlbum .share {float:left;margin-left:8px;padding:5px 5px 5px 30px;background:url('http://file.bugsm.co.kr/nbugs/common/i_share.gif') no-repeat 0 -50px;}
+	
+/* pdAlbumList */
+.pdAlbumList {position:relative;clear:both;width:100%;border-bottom:1px solid #c8c8c8;}
+.pdAlbumList:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+.pdAlbumList .listRow {position:relative;float:left;width:100%;border-top:1px solid #ececec;z-index:1;}
+.pdAlbumList .listRow:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+.pdAlbumList .listRow.first {border-top:0;}
+.pdAlbumList .thumbnail {position:absolute;top:25px;height:138px;width:138px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat -250px -100px;}
+.pdAlbumList .thumbnail img {position:absolute;top:1px;left:12px;overflow:hidden;height:120px;width:120px;}
+.pdAlbumList .albumInfo {overflow:hidden;margin-right:150px;padding:25px 0 14px 163px;}
+.pdAlbumList .albumInfo dt {margin:1px 0 10px;}
+.pdAlbumList .albumInfo dd {margin:0 0 11px;}
+.pdAlbumList .albumInfo .albumtitle {font-size:16px;font-weight:bold;color:#333;line-height:20px;word-spacing:-1px;}
+.pdAlbumList .albumInfo .albumtitle strong {color:#f60;}
+.pdAlbumList .albumInfo .albumtitle:hover strong {text-decoration:underline;}
+.pdAlbumList .albumInfo .date {font-size:11px;color:#999;}
+.pdAlbumList .albumInfo .date span {display:none;}
+.pdAlbumList .albumInfo .desc {overflow:hidden;height:32px;color:#666;line-height:16px;}
+.pdAlbumList .albumInfo .reputation {margin-bottom:14px;font-size:11px;font-weight:bold;color:#666;}
+.pdAlbumList .albumInfo .reputation strong {font-weight:normal;}
+.pdAlbumList .albumInfo .reputation span {font-size:10px;font-weight:normal;color:#f1f1f1;}
+.pdAlbumList .albumInfo .theme {overflow:hidden;}
+.pdAlbumList .albumInfo .theme strong {float:left;height:21px;width:37px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -800px -300px;}
+.pdAlbumList .albumInfo .theme .category {float:left;width:440px;}
+.pdAlbumList .albumInfo .theme .category li {display:inline;float:left;margin:0 0 3px 3px;}
+.pdAlbumList .pdInfo {position:absolute;top:25px;right:0;height:122px;width:122px;border-left:1px solid #ececec;}
+.pdAlbumList .pdInfo .pdphoto {display:block;height:80px;width:80px;margin:15px 0 5px 25px;border:1px solid #dedede;}
+.pdAlbumList .pdInfo .pdphoto img {overflow:hidden;height:80px;width:80px;}
+.pdAlbumList .pdInfo .pdname {display:block;overflow:hidden;width:82px;margin:0 0 0 25px;font-weight:bold;color:#666;text-align:center;text-overflow:ellipsis;white-space:nowrap;}
+
+.pdOtherAlbumList {overflow:hidden;width:820px;}
+.pdOtherAlbumList li {float:left;height:199px;width:164px;}
+.pdOtherAlbumList .thumbnail {position:relative;overflow:hidden;height:135px;width:138px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat -250px -100px;}
+.pdOtherAlbumList .thumbnail img {position:absolute;top:1px;left:12px;overflow:hidden;height:120px;width:120px;}
+.pdOtherAlbumList .albumInfo {width:138px;}
+.pdOtherAlbumList .albumInfo dt,
+.pdOtherAlbumList .albumInfo dd {height:16px;width:100%;}
+.pdOtherAlbumList .albumInfo .albumtitle {font-weight:bold;color:#666;word-spacing:-1px;line-height:16px;}
+.pdOtherAlbumList .albumInfo .pdname {color:#666;line-height:16px;}
+.pdOtherAlbumList .albumInfo .date {color:#999;}
+
+/* recommendPdAlbum - pdDetail */
+.pgPdDetail {}
+.pgPdDetail .pdInfoWrap {position:relative;height:182px;margin-bottom:25px;border:2px solid #e0dbda;}
+.pgPdDetail .pdInfoWrap .pdphoto {display:inline;float:left;overflow:hidden;height:150px;width:150px;margin:15px 0 0 15px;border:1px solid #dedede;}
+.pgPdDetail .pdInfoWrap .pdphoto img {overflow:hidden;height:150px;width:150px;}
+.pgPdDetail .pdInfoWrap .pdInfo {display:inline;float:left;width:510px;margin:30px 0 0 25px;}
+.pgPdDetail .pdInfoWrap .pdInfo dt {height:18px;margin-bottom:12px;font-size:16px;font-weight:bold;color:#333;line-height:18px;}
+.pgPdDetail .pdInfoWrap .pdInfo dt .link {display:inline-block;height:15px;width:15px;margin:1px 0 0 5px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat -200px -50px;}
+.pgPdDetail .pdInfoWrap .pdInfo dt .link span {display:none;}
+.pgPdDetail .pdInfoWrap .pdInfo dd {overflow:hidden;height:45px;color:#999;line-height:15px;}
+.pgPdDetail .pdInfoWrap .pdActive {float:right;height:182px;width:143px;}
+.pgPdDetail .pdInfoWrap .pdActive span {display:block;height:53px;width:56px;margin:30px auto 0;font-size:14px;font-weight:bold;color:#666;text-align:center;}
+.pgPdDetail .pdInfoWrap .pdActive span strong {display:block;height:17px;margin-bottom:9px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat;}
+.pgPdDetail .pdInfoWrap .pdActive .albumNum strong {background-position:0 -400px;}
+.pgPdDetail .pdInfoWrap .pdActive .commentNum strong {background-position:-100px -400px;}
+.pgPdDetail .pdInfoWrap .btnArea {position:absolute;bottom:30px;left:192px;}
+.pgPdDetail .pdAlbumWrap h5 {text-indent:-10000em;}
+.pgPdDetail .pdAlbumList .albumInfo {margin-right:0;}
+.pgPdDetail .pdAlbumList .pdInfo {display:none;}
+.pgPdDetail .pdAlbumList .albumInfo .theme .category {width:594px;}
+.pgPdDetail .comment {display:none;}
+.pgPdDetail .comment h5 {padding-left:20px;border-bottom:0;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat -400px -50px;}
+.pgPdDetail .comment h6 {display:none;}
+.pgPdDetail .recomAlbumList {margin-top:-1px;border-bottom:1px solid #d3d3d3;}
+
+/* recommendPdAlbum - pdAlbumDetail */
+.pgPdAlbumDetail {}
+.pgPdAlbumDetail h5 {border-bottom:0;}
+.pgPdAlbumDetail .pdAlbumInfoWrap {position:relative;height:268px;width:100%;padding-bottom:35px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_musicpdAlbumInfo.gif') no-repeat 0 -200px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .thumbnail {position:relative;float:left;height:238px;width:238px;margin-top:10px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat 0 -100px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .thumbnail img {position:absolute;top:1px;left:12px;overflow:hidden;height:220px;width:220px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .userArea {position:absolute;bottom:74px;left:257px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .btnArea {display:inline;float:left;overflow:hidden;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo {display:inline;float:left;width:330px;margin:14px 0 0 20px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo dt {margin-bottom:12px;font-size:16px;font-weight:bold;color:#333;line-height:18px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation {margin-bottom:14px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation span {display:block;margin-bottom:4px;color:#666;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation strong {display:inline-block;height:10px;width:29px;margin:2px 11px 0 0;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation strong span {display:none;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation .date strong {background-position:-250px -50px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation .hit strong {background-position:-300px -50px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .reputation .commentNum strong {background-position:-350px -50px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .theme {overflow:hidden;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .theme strong {float:left;height:21px;width:37px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -800px -300px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .theme .category {float:left;width:290px;}
+.pgPdAlbumDetail .pdAlbumInfoWrap .albumInfo .theme .category li {display:inline;float:left;margin:0 0 3px 3px;}
+.pdAlbumInfoWrap .category .word {background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 0 -150px;}
+.pdAlbumInfoWrap .category .word span {background:#fff url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 100% -150px;}
+.pgPdAlbumDetail .pdInfoWrap {float:right;width:188px;margin-top:10px;}
+.pgPdAlbumDetail .pdInfoWrap .pdphoto {display:inline;float:left;height:80px;width:80px;margin:0 0 15px 21px;border:1px solid #dedede;}
+.pgPdAlbumDetail .pdInfoWrap .pdphoto img {overflow:hidden;height:80px;width:80px;}
+.pgPdAlbumDetail .pdInfoWrap .pdActive {display:inline;float:left;width:45px;margin-left:13px;}
+.pgPdAlbumDetail .pdInfoWrap .pdActive span {display:block;height:42px;width:45px;margin:5px auto 0;font-size:12px;font-weight:bold;color:#666;text-align:center;}
+.pgPdAlbumDetail .pdInfoWrap .pdActive span strong {display:block;height:13px;margin-bottom:5px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat;}
+.pgPdAlbumDetail .pdInfoWrap .pdActive .albumNum strong {background-position:-200px -400px;}
+.pgPdAlbumDetail .pdInfoWrap .pdActive .commentNum strong {background-position:-300px -400px;}
+.pgPdAlbumDetail .pdInfoWrap .pdInfo {clear:both;width:152px;margin-left:21px;padding-top:14px;border-top:1px dashed #e0e0e0;}
+.pgPdAlbumDetail .pdInfoWrap .pdInfo dt {margin-bottom:7px;line-height:16px;}
+.pgPdAlbumDetail .pdInfoWrap .pdInfo dt a {font-weight:bold;color:#666;}
+.pgPdAlbumDetail .pdInfoWrap .pdInfo dt .link {display:inline-block;height:15px;width:15px;margin:1px 0 0 5px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat -200px -50px;}
+.pgPdAlbumDetail .pdInfoWrap .pdInfo dt .link span {display:none;}
+.pgPdAlbumDetail .pdInfoWrap .pdInfo dd {overflow:hidden;height:45px;font-size:11px;color:#999;line-height:15px;word-spacing:-1px;}
+.pgPdAlbumDetail .pdInfoWrap .btnArea {clear:both;margin:12px 0 0 21px;}
+.pgPdAlbumDetail .pdInfoWrap .btnArea .bubble {height:25px;background-position:100% -40px;}
+.pgPdAlbumDetail .pdInfoWrap .btnArea .bubble strong {display:inline-block;width:32px;color:#666;line-height:25px;text-align:center;}
+.pgPdAlbumDetail .pdInfoWrap .btnArea .bubble span {background-position:0 -40px;}
+.pgPdAlbumDetail .pdAlbumDesc {margin-bottom:40px;}
+.pgPdAlbumDetail .pdAlbumDesc h5 {padding-bottom:8px;}
+.pgPdAlbumDetail .pdAlbumDesc .descContent {overflow:hidden;width:100%;line-height:19px;}
+.pgPdAlbumDetail .pdAlbumDesc .descContent .paragraph {clear:both;overflow:hidden;padding-bottom:40px;}
+.pgPdAlbumDetail .pdAlbumDesc .descContent p {overflow:hidden;width:auto;margin:0 0 20px;line-height:19px;text-align:justify;word-break:break-all;}
+.pgPdAlbumDetail .pdAlbumDesc .descContent .imgLeft {float:left;margin:0 20px 0 0;}
+.pgPdAlbumDetail .pdAlbumDesc .descContent .imgRight {float:right;margin:0 0 0 20px;}
+.pgPdAlbumDetail .pdAlbumDesc .descContent .imgCenter {margin:0 0 20px;text-align:center;}
+.pgPdAlbumDetail .pdAlbumTrack {margin-bottom:40px;}
+.pgPdAlbumDetail .pdOtherAlbum {overflow:hidden;width:794px;margin-bottom:40px;border-bottom:1px solid #ececec;}
+.pgPdAlbumDetail .pdOtherAlbum h5 {padding-bottom:8px;}
+.pgPdAlbumDetail .pdOtherAlbum .moreAll {height:33px;width:100%;margin-top:-33px;text-align:right;}
+.pgPdAlbumDetail .pdOtherAlbum .moreAll a {margin-right:7px;text-align:right;}
+
+/* recommendPdAlbum - all */
+.pgPdAll {}
+.pgPdAll .pdAlbumTheme {overflow:hidden;width:100%;margin-bottom:30px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 0 0;}
+.pgPdAll .pdAlbumTheme .titTheme {float:left;height:56px;width:438px;}
+.pgPdAll .pdAlbumTheme .titTheme strong {display:inline;float:left;height:16px;width:79px;margin:25px 0 0 21px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -800px 0;}
+.pgPdAll .pdAlbumTheme .titTheme span {float:left;margin-top:25px;padding:5px 0 0 8px;font-size:11px;color:#999;word-spacing:-2px;}
+.pgPdAll .pdAlbumTheme .searchTheme {position:relative;float:left;height:51px;width:438px;}
+.pgPdAll .pdAlbumTheme .searchTheme .text {height:29px;width:360px;margin-left:20px;padding:0;color:#666;line-height:29px;text-indent:10px;vertical-align:top;border:1px solid #dedede;border-right:0;background-color:#f5f5f5;}
+.pgPdAll .pdAlbumTheme .searchTheme button {height:31px;width:31px;text-indent:-1000em;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -900px 0;}
+.pgPdAll .pdAlbumTheme .searchTheme .placeholder {display:inline-block;position:absolute;top:0;left:20px;cursor:text;padding:0 0 0 10px;font-size:12px;color:#666;line-height:29px;}
+.pgPdAll .pdAlbumTheme .recommendTheme {float:right;height:107px;width:356px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -800px -35px;}
+.pgPdAll .pdAlbumTheme .recommendTheme ul {overflow:hidden;margin:25px 25px 0 104px;}
+.pgPdAll .pdAlbumTheme .recommendTheme li {float:left;overflow:hidden;width:218px;padding-left:7px;text-overflow:ellipsis;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -955px 7px;}
+.pgPdAll .pdAlbumTheme .recommendTheme a {color:#666;letter-spacing:-1px;line-height:20px;}
+.pgPdAll .pdAlbumTheme .selectTheme {float:left;clear:both;width:100%;border-bottom:1px solid #d6d9e1;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat 0 -300px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType {overflow:hidden;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeA {float:left;width:158px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeB,
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeC,
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeD,
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeE {float:left;width:159px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType li strong {display:block;height:35px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeA strong {background-position:-800px -250px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeB strong {background-position:-600px -250px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeC strong {background-position:-400px -250px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeD strong {background-position:-200px -250px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeType .themeE strong {background-position:0 -250px;}
+.pgPdAll .pdAlbumTheme .selectTheme .category {overflow:hidden;width:148px;margin:10px 5px 6px;}
+.pgPdAll .pdAlbumTheme .selectTheme .category li {float:left;width:50%;margin-bottom:4px;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeC .category li {width:46%;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeC .category li.odd {width:54%;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeD .category li {width:100%;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeE .category li {width:46%;}
+.pgPdAll .pdAlbumTheme .selectTheme .themeE .category li.odd {width:54%;}
+.pgPdAll .themeRadio {overflow:hidden;height:40px;border-bottom:1px solid #ececec;background-color:#f7f7f7;}
+.pgPdAll .themeRadio p {display:inline;float:left;height:26px;width:212px;margin:7px 0 0 237px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat 0 -350px;}
+.pgPdAll .themeRadio p span {display:none;}
+.pgPdAll .themeRadio a {float:left;margin-top:14px;font-weight:bold;font-size:14px;color:#333;text-decoration:none;vertical-align:top;}
+.pgPdAll .themeRadio a em {color:#f60;}
+.pgPdAll .themeRadio a .btnPlay {display:inline-block;height:14px;width:14px;margin:0 0 0 2px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_play.gif') no-repeat 0 0;}
+.pgPdAll .themeRadio a:hover .btnPlay {background-position:-100px 0;}
+.pgPdAll .themeRadio a .btnPlay span {display:none;}
+.pgPdAll .listNone {padding:40px 20px;}
+.pgPdAll .listNone strong {display:block;margin-bottom:14px;font-size:14px;color:#333;}
+.pgPdAll .listNone p {letter-spacing:-1px;line-height:20px;}
+.pgPdAll .listNone p span {display:inline-block;padding-left:7px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu.gif') no-repeat 0 -42px;}
+
+/* recommendPdAlbum - chart */
+.pgPdChart .tabRecommend {margin-bottom:0;}
+.pgPdChart .term {height:37px;padding-top:20px;border-bottom:1px solid #c8c8c8;z-index:10;}
+.pgPdChart .term .dateTab {top:20px;}
+.pgPdChart .term .date {padding:0;}
+.pgPdChart .calendar {display:inline;position:relative;float:left;width:22px;height:22px;margin:20px 0 0 14px;}
+.pgPdChart .calendar .viewCalendar {display:block;cursor:pointer;width:22px;height:22px;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 0 -4300px;}
+.pgPdChart .calendar .viewCalendar span {display:none;}
+.pgPdChart .chartGuideis {position:absolute;top:27px;right:14px;z-index:1;}
+.pgPdChart .chartGuideis .link {display:block;height:16px;width:61px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat 0 -50px;}
+.pgPdChart .chartGuideis .link span {position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+
+/* recommendPdAlbum - steadyseller */
+.pgPdSteadyseller {}
+.pgPdSteadyseller .pageDesc {position:relative;height:74px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_steadyseller.jpg') no-repeat 0 0;z-index:10;}
+.pgPdSteadyseller .steadysellerGuideis {position:absolute;top:37px;right:14px;z-index:10;}
+.pgPdSteadyseller .steadysellerGuideis .link {display:block;height:16px;width:61px;}
+.pgPdSteadyseller .steadysellerGuideis .link span {position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+
+/* recommendPdAlbum - starpd */
+.pgPdStar {}
+.pgPdStar h5 {border-bottom:0;}
+.pgPdStar .tabRecommend {margin-bottom:0;}
+.pgPdStar .pdBestAlbum {overflow:hidden;width:794px;margin-bottom:40px;border-bottom:1px solid #ececec;}
+.pgPdStar .pdBestAlbum h5 {padding-bottom:8px;}
+.pgPdStar .pdBestTrack {margin-bottom:40px;}
+.pgPdStar .pdBestTrack .trackList .trackInfo {width:570px;}
+
+.pdStarList {position:relative;clear:both;width:100%;}
+.pdStarList:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+.pdStarList li {position:relative;float:left;height:140px;width:100%;border-bottom:1px solid #ececec;z-index:1;}
+.pdStarList li:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+.pdStarList .thumbnail {position:absolute;top:20px;overflow:hidden;height:100px;width:220px;}
+.pdStarList .info {overflow:hidden;padding:28px 0 0 245px;}
+.pdStarList .info dt {margin-bottom:10px;}
+.pdStarList .info dt a {font-size:16px;font-weight:bold;color:#333;line-height:20px;word-spacing:-1px;}
+.pdStarList .info .desc {margin-bottom:5px;overflow:hidden;height:32px;}
+.pdStarList .info .desc a {color:#666;line-height:16px;}
+.pdStarList .info .date {font-size:11px;color:#999;}
+
+.pgPdStar .viewContent {overflow:hidden;width:794px;margin:0 auto 40px;}
+.pgPdStar .viewContent h5 {padding:20px 0 6px;font-size:16px;line-height:18px;}
+.pgPdStar .viewContent p,
+.pgPdStar .viewContent p * {line-height:18px;}
+.pgPdStar .viewContent .topImg {margin-bottom:7px;}
+.pgPdStar .viewContent .btnArea {margin-bottom:47px;}
+.pgPdStar .viewContent .btnArea a {display:inline-block;height:26px;width:94px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat 0 -450px;}
+.pgPdStar .viewContent .btnArea a span {display:none;}
+.pgPdStar .viewContent .btnArea span {display:inline-block;margin-left:6px;font-size:11px;color:#999;line-height:26px;vertical-align:top;}
+.pgPdStar .viewContent .contentWrap {clear:both;overflow:hidden;width:100%;}
+.pgPdStar .viewContent .interview {width:100%;}
+
+/* recommendPdAlbum - pdManager */
+.pgPdManager .pdManagerDesc {height:225px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdManager.jpg') no-repeat 0 0;}
+.pgPdManager .pdMakeContent {margin:0 20px;padding-top:5px;}
+.pgPdManager .pdMakeContent .caution {padding-top:3px;text-align:center;}
+.pgPdManager .pdMakeContent .btn {margin-top:22px;text-align:center;}
+.pgPdManager .pdMakeContent .btn a {margin:0 2px;}
+.pgPdManager .pdMakeGuideContent {position:relative;height:850px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_pdMakeGuideV20141022.gif') no-repeat 0 -50px;}
+.pgPdManager .pdMakeGuideContent a {position:absolute;top:783px;left:301px;overflow:hidden;height:40px;width:192px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_pdMakeGuideV20141022.gif') no-repeat 0 0;}
+.pgPdManager .pdPolicyContent {margin:0 20px;}
+.pgPdManager .pdPolicyContent h5 {color:#666;padding-left:14px;border-bottom:0;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1476px;}
+.pgPdManager .pdPolicyContent .guide {clear:both;margin-bottom:25px;padding:22px 20px;border:1px solid #e9e9e9;}
+.pgPdManager .pdPolicyContent .guide p {padding-bottom:20px;}
+.pgPdManager .pdPolicyContent .guide ol {overflow:hidden;width:100%;}
+.pgPdManager .pdPolicyContent .guide li {float:left;width:100%;color:#666;line-height:20px;list-style:none;}
+.pgPdManager .pdPolicyContent .guide li strong {float:left;}
+.pgPdManager .pdPolicyContent .guide li span {display:block;overflow:hidden;margin-left:17px;padding-bottom:20px;}
+.pgPdManager .pdPolicyContent .link {float:right;margin:-25px 5px 0 0;font-weight:bold;color:#f60;text-decoration:underline;}
+
+.pdMakeTB {width:100%;margin-bottom:20px;table-layout:fixed;border-bottom:1px solid #ececec;border-collapse:collapse;}
+.pdMakeTB th {position:relative;text-align:left;vertical-align:top;}
+.pdMakeTB th span,
+.pdMakeTB th label {padding-left:14px;font-size:14px;color:#54575a;line-height:20px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1477px;}
+.pdMakeTB .subRow th label {padding-left:13px;font-size:12px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu.gif') no-repeat 3px -145px;}
+.pdMakeTB td {color:#54575a;vertical-align:top;}
+.pdMakeTB td strong {display:block;font-size:14px;line-height:20px;}
+.pdMakeTB input {height:38px;font-size:14px;line-height:34px;vertical-align:top;}
+.pdMakeTB textarea {overflow:auto;width:747px;line-height:18px;}
+.pdMakeTB .desc {color:#54575a;line-height:18px;}
+.pdMakeTB .desc a {font-weight:bold;color:#f60;text-decoration:underline;}
+.pdMakeTB .desc em {font-weight:bold;color:#f60;}
+.pdMakeTB th label .desc {display:inline;font-size:12px;font-weight:normal;}
+.pdMakeTB .checkByte {position:absolute;top:4px;right:3px;font-weight:normal;color:#333;}
+.pdMakeTB .checkByte .default {color:#333;border:0;}
+.pdMakeTB .checkByte .error {color:#FF0000;}
+.pdMakeTB .userid td {padding-bottom:15px;}
+.pdMakeTB .username td {padding-bottom:8px;}
+.pdMakeTB .nickname th {padding-top:5px;}
+.pdMakeTB .nickname td {padding-bottom:17px;}
+.pdMakeTB .nickname input {width:273px;}
+.pdMakeTB .nickname .desc {padding-top:7px;}
+.pdMakeTB .email td {padding-bottom:15px;}
+.pdMakeTB .email td strong {font-size:12px;font-weight:normal;}
+.pdMakeTB .mobileNum td {padding-bottom:15px;}
+.pdMakeTB .mobileNum td strong {font-size:12px;font-weight:normal;}
+.pdMakeTB .mobileNum .desc {padding-top:5px;}
+.pdMakeTB .pdphoto td {padding-bottom:20px;}
+.pdMakeTB .pdphoto .desc {padding-bottom:13px;}
+.pdMakeTB .pdphoto .previewPhoto {float:left;height:150px;width:150px;border:1px solid #e6e6e6;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat -1px -1px;}
+.pdMakeTB .pdphoto .previewPhoto img {overflow:hidden;height:150px;width:150px;}
+.pdMakeTB .pdphoto .defaultPhoto {display:inline;float:left;height:78px;width:423px;margin:0 0 10px 8px;padding:14px 0 0 24px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat -200px 0;}
+.pdMakeTB .pdphoto .defaultPhoto li {display:inline;float:left;height:62px;width:62px;margin-right:5px;border:1px solid #dedede;}
+.pdMakeTB .pdphoto .defaultPhoto img {overflow:hidden;height:62px;width:62px;}
+.pdMakeTB .pdphoto .btnArea {display:inline;float:left;margin-left:18px;}
+.pdMakeTB .pdphoto .btnArea button {float:left;height:35px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat;}
+.pdMakeTB .pdphoto .btnArea .upload {display:inline;width:120px;margin-right:5px;background-position:-200px -100px;}
+.pdMakeTB .pdphoto .btnArea .cancel {width:67px;background-position:-350px -100px;}
+.pdMakeTB .myInfo td,
+.pdMakeTB .homepage td,
+.pdMakeTB .reason td,
+.pdMakeTB .recomAlbum td {padding:5px 0 27px 0;}
+.pdMakeTB .portfolio th ,
+.pdMakeTB .musicPDAlbum td {padding:5px 0 17px 0;}
+.pdMakeTB .myInfo textarea,
+.pdMakeTB .reason textarea {height:73px;}
+.pdMakeTB .musicPDAlbum textarea,
+.pdMakeTB .recomAlbum textarea,
+.pdMakeTB .homepage textarea {height:53px;}
+.pdMakeTB .reward td {padding-bottom:26px;}
+.pdMakeTB .reward .icNotice {float:left;height:14px;width:14px;margin-top:2px;background:url('http://file.bugsm.co.kr/nbugs/common/new/ic.png') no-repeat 0 -60px;}
+.pdMakeTB .reward .desc {overflow:hidden;margin-left:20px;word-spacing:-1px;}
+.pdMakeTB .reward a {font-weight:normal;}
+
+/* recommendPdAlbum - pdAlbumMake */
+.pgPdAlbumMake {}
+.pgPdAlbumMake h4 {display:block;height:27px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat 3px -160px;}
+.pgPdAlbumMake .btn {margin-top:22px;text-align:center;}
+.pgPdAlbumMake .btn a {margin:0 2px;}
+
+.pgPdAlbumMake .albumMakeGuide {position:relative;margin-bottom:20px;padding:23px 27px 20px;border:5px solid #f5f4f4;}
+.pgPdAlbumMake .albumMakeGuide p {padding-bottom:10px;line-height:16px;color:#001449;}
+.pgPdAlbumMake .albumMakeGuide strong {display:block;padding-bottom:8px;font-weight:bold;font-size:14px;color:#ff3d33;}
+.pgPdAlbumMake .albumMakeGuide li {padding-left:10px;line-height:22px;color:#001449;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 1px -311px;}
+.pgPdAlbumMake .albumMakeGuide li em {font-weight:bold;}
+.pgPdAlbumMake .albumMakeGuide .guidelink {position:absolute;top:-29px;right:8px;display:block;padding-left:9px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif') no-repeat 0 -796px;}
+.pgPdAlbumMake .albumMakeGuide .guidelink a {text-decoration:underline;}
+
+.albumMakeTB {width:100%;table-layout:fixed;border-collapse:collapse;}
+.albumMakeTB th {padding-bottom:6px;text-align:left;vertical-align:top;}
+.albumMakeTB th span,
+.albumMakeTB th label {padding-left:14px;font-size:14px;line-height:20px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1157px;}
+.albumMakeTB td {vertical-align:top;}
+.albumMakeTB input {height:38px;font-size:14px;line-height:34px;vertical-align:top;}
+.albumMakeTB textarea {overflow:auto;width:747px;line-height:18px;}
+.albumMakeTB .desc {line-height:18px;vertical-align:top;}
+.albumMakeTB .desc a {font-weight:bold;color:#f60;text-decoration:underline;}
+.albumMakeTB .desc em {font-weight:bold;color:#f60;}
+.albumMakeTB .albumname td {padding-bottom:17px;}
+.albumMakeTB .albumname input {width:513px;}
+.albumMakeTB .albumname .desc {display:inline-block;margin:4px 0 0 13px;line-height:16px;}
+.albumMakeTB .albumThumbnail td {overflow:hidden;padding-bottom:8px;}
+.albumMakeTB .albumThumbnail input {height:33px;width:407px;}
+.albumMakeTB .albumThumbnail .desc {float:left;width:536px;padding-bottom:25px;}
+.albumMakeTB .albumThumbnail .previewThumbnail {position:relative;float:right;height:238px;width:238px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat 0 -200px;}
+.albumMakeTB .albumThumbnail .previewThumbnail img {position:absolute;top:1px;left:12px;overflow:hidden;height:220px;width:220px;}
+.albumMakeTB .albumThumbnail .defaultThumbnail {float:left;height:113px;width:523px;padding:23px 0 0 23px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat -250px -200px;}
+.albumMakeTB .albumThumbnail .defaultThumbnail li {float:left;height:88px;width:88px;margin-right:10px;border:1px solid #dedede;}
+.albumMakeTB .albumThumbnail .defaultThumbnail img {overflow:hidden;height:88px;width:88px;}
+.albumMakeTB .albumThumbnail .btnArea {position:relative;float:left;width:536px;margin-bottom:8px;}
+.albumMakeTB .albumThumbnail .btnArea button {position:absolute;top:0;right:0;height:35px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat;}
+.albumMakeTB .albumThumbnail .btnArea .upload {width:120px;background-position:-200px -100px;}
+.albumMakeTB .explanation td {padding-bottom:20px;}
+.albumMakeTB .explanation .editor {position:relative;float:left;width:792px;border:1px solid #B5B5B5;}
+.albumMakeTB .explanation .editor * button {text-indent:-1000em;}
+.albumMakeTB .explanation .editor .head {height:44px;padding:8px 0 0 10px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_editorHead.gif') repeat-x;}
+.albumMakeTB .explanation .editor .head button {float:left;height:35px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat;}
+.albumMakeTB .explanation .editor .head .textViewOff {width:85px;background-position:0 0;}
+.albumMakeTB .explanation .editor .head .textViewOver {width:85px;background-position:0 -49px;}
+.albumMakeTB .explanation .editor .head .textViewSelected {width:85px;background-position:0 -99px;}
+.albumMakeTB .explanation .editor .head .imgViewOff {width:89px;background-position:-85px 0;}
+.albumMakeTB .explanation .editor .head .imgViewOver {width:89px;background-position:-85px -49px;}
+.albumMakeTB .explanation .editor .head .imgViewSelected {width:89px;background-position:-85px -99px;}
+.albumMakeTB .explanation .editor .head .vclipViewOff {width:87px;background-position:-174px 0;}
+.albumMakeTB .explanation .editor .head .vclipViewOver {width:87px;background-position:-174px -49px;}
+.albumMakeTB .explanation .editor .head .vclipViewSelected {width:87px;background-position:-174px -99px;}
+.albumMakeTB .explanation .editor .addAreaOff {position:absolute;right:40px;top:423px;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -149px;}
+.albumMakeTB .explanation .editor .addAreaOver {position:absolute;right:40px;top:423px;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -149px;}
+.albumMakeTB .explanation .editor .writeForm {position:relative;overflow:auto;height:396px;}
+.albumMakeTB .explanation .editor .writeForm textarea {line-height:19px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_textareaContent.gif') no-repeat 50% 50%;}
+.albumMakeTB .explanation .editor .writeForm textarea.noBg {background:none;}
+.albumMakeTB .explanation .editor .writeForm .text {overflow:auto;width:787px;height:385px;line-height:19px;border:0;}
+.albumMakeTB .explanation .editor .writeForm .editSet {position:relative;width:753px;height:262px;margin:13px 0 41px 11px;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type1,
+.albumMakeTB .explanation .editor .writeForm .editSet.type2 {height:262px;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type3 {height:663px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .imgBox {position:relative;overflow:hidden;width:300px;height:260px;border:1px solid #E6E6E6;background:#F5F5F5;}
+.albumMakeTB .explanation .editor .writeForm .editSet .imgBox img {width:300px;height:260px;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type2 .imgBox {margin-left:442px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .addInfoLayer {position:absolute;width:210px;text-align:center;}
+.albumMakeTB .explanation .editor .writeForm .editSet .addInfoLayer span {color:#979797;line-height:19px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .addInfoLayer button {width:100px;height:29px;margin-top:15px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .imgBox .addInfoLayer {left:15%;top:30%;}
+.albumMakeTB .explanation .editor .writeForm .editSet .imgBox .addInfoLayer .addImgOff {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -233px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .imgBox .addInfoLayer .addImgOver {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -233px;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type1 textarea {position:absolute;top:0;left:320px;overflow:hidden;width:422px;height:255px;border:1px solid #E6E6E6;z-index:1;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type2 textarea {position:absolute;top:0;left:0;overflow:hidden;width:422px;height:255px;border:1px solid #E6E6E6;z-index:1;}
+.albumMakeTB .explanation .editor .writeForm .deleteAreaOff {position:absolute;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -191px;z-index:2;}
+.albumMakeTB .explanation .editor .writeForm .deleteAreaOver {position:absolute;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -191px;z-index:2;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type1 .deleteAreaOff,
+.albumMakeTB .explanation .editor .writeForm .editSet.type2 .deleteAreaOff,
+.albumMakeTB .explanation .editor .writeForm .editSet.type1 .deleteAreaOver,
+.albumMakeTB .explanation .editor .writeForm .editSet.type2 .deleteAreaOver {right:11px;top:261px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .vclipBox {position:relative;overflow:hidden;width:640px;height:390px;margin:0 auto;border:1px solid #E6E6E6;background:#F5F5F5;}
+.albumMakeTB .explanation .editor .writeForm .editSet .vclipBox .addInfoLayer {left:32%;top:30%;}
+.albumMakeTB .explanation .editor .writeForm .editSet .vclipBox .addInfoLayer .addVclipOff {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -277px;}
+.albumMakeTB .explanation .editor .writeForm .editSet .vclipBox .addInfoLayer .addVclipOver {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -277px;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type3 textarea {width:746px;height:234px;margin-top:30px;border:1px solid #E6E6E6;}
+.albumMakeTB .explanation .editor .writeForm .editSet.type3 .deleteAreaOff,
+.albumMakeTB .explanation .editor .writeForm .editSet.type3 .deleteAreaOver {right:11px;top:662px;}
+.albumMakeTB .selectGenre td {padding-bottom:15px;}
+.albumMakeTB .selectGenre select {width:170px;}
+.albumMakeTB .tag td {padding-bottom:17px;}
+.albumMakeTB .tag input {width:573px;}
+.albumMakeTB .tag .desc {display:inline-block;margin:4px 0 0 13px;line-height:16px;}
+.albumMakeTB .selectMusic td {padding-bottom:17px;}
+.albumMakeTB .selectMusic .musicSearch {position:relative;width:100%;}
+.albumMakeTB .selectMusic .musicSearch .tabMusicSearch {overflow:hidden;width:100%;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_musicpdAlbumEdit.gif') no-repeat 0 0;}
+.albumMakeTB .selectMusic .musicSearch .tabMusicSearch li {float:left;width:50%;}
+.albumMakeTB .selectMusic .musicSearch .tabMusicSearch a {display:block;height:34px;font-weight:bold;color:#b4b5bb;line-height:34px;text-align:center;text-decoration:none;}
+.albumMakeTB .selectMusic .musicSearch .tabMusicSearch a.on {color:#696c78;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_musicpdAlbumEdit.gif') no-repeat 0 -50px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm {height:396px;width:792px;border:1px solid #B5B5B5;border-top:0;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_formBoxSearch.gif') 0 0 repeat-x;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .searchInput {height:29px;padding:10px 0;text-align:center;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .searchInput input {width:676px;height:27px;margin-right:10px;line-height:27px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .searchInput button {display:inline-block;width:66px;height:29px;text-indent:-1000em;}
+	.msie7 .albumMakeTB .selectMusic .musicSearch .searchForm .searchInput button {margin-top:-1px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .searchInput .btnSearch {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_selectMusicSet.gif') no-repeat 0 -181px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .searchInput .btnInput {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_selectMusicSet.gif') no-repeat -81px -181px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive {display:none;position:absolute;top:72px;left:19px;width:678px;border:1px solid #DADADA;background-color:#FFF;z-index:1000;}
+	.msie8 .albumMakeTB .selectMusic .musicSearch .searchForm .predictive {left:18px}
+	.msie7 .albumMakeTB .selectMusic .musicSearch .searchForm .predictive {left:18px}
+	.msie6 .albumMakeTB .selectMusic .musicSearch .searchForm .predictive {left:18px}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive ul {overflow:hidden;width:100%;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive ul li {padding:0 0 0 9px;line-height:26px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive ul li.over {background-color:#f3f3f3;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive ul li a {display:block;width:100%;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive ul li a strong {color:#F60;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .predictive ul li a:hover strong {text-decoration:underline;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .result {height:26px;padding:10px 0 0 21px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .result .checkbox {height:14px;font-size:0;line-height:0;vertical-align:middle;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .result strong {color:#f60;}
+.albumMakeTB .selectMusic .musicSearch .searchForm dl {padding:92px 0 0 0;border-top:1px solid #F7F7F7;}
+.albumMakeTB .selectMusic .musicSearch .searchForm dl dt {height:31px;font-weight:bold;color:#f60;text-align:center;text-decoration:underline;}
+.albumMakeTB .selectMusic .musicSearch .searchForm dl dd {margin-bottom:8px;text-align:center;}
+.albumMakeTB .selectMusic .musicSearch .searchForm dl dd span {display:inline-block;color:#666;line-height:24px;text-align:left;}
+.albumMakeTB .selectMusic .musicSearch .searchForm dl dd em {color:#f60;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .urlInputEx {padding:56px 0 0 280px;border-top:1px solid #F7F7F7;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .urlInputEx strong {color:#f60;text-decoration:underline;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .urlInputEx img {margin-top:30px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .contentNone {padding-top:92px;}
+.albumMakeTB .selectMusic .musicSearch .searchForm .contentNone .musicApp {display:block;margin:18px auto;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm {height:385px;width:792px;padding-top:11px;border:1px solid #B5B5B5;border-top:0;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_formBoxMyalbum.gif') 0 0 repeat-x;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .myalbumList {position:relative;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .tabMyalbum {position:absolute;top:0;left:0;overflow-y:scroll;height:355px;width:135px;padding:15px 0;border-right:1px solid #b5b5b5;background-color:#dedede;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .tabMyalbum li {float:left;overflow:hidden;height:20px;width:95px;padding-left:23px;text-overflow:ellipsis;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 15px -232px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .tabMyalbum li.on {background-color:#666;background-position:15px -192px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .tabMyalbum a {color:#333;line-height:20px;text-decoration:none;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .tabMyalbum li.on a {color:#fff;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .myalbumBox {padding-left:136px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .title {height:50px;font-size:14px;font-weight:bold;color:#333;line-height:50px;text-indent:20px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .title strong {color:#f60;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .title span {font-size:11px;font-weight:normal;color:#999;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .result {height:25px;padding:13px 0 0 21px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .result .checkbox {height:14px;font-size:0;line-height:0;vertical-align:middle;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .result strong {color:#f60;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .musicList {height:296px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .musicList li .playMusic {width:255px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .musicList li .artist {width:280px;}
+.albumMakeTB .selectMusic .musicSearch .myalbumForm .contentNone {padding-top:185px;background-color:#fff;}
+.albumMakeTB .selectMusic .addList {width:100%;}
+.albumMakeTB .selectMusic .addList .addListForm {width:792px;height:419px;border:1px solid #B5B5B5;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_formBoxAdd.gif') 0 0 repeat-x;}
+.albumMakeTB .selectMusic .addList .addListForm .title {overflow:hidden;height:70px;color:#666;}
+.albumMakeTB .selectMusic .addList .addListForm .title strong {float:left;height:28px;width:130px;margin:20px 0 0 17px;line-height:28px;border-right:1px solid #dadada;}
+.albumMakeTB .selectMusic .addList .addListForm .title p {overflow:hidden;margin:17px 0 0 160px;font-size:11px;word-spacing:-1px;line-height:18px;}
+.albumMakeTB .selectMusic .addList .addListForm .title p em {color:#f60;}
+.albumMakeTB .selectMusic .addList .addListForm .listControl {position:relative;margin-bottom:13px;padding:10px 0 0 21px;}
+.albumMakeTB .selectMusic .addList .addListForm .listControl .checkbox {height:14px;font-size:0;line-height:0;vertical-align:middle;}
+.albumMakeTB .selectMusic .addList .addListForm .listControl .btnListControl {position:absolute;left:44px;top:6px;}
+.albumMakeTB .selectMusic .addList .addListForm .listControl .registMusic {position:absolute;left:247px;top:11px;}
+.albumMakeTB .selectMusic .addList .addListForm .listControl .registMusic strong {color:#f60;}
+.albumMakeTB .selectMusic .musicList {position:relative;overflow-y:scroll;height:311px;width:100%;}
+.albumMakeTB .selectMusic .musicList li {position:relative;clear:both;height:27px;border-top:1px solid #F7F7F7;}
+.albumMakeTB .selectMusic .musicList li .select {display:inline;float:left;width:26px;margin-left:21px;padding-top:7px;}
+.albumMakeTB .selectMusic .musicList li .select .checkbox {height:14px;font-size:0;vertical-align:middle;}
+.albumMakeTB .selectMusic .musicList li .playMusic {float:left;overflow:hidden;height:14px;width:350px;margin-right:13px;padding-top:6px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.albumMakeTB .selectMusic .musicList li .playMusic a {line-height:14px;}
+.albumMakeTB .selectMusic .musicList li .playMusic .btnPlay {display:inline-block;height:14px;width:14px;margin-right:17px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_play.gif') no-repeat 0 0;}
+.albumMakeTB .selectMusic .musicList li .playMusic a:hover span {text-decoration:underline;}
+.albumMakeTB .selectMusic .musicList li .playMusic a:hover .btnPlay {background-position:-100px 0;}
+.albumMakeTB .selectMusic .musicList li .playMusic span {color:#d9d9d9;}
+.albumMakeTB .selectMusic .musicList li .playMusic span .btnPlay {background-position:-200px 0;}
+.albumMakeTB .selectMusic .musicList li .artist {float:left;overflow:hidden;width:300px;padding-top:7px;font-size:11px;color:#999;line-height:14px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.albumMakeTB .selectMusic .musicList li .artist a {font-size:11px;color:#999;line-height:14px;}
+.albumMakeTB .selectMusic .musicList li .btnAdd,
+.albumMakeTB .selectMusic .musicList li .btnDelete {position:absolute;top:4px;right:10px;}
+.albumMakeTB .selectMusic .musicList li.dim a:hover {text-decoration:none;}
+.albumMakeTB .selectMusic .musicList li.dim .playMusic {color:#B7B7B7;}
+.albumMakeTB .selectMusic .musicList li.dim .artist {color:#DCDCDC;}
+.albumMakeTB .selectMusic .musicList li.dim .btnAdd {cursor:default;}
+.albumMakeTB .selectMusic .musicList li.dim .btnAdd.act {cursor:pointer;}
+.albumMakeTB .selectMusic .contentNone {padding-top:128px;text-align:center;border-top:1px solid #F7F7F7;}
+.albumMakeTB .selectMusic .contentNone strong {display:block;margin-bottom:18px;color:#f60;}
+.albumMakeTB .selectMusic .btnArea {margin:10px 0;text-align:center;}
+.albumMakeTB .caution ul {padding:20px 0 20px 29px;border:5px solid #F5F4F4;}
+.albumMakeTB .caution li {padding-left:14px;line-height:22px;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 0 -712px;}
+.albumMakeTB .caution a {color:#F60;text-decoration:underline;}
+
+/*전체명반*/
+.pgRecomAll .selectTheme {clear:both;width:100%;margin-bottom:28px;border-bottom:1px solid #d6d9e1;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_themeRecomAlbum.gif') no-repeat 0 -40px;}
+.pgRecomAll .selectTheme .themeType {overflow:hidden;}
+.pgRecomAll .selectTheme .themeType .themeA {float:left;width:378px;}
+.pgRecomAll .selectTheme .themeType .themeB {float:left;width:193px;}
+.pgRecomAll .selectTheme .themeType .themeC {float:left;width:223px;}
+.pgRecomAll .selectTheme .themeType li strong {display:block;height:35px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_themeRecomAlbum.gif') no-repeat;}
+.pgRecomAll .selectTheme .themeType .themeA strong {background-position:-500px 0;}
+.pgRecomAll .selectTheme .themeType .themeB strong {background-position:-250px 0;}
+.pgRecomAll .selectTheme .themeType .themeC strong {background-position:0 0;}
+.pgRecomAll .selectTheme ul.category {overflow:hidden;margin:10px 16px 6px;}
+.pgRecomAll .selectTheme ul.category li {margin-bottom:4px;}
+.pgRecomAll .selectTheme dl.category {float:left;padding:0;margin:14px 0 6px;}
+.pgRecomAll .selectTheme dl.category dt {padding-left:5px;margin-bottom:6px;font-size:12px;font-weight:bold;color:#232937}
+.pgRecomAll .selectTheme dl.category dt span {padding-right:9px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif') 100% -645px no-repeat;}
+.pgRecomAll .selectTheme dl.category dd {margin-bottom:4px;}
+.pgRecomAll .selectTheme .themeA .category.kpop {margin-left:16px;width:137px;}
+.pgRecomAll .selectTheme .themeA .category.pop {width:115px;}
+.pgRecomAll .selectTheme .themeA .category.etc {width:}
+.pgRecomAll .selectTheme .themeB .category {width:166px;}
+.pgRecomAll .selectTheme .themeB .category li {float:left;width:83px;}
+.pgRecomAll .selectTheme .themeC .category {width:180px;}
+.pgRecomAll  h5 {border-bottom:none;}
+.pgRecomAll .recomAlbumList {border-bottom:1px solid #d3d3d3;}
+.recomAlbumSet {padding-bottom:20px;overflow:auto;}
+.recomAlbumSet .albumBox {position:relative;padding-bottom:23px;border-top:1px solid #d3d3d3;border-bottom:1px solid #f3f3f3;background-color:#f7f7f7;}
+.recomAlbumSet .albumBox .title {margin:19px auto -11px;padding-bottom:12px;width:738px;font-size:16px;font-weight:bold;border-bottom:1px solid #e5e5e5;}
+.recomAlbumSet .albumBox .title strong {display:block;width:700px;}
+.recomAlbumSet .albumBox .icNewRecom {position:absolute;top:-1px;left:737px;height:58px;width:57px;text-indent:-10000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/ic_musicpdFlag.png') -300px 0 no-repeat;z-index:1;}
+.recomAlbumSet .albumBox .lanking {position:absolute;top:-1px;right:0;height:55px;width:55px;background:url('http://file.bugsm.co.kr/nbugs/recommend/ic_musicpdFlag.png') -100px -100px no-repeat;z-index:1;}
+.recomAlbumSet .albumBox .lanking.top5 {background-position:0 -100px !important}
+.recomAlbumSet .albumBox .lanking span {display:block;float:right;margin-top:11px;width:28px;font:bold 14px 맑은 고딕, Malgun Gothic, Apple Gothic;color:#fff;text-align:center;}
+	.mac .recomAlbumSet .albumBox .lanking span {letter-spacing:-2px;margin-right:2px;}
+.recomAlbumSet .albumBox .thumbnail {float:left;margin:27px 23px 0 28px;position:relative;height:122px;width:137px;text-align:cent	er;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_thumbnailAlbum.gif') no-repeat;}
+.recomAlbumSet .albumBox .thumbnail .albumImg {display:block;overflow:hidden;height:120px;width:120px;border:1px solid #333;background-color:#fff;} 
+.recomAlbumSet .albumBox .thumbnail img,
+.recomAlbumSet .albumBox .thumbnail .thumbnailValign {line-height:122px;vertical-align:middle;}
+.recomAlbumSet .albumBox .thumbnail a {position:absolute;top:0;left:0;height:122px;width:122px;}
+.recomAlbumSet .albumBox .thumbnail .icSoundQuality {position:absolute !important;top:0;right:0;margin:0;}
+.recomAlbumSet .albumBox .thumbnail .btnPlay {position:absolute;top:91px;left:91px;height:22px;width:22px;z-index:5;}
+.recomAlbumSet .albumBox .thumbnail .btnPlay a {display:block;overflow:hidden;height:22px;width:22px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_button.png') no-repeat 0 -100px;}
+.recomAlbumSet .albumBox .thumbnail .btnPlay a:hover {background-position:-100px -100px;}
+.recomAlbumSet .albumBox .albumInfo {float:left;padding-top:28px;margin-bottom:11px;width:576px;}
+	.msie7 .recomAlbumSet .albumBox .albumInfo {width:600px;}
+.recomAlbumSet .albumBox .albumInfo dt {height:22px;font-size:14px;font-weight:bold;}
+.recomAlbumSet .albumBox .albumInfo dt a {color:#54575a;}
+.recomAlbumSet .albumBox .albumInfo dd {position:relative;margin-bottom:12px;font-size:12px;}
+.recomAlbumSet .albumBox .albumInfo dd a {color:#54575a;}
+.recomAlbumSet .albumBox .albumInfo dd span.bar {display:inline-block;margin:0 6px 2px 4px;width:1px;height:9px;text-indent:-10000em;vertical-align:middle;background:url('http://file.bugsm.co.kr/nbugs/common/lv_gr.gif') 0 -890px no-repeat;}
+.recomAlbumSet .albumBox .albumInfo dd span.date {font-size:11px;color:#999;}
+.recomAlbumSet .albumBox .albumInfo dd.track {height:18px;margin-bottom:0;}
+.recomAlbumSet .albumBox .albumInfo dd.track a {padding-left:20px;line-height:16px;font-size:11px;color:#828282;}
+.recomAlbumSet .albumBox .albumInfo dd.track .btnPlay {position:absolute;top:0;left:0;display:block;height:14px;width:14px;text-indent:-10000em;background-image:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_button.png');background-repeat:no-repeat;}
+.recomAlbumSet .albumBox .albumInfo dd.track a .btnPlay {background-position:0 0;}
+.recomAlbumSet .albumBox .albumInfo dd.track a:hover .btnPlay {;background-position:-100px 0;}
+.recomAlbumSet .albumBox .albumInfo dd.track .dim {padding-left:20px;line-height:16px;font-size:11px;color:#d9d9d9;}
+.recomAlbumSet .albumBox .albumInfo dd.track .dim .btnPlay {background-position:-200px 0;}
+
+.recomAlbumSet .albumBox .btns .btn {display:inline-block;margin-right:-1px;background-image:url('http://file.bugsm.co.kr/nbugs/common/button/new/b_likesetV20141117.gif') ; background-repeat:no-repeat;}
+.recomAlbumSet .albumBox .btns .btn .btbg {display:inline-block;height:27px;background-image:url('http://file.bugsm.co.kr/nbugs/common/button/new/b_likesetV20141117.gif') ; background-repeat:no-repeat;}
+.recomAlbumSet .albumBox .btns .btn strong {display:inline-block;font-size:12px;color:#666;line-height:27px;vertical-align:top;}
+.recomAlbumSet .albumBox .btns .btn.btnBuyAlbum{width:86px;background-position:0 -500px;}
+.recomAlbumSet .albumBox .btns .btn.btnBuyAlbum .btbg {background:none;}
+.recomAlbumSet .albumBox .btns .btn.btnTrackDown {width:103px;background-position:0 -550px;}
+.recomAlbumSet .albumBox .btns .btn.btnTrackDown .btbg {background:none;}
+.recomAlbumSet .albumBox .btns .btn.btnLikeAlbum {padding-left:80px;background-position:0 -400px;}
+.recomAlbumSet .albumBox .btns .btn.btnLikeAlbum .btbg {width:17px;background-position:100% -400px;}
+.recomAlbumSet .albumBox .btns .btn.btnLikeAlbumCancel {padding-left:80px;background-position:0 -450px;}
+.recomAlbumSet .albumBox .btns .btn.btnLikeAlbumCancel .btbg {width:17px;background-position:100% -450px;}
+.recomAlbumSet .albumBox .btns .btn.btnLikeAlbumCancel strong {color:#666;}
+
+.recomAlbumSet .review {padding:17px 27px 28px;margin-bottom:19px;color:#54575a;line-height:20px;text-align:justify;}
+.recomAlbumSet .review .close {display:block;height:100px;overflow:hidden;}
+.recomAlbumSet .review .open {display:block;}
+.recomAlbumSet .review .toggle {float:right;display:inline-block;cursor:pointer;padding-right:10px;font-size:12px;font-weight:bold;color:#54575a;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif');background-repeat:no-repeat;}
+.recomAlbumSet .review .btnMore {background-position:100% -692px;}
+.recomAlbumSet .review .btnClose {background-position:100% -742px;}
+.recomAlbumSet .theme {float:left;overflow:hidden;padding-left:27px;}
+.recomAlbumSet .theme strong {float:left;height:21px;width:37px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_theme.gif') no-repeat -800px -300px;}
+.recomAlbumSet .theme .category {float:left;width:500px;}
+.recomAlbumSet .theme .category li {display:inline;float:left;margin:0 0 3px 3px;}
+.recomAlbumSet .musicPDInfo {float:right;position:relative;width:200px;height:36px;margin:0 28px 0 0;}
+.recomAlbumSet .musicPDInfo .name,
+.recomAlbumSet .musicPDInfo .date {float:left;width:156px;text-align:right;}
+.recomAlbumSet .musicPDInfo .name {margin-top:5px;}
+.recomAlbumSet .musicPDInfo .name a{font-weight:bold;font-size:12px;color:#666;}
+.recomAlbumSet .musicPDInfo .date {font-size:11px;color:#999;}
+	.pgPdDetail .recomAlbumSet .musicPDInfo .date {padding:5px 2px 0 0;width:198px;font-size:12px;text-align:right;}/*뮤직피디상세페이지에서는 날짜만 노출*/
+.recomAlbumSet .musicPDInfo .pdImage {position:absolute;top:0;right:0;width:36px;}
+.recomAlbumSet .musicPDInfo .pdImage img {width:34px;height:34px;border:1px solid #dedede}
+
+.recommendPdAlbum.pgRecomSeries .listTab {margin-top:-14px;}
+.pgRecomSeries .recomAlbumList {padding:25px 0 7px;overflow:auto;}
+.pgRecomSeries .recomAlbumList li {position:relative;height:327px;}
+	.msie7 .pgRecomSeries .recomAlbumList li {margin-bottom:-25px;}
+.pgRecomSeries .recomAlbumList li .icUpdate {position:absolute;top:0;right:0;height:58px;width:57px;text-indent:-10000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/ic_musicpdFlag.png') -400px 0 no-repeat;z-index:1;}
+.pgRecomSeries .recomAlbumList .odd {float:left;}
+.pgRecomSeries .recomAlbumList .even {float:right}
+
+.pgRecomSeriesDetail .introRecomAlbum {overflow:hidden;margin-bottom:29px;border-bottom:2px solid #3b3b3b}
+.pgRecomSeriesDetail .introRecomAlbum p {float:left;}
+.pgRecomSeriesDetail .introRecomAlbum p img {width:360px;height:214px;}
+.pgRecomSeriesDetail .introRecomAlbum .intro {float:left;padding-left:5px;padding-top:27px;width:390px;}
+.pgRecomSeriesDetail .introRecomAlbum .intro p {float:none;}
+.pgRecomSeriesDetail .introRecomAlbum .intro span,
+.pgRecomSeriesDetail .introRecomAlbum .intro strong {display:block;}
+.pgRecomSeriesDetail .introRecomAlbum .intro .title {margin-bottom:8px;font-family:"Malgun Gothic" , "맑은고딕";font-size:20px;color:#333;letter-spacing:-1px;}
+.pgRecomSeriesDetail .introRecomAlbum .intro .subtitle {margin-bottom:27px;font-size:14px;color:#666;}
+.pgRecomSeriesDetail .introRecomAlbum .intro .desc {line-height:19px;color:#54575a}
+.pgRecomSeriesDetail .recomAlbumSet {margin-top:-1px;}
+.pgRecomSeriesDetail .pagination.typeF {padding-bottom:30px;margin-bottom:40px;border-bottom:1px solid #ececec;}
+
+/* recommendPdAlbum - recomReview */
+.pgRecomReview .btn {margin-top:22px;text-align:center;}
+.pgRecomReview .btn a {margin:0 2px;}
+
+.pgRecomReview .recomReviewGuide {position:relative;margin-bottom:20px;padding:25px 30px;border:5px solid #f5f4f4;}
+.pgRecomReview .recomReviewGuide p {padding-bottom:10px;line-height:16px;}
+.pgRecomReview .recomReviewGuide strong {display:block;padding-bottom:5px;font-weight:bold;color:#f60;}
+.pgRecomReview .recomReviewGuide li {padding-left:15px;color:#f60;line-height:22px;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 0 -711px;}
+.pgRecomReview .recomReviewGuide .guidelink {position:absolute;top:-29px;right:8px;display:block;padding-left:9px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif') no-repeat 0 -796px;}
+.pgRecomReview .recomReviewGuide .guidelink a {text-decoration:underline;}
+
+.pgRecomReview .recomReviewGuide  {position:relative;margin-bottom:20px;padding:23px 27px 20px;border:5px solid #f5f4f4;}
+.pgRecomReview .recomReviewGuide  p {padding-bottom:10px;line-height:16px;color:#001449;}
+.pgRecomReview .recomReviewGuide strong {display:block;padding-bottom:8px;font-weight:bold;font-size:14px;color:#ff3d33;}
+.pgRecomReview .recomReviewGuide li {padding-left:10px;line-height:22px;color:#001449;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 1px -311px;}
+.pgRecomReview .recomReviewGuide li em {font-weight:bold;}
+.pgRecomReview .recomReviewGuide .guidelink {position:absolute;top:-29px;right:8px;display:block;padding-left:9px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu_arrow.gif') no-repeat 0 -796px;}
+.pgRecomReview .recomReviewGuide .guidelink a {text-decoration:underline;}
+
+.recomReviewTB {width:100%;table-layout:fixed;border-collapse:collapse;}
+.recomReviewTB th {padding-bottom:7px;text-align:left;vertical-align:top;}
+.recomReviewTB th span,
+.recomReviewTB th label {padding-left:14px;font-size:14px;line-height:20px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1157px;}
+.recomReviewTB td {vertical-align:top;}
+.recomReviewTB input {height:38px;font-size:14px;line-height:34px;vertical-align:top;}
+.recomReviewTB textarea {overflow:auto;width:747px;line-height:18px;}
+.recomReviewTB .desc {line-height:18px;vertical-align:top;}
+.recomReviewTB .desc a {font-weight:bold;color:#f60;text-decoration:underline;}
+.recomReviewTB .desc em {font-weight:bold;color:#f60;}
+.recomReviewTB .albumname td {padding-bottom:17px;}
+.recomReviewTB .albumname input {width:513px;}
+.recomReviewTB .albumname .desc {display:inline-block;margin:4px 0 0 13px;line-height:16px;}
+.recomReviewTB .albumThumbnail td {overflow:hidden;padding-bottom:8px;}
+.recomReviewTB .albumThumbnail input {height:33px;width:407px;}
+.recomReviewTB .albumThumbnail .desc {float:left;width:536px;padding-bottom:25px;}
+.recomReviewTB .albumThumbnail .previewThumbnail {position:relative;float:right;height:238px;width:238px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat 0 -200px;}
+.recomReviewTB .albumThumbnail .previewThumbnail img {position:absolute;top:1px;left:12px;overflow:hidden;height:220px;width:220px;}
+.recomReviewTB .albumThumbnail .defaultThumbnail {float:left;height:113px;width:523px;padding:23px 0 0 23px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat -250px -200px;}
+.recomReviewTB .albumThumbnail .defaultThumbnail li {float:left;height:88px;width:88px;margin-right:10px;border:1px solid #dedede;}
+.recomReviewTB .albumThumbnail .defaultThumbnail img {overflow:hidden;height:88px;width:88px;}
+.recomReviewTB .albumThumbnail .btnArea {position:relative;float:left;width:536px;margin-bottom:8px;}
+.recomReviewTB .albumThumbnail .btnArea button {position:absolute;top:0;right:0;height:35px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbumEdit.gif') no-repeat;}
+.recomReviewTB .albumThumbnail .btnArea .upload {width:120px;background-position:-200px -100px;}
+.recomReviewTB .explanation td {padding-bottom:20px;}
+.recomReviewTB .explanation .editor {position:relative;float:left;width:792px;border:1px solid #B5B5B5;}
+.recomReviewTB .explanation .editor * button {text-indent:-1000em;}
+.recomReviewTB .explanation .editor .head {height:44px;padding:8px 0 0 10px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_editorHead.gif') repeat-x;}
+.recomReviewTB .explanation .editor .head button {float:left;height:35px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat;}
+.recomReviewTB .explanation .editor .head .textViewOff {width:85px;background-position:0 0;}
+.recomReviewTB .explanation .editor .head .textViewOver {width:85px;background-position:0 -49px;}
+.recomReviewTB .explanation .editor .head .textViewSelected {width:85px;background-position:0 -99px;}
+.recomReviewTB .explanation .editor .head .imgViewOff {width:89px;background-position:-85px 0;}
+.recomReviewTB .explanation .editor .head .imgViewOver {width:89px;background-position:-85px -49px;}
+.recomReviewTB .explanation .editor .head .imgViewSelected {width:89px;background-position:-85px -99px;}
+.recomReviewTB .explanation .editor .head .vclipViewOff {width:87px;background-position:-174px 0;}
+.recomReviewTB .explanation .editor .head .vclipViewOver {width:87px;background-position:-174px -49px;}
+.recomReviewTB .explanation .editor .head .vclipViewSelected {width:87px;background-position:-174px -99px;}
+.recomReviewTB .explanation .editor .addAreaOff {position:absolute;right:40px;top:423px;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -149px;}
+.recomReviewTB .explanation .editor .addAreaOver {position:absolute;right:40px;top:423px;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -149px;}
+.recomReviewTB .explanation .editor .writeForm {position:relative;overflow:auto;height:396px;}
+.recomReviewTB .explanation .editor .writeForm textarea {line-height:19px;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_textareaContent.gif') no-repeat 50% 50%;}
+.recomReviewTB .explanation .editor .writeForm textarea.noBg {background:none;}
+.recomReviewTB .explanation .editor .writeForm .text {overflow:auto;width:787px;height:385px;line-height:19px;border:0;}
+.recomReviewTB .explanation .editor .writeForm .editSet {position:relative;width:753px;height:262px;margin:13px 0 41px 11px;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type1,
+.recomReviewTB .explanation .editor .writeForm .editSet.type2 {height:262px;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type3 {height:663px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .imgBox {position:relative;overflow:hidden;width:300px;height:260px;border:1px solid #E6E6E6;background:#F5F5F5;}
+.recomReviewTB .explanation .editor .writeForm .editSet .imgBox img {width:300px;height:260px;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type2 .imgBox {margin-left:442px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .addInfoLayer {position:absolute;width:210px;text-align:center;}
+.recomReviewTB .explanation .editor .writeForm .editSet .addInfoLayer span {color:#979797;line-height:19px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .addInfoLayer button {width:100px;height:29px;margin-top:15px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .imgBox .addInfoLayer {left:15%;top:30%;}
+.recomReviewTB .explanation .editor .writeForm .editSet .imgBox .addInfoLayer .addImgOff {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -233px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .imgBox .addInfoLayer .addImgOver {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -233px;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type1 textarea {position:absolute;top:0;left:320px;overflow:hidden;width:422px;height:255px;border:1px solid #E6E6E6;z-index:1;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type2 textarea {position:absolute;top:0;left:0;overflow:hidden;width:422px;height:255px;border:1px solid #E6E6E6;z-index:1;}
+.recomReviewTB .explanation .editor .writeForm .deleteAreaOff {position:absolute;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -191px;z-index:2;}
+.recomReviewTB .explanation .editor .writeForm .deleteAreaOver {position:absolute;width:102px;height:27px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -191px;z-index:2;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type1 .deleteAreaOff,
+.recomReviewTB .explanation .editor .writeForm .editSet.type2 .deleteAreaOff,
+.recomReviewTB .explanation .editor .writeForm .editSet.type1 .deleteAreaOver,
+.recomReviewTB .explanation .editor .writeForm .editSet.type2 .deleteAreaOver {right:11px;top:261px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .vclipBox {position:relative;overflow:hidden;width:640px;height:390px;margin:0 auto;border:1px solid #E6E6E6;background:#F5F5F5;}
+.recomReviewTB .explanation .editor .writeForm .editSet .vclipBox .addInfoLayer {left:32%;top:30%;}
+.recomReviewTB .explanation .editor .writeForm .editSet .vclipBox .addInfoLayer .addVclipOff {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat 0 -277px;}
+.recomReviewTB .explanation .editor .writeForm .editSet .vclipBox .addInfoLayer .addVclipOver {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_editorSet.gif') no-repeat -110px -277px;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type3 textarea {width:746px;height:234px;margin-top:30px;border:1px solid #E6E6E6;}
+.recomReviewTB .explanation .editor .writeForm .editSet.type3 .deleteAreaOff,
+.recomReviewTB .explanation .editor .writeForm .editSet.type3 .deleteAreaOver {right:11px;top:662px;}
+.recomReviewTB .selectGenre td {padding-bottom:29px;}
+.recomReviewTB .selectGenre select {width:170px;}
+.recomReviewTB .tag td {padding-bottom:32px;}
+.recomReviewTB .tag input {width:573px;}
+.recomReviewTB .tag .desc {display:inline-block;margin:4px 0 0 13px;line-height:16px;}
+.recomReviewTB .reviewTitle td {padding-bottom:28px;}
+.recomReviewTB .reviewTitle input {float:left;width:543px;}
+.recomReviewTB .reviewTitle .desc {float:left;display:inline-block;margin:4px 0 0 13px;line-height:16px;}
+.recomReviewTB .writeReview td {padding-bottom:28px;}
+.recomReviewTB .writeReview textarea {height:160px;width:792px;border:1px solid #dadada;}
+.recomReviewTB .selectMusic td {padding-bottom:28px;}
+.recomReviewTB .selectMusic .musicSearch {position:relative;width:100%;}
+.recomReviewTB .selectMusic .musicSearch .tabMusicSearch {overflow:hidden;width:100%;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_musicpdAlbumEdit.gif') no-repeat 0 0;}
+.recomReviewTB .selectMusic .musicSearch .tabMusicSearch li {float:left;width:50%;}
+.recomReviewTB .selectMusic .musicSearch .tabMusicSearch a {display:block;height:34px;font-weight:bold;color:#b4b5bb;line-height:34px;text-align:center;text-decoration:none;}
+.recomReviewTB .selectMusic .musicSearch .tabMusicSearch a.on {color:#696c78;background:url('http://file.bugsm.co.kr/nbugs/recommend/tab_musicpdAlbumEdit.gif') no-repeat 0 -50px;}
+
+.recomReviewTB .selectMusic .musicSearch .searchForm {height:396px;width:792px;border:1px solid #B5B5B5;border-top:0;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_formBoxSearch.gif') 0 0 repeat-x;}
+.recomReviewTB .selectMusic .musicSearch .likeAlbumForm {display:block;height:396px;width:792px;border:1px solid #B5B5B5;border-top:0;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_formBoxSearch.gif') 0 -50px repeat-x;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .searchInput {height:29px;padding:10px 0;text-align:center;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .searchInput input {width:676px;height:27px;margin-right:10px;line-height:27px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .searchInput button {display:inline-block;width:66px;height:29px;text-indent:-1000em;}
+	.msie7 .recomReviewTB .selectMusic .musicSearch .contMusicSearch .searchInput button {margin-top:-1px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .searchInput .btnSearch {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_selectMusicSet.gif') no-repeat 0 -181px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .searchInput .btnInput {background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_selectMusicSet.gif') no-repeat -81px -181px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive {display:none;position:absolute;top:72px;left:19px;width:678px;border:1px solid #DADADA;background-color:#FFF;z-index:1000;}
+	.msie8 .recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ,
+	.msie7 .recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ,
+	.msie6 .recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive {left:18px}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ul {overflow:hidden;width:100%;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ul li {padding:0 0 0 9px;line-height:26px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ul li.over {background-color:#f3f3f3;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ul li a {display:block;width:100%;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ul li a strong {color:#F60;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .predictive ul li a:hover strong {text-decoration:underline;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .result {height:26px;padding:10px 0 0 21px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .result .checkbox {height:14px;font-size:0;line-height:0;vertical-align:middle;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .result strong {color:#f60;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList {overflow-y:scroll;overflow-x:hidden;height:311px;}
+	.recomReviewTB .selectMusic .musicSearch .contMusicSearch.likeAlbumForm .resultList {height:360px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li {height:70px;border-bottom:1px solid #f7f7f7;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .albumImg {float:left;margin:10px 0 0 18px;width:50px;height:50px;overflow:hidden;text-align:center;border:1px solid #f0eae9;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .albumImg img {vertical-align:middle;max-width:100%;max-height:100%;line-height:50px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .albumImg .thumbnailValign {display:inline-block;width:0;height:100%;line-height:50px;vertical-align:middle;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .blind {font-size:12px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li dl {float:left;margin:10px 0 0 15px;width:500px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li dt {margin-bottom:2px;height:14px;word-wrap:normal;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li dd {margin-bottom:4px;height:14px;word-wrap:normal;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li dt a , 
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li dd a {font-size:12px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li dd.info {font-size:11px;color:#999;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .btns {float:right;padding-right:20px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .btns img {margin-top:25px}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li .btns .btnAdd {margin-left:8px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList .moreArea {height:26px;width:100%;text-align:right;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList .moreArea a {color:#54575a;padding:0 15px;font-weight:bold;line-height:26px;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li.dim a {cursor:default;color:#d9d9d9}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li.dim a:hover {text-decoration:none;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li.dim .playMusic {color:#d9d9d9;}
+.recomReviewTB .selectMusic .musicSearch .contMusicSearch .resultList li.dim .artist {color:#d9d9d9;}
+
+.recomReviewTB .selectMusic .desc {padding:10px 0 11px;text-align:center;}
+.recomReviewTB .selectMusic .desc img {vertical-align:-5px;}
+.recomReviewTB .selectMusic .desc strong {display:inline-block;margin-bottom:1px;}
+.recomReviewTB .selectMusic .addAlbum {width:100%;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm {width:792px;height:362px;border:1px solid #B5B5B5;background:url('http://file.bugsm.co.kr/nbugs/recommend/bg_formBoxAdd_20140801.gif') 0 0 repeat-x;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .title {overflow:hidden;height:50px;color:#666;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .title strong {float:left;height:24px;width:85px;margin:13px 0 0 17px;line-height:24px;border-right:1px solid #dadada;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .title p {overflow:hidden;margin:17px 0 0 20px;padding-left:20px;font-size:11px;word-spacing:-1px;line-height:18px;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .title p em {color:#f60;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet {height:312px;overflow-y:auto;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo {height:70px;border-bottom:1px solid #dfdfdf;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .albumImg {float:left;margin:10px 0 0 18px;width:50px;height:50px;overflow:hidden;text-align:center;border:1px solid #f0eae9;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .albumImg img {vertical-align:middle;max-width:100%;max-height:100%;line-height:50px;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .albumImg .thumbnailValign {display:inline-block;width:0;height:100%;line-height:50px;vertical-align:middle;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo dl {float:left;margin:10px 0 0 15px;width:500px;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo dt {margin-bottom:2px;height:14px;word-wrap:normal;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo dd {margin-bottom:4px;height:14px;word-wrap:normal;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo dd.info {font-size:11px;color:#999;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .blind {font-size:12px;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .btns {float:right;padding-right:20px;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .btns img {margin-top:25px}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .addAlbumSet .albumInfo .btns .btnAdd {margin-left:8px;}
+.recomReviewTB .selectMusic .addAlbum .addAlbumForm .musicList li .playMusic {width:700px}
+.recomReviewTB .selectMusic .musicList {width:100%;}
+.recomReviewTB .selectMusic .musicList li {position:relative;clear:both;height:27px;border-top:1px solid #F7F7F7;}
+.recomReviewTB .selectMusic .musicList li .select {display:inline;float:left;width:26px;margin-left:21px;padding-top:7px;}
+.recomReviewTB .selectMusic .musicList li .select .checkbox {height:14px;font-size:0;vertical-align:middle;}
+.recomReviewTB .selectMusic .musicList li .playMusic {float:left;overflow:hidden;height:14px;width:350px;margin-right:13px;padding-top:6px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.recomReviewTB .selectMusic .musicList li .playMusic a {line-height:14px;}
+.recomReviewTB .selectMusic .musicList li .playMusic .btnPlay {display:inline-block;height:14px;width:14px;margin-right:17px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/new/button/b_play.gif') no-repeat 0 0;}
+.recomReviewTB .selectMusic .musicList li .playMusic a:hover span {text-decoration:underline;}
+.recomReviewTB .selectMusic .musicList li .playMusic a:hover .btnPlay {background-position:-100px 0;}
+.recomReviewTB .selectMusic .musicList li .playMusic span {color:#d9d9d9;}
+.recomReviewTB .selectMusic .musicList li .playMusic span .btnPlay {background-position:-200px 0;}
+.recomReviewTB .selectMusic .musicList li .artist {float:left;overflow:hidden;width:300px;padding-top:7px;font-size:11px;color:#999;line-height:14px;text-overflow:ellipsis;white-space:nowrap;}
+.recomReviewTB .selectMusic .musicList li .artist a {font-size:11px;color:#999;line-height:14px;}
+.recomReviewTB .selectMusic .musicList li .btnAdd,
+.recomReviewTB .selectMusic .musicList li .btnDelete {position:absolute;top:4px;right:10px;}
+.recomReviewTB .selectMusic .musicList li.dim a {cursor:default;color:#DCDCDC;}
+.recomReviewTB .selectMusic .musicList li.dim a:hover {text-decoration:none;color:#DCDCDC;}
+.recomReviewTB .selectMusic .musicList li.dim .playMusic {color:#B7B7B7;}
+.recomReviewTB .selectMusic .musicList li.dim .artist {color:#DCDCDC;}
+.recomReviewTB .selectMusic .musicList li.dim .playMusic .btnPlay {background-position:-200px 0;}
+
+.recomReviewTB .selectMusic .contentNone {padding-top:110px;text-align:center;border-top:1px solid #F7F7F7;}
+.recomReviewTB .selectMusic .contentNone strong {display:block;margin-bottom:18px;color:#f60;}
+.recomReviewTB .selectMusic .btnArea {margin:10px 0;text-align:center;}
+.recomReviewTB .caution ul {padding:20px 0 20px 29px;border:5px solid #F5F4F4;}
+.recomReviewTB .caution li {padding-left:14px;line-height:22px;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 0 -712px;}
+.recomReviewTB .caution a {color:#2d85ff;text-decoration:underline;}
+
+.recomEvent {position:relative;width:794px;height:97px;text-indent:-100000em;border-bottom:1px solid #d3d3d3;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_recomEvent.gif') 0 0 no-repeat;}
+.recomEvent a {display:block;position:absolute;top:24px;left:584px;width:191px;height:46px;}
+.pgRecomSeriesDetail .recomEvent {margin-bottom:40px;}
+.pgPdAlbumDetail .recomEvent {margin:-6px 0 27px;}
+
+/* 메니아 베스트 음악 */
+.pgMania .criterion dt {background-position:0 -760px;}
+.pgMania .term .date {padding:0;}
+.pgMania .layerGuideTip {right:58px;width:275px;}
+
+.pgMania .chartList .rankTop3 .check .checkbox {background-position:2px -278px;}
+.pgMania .chartList .rankTop3 .ranking .updown.up {color:#FFF;background-position:1px -184px;}
+.pgMania .chartList .rankTop3 .ranking strong.num2 {background-position:0 -50px;}
+.pgMania .chartList .rankTop3 .ranking strong.num3 {background-position:0 -100px;}
+.pgMania .chartList .rankTop3 .check.click .checkbox {background-position:2px -238px;}
+.pgMania .chartList .rankTop3 .ranking {border-right:0 none;background:url('http://file.bugsm.co.kr/nbugs/chart/bg_list.gif') no-repeat 0 -200px;}
+.pgMania .chartList .rankTop10 .ranking {border-right:0 none;background:url('http://file.bugsm.co.kr/nbugs/chart/bg_list.gif') no-repeat 0 -300px;}
+
+.pgMania .chartTrackList .rankTop10,
+.pgMania .chartTrackList .rankTop10 .ranking {height:72px;}
+.pgMania .chartTrackList .rankTop3 .ranking .updown.new {background-position:0 -1885px;}
+.pgMania .chartTrackList .rankTop3 .ranking .updown.hot {background-position:0 -1925px;}
+.pgMania .chartTrackList .rankTop3 .ranking .updown.re {background-position:0 -1965px;}
+
+.pgMania .comment {margin-top:30px;}
+.pgMania .comment h4 {height:24px;line-height:14px;text-indent:41px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/music/new/h3_title.gif') no-repeat 0 -440px;}
+.pgMania .comment h4 strong {vertical-align:top;}
+.pgMania #commentForm textarea {width:690px;}
+.pgMania #commentList .text {width:564px;}
+.pgMania #commentList .replyList .text {width:634px;}
+.pgMania #commentList fieldset .wrap {width:782px;}
+.pgMania #commentList .starComment .starCommentLi {width:792px;}
+
+.pgRecomChart .term {padding-top:2px;margin-bottom:14px;z-index:10;}
+.pgRecomChart .term .dateTab {top:2px;}
+.pgRecomChart .term .date {padding:0;}
+.pgRecomChart .calendar {display:inline;position:relative;float:left;width:22px;height:22px;margin:20px 0 0 14px;}
+.pgRecomChart .calendar .viewCalendar {display:block;cursor:pointer;width:22px;height:22px;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 0 -4300px;}
+.pgRecomChart .calendar .viewCalendar span {display:none;}
+.pgRecomChart .chartGuideis {position:absolute;top:9px;right:14px;z-index:1;}
+.pgRecomChart .chartGuideis .link {display:block;height:16px;width:61px;background:url('http://file.bugsm.co.kr/nbugs/recommend/i_musicpdAlbum.gif') no-repeat 0 -50px;}
+.pgRecomChart .chartGuideis .link span {position:absolute;top:0;left:0;visibility:hidden;overflow:hidden;height:0;width:0;font-size:0;line-height:0;}
+.pgRecomChart .recomAlbumSet {margin-top:-1px;}
+.pgRecomChart .pagination.typeF {padding-bottom:30px;margin-bottom:40px;border-bottom:1px solid #ececec;}

@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+/* openAlbum default */
+#container.openAlbum {background:url('http://file.bugsm.co.kr/nbugs/new/bg_container.gif') no-repeat 0 100%;}
+.openAlbum #content {float:left;width:548px;padding:0 0 70px 21px;background:url('http://file.bugsm.co.kr/nbugs/common/new/bg_content.gif') no-repeat;}
+.openAlbum h3 {height:40px;line-height:40px;text-indent:-1000em;border-bottom:1px solid #ececec;background:url('http://file.bugsm.co.kr/nbugs/open/h3_title.gif') no-repeat;}
+.openAlbum h5 {height:35px;width:100%;background:url('http://file.bugsm.co.kr/nbugs/open/h5_title.gif') no-repeat;}
+.openAlbum h5 a {display:block;overflow:hidden;height:100%;width:100%;text-indent:-1000em;}
+.openAlbum h5 span {display:block;overflow:hidden;height:100%;width:100%;text-indent:-1000em;}
+
+/* openAlbum Left navi */
+.openAlbum .lnbWrap {float:left;width:149px;padding:8px 0 70px;}
+.openAlbum .lnbWrap h2 {height:40px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/lnb_open.gif') no-repeat;}
+.openAlbum .lnb {width:100%;}
+.openAlbum .lnb li {overflow:hidden;width:100%;background-image:url('http://file.bugsm.co.kr/nbugs/open/lnb_open.gif');background-repeat:no-repeat;}
+.openAlbum .lnb li a {display:block;height:35px;width:100%;text-indent:-1000em;}
+.openAlbum .lnb .realAB {background-position:0 -40px;}
+.openAlbum.realAlbum .lnb .realAB {background-position:-200px -40px;}
+.openAlbum .lnb .popAB {background-position:0 -75px;}
+.openAlbum.chartOpenAlbum .lnb .popAB {background-position:-200px -75px;}
+.openAlbum .lnb .essenAB {background-position:0 -110px;}
+.openAlbum.essenAlbum .lnb .essenAB {background-position:-200px -110px;}
+.openAlbum .lnb .makeAB {background-position:0 -200px;}
+.openAlbum.essenAlbum .lnb .makeAB {display:none;}
+.openAlbum.chartOpenAlbum .lnb .makeAB {display:none;}
+.openAlbum .lnb .makeAB a {height:45px;}
+
+.openAlbum .hotTheme {width:100%;margin:20px 0 0 0;}
+.openAlbum .hotTheme h5 {height:15px;text-indent:-1000em;background-position:13px -300px;}
+.openAlbum .hotTheme ol {margin:7px 0 0 13px;}
+.openAlbum .hotTheme ol li {overflow:hidden;height:18px;width:104px;padding:0 0 0 20px;line-height:18px;text-overflow:ellipsis;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/open/bg_num.gif') no-repeat;}
+	.ff3_5 .openAlbum .hotTheme ol li {white-space:normal;}
+.openAlbum .hotTheme ol li a {color:#666;line-height:18px;}
+.openAlbum .hotTheme ol li a.point {color:#7d9600;}
+.openAlbum .hotTheme ol .num1 {background-position:0 -498px;}
+.openAlbum .hotTheme ol .num2 {background-position:0 -539px;}
+.openAlbum .hotTheme ol .num3 {background-position:0 -579px;}
+.openAlbum .hotTheme ol .num4 {background-position:0 -619px;}
+.openAlbum .hotTheme ol .num5 {background-position:0 -659px;}
+.openAlbum .hotTheme ol .num6 {background-position:0 -699px;}
+.openAlbum .hotTheme ol .num7 {background-position:0 -739px;}
+.openAlbum .hotTheme ol .num8 {background-position:0 -779px;}
+.openAlbum .hotTheme ol .num9 {background-position:0 -819px;}
+.openAlbum .hotTheme ol .num10 {background-position:0 -859px;}
+.openAlbum .hotTheme ol .num11 {background-position:0 -899px;}
+.openAlbum .hotTheme ol .num12 {background-position:0 -939px;}
+.openAlbum .hotTheme ol .num13 {background-position:0 -979px;}
+.openAlbum .hotTheme ol .num14 {background-position:0 -1019px;}
+.openAlbum .hotTheme ol .num15 {background-position:0 -1059px;}
+.openAlbum .hotTheme ol .num16 {background-position:0 -1099px;}
+.openAlbum .hotTheme ol .num17 {background-position:0 -1139px;}
+.openAlbum .hotTheme ol .num18 {background-position:0 -1179px;}
+.openAlbum .hotTheme ol .num19 {background-position:0 -1219px;}
+.openAlbum .hotTheme ol .num20 {background-position:0 -1259px;}
+.openAlbum .hotTheme ol .num21 {background-position:0 -1299px;}
+.openAlbum .hotTheme ol .num22 {background-position:0 -1339px;}
+.openAlbum .hotTheme ol .num23 {background-position:0 -1379px;}
+.openAlbum .hotTheme ol .num24 {background-position:0 -1419px;}
+.openAlbum .hotTheme ol .num25 {background-position:0 -1459px;}
+.openAlbum .hotTheme ol .num26 {background-position:0 -1499px;}
+.openAlbum .hotTheme ol .num27 {background-position:0 -1539px;}
+.openAlbum .hotTheme ol .num28 {background-position:0 -1579px;}
+.openAlbum .hotTheme ol .num29 {background-position:0 -1619px;}
+.openAlbum .hotTheme ol .num30 {background-position:0 -1659px;}
+.openAlbum .hotTheme .moreTheme {height:15px;width:100%;margin:5px 0 0 0;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/open/lhd_gr23.gif') repeat-x 0 0;}
+.openAlbum .hotTheme .moreTheme a {display:block;overflow:hidden;height:5px;width:9px;padding:5px;margin:0 auto;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 5px -955px;}
+.openAlbum .hotTheme .moreTheme.down a {display:block;overflow:hidden;height:5px;width:9px;padding:5px;margin:0 auto;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 5px -915px;}
+.openAlbum.essenAlbum .hotTheme .moreTheme a {display:none;}
+
+/* openAblume right side */
+.openAlbum .aside {position:relative;float:right;width:226px;padding:40px 0 70px 0;}
+.openAlbum .popAlbumSide {position:relative;margin-bottom:5px;border-bottom:1px solid #ECECEC;background:#fafafa url('http://file.bugsm.co.kr/nbugs/music/bg_asideArtist.gif') repeat-y;}
+.openAlbum .popAlbumSide .moreAll {position:absolute;right:11px;top:12px;}
+.openAlbum .popAlbumSide .albumList {width:202px;margin:0 12px;padding-bottom:5px;}
+.openAlbum .popAlbumSide .albumList li {overflow:hidden;width:100%;padding:8px 0 3px;background:url('http://file.bugsm.co.kr/nbugs/open/bg_lhd_gr.gif') repeat-x;}
+.openAlbum .popAlbumSide .albumList li.first {background:none;}
+.openAlbum .popAlbumSide .albumList dl {overflow:hidden;width:100%;}
+.openAlbum .popAlbumSide .albumList dl * {line-height:18px;}
+.openAlbum .popAlbumSide .albumList dt {clear:both;overflow:hidden;height:18px;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+	.ff3_5 .openAlbum .popAlbumSide .albumList dt {white-space:normal;}
+.openAlbum .popAlbumSide .albumList dt a {font-weight:bold;}
+.openAlbum .popAlbumSide .albumList dd.all {clear:both;width:90%;padding:0 0 1px;color:#787878;}
+.openAlbum .popAlbumSide .albumList dd.all a {padding:0 8px 0 0;color:#333;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 100% -197px;}
+.openAlbum .popAlbumSide .albumList dd.like {float:left;margin:0;font-size:11px;color:#999;}
+.openAlbum .popAlbumSide .albumList dd.like em {color:#F60;}
+.openAlbum .popAlbumSide .albumList dd.comment {float:left;margin:0 0 0 6px;padding-left:8px;font-size:11px;color:#999;background:url('http://file.bugsm.co.kr/nbugs/common/lv_gr.gif') no-repeat 0 -124px;}
+
+.openAlbum .sideSorting {overflow:hidden;height:25px;padding:10px 0 0 0;margin:0 12px;background:url('http://file.bugsm.co.kr/nbugs/open/bg_tab.gif') no-repeat 0 -40px;}
+.openAlbum .sideSorting li {display:inline;float:left;margin:0 1px 0 0;padding:0;}
+.openAlbum .sideSorting li span {display:inline-block;height:25px;line-height:25px;background:url('http://file.bugsm.co.kr/nbugs/open/bg_tab.gif') no-repeat 0 -100px;}
+.openAlbum .sideSorting li a {display:inline-block;height:25px;padding:0 20px 0 20px;font-weight:bold;color:#999;line-height:25px;letter-spacing:-1px;background:url('http://file.bugsm.co.kr/nbugs/open/bg_tab.gif') no-repeat 100% -100px;}
+.openAlbum .sideSorting li.on span {background-position:0 0;}
+.openAlbum .sideSorting li.on a {font-weight:bold;color:#333;background-position:100% 0;}
+
+.openAlbum .popAlbumSide.popOpenSide h5 {background-position:0 -50px;}
+.openAlbum .popAlbumSide.popOpenSide .albumList dl {float:left;width:164px;margin:-2px 0 0 7px;}
+.openAlbum .popOpenSide .albumList .number {float:left;height:47px;width:30px;border-right:1px solid #ececec;background:url('http://file.bugsm.co.kr/nbugs/open/bg_num.gif') no-repeat;}
+.openAlbum .popOpenSide .albumList .number span {display:none;}
+.openAlbum .popOpenSide .albumList .number.num1 {background-position:1px 0;}
+.openAlbum .popOpenSide .albumList .number.num2 {background-position:1px -50px;}
+.openAlbum .popOpenSide .albumList .number.num3 {background-position:1px -100px;}
+.openAlbum .popOpenSide .albumList .number.num4 {background-position:1px -150px;}
+.openAlbum .popOpenSide .albumList .number.num5 {background-position:1px -200px;}
+.openAlbum .popOpenSide .albumList .number.num6 {background-position:1px -250px;}
+.openAlbum .popOpenSide .albumList .number.num7 {background-position:1px -300px;}
+.openAlbum .popOpenSide .albumList .number.num8 {background-position:1px -350px;}
+.openAlbum .popOpenSide .albumList .number.num9 {background-position:1px -400px;}
+.openAlbum .popOpenSide .albumList .number.num10 {background-position:1px -450px;}
+.openAlbum .popOpenSide .albumList .photo {float:right;padding:6px 0 15px;font-size:0em;line-height:0em;}
+.openAlbum .popOpenSide .albumList .photo img {vertical-align:top;height:55px;width:55px;margin:0 0 0 2px;}
+	.ff3_5 .openAlbum .popOpenSide .albumList .photo img {margin:0 0 0 3px;}
+.openAlbum .popOpenSide .moreList {height:30px;width:202px;margin:0 12px 0 12px;border-bottom:none;background:#fafafa url('http://file.bugsm.co.kr/nbugs/open/bg_lhd_gr.gif') repeat-x;}
+.openAlbum .popOpenSide .moreList a {font-size:11px;}
+.openAlbum .popOpenSide .moreList a.hideList {background-position:100% -436px; }
+
+/* openAlbum detail right side */
+.openAlbum .popAlbumSide.producerAlbum h5 {background-position:0 -100px;}
+.openAlbum .producerAlbum .topProduc {overflow:hidden;width:200px;margin:0 12px;padding:10px 0 7px 0;}
+.openAlbum .producerAlbum .topProduc .photo {float:left;margin:0 9px 0 0;padding:1px;border:1px solid #ececec;background:#FFF;}
+.openAlbum .producerAlbum .topProduc .photo img {height:50px;width:50px;}
+.openAlbum .producerAlbum .topProduc dl {float:left;margin:-3px 0 0 0;}
+.openAlbum .producerAlbum .topProduc dt {height:18px;width:128px;margin:0 0 7px 0;line-height:18px;font-weight:bold;}
+.openAlbum .producerAlbum .topProduc dt span {display:inline-block;padding:3px 0 0 0;}
+.openAlbum .producerAlbum .topProduc dd {font-size:11px;color:#666;line-height:15px;}
+.openAlbum .producerAlbum .topProduc dd span {color:#666;}
+.openAlbum .producerAlbum .topProduc dd.likeAlbum span {color:#F60;}
+.openAlbum .producerAlbum .otherAlbum {margin:0 12px 12px;padding:10px 10px 0;border:1px solid #f2f2f2;background:#FFF;}
+.openAlbum .producerAlbum .otherAlbum h6 {padding:0 0 5px 0;}
+.openAlbum .producerAlbum .otherAlbum .noneAlbumList {width:182px;margin:0;padding:20px 0 20px;text-align:center;background:url('http://file.bugsm.co.kr/nbugs/common/lhd_gr.gif') repeat-x}
+.openAlbum .producerAlbum .otherAlbum .albumList {width:182px;margin:0;}
+.openAlbum .producerAlbum.popAlbumSide .albumList li {background:url('http://file.bugsm.co.kr/nbugs/common/lhd_gr.gif') repeat-x;}
+.openAlbum .producerAlbum.popAlbumSide .albumList li.first {background:none;}
+.openAlbum .producerAlbum.popAlbumSide .albumList dl .like, .openAlbum .producerAlbum.popAlbumSide .albumList dl .comment {margin-top:-2px;padding-bottom:1px;} 
+
+.openAlbum .popAlbumSide.linkArtist h5 {background-position:0 -150px;}
+.openAlbum .linkArtist ul {overflow:hidden;width:225px;margin:0 0 0 1px;padding:0 0 10px 0;}
+.openAlbum .linkArtist ul li {display:inline;float:left;margin:10px 0 0 11px;}
+.openAlbum .linkArtist ul li img {height:60px;width:60px;}
+.openAlbum .likeAlbumAll {display:block;width:100%;}
+.openAlbum .likeAlbumAll h5 {background-position:0 -200px;}
+.openAlbum .likeAlbumAll dl {margin:12px 12px 14px 13px;line-height:18px;}
+.openAlbum .likeAlbumAll dt {font-weight:bold;}
+.openAlbum .likeAlbumAll dd span {color:#999;}
+.openAlbum .likeAlbumAll .allListen {overflow:hidden;margin:0 12px 0 13px;}
+.openAlbum .likeAlbumAll .allNumber {float:left;display:block;line-height:16px;}
+.openAlbum .likeAlbumAll .allNumber strong {font-weight:normal;color:#333;}
+.openAlbum .likeAlbumAll .btnListen {float:right;display:block;margin:-2px 0 0 0;padding:3px 0 0 0;}
+.openAlbum .likeAlbumAll .btnListen a {font-size:11px;line-height:14px;letter-spacing:-1px;}
+.openAlbum .likeAlbumAll .btnListen img {vertical-align:top;margin:-1px 0 0 0;}
+.openAlbum .likeAlbumAll ol {overflow:auto;height:167px;width:202px;margin:3px 12px 20px 12px;list-style:none;border-top:1px solid #f2f2f2;border-bottom:1px solid #f2f2f2;}
+.openAlbum .likeAlbumAll ol li {float:left;height:32px;width:177px;padding:3px 0 0;font-size:11px;border-bottom:1px solid #F2F2F2;}
+.openAlbum .likeAlbumAll ol li .tracktitle {font-weight:bold;line-height:14px;}
+.openAlbum .likeAlbumAll ol li .artistname {display:block;margin:0 0 0 16px;color:#7D9600;line-height:14px;}
+.openAlbum .likeAlbumAll ol li.last {border-bottom:0 none;}
+.openAlbum .likeAlbumAll .btnListen img {vertical-align:top;}
+.openAlbum .likeAlbumAll .pagination {position:absolute;right:10px;top:9px;height:24px;text-align:right;}
+.openAlbum .likeAlbumAll .pagination .page {display:inline-block;margin:2px 0 0;font:10px tahoma;color:#54575A;vertical-align:top;}
+.openAlbum .likeAlbumAll .pagination .btnArea {display:inline-block;margin:0 0 0 0;font-size:0em;vertical-align:top;}
+.openAlbum .likeAlbumAll .pagination .bcPrev {margin:0 -1px 0 0;}
+
+.openAlbum .popAlbumSide.realAlbumSide h5 {background-position:0 -250px;}
+
+/* 실시간 공개 앨범 */
+.realAlbum .producerAlbum, .realAlbum .linkArtist, .realAlbum .likeAlbumAll {display:none;}
+.realAlbum .albumfew {margin:0 0 0 -2px;padding:18px 0 13px 0;font-size:14px;font-weight:bold;color:#666;line-height:18px;}
+.realAlbum .albumfew strong {color:#ec6900;}
+.realAlbum .spot {margin-bottom:14px;border:1px solid #a4a4a4;}
+.realAlbum .borderGray {border:2px solid #bfbfbf;}
+.realAlbum .contentTop {position:relative;overflow:hidden;width:540px;padding:15px 0;border:1px solid #fff;background:#f8f8f8;}
+.realAlbum .contentTop h4 {height:16px;margin:0 0 0 15px;line-height:16px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/h4_title.gif') no-repeat;}
+.realAlbum .contentTop .moreLank {position:absolute;right:15px;top:15px;font-size:11px;}
+.realAlbum .contentTop ul {overflow:hidden;padding:10px 15px 0;}
+.realAlbum .contentTop li {float:left;width:97px;margin:0 0 0 6px;padding:15px 0 0 0;background:url('http://file.bugsm.co.kr/nbugs/open/bg_openAlbum97109.gif') no-repeat;}
+.realAlbum .contentTop li.first {margin-left:0;}
+.realAlbum .contentTop .photo {position:relative;margin:0 11px;}
+.realAlbum .contentTop .photo a {display:inline-block;height:75px;width:75px;}
+.realAlbum .contentTop .ranking {position:absolute;left:0;top:0;overflow:hidden;height:45px;width:45px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/artist/bg_rankingMain.gif') no-repeat;}
+.realAlbum .contentTop .ranking.num1 {background-position:0 0;}
+.realAlbum .contentTop .ranking.num2 {background-position:0 -50px;}
+.realAlbum .contentTop .ranking.num3 {background-position:0 -100px;}
+.realAlbum .contentTop .ranking.num4 {background-position:0 -150px;}
+.realAlbum .contentTop .ranking.num5 {background-position:0 -200px;}
+.realAlbum .contentTop .ranking.num6 {background-position:0 -250px;}
+.realAlbum .contentTop .ranking.num7 {background-position:0 -300px;}
+.realAlbum .contentTop .ranking.num8 {background-position:0 -350px;}
+.realAlbum .contentTop .ranking.num9 {background-position:0 -400px;}
+.realAlbum .contentTop .ranking.num10 {background-position:0 -450px;}
+.realAlbum .contentTop .rankinfo {width:97px;margin:15px 0 0 0;}
+.realAlbum .contentTop .rankinfo dt {overflow:hidden;height:16px;width:97px;padding:0 0 1px 0;font-weight:bold;line-height:16px;text-overflow:ellipsis;white-space:nowrap;border-bottom:1px solid #ececec;}
+	.ff3_5 .realAlbum .contentTop .rankinfo dt {white-space:normal;}
+.realAlbum .contentTop .rankinfo dd {font-size:11px;color:#9f9f9f;line-height:20px;border-bottom:1px solid #ececec;}
+.realAlbum .contentTop .rankinfo dd strong {font-weight:normal;color:#F60;}
+
+.realAlbum .tabWrap {overflow:hidden;margin:6px 0 0 0;background:url('http://file.bugsm.co.kr/nbugs/common/bg_tab.gif') repeat-x 0 -40px;}
+.openAlbum .openAlbumList li {padding:15px 0 13px 0;}
+.openAlbum .openAlbumList li dt {overflow:hidden;height:20px;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+	.ff3_5 .openAlbum .openAlbumList li dt {white-space:normal;}
+.openAlbum .openAlbumList .thumbnail {height:75px;width:75px;padding-bottom:2px;}
+.openAlbum .openAlbumList .thumbnail img {height:75px;width:75px;}
+.openAlbum .openAlbumList .albumInfo {width:365px;}
+.openAlbum .openAlbumList .lastUpdate {width:546px;padding:10px 0 9px;}
+.openAlbum .openAlbumList .lastUpdate .albumInfo {width:443px;}
+.openAlbum .openAlbumList .lastUpdate .albumInfo dt,
+.openAlbum .openAlbumList .lastUpdate .albumInfo dd {width:365px;}
+.openAlbum .openAlbumList .lastUpdate .albumInfo .albumText {overflow:hidden;height:16px;width:443px;margin:5px 0 0 0;padding:7px 0 0 0;text-overflow:ellipsis;white-space:nowrap;background:url('http://file.bugsm.co.kr/nbugs/common/lhd_gr.gif') repeat-x 0 -100px;}
+	.ff3_5 .openAlbum .openAlbumList .lastUpdate .albumInfo .albumText {white-space:normal;}
+.openAlbum .openAlbumList .lastUpdate .reputation {top:27px;}
+.openAlbum .openAlbumList .lastUpdate .essen {padding:1px 0 0 40px;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 0 -1856px;}
+.openAlbum .openAlbumList .lastUpdate .essen span {display:none;}
+
+
+/* 실시간 공개 앨범 상세 */
+#container.realAlbumDetail {background:none;}
+.openAlbum.realAlbumDetail #content {position:relative;float:left;width:723px;padding:0 0 70px 0;background:none;}
+.openAlbum.realAlbumDetail h3 {font-size:14px;font-weight:bold;line-height:47px;text-indent:0;border-bottom:none;background:none;}
+.openAlbum.realAlbumDetail .commentList .text {width:493px;}
+.openAlbum.realAlbumDetail .commentList .replyList li .text {width:573px;}
+.openAlbum.realAlbumDetail .commentList fieldset .wrap {width:711px;}
+.openAlbum.realAlbumDetail #commentForm textarea {width:499px;}
+.openAlbum.realAlbumDetail .commentList fieldset textarea {width:577px;}
+
+.realAlbumDetail .essenAlbumSide, .realAlbumDetail .popOpenSide, .realAlbumDetail .realAlbumSide {display:none;}
+.realAlbumDetail .prevPage {position:absolute;top:17px;right:0;text-align:right;}
+.realAlbumDetail .prevPage a {display:block;padding:0 0 0 8px;color:#666;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -997px;}
+.realAlbumDetail .albumDetail {overflow:hidden;}
+.realAlbumDetail .albumDetail .photo {float:left;border:1px solid #494949;}
+.realAlbumDetail .albumDetail .photo img {height:224px;width:224px;}
+.realAlbumDetail .albumDetail .albumInfo {position:relative;float:left;height:224px;width:477px;padding:0 0 0 15px;border-top:1px solid #494949;border-bottom:1px solid #ececec;}
+.realAlbumDetail .albumDetail .albumInfo h4 {margin:19px 0 0 9px;font-size:14px;font-weight:bold;color:#606060;line-height:16px;}
+.realAlbumDetail .albumDetail .albumInfo h4 strong {color:#F60;}
+.realAlbumDetail .albumDetail .albumInfo .button.typeS {position:absolute;right:0;top:15px;}
+.realAlbumDetail .albumDetail .introBox {overflow:hidden;height:91px;width:410px;margin:9px 0 0 10px;padding:0 0 0 0;line-height:20px;}
+.realAlbumDetail .albumDetail .introBox dt {float:left;width:67px;padding:0 0 0 7px;color:#666;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 7px;}
+.realAlbumDetail .albumDetail .introBox dd {float:left;width:330px;color:#333;}
+.realAlbumDetail .albumDetail .introBox dd a {color:#333;text-decoration:underline;}
+.realAlbumDetail .albumDetail .reputation {overflow:hidden;padding:5px 0 0 0;background:url('http://file.bugsm.co.kr/nbugs/common/lhd_gr.gif') repeat-x;}
+.realAlbumDetail .albumDetail .reputation dt.like {display:inline;float:left;width:60px;margin:0 0 0 38px;line-height:36px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/music/bg_txtReputation.gif') no-repeat 0 -68px;}
+.realAlbumDetail .albumDetail .reputation dd.like {float:left;width:136px;font:20px/34px tahoma;color:#EE7800;}
+.realAlbumDetail .albumDetail .reputation dt.comment {float:left;width:70px;line-height:36px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/music/bg_txtReputation.gif') no-repeat 0 -107px;}
+.realAlbumDetail .albumDetail .reputation dd.comment {float:left;font:20px/34px tahoma;color:#666;}
+.realAlbumDetail .albumDetail .btnArea {padding:0 0 15px 0;}
+
+.realAlbumDetail .albumReview {clear:both;margin:17px 0 0 0;}
+.realAlbumDetail .albumReview p {overflow:hidden;padding:0 0 11px 0;color:#666;line-height:18px;word-break:break-all;}
+.realAlbumDetail .albumReview dl {padding:0 0 11px 0;line-height:18px;background:url('http://file.bugsm.co.kr/nbugs/open/lhd_gr51.gif') repeat-x 0 0;}
+.realAlbumDetail .albumReview dt {padding:18px 0 0 0;font-weight:bold;color:#666;}
+.realAlbumDetail .albumReview dt.first {padding-top:13px;}
+.realAlbumDetail .albumReview dd {color:#999;}
+.realAlbumDetail .albumReview .more.close a {background-position:100% -436px;}
+.openAlbum div.comment {margin:34px 0 0 0;}
+.openAlbum .comment h3 {display:none;}
+.openAlbum .comment h4 {height:22px;text-indent:41px;background:url('http://file.bugsm.co.kr/nbugs/music/h4_title.gif') no-repeat 0 -318px;}
+.openAlbum div.track {position:relative;}
+.openAlbum .track h4 {height:22px;margin:35px 0 0 0;line-height:22px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/h4_title.gif') no-repeat 0 -40px;}
+
+	
+/* 에센셜앨범 */
+.essenAlbum .producerAlbum, .essenAlbum .linkArtist, .essenAlbum .likeAlbumAll {display:none;}
+.openAlbum.essenAlbum h3 {background-position:0 -100px;}
+.openAlbum.essenAlbum .hotTheme {display:none;}
+.openAlbum.essenAlbum .hotTheme.recomKeyword {display:block;}
+.essenAlbum .albumfew {padding:20px 0 14px 0;color:#999;}
+.openAlbum .openAlbumList.openEssenAlbum {border-bottom:1px solid #e7e7e7}
+.openAlbum .openAlbumList.openEssenAlbum li {overflow:hidden;height:140px;padding:0 0 0 1px;border-top:1px solid #e7e7e7;border-bottom:none;background:url('http://file.bugsm.co.kr/nbugs/open/bg_openAlbum5140.gif') no-repeat 141px 0;}
+.openAlbum .openAlbumList.openEssenAlbum li.firstAlbum {width:546px;margin:0 0 10px 0;padding:0;border:1px solid #e7e7e7;background:url('http://file.bugsm.co.kr/nbugs/open/bg_openAlbum406140.gif') no-repeat 140px 0;}
+.openAlbum .openAlbumList.openEssenAlbum .thumbnail {position:relative;float:left;height:120px;width:120px;margin:10px 30px 10px 10px;}
+.openAlbum .openAlbumList.openEssenAlbum .thumbnail img {height:120px;width:120px;}
+.openAlbum .openAlbumList.openEssenAlbum .thumbnail .thumIcon {position:absolute;left:0;top:0;overflow:hidden;height:40px;width:40px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/ic_thum.gif') no-repeat;}
+.openAlbum .openAlbumList.openEssenAlbum .thumbnail .new {background-position:0 0;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo {width:377px;margin:12px 0 0 0;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo * {line-height:18px;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo dt {height:19px;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo dt * {font-size:14px;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo .artistname {height:18px;width:100%;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo .albumText {margin:7px 0 0 1px;}
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo .albumText * {font-size:11px;color:#9f9f9f;} 
+.openAlbum .openAlbumList.openEssenAlbum .albumInfo .albumText .click {margin:0 0 0 3px;padding-left:7px;background:url('http://file.bugsm.co.kr/nbugs/common/lv_gr.gif') no-repeat 0 -118px;}
+.openAlbum .albumNumber {position:relative;float:left;overflow:hidden;height:18px;width:377px;margin:15px 0 0 0;background:url('http://file.bugsm.co.kr/nbugs/common/lhd_gr.gif') repeat-x 0 -83px;}
+.openAlbum .albumNumber span {float:left;display:block;height:12px;width:9px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/bg_numberAlbum.gif') no-repeat;}
+.openAlbum .albumNumber .listNum {width:44px;margin:0 0 0 2px;background-position:-200px 0;}
+.openAlbum .albumNumber .num0 {background-position:0 0;}
+.openAlbum .albumNumber .num1 {width:6px;background-position:-20px 0;}
+.openAlbum .albumNumber .num2 {background-position:-40px 0;}
+.openAlbum .albumNumber .num3 {background-position:-60px 0;}
+.openAlbum .albumNumber .num4 {background-position:-80px 0;}
+.openAlbum .albumNumber .num5 {background-position:-100px 0;}
+.openAlbum .albumNumber .num6 {background-position:-120px 0;}
+.openAlbum .albumNumber .num7 {background-position:-140px 0;}
+.openAlbum .albumNumber .num8 {background-position:-160px 0;}
+.openAlbum .albumNumber .num9 {background-position:-180px 0;} 
+.openAlbum .albumNumber .date {position:absolute; right:2px;top:-1px;font:11px tahoma;color:#999;} 
+
+/* 에센셜 앨범 키워드 */
+.openAlbum.essenKeyword .albumfew {font-size:14px;color:#666;}
+.openAlbum.essenKeyword .albumfew strong {color:#ec6900;}
+.openAlbum.essenKeyword .hotTheme {display:none;}
+.openAlbum.essenKeyword .hotTheme.recomKeyword {display:block;}
+.openAlbum .hotTheme.recomKeyword h5 {background-position:13px -350px;}
+.openAlbum .hotTheme.recomKeyword ol {padding-bottom:5px;background:url('http://file.bugsm.co.kr/nbugs/open/lhd_gr23.gif') repeat-x 0 100%;}
+.openAlbum .hotTheme.recomKeyword ol .on a {font-weight:bold;color:#ec6900;}
+
+/* 에센셜앨범 상세 */
+.openAlbum.essenDetail #content {width:794px;}
+.openAlbum.essenDetail h4.essenTitle {padding:20px 0 9px 0;font-size:14px;}
+.essenDetail .essendetailInfo {overflow:hidden;width:762px;padding:15px 15px 11px;border:1px solid #e7e7e7;background:url('http://file.bugsm.co.kr/nbugs/open/lv_gr6421.gif') repeat-y 100% 0;}
+.essenDetail .essendetailInfo ul {float:left;width:120px;margin:0 40px 0 0;}
+.essenDetail .essendetailInfo li img {height:120px;width:120px;}
+.essenDetail .essendetailInfo .nickName {margin:7px 0 0 0;color:#666;padding:0 0 0 47px;text-indent:-47px;}
+.essenDetail .essendetailInfo .nickName a {color:#666;line-height:18px;}
+.essenDetail .essendetailInfo .selfInfo {margin:3px 0 0 0;font-size:11px;color:#999;line-height:16px;}
+.essenDetail .essendetailInfo .albumDesc {overflow:hidden;}
+	.msie6 .essenDetail .essendetailInfo .albumDesc {margin:0 0 0 160px;}
+.essenDetail .essendetailInfo .albumDesc p {color:#666;line-height:18px;}
+.essenDetail .track {margin:10px 0 0 0;}
+.openAlbum.essenDetail .commentList .text {width:564px;}
+.openAlbum.essenDetail .commentList .replyList li .text {width:644px;}
+.openAlbum.essenDetail .commentList fieldset .wrap {width:782px;}
+.openAlbum.essenDetail #commentForm textarea {width:570px;}
+.openAlbum.essenDetail .commentList fieldset textarea {width:648px;} 
+
+.myEssenAlbum {margin:10px 0 0 0;border:1px solid #e7e7e7;background:#fafafa;}
+.myEssenAlbum dl {position:relative;border:1px solid #FFF;padding:17px 0 17px 18px;}
+.myEssenAlbum dt {height:17px;width:120px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/bg_EseenText.gif') no-repeat 0 0;}
+.myEssenAlbum dd.text {height:31px;width:490px;margin:8px 0 0 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/bg_EseenText.gif') no-repeat 0 -40px;}
+.myEssenAlbum dd.btnArea {position:absolute;right:40px;top:33px;}
+
+
+/* hot theme */
+.openAlbum.openAlbumHot h3 {background-position:0 -150px;}
+.openAlbumHot .producerAlbum, 
+.openAlbumHot .linkArtist, 
+.openAlbumHot .likeAlbumAll {display:none;}
+.openAlbumHot .albumfew {margin:0 0 0 -2px;padding:18px 0 7px 3px;font-size:14px;color:#666;line-height:18px;}
+.openAlbumHot .albumfew strong {color:#ec6900;}
+.openAlbumHot .tabWrap {background:url('http://file.bugsm.co.kr/nbugs/common/bg_tab.gif') repeat-x 0 -40px;}
+.openAlbumHot .tabSorting li {background-position:0 -26px;}
+.openAlbumHot .tabSorting li a {line-height:35px;}
+.openAlbumHot .openAlbumList li .reputation {right:25px;}
+
+/* openAlbum chart */
+.openAlbum.openAlbumChart #content h3 {margin:0;background-position:0 -50px;}
+.openAlbum.chartOpenAlbum .producerAlbum, .openAlbum.chartOpenAlbum .linkArtist, .openAlbum.chartOpenAlbum .likeAlbumAll, .openAlbum.chartOpenAlbum .popOpenSide {display:none;}
+.openAlbum.chartOpenAlbum #content .openAlbumList .albumInfo {width:260px;}
+.openAlbum.chartOpenAlbum #content .chartList {border-bottom:1px solid #ececec;}
+.openAlbum.chartOpenAlbum #content .dateBox {position:relative;z-index:1;}
+.openAlbum.chartOpenAlbum #content .tabWrap {overflow:hidden;margin:0 0 10px 0;background:url('http://file.bugsm.co.kr/nbugs/common/bg_tab.gif') repeat-x 0 -40px;}
+.openAlbum.chartOpenAlbum .dateBox .date {width:100%;padding:20px 0 12px 0;text-align:center;}
+.openAlbum.chartOpenAlbum .date .moreDate {display:inline-block;height:21px; width:21px;margin:0 6px 0 3px;line-height:21px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/button/bt_calendar.gif') no-repeat 0 -700px;}
+.openAlbum.chartOpenAlbum .date .moreDate span {display:none;}
+.openAlbum.chartOpenAlbum .dateYMD {height:21px;padding:3px 0 0 0;vertical-align:top;} 
+.openAlbum .dateYMD .year {height:18px;width:16px;background-position:-240px 0;}
+.openAlbum .dateYMD .month {height:18px;width:17px;background-position:-260px 0;}
+.openAlbum .dateYMD .week {height:18px;width:17px;background-position:-280px 0;}
+.openAlbum .date .text {display:inline-block;padding:0 0 0 3px;font-size:14px;font-weight:bold;color:#666;line-height:23px;}
+.openAlbum .date .text strong {color:#ec6900;}
+.openAlbum .track .tabWrap p {float:left;padding:12px 0 0 10px;color:#999;}
+
+.openAlbum.chartOpenAlbum .chartList .ranking em {display:block;position:absolute;left:28px;top:30px;height:15px;width:27px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/open/ic_monthText.gif') no-repeat;}
+.openAlbum.chartOpenAlbum .chartList .ranking em.month {background-position:0 0;}
+.openAlbum.chartOpenAlbum .chartList .ranking em.week {background-position:0 -40px;}
+.openAlbum.chartOpenAlbum .chartList .ranking strong.num1 {top:52px;}
+
