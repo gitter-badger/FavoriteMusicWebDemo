@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+@media print {
+	.headerWrap,
+	.footerWrap {display:none;}
+}
+
+/* 제휴문의 */
+.partnerBugs .withBugs {height:80px;width:600px;margin:54px auto 0 auto;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/i_txtPartner.gif') no-repeat;}
+.partnerBugs .partnerbox {margin:37px 100px 0 100px;padding:32px 0 0 0;border:3px solid #e6e6e6;}
+.partnerBugs .partnerbox dl {margin:0 26px;padding:30px 0 30px 140px;border-top:1px solid #e6e6e6;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/bg_partner.gif') no-repeat 20px 0;}
+.partnerBugs .partnerbox dl dt {height:15px;line-height:15px;margin:0 0 0 0px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/i_txtPartner.gif') no-repeat;}
+.partnerBugs .partnerbox dl dd.text {margin:15px 0 0 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/i_txtPartner.gif') no-repeat;}
+.partnerBugs .partnerbox dl dd.email {margin:11px 0 0 0;}
+.partnerBugs .partnerbox dl.first {border-top:none;padding-top:0;}
+.partnerBugs .partnerbox .marketing {background-position:0 0;}
+.partnerBugs .partnerbox .marketing dt {background-position:0 -100px;}
+.partnerBugs .partnerbox .marketing dd.text {height:32px;background-position:0 -130px;}
+.partnerBugs .partnerbox .ticket {background-position:0 -120px;}
+.partnerBugs .partnerbox .ticket dt {background-position:0 -200px;}
+.partnerBugs .partnerbox .ticket dd.text {height:32px;background-position:0 -230px;}
+.partnerBugs .partnerbox .albumAct {background-position:0 -270px;}
+.partnerBugs .partnerbox .albumAct dt {background-position:0 -300px;}
+.partnerBugs .partnerbox .albumAct dd.text {height:52px;background-position:0 -330px;}
+.partnerBugs .partnerbox .music {background-position:0 -420px;}
+.partnerBugs .partnerbox .music dt {background-position:0 -400px;}
+.partnerBugs .partnerbox .music dd.text {height:32px;background-position:0 -430px;}
+.partnerBugs .partnerbox .withAsp {background-position:0 -570px;}
+.partnerBugs .partnerbox .withAsp dt {background-position:0 -500px;}
+.partnerBugs .partnerbox .withAsp dd.text {height:32px;background-position:0 -530px;}
+
+.agreeBugs #content {width:764px;margin:26px auto 0;}
+.agreeBugs .title {margin:0 0 30px;}
+.agreeBugs .title h3 {width:764px;height:43px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/h3_agree.gif') no-repeat;}
+.agreeBugs.privacy h3 {background-position:0 -100px;}
+.agreeBugs.safeguard h3 {background-position:0 -200px;}
+.agreeBugs .title p {height:12px;width:100%;margin:15px 0 0 0;line-height:12px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/i_txtAgreement.gif') no-repeat;}
+.agreeBugs.safeguard .title p {background-position:0 -40px;}
+.agreeBugs .agreetab {overflow:hidden;height:47px;border-left:3px solid #e6e6e6;background:url('http://file.bugsm.co.kr/nbugs/common/bg_tab.gif') repeat-x 0 -360px;}
+.agreeBugs .agreetab li {float:left; display:inline;text-align:center;border-right:3px solid #e6e6e6;}
+.agreeBugs .agreetab li.use {width:378px;}
+.agreeBugs .agreetab li.service {width:377px;}
+.agreeBugs .agreetab li a {display:block;width:100%;line-height:47px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/footer/footerMenu/i_txtTabmenu.gif') no-repeat;}
+.agreeBugs .agreetab li.useOn,
+.agreeBugs .agreetab li.serviceOn {font-weight:bold;background:url('http://file.bugsm.co.kr/nbugs/common/bg_tab.gif') repeat-x 0 -300px;}
+.agreeBugs .agreetab li.useOff a {background-position:135px -62px;}
+.agreeBugs .agreetab li.useOn a {background-position:135px 18px;}
+.agreeBugs .agreetab li.serviceOff a {background-position:100px -224px;}
+.agreeBugs .agreetab li.serviceOn a {background-position:100px -144px;}
+.agreeBugs .Topbox {overflow:hidden;width:698px;padding:25px 30px 24px;border:3px solid #e6e6e6;}
+.agreeBugs .Topbox.agreementBox {border-top:none;}
+.agreeBugs .Topbox h4 {display:none;}
+.agreeBugs .Topbox ul {float:left;width:318px;}
+.agreeBugs .Topbox ul.listB {float:right;}
+.agreeBugs .Topbox li {list-style:none;padding:0 0 0 9px;line-height:22px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1153px;}
+.agreeBugs .Topbox li.more10 {padding:0 0 0 59px;text-indent:-50px;}
+.agreeBugs .Topbox li.less10 {padding:0 0 0 51px;text-indent:-42px;}
+.agreeBugs .Topbox .safeguardText {padding:2px 0 3px 0;line-height:17px;}
+.agreeBugs ol {list-style:none;}
+
+.agreeBugs .textBox * {color:#666;line-height:17px;text-align:justify;}
+.agreeBugs .textBox .chapter {margin:29px 0 2px 3px;font-size:16px;}
+.agreeBugs .textBox .article {padding:16px 0 0 3px;font-size:12px;}
+.agreeBugs .textBox .depth1,
+.agreeBugs .textBox p {padding-left:3px;}
+.agreeBugs .textBox .btnArea {padding:11px 0 10px 0;text-align:right;border-bottom:1px solid #e6e6e6;}
+
+.agreeBugs .date {position:relative;height:31px;margin-bottom:10px;padding:0 80px 0 10px;color:#676767;line-height:31px;border:1px solid #f0f0f0;background-color:#fafafa;}
+.agreeBugs .date .current {float:left;padding-left:7px;background-image:url('http://file.bugsm.co.kr/nbugs/common/bu.gif');background-repeat:no-repeat;background-position:0 -27px;}
+.agreeBugs .date .current strong {color:#f36900;}
+.agreeBugs .date .past {float:right;}
+.agreeBugs .date .past label {line-height:31px;}
+.agreeBugs .date .past select {line-height:1;vertical-align:middle;}
+.agreeBugs .date .btnPrint {position:absolute;top:50%;right:4px;margin-top:-10px;}
+.agreeBugs .date .btnPrint a {display:block;height:20px;width:69px;text-indent:-1000em;background-image:url('http://file.bugsm.co.kr/nbugs/common/button/bos_print.png');background-repeat:no-repeat;}
+
+.agreeBugs.privacy .title {margin:0 0 25px;}
+.agreeBugs.privacy h4,
+.agreeBugs.privacy .textBox > div > strong {display:block;margin:29px 0 2px 3px;padding-bottom:17px;font-size:16px;}
+.agreeBugs.privacy h5 {margin:0;padding:16px 0 0 3px;font-size:12px;}
+.agreeBugs.privacy .textBox table {width:100%;margin:20px 0 0;border-collapse:collapse;}
+.agreeBugs.privacy .textBox table caption {display:none;}
+.agreeBugs.privacy .textBox table thead th {font-weight:bold;}
+.agreeBugs.privacy .textBox table th,
+.agreeBugs.privacy .textBox table td {padding:4px 7px;font-weight:normal;text-align:center;border:1px solid #999;}
+.agreeBugs.safeguard h4 {margin:29px 0 2px 3px;padding-bottom:17px;font-size:16px;}
+.agreeBugs.safeguard .lineGray {padding-bottom:37px;border-bottom:1px solid #e6e6e6;}
+
+/* 서비스 점검 페이지 */
+.serviceError {background:none !important;}
+.serviceError #content {width:632px;margin:0 auto;padding-bottom:127px;}
+#container.serviceInspec #content {width:441px;padding-bottom:105px;}
+.serviceError h3 {height:29px;margin:92px 0 27px 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/other/h3_title.gif') no-repeat;}
+.serviceError.serviceInspec h3 {margin-top:94px;}
+.serviceError.pageNot h3 {background-position:82px -80px;}
+.serviceError.serviceNot h3 {background-position:78px 0px;}
+.serviceError.accessNot h3 {background-position:91px -160px;}
+.serviceError.regular h3 {background-position:55px -240px;}
+.serviceError.temporary h3 {background-position:55px -320px;}
+.serviceError.urgency h3 {background-position:55px -400px;}
+.serviceError.checkDRM h3 {background-position:55px -480px;}
+.serviceError.temporaryHelp h3 {background-position:47px -560px;}
+.serviceError p.errorBox {padding:0 0 18px 0;color:#666;line-height:17px;border-bottom:1px solid #e6e6e6;}
+.serviceError p.errorBox a {font-weight:bold;text-decoration:underline;}
+.serviceError.checkDRM p.errorBox {text-align:center;border-bottom:0 none;}
+.serviceError.serviceInspec p.errorBox {padding:0 0 18px 19px;}
+.serviceError .btnArea {padding:19px 30px 0 0;text-align:center;}
+.serviceError .btnArea .typeD a {font-weight:bold;}
+.serviceError .InspecTime {overflow:hidden;width:441px;padding:17px 0;line-height:17px;border-bottom:1px solid #e6e6e6;}
+.serviceError .InspecTime dt {float:left;display:inline;margin:0 0 0 130px;}
+.serviceError .InspecTime dd {float:left;padding:0 130px 0 3px;}
+.serviceError .InspecTime dd strong {color:#ec6600;}
+#footer.svErrorFooter {font:10px/14px Tahoma;color:#666;text-align:center;background-image:none;}
+#footer.svErrorFooter * {display:inline;}
+#footer.svErrorFooter strong {color:#ff6700;}
+
+/* login */
+.commonLogin #content {overflow:hidden;width:677px;margin:0 auto;padding:112px 0 114px;background-color:#FFF;}
+.commonLogin h2 {height:22px;margin:0 0 28px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/new/login/h2_title.gif') no-repeat 50% 0;}
+.commonLogin h3 {height:21px;background:url('http://file.bugsm.co.kr/nbugs/common/new/login/i_login.gif') no-repeat;}
+.commonLogin .login .bugsID h3 {background-position:0 0;}
+.commonLogin .login .facebookID h3 {background-position:0 -50px;}
+.commonLogin .loginWrap {float:left;height:369px;width:328px;margin:0 6px 0 0;border:1px solid #DCDCDC;border-radius:3px;background-color:#FAFAFA;}
+.commonLogin .login {margin:37px 0 0 37px;}
+.commonLogin .login .bugsID {height:159px;width:230px;}
+.commonLogin .login .facebookID {width:230px;}
+.commonLogin .login .btnBugsLogin {right:48px;height:62px;width:70px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/new/login/i_login.gif') no-repeat 0 -100px;}
+.commonLogin .login .btnFBLogin {height:62px;width:70px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/new/login/i_login.gif') no-repeat 0 -200px;}
+.commonLogin .loginForm .inputInfo span {height:28px;}
+.commonLogin .loginForm .inputInfo label {height:28px;width:157px;line-height:28px;text-indent:8px;}
+.commonLogin .loginForm .inputInfo .text {height:26px;width:153px;line-height:26px;}
+.commonLogin .banner {float:left;height:369px;width:339px;border:1px solid #DCDCDC;border-radius:3px;background-color:#FAFAFA;}
+.commonLogin .banner a {display:inline-block;margin:29px 0 0 28px;border:1px solid #DCDCDC;}
+/* .commonLogin h3 {height:27px;margin:59px 0 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/login/h3_title.gif') no-repeat 50% 0;}
+.commonLogin .commonLoginWrap {float:left;height:195px;width:294px;margin:59px 0 0;padding:2px;border:1px solid #A4A4A4;background-color:#BFBFBF;}
+.commonLogin #login {height:193px;width:214px;padding:0 39px;border:1px solid #FFF;background-color:#f8f8f8;}
+.commonLogin #login .msg {display:none;}
+.commonLogin #login fieldset {margin:40px 0 0;}
+.commonLogin #login .enterIDPW input {width:149px;}
+.commonLogin #login .check {padding:5px 0 15px;}
+.commonLogin #login .check label {font-size:12px;color:#666;}
+.commonLogin #login .signup a {font-size:12px;}
+.commonLogin #login .forgot a {font-size:12px;color:#666;}
+.commonLogin .goMenu {float:right;overflow:hidden;height:201px;width:456px;margin:59px 0 0;background:url('http://file.bugsm.co.kr/nbugs/common/login/bg_menu.gif') no-repeat 100% 0;}
+.commonLogin .goMenu li {float:left;padding:0 0 7px 7px;}
+.commonLogin .goMenu a {display:block;overflow:hidden;height:97px;width:221px;text-indent:-1000em;}
+ */
+
+/* jukeOn page */
+.jukeOnLogin {width:764px;margin:0 auto;}
+.jukeOnLogin .infoText {padding-top:43px;}
+.jukeOnLogin .infoText .textA {height:59px;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/member/i_textJukeon.gif') no-repeat;}
+.jukeOnLogin .infoText .textB {height:38px;width:100%;margin:31px 0 0 0;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/member/i_textJukeon.gif') no-repeat 0 -90px;}
+
+.jukeOnLogin .loginBox {margin:40px 0 0 0;padding:48px 107px 51px 107px;border:3px solid #e6e6e6;}
+.jukeOnLogin .loginBox .idInfo {height:14px;width:100%;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/member/i_textJukeon.gif') no-repeat 0 -150px;}
+.jukeOnLogin .loginBox #loginJukeon {width:262px;overflow:hidden;margin:10px 0 0 0;padding:30px 152px 27px 130px;border-top:2px solid #f26a00;border-bottom:2px solid #f26a00;}
+.jukeOnLogin .loginBox #loginJukeon .enterIDPW {width:201px;}
+.jukeOnLogin .loginBox #loginJukeon .enterIDPW input {margin:0 0 4px 0;width:197px;}
+	.msie6 .jukeOnLogin .loginBox #loginJukeon .enterIDPW input, ie7 .jukeOnLogin .loginBox #loginJukeon .enterIDPW input {margin-bottom:2px;}
+.jukeOnLogin .loginBox #loginJukeon .enterIDPW .text {background-position:0 -46px;}
+.jukeOnLogin .loginBox #loginJukeon .enterIDPW .password {background-position:0 -71px;}
+.jukeOnLogin .loginBox #loginJukeon .btnLogin {height:47px;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_jukeOk.gif') no-repeat;}
+.jukeOnLogin .loginBox #loginJukeon .jukeForgot {clear:both;overflow:hidden;display:block;padding:5px 0 0 7px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 10px;}
+.jukeOnLogin .loginBox #loginJukeon .jukeForgot a {color:#666;}
+
+.jukeOnLogin .memberInfo {overflow:hidden;margin:25px 0 0 0;}
+.jukeOnLogin .memberInfo dt {float:left;height:13px;width:187px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/member/i_textJukeon.gif') no-repeat;}
+.jukeOnLogin .memberInfo dt.jukeMem {margin-bottom:12px;background-position:0 -200px;}
+.jukeOnLogin .memberInfo dt.jukeGuest {background-position:0 -250px;}
+.jukeOnLogin .memberInfo dd {float:left;width:357px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/member/i_textJukeon.gif') no-repeat;}
+.jukeOnLogin .memberInfo dd.jukeMem {height:13px;margin-bottom:12px;background-position:-187px -200px;}
+.jukeOnLogin .memberInfo dd.jukeGuest {height:28px;background-position:-187px -250px;}
+.jukeOnLogin .faqInfo {margin:21px 0 0 0;}
+.jukeOnLogin .faqInfo p {float:left;padding:0 0 0 8px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1158px;}
+.jukeOnLogin .faqInfo p a {color:#2d85ff;text-decoration:underline;}
+.jukeOnLogin .faqInfo .phoneNum {float:right;padding:0 3px 0 0;color:#999;}
+
+#loginJukeon * {line-height:16px;}
+#loginJukeon .enterIDPW {float:left;width:135px;}
+#loginJukeon .enterIDPW label {display:none;}
+#loginJukeon .enterIDPW input {height:19px;width:131px;margin-bottom:3px;line-height:19px;}
+	.msie6 #loginJukeon .enterIDPW input,
+	.msie7 #loginJukeon .enterIDPW input {margin-bottom:2px;}
+#loginJukeon .enterIDPW .text {background:#FFF url('http://file.bugsm.co.kr/nbugs/common/bg_loginIDPW.gif') no-repeat 0 4px;}
+#loginJukeon .enterIDPW .password {background:#FFF url('http://file.bugsm.co.kr/nbugs/common/bg_loginIDPW.gif') no-repeat 0 -21px;}
+#loginJukeon .enterIDPW .focus {background-image:none;}
+#loginJukeon .enterIDPW .endInput {background-image:none;}
+#loginJukeon .btnLogin {float:right;overflow:hidden;height:45px;width:56px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_login.gif') no-repeat;}
+
+/* sitemap */
+.sitemap {overflow:hidden;}
+.sitemap .colgroup {overflow:hidden;width:1000px;margin:0 0 4px;}
+.sitemap .categoryWrap {float:left;display:inline;width:164px;margin:15px 35px 0 0;}
+.sitemap h3 {width:100%;text-indent:8px;border-bottom:1px solid #e0e0e0;}
+.sitemap h3 a {font-size:12px;color:#1d1d1e;line-height:22px;}
+.sitemap .depth1 {margin:7px 0 0;}
+.sitemap .depth1 li {line-height:22px;}
+.sitemap .depth1 li a {display:inline-block;padding-left:8px;color:#54575a;background:url('http://file.bugsm.co.kr/nbugs/common/new/bu.gif') no-repeat 0 -92px;)}
+.sitemap .depth2 {margin:-1px 0 0;}
+.sitemap .depth2 li {padding-left:8px;color:#9b9b9b;}
+.sitemap .depth2 li a {padding:0;color:#9b9b9b;background:none;}
+.sitemap .exception {margin-top:9px;}
+.sitemap .notice {margin:-8px 0 0 398px;}
+
+/* 공지사항 리스트 */
+.notice #content {padding-top:23px;}
+.notice h2 {float:left;height:38px;width:88px;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/other/bg_listTable.gif') no-repeat 0 -50px;}
+.notice .sortingTotal {display:inline;float:left;height:32px;padding-top:5px;padding-left:9px;font-size:14px;font-weight:bold;color:#333;background:url('http://file.bugsm.co.kr/nbugs/common/bu.gif') no-repeat 0 -749px;}
+.notice .sortingTotal em {color:#F60;}
+.notice .searchField {display:inline;float:right;}
+.notice .searchField input {display:inline;float:left;height:24px;width:165px;margin-top:1px;padding-left:5px;line-height:24px;vertical-align:top;border:1px solid #DADADA;}
+.notice .searchField button {display:inline;float:left;height:29px;width:66px;margin-left:5px;text-indent:-1000em;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/button/bo_search.gif') no-repeat 0 0;}
+.notice .noticeListWrap {clear:both;}
+	.noticeListWrap .title {overflow:hidden;height:34px;background:url('http://file.bugsm.co.kr/nbugs/other/bg_listTable.gif') no-repeat 0 0;}
+	.noticeListWrap .title div {height:34px;text-align:center;border-left:1px solid #C7C7C7;}
+	.noticeListWrap .title span {display:block;overflow:hidden;height:34px;margin:0 auto;text-indent:-1000em;background:url('http://file.bugsm.co.kr/nbugs/other/bg_listTable.gif') no-repeat;}
+	.noticeListWrap .title .number span {width:22px;background-position:0 -90px;}
+	.noticeListWrap .title .subject span {width:22px;background-position:-30px -90px;}
+	.noticeListWrap .title .date span {width:31px;background-position:-60px -90px;}
+	.noticeListWrap .title .hits span {width:31px;background-position:-100px -90px;}
+	
+	.noticeListWrap .list {overflow:hidden;padding-top:1px;}
+	.noticeListWrap .list li {display:inline;float:left;width:100%;text-align:center;border-bottom:1px solid #ECECEC;}
+	.noticeListWrap .list li div {height:16px;padding-top:8px;padding-bottom:8px;border-left:1px solid #ECECEC;}
+	.noticeListWrap .list .number,
+	.noticeListWrap .list .date,
+	.noticeListWrap .list .hits {font-family:tahoma;font-size:11px;}
+	.noticeListWrap .list .subject {overflow:hidden;text-align:left;text-overflow:ellipsis;white-space:nowrap;}
+	.noticeListWrap .list .subject a:hover {color:#333;text-decoration:none;}
+	.noticeListWrap .list .view {display:none;clear:both;height:auto;padding:30px;line-height:16px;text-align:left;border:0;background:#FFF;}
+	.noticeListWrap .list .view a {color:#00F;text-decoration:underline;}
+	.noticeListWrap .list .view a * {color:#00F;font-family:Dotum, '돋움', helvetica, 'Apple SD Gothic Neo', AppleGothic, Sans-serif, Meiryo, 'メイリオ', 'MS Gothic';}
+		
+	.noticeListWrap .title .number,
+	.noticeListWrap .list .number {border-left:1px solid transparent;}
+		.msie6 .noticeListWrap .title .number,
+		.msie6 .noticeListWrap .list .number {border-left-color:blue;filter:chroma(color=blue);}
+	.noticeListWrap .title .hits,
+	.noticeListWrap .list .hits {border-right:1px solid transparent;}
+		.msie6 .noticeListWrap .title .hits,
+		.msie6 .noticeListWrap .list .hits {border-right-color:blue;filter:chroma(color=blue);}
+	
+	.noticeListWrap .list .notice {margin-top:-1px;padding:1px 0;border-bottom:0;background:#FBFBFB url('http://file.bugsm.co.kr/nbugs/other/bg_listTable.gif') no-repeat 0 -150px;}
+	.noticeListWrap .list .notice.end {padding-bottom:0;border-bottom:1px solid #C7C7C7;}
+	.noticeListWrap .list .notice .subject {color:#F60;font-weight:bold;letter-spacing:-1px;}
+	.noticeListWrap .list .notice .subject a {color:#F60;font-weight:bold;letter-spacing:-1px;}
+	.noticeListWrap .list .notice .subject a:hover {color:#F60;}
+	
+	.noticeListWrap .list .open {margin-top:-1px;padding:0;border-bottom:1px solid #C7C7C7;}
+	.noticeListWrap .open .number {color:#FFF;font-weight:bold;border:1px solid #EE6A05;border-right:0;background:#FF780C;}
+		.msie6 .noticeListWrap .open .number {border-left-color:#EE6A05;}
+	.noticeListWrap .open .subject {color:#FFF;font-weight:bold;letter-spacing:-1px;border:1px solid #EE6A05;border-right:0;background:#FF780C;}
+	.noticeListWrap .list .notice.open .subject {color:#FFF;}
+	.noticeListWrap .open .subject a {padding-left:10px;color:#FFF;font-weight:bold;letter-spacing:-1px;background:url('http://file.bugsm.co.kr/nbugs/common/bu_arrow.gif') no-repeat 0 -1598px;}
+	.noticeListWrap .list .notice.open .subject a {color:#FFF;}
+	.noticeListWrap .open .subject a:hover {color:#FFF;}
+	.noticeListWrap .list .notice.open .subject a:hover {color:#FFF;}
+	.noticeListWrap .open .date {color:#FFF;border:1px solid #797979;border-left:1px solid #EE6A05;border-right:0;background:#858585;}
+	.noticeListWrap .open .hits {color:#FFF;border:1px solid #797979;background:#858585;}
+		.msie6 .noticeListWrap .open .hits {border-right-color:#797979;}
+	.noticeListWrap .list .open .view {display:block;}
+	
+	.noticeListWrap .number {display:inline;float:left;width:100px;}
+	.noticeListWrap .subject {display:inline;float:left;overflow:hidden;width:580px;padding:0 20px 0 19px;}
+	.noticeListWrap .date {display:inline;float:left;width:120px;}
+	.noticeListWrap .hits {display:inline;float:left;width:120px;}
+	
+	.noticeListWrap .icNew {display:inline-block;height:11px;width:27px;margin:2px 0 0 5px;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 0 -240px;}
+		.msie6 .noticeListWrap .icNew,
+		.msie7 .noticeListWrap .icNew {margin-top:0;}
+	.noticeListWrap .icNew span {display:none;}
+	.noticeListWrap .icNotice {display:inline-block;height:16px;width:35px;margin-top:0;vertical-align:top;background:url('http://file.bugsm.co.kr/nbugs/common/ic.gif') no-repeat 0 -4020px;}
+	.noticeListWrap .open .icNotice {background-position:0 -4060px;}
+	.noticeListWrap .icNotice span {display:none;}
+	
+/* 아티스트/앨범/곡 없는 페이지 */
+.noMusic #content {width:765px;margin:0 auto;padding:165px 0 150px;}
+.noMusic h2 {height:30px;width:100%;margin:0 0 25px;background:url('http://file.bugsm.co.kr/nbugs/common/error/h_error.gif') no-repeat 50% 0;}
+.noMusic h2 span {display:none;}
+.noMusic p {padding-bottom:155px;line-height:17px;text-align:center;}
+.noMusic .btnArea {padding-top:20px;text-align:center;border-top:1px solid #E6E6E6;}
+.noMusic .btnArea a {font-weight:bold;}
+
+
+/* 모바일 점검,에러 페이지 */
+.mobileError {display:table;height:100%;width:100%;margin:0;padding:0;background:#fdfcf8;}
+.mobileError * {margin:0;padding:0;}
+.mobileError div {display:table-cell;vertical-align:middle;text-align:center;}
+.mobileError section {display:block;position:relative;padding:89px 0 0;}
+.mobileError section:before {content:'';display:block;position:absolute;top:0;left:50%;height:62px;width:70px;margin:0 0 0 -35px;background-position:0 0;}
+.mobileError section strong {display:block;margin:0 0 10px;font-size:1.500em;}
+.mobileError.sorry section strong {font-size:1.313em;color:#543c34;}
+.mobileError section strong span {color:#ff3d33;}
+.mobileError section p {font-size:0.875em;color:#543c34;line-height:1.21428;}
+.mobileError section p a {font-weight:bold;color:#543c34;text-decoration:underline;}
+.mobileError ul {width:278px;margin:20px auto 0;padding:13px 0 10px;border:1px solid #e5e4df;border-radius:3px;background:#f5f2ed;}
+.mobileError ul li {display:table;width:100%;font-size:0.875em;line-height:1.42857;}
+.mobileError ul li strong {display:table-cell;width:40%;padding-right:5px;font-weight:normal;color:#543c34;text-align:right;}
+.mobileError ul li strong span {display:inline-block;position:relative;padding:0 0 0 10px;}
+.mobileError ul li strong span:before {content:'';display:block;position:absolute;top:50%;left:0;height:4px;width:4px;margin-top:-3px;background-position:0 -80px;}
+.mobileError ul li>span {display:table-cell;width:60%;color:#543c34;text-align:left;}
+
+.mobileError section:before,
+.mobileError ul li strong span:before {background-image:url('http://file.bugsm.co.kr/nbugs/other/i_mobile.png');background-repeat:no-repeat;;background-size:100px auto;}

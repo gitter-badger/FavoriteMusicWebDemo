@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mplanweb.music.web.mybatis.Board">
+
+
+	<select id="selectTotalCountYboard" resultType="int"
+		parameterType="boardSearch">
+<!-- 
+		SELECT COUNT(*)
+		FROM mp_board2
+		<where>
+			<if test="@Ognl@isNotEmpty(searchText)">
+				AND ${searchColumn} LIKE CONCAT('',#{searchText},'%')
+			</if>
+			<if test="@Ognl@isNotEmpty(priority)">				
+				<![CDATA[ 
+				 AND priority >= #{priority}
+				]]>
+			</if>
+		</where>
+-->
+	</select>
+
+
+</mapper>    
