@@ -154,10 +154,12 @@
 				</div>
 
 				<!-- 페이징처리 부분  -->
+			
 				<div class="col-md-8">
 					<ul class="pagination" id="pagination">
 					</ul>
 				</div>
+	
 			</div>
 		</div>
 	</div>
