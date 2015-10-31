@@ -115,7 +115,19 @@ public class MusicController {
 		logger.info("MainPage ==> musicda : " + locale);
 		return "/music/artistview";
 	}
-
+	/*
+	 * main =========> artistview =========> /music/artistview.jsp 아티스트 관리
+	 * (View)
+	 * 
+	 * @param Model
+	 * 
+	 * @return /music/artistview
+	 */
+	@RequestMapping(value = "/radioview", method = RequestMethod.GET)
+	public String RadioView(Locale locale, Model model) {
+		logger.info("MainPage ==> radioview : " + locale);
+		return "/music/radioview";
+	}
 	/*
 	 * main =========> coin =========> /music/coin.jsp 정산 관리 (View)
 	 * 

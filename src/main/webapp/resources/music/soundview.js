@@ -354,12 +354,14 @@ $('#btnYboardDelete').click(function() {
 	var checknum = $('input[name=mp_mpnum]:checked').map(function() {
 		if (this.checked) {
 			// alert("한개 이상 체크되어야 합니다.");
+			alert(checknum);
 			return this.value;
 		}
 	}).get().join(",");
 
 	// 아무것도 체크되어 있지 않다면 에러표시
 	if (checknum === "") {
+		alert(checknum);
 		alert("한개 이상 체크되어야 합니다.");
 		return;
 	}

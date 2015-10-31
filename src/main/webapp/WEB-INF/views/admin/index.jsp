@@ -33,7 +33,7 @@
 <!--  video/195550.mp4 -->
 <!-- Video -->
 <video id="movie" poster="ittank.png" preload="auto" autoplay loop>
-	<source src="https://r13---sn-oguesnll.c.docs.google.com/videoplayback?requiressl=yes&id=ff84adabedf6d0b1&itag=22&source=webdrive&app=texmex&ip=183.99.41.67&ipbits=8&expire=1446119395&sparams=requiressl,id,itag,source,ip,ipbits,expire&signature=77736C1073D1722F693628595B1A348D263C35D1.6AB029FA0CB55135786A6140AC2C92CEB32146E5&key=ck2&mm=30&mn=sn-oguesnll&ms=nxu&mt=1446114135&mv=m&nh=IgpwcjAxLm5ydDE5KgkxMjcuMC4wLjE&pl=18&cpn=VDYUZYpcz85R3QLK&c=WEB&cver=html5" type="video/mp4">
+	<source src="/movie/231030.mp4" type="video/mp4">
 </video>
 
 <body>
