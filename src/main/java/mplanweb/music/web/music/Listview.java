@@ -2,8 +2,6 @@ package mplanweb.music.web.music;
 
 import java.io.Serializable;
 
-import mplanweb.music.web.source.MusicStringUtil;
-
 
 @SuppressWarnings("serial")
 public class Listview implements Serializable {

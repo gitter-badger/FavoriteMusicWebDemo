@@ -56,6 +56,9 @@ public class AdminController {
 		return "/main/join";
 	}
 
+	/* 
+	 * 삭제
+	
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String Admin(Locale locale, Model model) {
 		logger.info("LoginPage ==> MainPage : ", locale);
@@ -68,5 +71,5 @@ public class AdminController {
 
 		return "/main/loginok";
 	}
-
+ */
 }

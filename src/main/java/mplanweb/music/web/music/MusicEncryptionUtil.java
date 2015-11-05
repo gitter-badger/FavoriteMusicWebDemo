@@ -1,4 +1,4 @@
-package mplanweb.music.web.source;
+package mplanweb.music.web.music;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -7,7 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * 암호회 처리 유틸
+ * ?��?��?�� 처리 ?��?��
  * 
  * @author ykkim
  * 
@@ -17,7 +17,7 @@ public class MusicEncryptionUtil {
 	private MusicEncryptionUtil() { }
 
 	/**
-	 * hex to byte[] : 16진수 문자열을 바이트 배열로 변환한다.
+	 * hex to byte[] : 16진수 문자?��?�� 바이?�� 배열�? �??��?��?��.
 	 * 
 	 * @param hex
 	 *            hex string
@@ -35,7 +35,7 @@ public class MusicEncryptionUtil {
 	}
 
 	/**
-	 * byte[] to hex : unsigned byte(바이트) 배열을 16진수 문자열로 바꾼다.
+	 * byte[] to hex : unsigned byte(바이?��) 배열?�� 16진수 문자?���? 바꾼?��.
 	 * 
 	 * @param ba
 	 *            byte[]
@@ -56,11 +56,11 @@ public class MusicEncryptionUtil {
 	}
 
 	/**
-	 * AES 방식으로 양방향 암호화(키는 16byte 필수, 예 : 00000000001234)
+	 * AES 방식?���? ?��방향 ?��?��?��(?��?�� 16byte ?��?��, ?�� : 00000000001234)
 	 * 
 	 * @param plaintext
 	 * @param sKey
-	 *            - 16byte 필수, 예 : 00000000001234
+	 *            - 16byte ?��?��, ?�� : 00000000001234
 	 * @return
 	 */
 	public static String encrypto(String plaintext, String sKey) throws Exception {
@@ -77,11 +77,11 @@ public class MusicEncryptionUtil {
 	}
 
 	/**
-	 * AES 방식으로 복호화(키는 16byte 필수, 예 : 00000000001234)
+	 * AES 방식?���? 복호?��(?��?�� 16byte ?��?��, ?�� : 00000000001234)
 	 * 
 	 * @param encrypted
 	 * @param sKey
-	 *            - 16byte 필수, 예 : 00000000001234
+	 *            - 16byte ?��?��, ?�� : 00000000001234
 	 * @return
 	 */
 	public static String decrypto(String encrypted, String sKey) throws Exception {
@@ -97,7 +97,7 @@ public class MusicEncryptionUtil {
 	}
 
 	/**
-	 * MD5 -> Hexa형식으로 단방향 암호화 (복호화 불가)
+	 * MD5 -> Hexa?��?��?���? ?��방향 ?��?��?�� (복호?�� 불�?)
 	 * 
 	 * @param str
 	 * @return
@@ -110,7 +110,7 @@ public class MusicEncryptionUtil {
 	}
 
 	/**
-	 * Hexa형식으로 리턴
+	 * Hexa?��?��?���? 리턴
 	 * 
 	 * @param b
 	 * @return
@@ -118,12 +118,12 @@ public class MusicEncryptionUtil {
 	private static String getHexa(byte[] b) {
 		StringBuffer sb = new StringBuffer(b.length * 2);
 		for (int i = 0; i < b.length; i++) {
-			int v = b[i] < 0 ? (int) b[i] + 0x100 : (int) b[i]; // 음수를 양수로 변환 //
-			// (int)b[i]+256와
+			int v = b[i] < 0 ? (int) b[i] + 0x100 : (int) b[i]; // ?��?���? ?��?���? �??�� //
+			// (int)b[i]+256??
 			// 같다.
-			String s = Integer.toHexString(v); // 16진수로
+			String s = Integer.toHexString(v); // 16진수�?
 			if (s.length() == 1)
-				sb.append('0'); // 한자리면 앞에 0을 붙여준다.
+				sb.append('0'); // ?��?��리면 ?��?�� 0?�� 붙여�??��.
 			sb.append(s);
 		}
 		return sb.toString();
@@ -132,7 +132,7 @@ public class MusicEncryptionUtil {
 	//
 
 	/**
-	 * 문자열을 SHA-256 방식으로 단방향 암호화
+	 * 문자?��?�� SHA-256 방식?���? ?��방향 ?��?��?��
 	 * 
 	 * @param input
 	 * @return
@@ -158,7 +158,7 @@ public class MusicEncryptionUtil {
 	}
 
 	/**
-	 * 문자열을 SHA-512 방식으로 단방향 암호화
+	 * 문자?��?�� SHA-512 방식?���? ?��방향 ?��?��?��
 	 * 
 	 * @param input
 	 * @return

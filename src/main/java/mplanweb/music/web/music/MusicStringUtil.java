@@ -1,4 +1,4 @@
-package mplanweb.music.web.source;
+package mplanweb.music.web.music;
 
 public class MusicStringUtil {
 
@@ -54,7 +54,7 @@ public class MusicStringUtil {
 			result = "-1";
 		}
 		int a = Integer.parseInt(result);
-		System.out.println("Aes   : " + a);
+	
 		return Integer.parseInt(result);
 	}
 

@@ -3,7 +3,6 @@ package mplanweb.music.web.board;
 import java.util.List;
 import java.util.Map;
 
-import mplanweb.music.web.source.Ssearch;
 
 public interface BoardService {
 	// count

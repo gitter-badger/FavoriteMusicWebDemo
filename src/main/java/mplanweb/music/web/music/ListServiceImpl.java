@@ -3,9 +3,6 @@ package mplanweb.music.web.music;
 import java.util.List;
 import java.util.Map;
 
-import mplanweb.music.web.source.Ssearch;
-import mplanweb.music.web.source.Ssview;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

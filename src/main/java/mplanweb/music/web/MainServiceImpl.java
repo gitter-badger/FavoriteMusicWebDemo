@@ -1,8 +1,5 @@
 package mplanweb.music.web;
 
-import mplanweb.music.web.source.MusicDAO;
-import mplanweb.music.web.source.MusicService;
-import mplanweb.music.web.source.Ssearch;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
