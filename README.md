@@ -1,6 +1,4 @@
-#Favorite Music 
-
-해당 관련 소스는 정식 버전 입니다.
+#Favorite Music web Demo
 
 # README #
 Favorite Music은 스트리밍 음악 콘텐츠 Web, App입니다.
