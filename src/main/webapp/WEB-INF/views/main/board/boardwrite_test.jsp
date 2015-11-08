@@ -7,9 +7,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<link href="/web/resources/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/web/resources/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+<link href="/web/resources/bower_components/bootstrapValidator/dist/css/bootstrapValidator.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../resources/editor/css/editor.css" type="text/css" charset="utf-8" />
+	
 <script src="../resources/editor/js/editor_loader.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="/web/resources/bower_components/jquery/jquery.min.js"></script>
+<script src="/web/resources/js/jquery/jquery.form.min.js"></script>
+<script src="/web/resources/js/jquery/jQuery.MultiFile.min.js"></script>
+<script src="/web/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/web/resources/bower_components/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="/web/resources/bower_components/bootstrap-paginator/build/bootstrap-paginator.min.js"></script>
+<script src="/web/resources/bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js"></script>
+
+
 </head>
+
 <body>
 	<div class="body">
 		<!-- 에디터 시작 -->
@@ -19,10 +35,81 @@
 	-->
 		<form name="tx_editor_form" id="tx_editor_form"
 			action="../board/boardwrite" method="post" accept-charset="utf-8"
-			commandName="boarddto" enctype="multipart/form-data">		
+			commandName="boarddto" enctype="multipart/form-data">
+			<input type="hidden" id="num" name="num">
+			<div class="form-group">
+				<label for="titlename" class="col-sm-2 control-label">제목 </label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="title" name="title"
+						placeholder="제목 입력 바랍니다. ">
+				</div>
+			</div>
+						
+						
 			<!-- 에디터 컨테이너 시작 -->
 			<div id="tx_trex_container" class="tx-editor-container">
 				<!-- 사이드바 -->
+				<div id="tx_sidebar" class="tx-sidebar">
+					<div class="tx-sidebar-boundary">
+						<!-- 사이드바 / 첨부 -->
+						<ul class="tx-bar tx-bar-left tx-nav-attach">
+							<!-- 이미지 첨부 버튼 시작 -->
+							<!--
+							@decsription
+							<li></li> 단위로 위치를 이동할 수 있다.
+						-->
+							<li class="tx-list">
+								<div unselectable="on" id="tx_image"
+									class="tx-image tx-btn-trans">
+									<a href="javascript:;" title="사진" class="tx-text">사진</a>
+								</div>
+							</li>
+							<!-- 이미지 첨부 버튼 끝 -->
+							<li class="tx-list">
+								<div unselectable="on" id="tx_file" class="tx-file tx-btn-trans">
+									<a href="javascript:;" title="파일" class="tx-text">파일</a>
+								</div>
+							</li>
+							<li class="tx-list">
+								<div unselectable="on" id="tx_media"
+									class="tx-media tx-btn-trans">
+									<a href="javascript:;" title="외부컨텐츠" class="tx-text">외부컨텐츠</a>
+								</div>
+							</li>
+							<li class="tx-list tx-list-extra">
+								<div unselectable="on" class="tx-btn-nlrbg tx-extra">
+									<a href="javascript:;" class="tx-icon" title="버튼 더보기">버튼
+										더보기</a>
+								</div>
+								<ul class="tx-extra-menu tx-menu" style="left: -48px;"
+									unselectable="on">
+									<!--
+									@decsription
+									일부 버튼들을 빼서 레이어로 숨기는 기능을 원할 경우 이 곳으로 이동시킬 수 있다.
+								-->
+								</ul>
+							</li>
+						</ul>
+						<!-- 사이드바 / 우측영역 -->
+						<ul class="tx-bar tx-bar-right">
+							<li class="tx-list">
+								<div unselectable="on" class="tx-btn-lrbg tx-fullscreen"
+									id="tx_fullscreen">
+									<a href="javascript:;" class="tx-icon" title="넓게쓰기 (Ctrl+M)">넓게쓰기</a>
+								</div>
+							</li>
+						</ul>
+						<ul class="tx-bar tx-bar-right tx-nav-opt">
+							<li class="tx-list">
+								<div unselectable="on" class="tx-switchtoggle"
+									id="tx_switchertoggle">
+									<a href="javascript:;" title="에디터 타입">에디터</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
 				<!-- 툴바 - 기본 시작 -->
 				<!--
 				@decsription
@@ -34,9 +121,7 @@
 				tx-btn-48lbg, tx-btn-48rbg, tx-btn-30lrbg, tx-btn-46lrbg, tx-btn-67lrbg, tx-btn-49lbg, tx-btn-58bg, tx-btn-46bg, tx-btn-49rbg
 			-->
 				<div id="tx_toolbar_basic" class="tx-toolbar tx-toolbar-basic">
-					<div class="tx-toolbar-boundary">		
-					
-				
+					<div class="tx-toolbar-boundary">
 						<ul class="tx-bar tx-bar-left">
 							<li class="tx-list">
 								<div id="tx_fontfamily" unselectable="on"
@@ -281,14 +366,7 @@
 									<a href="javascript:;" class="tx-icon" title="다시실행 (Ctrl+Y)">다시실행</a>
 								</div>
 							</li>
-							<li class="tx-list">
-								<div unselectable="on" class="tx-switchtoggle"
-									id="tx_switchertoggle">
-									<a href="javascript:;" title="에디터 타입">에디터</a>
-								</div>
-							</li>
 						</ul>
-							
 						<ul class="tx-bar tx-bar-right">
 							<li class="tx-list">
 								<div unselectable="on" class="tx-btn-nlrbg tx-advanced"
@@ -436,6 +514,19 @@
 						<textarea id="tx_canvas_text" rows="30" cols="30"></textarea>
 					</div>
 				</div>
+				<!-- 높이조절 Start -->
+				<div id="tx_resizer" class="tx-resize-bar">
+					<div class="tx-resize-bar-bg"></div>
+					<img id="tx_resize_holder"
+						src="../resources/editor/images/icon/editor/skin/01/btn_drag01.gif"
+						width="58" height="12" unselectable="on" alt="" />
+				</div>
+				<div class="tx-side-bi" id="tx_side_bi">
+					<div style="text-align: right;">
+						<img hspace="4" height="14" width="78" align="absmiddle"
+							src="../resources/editor/images/icon/editor/editor_bi.png" />
+					</div>
+				</div>
 				<!-- 편집영역 끝 -->
 				<!-- 첨부박스 시작 -->
 				<!-- 파일첨부박스 Start -->
@@ -525,6 +616,13 @@
 			var editor = new Editor(config);
 		});
 	</script>
+
+			<div class="modal-footer">
+			
+						<button type="submit" class="btn btn-primary" onclick='saveContent()'>저장</button>
+					</div>
+
+
 	<!-- Sample: Saving Contents -->
 	<script type="text/javascript">
 		/* 예제용 함수 */
@@ -542,6 +640,10 @@
 		 */
 		function validForm(editor) {
 			// Place your validation logic here
+			if ($tx('title').value == "") {
+				alert('제목을 입력하세요');
+				return false;
+			}
 
 			// sample : validate that content exists
 			var validator = new Trex.Validator();

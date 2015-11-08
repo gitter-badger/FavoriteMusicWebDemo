@@ -216,7 +216,7 @@
 												class="thumb"> <img
 												src="${resourcePath}/sourceimg/${object3.m_imgo}">
 											</span> <span class="grup">
-												<h4>Darkness</h4>
+												<h4>Event</h4>
 											</span> <span class="info"> <span class="bit1">${object3.m_year}</span>
 												<span class="bit2">320kbps</span> <span class="bit3">Flac</span>
 											</span> <span class="info"></span> <span class="subject"> <span
