@@ -64,9 +64,11 @@ public class SearchController {
 		List<MsearchDTO> object = searchdao.artistsearch(result);
 		List<MsearchDTO> object2 = searchdao.albumsearch(result);
 		List<MsearchDTO> object3 = searchdao.musicsearch(result);
+		List<MsearchDTO> object4 = searchdao.mvsearch(result);
 		model.addAttribute("object", object);
 		model.addAttribute("object2", object2);
 		model.addAttribute("object3", object3);
+		model.addAttribute("object4", object4);
 		logger.info("count : " + object.size());
 		logger.info("object : " + object.toString());
 		
@@ -75,6 +77,9 @@ public class SearchController {
 		
 		logger.info("count : " + object3.size());
 		logger.info("object : " + object3.toString());
+
+		logger.info("count : " + object4.size());
+		logger.info("object : " + object4.toString());
 		//카운트 계산
 		return "main/search";
 		

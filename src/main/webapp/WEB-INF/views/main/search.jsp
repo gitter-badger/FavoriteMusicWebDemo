@@ -80,6 +80,8 @@
 	type="text/css">
 <link href="resources/test/css/singlelist.css" rel="stylesheet"
 	type="text/css">
+	<link href="resources/test/css/mvlist.css" rel="stylesheet"
+	type="text/css">
 </head>
 <body>
 
@@ -118,7 +120,7 @@
 	</div>
 
 	<!-- 모달창 로그인 레이아웃 종료-->
-		<%@ include file="inc/header.jsp"%>
+	<%@ include file="inc/header.jsp"%>
 	<!-- end header -->
 	<!-- center -->
 	<div id="center">
@@ -215,9 +217,13 @@
 											<a href="#" class="tnail"></a> <span class="group"></span> <span
 												class="thumb"> <img
 												src="${resourcePath}/sourceimg/${object3.m_imgo}">
-											</span> <span class="grup">
-												<h4>Event</h4>
-											</span> <span class="info"> <span class="bit1">${object3.m_year}</span>
+											</span>
+											<c:if test="${object3.m_titleuse == 'Y'}">
+												<span class="grup">
+													<h4>Title</h4>
+												</span>
+											</c:if>
+											<span class="info"> <span class="bit1">${object3.m_year}</span>
 												<span class="bit2">320kbps</span> <span class="bit3">Flac</span>
 											</span> <span class="info"></span> <span class="subject"> <span
 												class="artist">${object3.m_artist}</span> <span
@@ -233,6 +239,54 @@
 							<c:when test="${empty object3}">
 
 								<li>찾으시는 곡이 없습니다.</li>
+							</c:when>
+						</c:choose>
+					</ul>
+				</div>
+
+			</div>
+			
+			<!--  MV  -->
+			
+			<div class="text">
+				<h2>뮤직비디오</h2>
+
+			</div>
+
+
+			<div id="thelist">
+				<div class="listtest">
+					<ul>
+						<c:choose>
+							<c:when test="${not empty object4}">
+								<c:forEach var="object4" items="${object4}" varStatus="status">
+									<li>
+										<div class="mvlist">
+											<a href="#" class="tnail"></a> <span class="group"></span> <span
+												class="thumb"> <img
+												src="${resourcePath}/videoimg/${object4.mv_imgo}">
+											</span>
+											<c:if test="${object4.mv_release == 'N'}">
+												<span class="grup">
+													<h4>티저</h4>
+												</span>
+											</c:if>
+											<span class="info"> <span class="bit1">${object4.mv_year}</span>
+												<span class="bit2">${object4.mv_age}세</span>
+											</span> <span class="info"></span> <span class="subject"> <span
+												class="artist">${object4.mv_artist}</span> <span
+												class="title">${object4.mv_title}</span> <span class="album">${object4.mv_album}</span>
+											</span> <span class="play"> <span class="home"><a
+													href="${resourcePath}/video/${object4.mv_mvko}"
+													target="_blank">뮤비듣기</a></span> <span class="like">추천</span>
+											</span>
+										</div>
+									</li>
+								</c:forEach>
+							</c:when>
+							<c:when test="${empty object4}">
+
+								<li>찾으시는 동영상이 없습니다.</li>
 							</c:when>
 						</c:choose>
 					</ul>

@@ -31,4 +31,9 @@ public class SearchDAO implements SearchService {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("Query.musicsearch", result);
 	}
+	
+	public List<MsearchDTO> mvsearch(String result) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("Query.mvsearch", result);
+	}
 }

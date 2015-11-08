@@ -13,7 +13,16 @@ public class MsearchDTO {
 	String m_artist;
 	String m_title;
 	String art_label;
+	String m_titleuse;
 	
+	
+	
+	public String getM_titleuse() {
+		return m_titleuse;
+	}
+	public void setM_titleuse(String m_titleuse) {
+		this.m_titleuse = m_titleuse;
+	}
 	String m_album;
 	String m_year;
 	String m_imgo;
@@ -23,6 +32,65 @@ public class MsearchDTO {
 	String art_hit;
 	String art_etc;
 	String al_corp;
+	
+	String mv_artist;
+	String mv_title;
+	String mv_album;
+	String mv_year;
+	String mv_imgo;
+	String mv_mvko;
+	String mv_age;
+	
+	String mv_release;
+	
+	public String getMv_release() {
+		return mv_release;
+	}
+	public void setMv_release(String mv_release) {
+		this.mv_release = mv_release;
+	}
+	public String getMv_artist() {
+		return mv_artist;
+	}
+	public void setMv_artist(String mv_artist) {
+		this.mv_artist = mv_artist;
+	}
+	public String getMv_title() {
+		return mv_title;
+	}
+	public void setMv_title(String mv_title) {
+		this.mv_title = mv_title;
+	}
+	public String getMv_album() {
+		return mv_album;
+	}
+	public void setMv_album(String mv_album) {
+		this.mv_album = mv_album;
+	}
+	public String getMv_year() {
+		return mv_year;
+	}
+	public void setMv_year(String mv_year) {
+		this.mv_year = mv_year;
+	}
+	public String getMv_imgo() {
+		return mv_imgo;
+	}
+	public void setMv_imgo(String mv_imgo) {
+		this.mv_imgo = mv_imgo;
+	}
+	public String getMv_mvko() {
+		return mv_mvko;
+	}
+	public void setMv_mvko(String mv_mvko) {
+		this.mv_mvko = mv_mvko;
+	}
+	public String getMv_age() {
+		return mv_age;
+	}
+	public void setMv_age(String mv_age) {
+		this.mv_age = mv_age;
+	}
 	public String getAl_corp() {
 		return al_corp;
 	}

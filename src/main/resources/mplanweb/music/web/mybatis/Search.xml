@@ -15,11 +15,14 @@
 	<select id="artistsearch" resultType="MsearchDTO" parameterType="java.lang.String">
 
 		SELECT mp_artist AS art_artist, mp_artistorg AS art_img, mp_debut AS
-		art_debut, mp_favorite_artist AS art_hit,  mp_etc AS art_etc, mp_label AS art_label
+		art_debut, mp_favorite_artist AS art_hit, mp_etc AS art_etc, mp_label
+		AS art_label
 		FROM mplan_artist
 		WHERE mp_artist
-		LIKE CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR mp_artist
-		LIKE CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR mp_artist
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR mp_artist
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR mp_artist
 		LIKE
 		CONCAT('%',CONCAT(#{search}),'%')
 		AND mp_useyn = 'Y'
@@ -31,54 +34,119 @@
 		mp_artist AS al_artist,
 		mp_album AS al_album,
 		mp_year AS al_year,
-		mp_albumimgorg AS al_imgorg, 
+		mp_albumimgorg AS al_imgorg,
 		mp_corp as al_corp
 		FROM mplan_album
-		WHERE mp_artist
-		LIKE CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		WHERE
 		mp_artist
-		LIKE CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
 		mp_artist
-		LIKE CONCAT('%',CONCAT(#{search}),'%') OR
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		mp_artist
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') OR
 		mp_album
-		LIKE CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
 		mp_album
-		LIKE CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
 		mp_album
-		LIKE CONCAT('%',CONCAT(#{search}),'%') AND
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') AND
 		mp_useyn = 'Y';
 	</select>
 	<!-- MUSIC SEARCH -->
 	<select id="musicsearch" resultType="MsearchDTO" parameterType="java.lang.String">
 		SELECT
 		mp_artist AS m_artist,
-		mp_title AS m_title,
+		mp_titlemusic AS m_titleuse,
+		mp_title AS
+		m_title,
 		mp_album AS m_album,
 		mp_year AS m_year,
 		mp_imgo AS m_imgo,
 		mp_320ko AS m_320ko,
 		mp_192ko AS m_192ko
+
 		FROM mplan_music
 		WHERE mp_artist
-		LIKE CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
 		mp_artist
-		LIKE CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
 		mp_artist
-		LIKE CONCAT('%',CONCAT(#{search}),'%') OR
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') OR
 		mp_album
-		LIKE CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
 		mp_album
-		LIKE CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
 		mp_album
-		LIKE CONCAT('%',CONCAT(#{search}),'%') OR
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') OR
 		mp_title
-		LIKE CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
 		mp_title
-		LIKE CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
 		mp_title
-		LIKE CONCAT('%',CONCAT(#{search}),'%') AND
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') AND
 		mp_useyn = 'Y';
 	</select>
+
+	<!-- MUSIC SEARCH -->
+	<select id="mvsearch" resultType="MsearchDTO" parameterType="java.lang.String">
+		SELECT
+		mp_artist AS mv_artist,
+		mp_release AS mv_release,
+		mp_title AS mv_title,
+		mp_album AS mv_album,
+		mp_year AS
+		mv_year,
+		mp_imgo AS mv_imgo,
+		mp_mvko AS mv_mvko,
+		mp_age AS mv_age
+
+		FROM mplan_musicvideo
+		WHERE mp_artist
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		mp_artist
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		mp_artist
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') OR
+		mp_album
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		mp_album
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		mp_album
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') OR
+		mp_title
+		LIKE
+		CONCAT('%',CONCAT(UPPER(#{search}),'%')) OR
+		mp_title
+		LIKE
+		CONCAT('%',CONCAT(LOWER(#{search}),'%')) OR
+		mp_title
+		LIKE
+		CONCAT('%',CONCAT(#{search}),'%') AND
+		mp_useyn = 'Y';
+	</select>
+
+
 	<select id="selectTotalCountMusic" resultType="int">
 		select count(*)
 		from mplan_music

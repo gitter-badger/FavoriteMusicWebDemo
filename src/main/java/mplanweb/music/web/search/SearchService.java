@@ -11,5 +11,7 @@ public interface SearchService {
 	public List<MsearchDTO> albumsearch(String result);
 	
 	public List<MsearchDTO> musicsearch(String result);
+	
+	public List<MsearchDTO> mvsearch(String result);
 
 }
