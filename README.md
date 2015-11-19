@@ -1,5 +1,7 @@
 #Favorite Music web Demo
 
+[![Join the chat at https://gitter.im/mplan1997/FavoriteMusicWebDemo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mplan1997/FavoriteMusicWebDemo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # README #
 Favorite Music은 스트리밍 음악 콘텐츠 Web, App입니다.
 
